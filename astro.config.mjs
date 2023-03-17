@@ -9,6 +9,9 @@ export default defineConfig({
     assets: 'css'
   },
   vite: {
+    css: {
+      devSourcemap: true
+    },
     build: {
       minify: false,
       rollupOptions: {
