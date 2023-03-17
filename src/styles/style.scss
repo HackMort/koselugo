@@ -4,10 +4,8 @@
 @import './settings/_fonts.scss';
 @import './settings/_mixins.scss';
 @import './settings/_layouts.scss';
+@import './settings/_global.scss';
 @import './components/_buttons.scss';
 @import './components/_header.scss';
+@import './components/_isi.scss';
 @import './components/_footer.scss';
-
-body {
-  font-family: 'Montserrat', sans-serif;
-}
