@@ -6,14 +6,12 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "dev": "npm run start & sass --watch src/styles/style.scss:public/css/style.css"
+    "astro": "astro"
   },
   "dependencies": {
     "astro": "2.0.18"
   },
   "devDependencies": {
-    "sass": "1.59.3",
     "standard": "17.0.0"
   },
   "eslintConfig": {
