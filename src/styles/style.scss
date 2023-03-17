@@ -1,12 +1,13 @@
 // Import
-@import './settings/_variables.scss';
-@import './settings/_mixins.scss';
 @import './settings/_reset.scss';
+@import './settings/_variables.scss';
 @import './settings/_fonts.scss';
+@import './settings/_mixins.scss';
+@import './settings/_layouts.scss';
 @import './components/_buttons.scss';
 @import './components/_header.scss';
 @import './components/_footer.scss';
 
 body {
-  background-color: green;
+  font-family: 'Montserrat', sans-serif;
 }
