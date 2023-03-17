@@ -5,22 +5,71 @@ const {} = Astro.props;
 ---
 
 <footer class="footer">
-  <!-- Footer Logo -->
-  <div class="footer__logo">
-    <a href="/">Footer Logo</a>
-  </div>
-  <!-- Footer Navigation -->
-  <div class="footer__nav">
-    <nav>
-      <ul class="navigation">
-        <li><a href="/">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
+  <div class="wrapper">
+    <!-- Footer Logo -->
+    <div class="footer__branding">
+      <p>
+        <a class="footer__branding_link" href="#" target="_blank">
+          <img
+            class="footer__branding_link_logo"
+            src="/images/alexion-logo.svg"
+            style="width: 200px;"
+            alt="Alexion"
+          />
+        </a>
+      </p>
+      <p>
+        <a class="footer__branding_link" href="#" target="_blank">
+          Visit Us:
+          <img
+            class="facebook_logo"
+            src="/icons/facebook-alt.svg"
+            style="width: 20px;"
+            alt="Facebook"
+          />
+        </a>
+      </p>
+    </div>
 
-  <style></style>
+    <!-- Footer Navigation -->
+    <div class="footer__links">
+      <nav class="footer__nav">
+        <ul class="footer__nav_menu">
+          <li class="footer__nav_menu_item">
+            <a class="footer__nav_menu_item_link" href="/">Contact Us</a>
+          </li>
+          <li class="footer__nav_menu_item">
+            <a class="footer__nav_menu_item_link" href="#">Contact Us</a>
+          </li>
+          <li class="footer__nav_menu_item">
+            <a class="footer__nav_menu_item_link" href="#">Privacy Notice</a>
+          </li>
+          <li class="footer__nav_menu_item">
+            <a class="footer__nav_menu_item_link" href="#">Cookie Notice</a>
+          </li>
+          <li class="footer__nav_menu_item">
+            <a class="footer__nav_menu_item_link" href="#">Legal Statement</a>
+          </li>
+          <li class="footer__nav_menu_item">
+            <a class="footer__nav_menu_item_link" href="#">Site Map</a>
+          </li>
+          <li class="footer__nav_menu_item">
+            <a class="footer__nav_menu_item_link" href="#">Glossary</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Footer Text -->
+    <div class="footer__text">
+      <p>
+        KOSELUGO is a registered trademark of the AstraZeneca group of
+        companies. <br />
+        ALEXION, the Alexion logo, and the OneSource logo are registered trademarks
+        of Alexion Pharmaceuticals, Inc., and OneSource™ is a trademark of Alexion
+        Pharmaceuticals, Inc. © 2023, Alexion Pharmaceuticals, Inc. All rights reserved.
+        US/KOS-NF1/0392 V2 3/23
+      </p>
+    </div>
+  </div>
 </footer>

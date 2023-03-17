@@ -1,0 +1,22 @@
+.footer {
+  background-color: $color-aqua;
+  color: $color-white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include flex-gap(1.25rem);
+    text-align: center;
+
+    @include media('tablet') {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+
+  }
+
+}
