@@ -26,19 +26,40 @@
   }
 
   &__section_header {
+    position: relative;
+    background-color: $color-white;
+  }
+
+  &__section_header.is--fixed {
     position: fixed;
-    transition: all 0.3s ease-in-out;
     width: 100%;
     z-index: 2;
-    background-color: $color-white;
+    height: 9.0625rem;
     left: 0;
     right: 0;
     bottom: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    .wrapper__inner {
+      position: relative;
+    }
+
+    .isi__section_toggle {
+      display: block;
+    }
   }
 
-  &__section_header.isi__preview {
-    visibility: hidden;
+  &__section_header.is--fixed.is--open {
+    top: 20%;
+    overflow-y: scroll;
+    height: auto;
+
+    .isi__section_toggle {
+      transform: rotate(180deg);
+    }
   }
+
 
   &__section_footer {
     .isi__section_heading {
@@ -58,10 +79,6 @@
     position: absolute;
     right: 0;
     top: 0;
-  }
-
-  &__section_header.visible {
-    position: relative;
   }
 
 }
