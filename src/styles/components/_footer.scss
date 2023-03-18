@@ -48,10 +48,11 @@
   &__branding {
     display: flex;
     flex-direction: column;
+    @include flex-gap(1.5rem);
 
     @include media('tablet') {
       align-items: flex-start;
-      @include flex-gap(2rem);
+      // @include flex-gap(2rem);
     }
 
     &_social {
@@ -59,16 +60,15 @@
       align-items: center;
       justify-content: center;
       @include flex-gap(1rem);
-      margin-bottom: 1.5625rem;
 
       @include media('tablet') {
-        margin-bottom: 0;
+        margin-bottom: 1.5625rem;
       }
 
       @include media('desktop') {
         font-size: 1.0625rem;
         line-height: 1.6062rem;
-        margin-bottom: 0;
+        margin-bottom: 1rem;
       }
 
       .facebook_logo {
