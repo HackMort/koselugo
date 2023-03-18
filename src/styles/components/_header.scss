@@ -1,0 +1,39 @@
+.site__header {
+
+  // Top
+  &_top {
+    background-color: $color-soft-gray;
+    color: $color-black;
+
+    .site__header_nav_menu {
+      &_list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        @include flex-gap(1rem);
+        font-size: .75rem;
+        font-weight: 500;
+        line-height: 1.25rem;
+        max-width: max-content;
+        margin: 0 auto;
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
+        text-align: center;
+      }
+    }
+  }
+
+  // main nav
+  &_bottom {
+    .site__header_nav {
+      display: none;
+
+      @include media('desktop') {
+        display: block;
+      }
+    }
+
+
+  }
+}
