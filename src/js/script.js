@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   })
 
   function isiHeaderFixed () {
-    const mobileMedia = window.matchMedia('(min-width: 768px)')
+    // const mobileMedia = window.matchMedia('(min-width: 768px)')
     const isiHeader = document.querySelector('.isi__section_header')
     const isiSection = document.querySelector('.isi')
 
@@ -21,10 +21,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
     const isiObserver = new window.IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
-        if (!mobileMedia.matches) return
+        // if (!mobileMedia.matches) return
         if (entry.isIntersecting) {
-          isiHeader.classList.remove('is--fixed')
-          isiHeader.classList.remove('is--open')
+          isiHeader.classList.remove('is--fixed', 'is--open')
         } else {
           if (entry.boundingClientRect.top < 0) {
             isiHeader.classList.add('is--fixed')
