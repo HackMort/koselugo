@@ -17,35 +17,45 @@ p {
   line-height: 1.6062rem;
 }
 
-ul ul {
-  padding-left: 1rem;
-}
-
 ul li {
-  color: currentColor;
-  font-weight: 400;
-  font-stretch: normal;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: 1.6062rem;
-  list-style-type: disc;
-
-  ul {
-    padding-left: 1rem;
-    margin-top: .375rem;
-    margin-bottom: .375rem;
-  }
-
-  ul li {
-
-    list-style-type: circle;
-
-    ul li {
-      list-style-type: square;
-    }
-  }
+  list-style-type: none;
 }
 
 ul li::marker {
-  color: $color-aqua;
+  display: none;
+}
+
+main {
+  ul ul {
+    padding-left: 1rem;
+  }
+
+  ul li {
+    color: currentColor;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 1.6062rem;
+    list-style-type: disc;
+
+    ul {
+      padding-left: 1rem;
+      margin-top: .375rem;
+      margin-bottom: .375rem;
+    }
+
+    ul li {
+
+      list-style-type: circle;
+
+      ul li {
+        list-style-type: square;
+      }
+    }
+  }
+
+  ul li::marker {
+    color: $color-aqua;
+  }
 }
