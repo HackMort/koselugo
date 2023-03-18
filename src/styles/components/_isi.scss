@@ -28,6 +28,14 @@
   &__section_header {
     position: relative;
     background-color: $color-white;
+
+    .wrapper__inner {
+
+      .isi__section_content,
+      .isi__section_footer {
+        display: none;
+      }
+    }
   }
 
   &__section_header.is--fixed {
@@ -54,6 +62,14 @@
     top: 20%;
     overflow-y: scroll;
     height: auto;
+
+    .wrapper__inner {
+
+      .isi__section_content,
+      .isi__section_footer {
+        display: block;
+      }
+    }
 
     .isi__section_toggle {
       transform: rotate(180deg);
