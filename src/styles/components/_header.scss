@@ -24,9 +24,29 @@
     }
   }
 
-  // main nav
+  // logo
+  &_logo {
+    &_link_img {
+      width: 6.415rem;
+    }
+  }
+
+  // Middle
+  &_middle {
+    .wrapper {
+      max-width: calc(100% - 1.25rem);
+    }
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: space-between;
+    padding-top: .9375rem;
+    padding-bottom: .9375rem;
+  }
+
+  // bottom - main nav
   &_bottom {
-    .site__header_nav {
+    .site__header_nav_menu {
       display: none;
 
       @include media('desktop') {
@@ -34,6 +54,22 @@
       }
     }
 
+    .nav__menu_toggle {
+      display: block;
+
+      >span {
+        display: block;
+        width: 1.5rem;
+        height: .125rem;
+        background-color: $color-black;
+        margin-bottom: .25rem;
+      }
+
+
+      @include media('desktop') {
+        display: none;
+      }
+    }
 
   }
 }
