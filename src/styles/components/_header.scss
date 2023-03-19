@@ -53,23 +53,26 @@
         display: block;
       }
     }
+  }
 
-    .nav__menu_toggle {
+  .nav__menu_toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+
+    >span {
       display: block;
-
-      >span {
-        display: block;
-        width: 1.5rem;
-        height: .125rem;
-        background-color: $color-black;
-        margin-bottom: .25rem;
-      }
-
-
-      @include media('desktop') {
-        display: none;
-      }
+      width: 1.5rem;
+      height: .125rem;
+      background-color: $color-black;
+      margin-bottom: .25rem;
     }
 
+
+    @include media('desktop') {
+      display: none;
+    }
   }
 }
