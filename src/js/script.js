@@ -53,4 +53,13 @@ document.addEventListener('DOMContentLoaded', function (event) {
       isiHeader.classList.toggle('is--open')
     })
   }
+
+  const mobileMenuToogleBtn = document.getElementById('toggle-menu-button')
+  if (mobileMenuToogleBtn) {
+    mobileMenuToogleBtn.addEventListener('click', () => {
+      const mobileMenu = document.getElementById('main__navigation')
+      console.log('Mobile menu clicked')
+      mobileMenu.classList.toggle('is--open')
+    })
+  }
 })
