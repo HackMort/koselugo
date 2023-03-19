@@ -1,0 +1,16 @@
+// Utility classes file
+.mobile--only {
+  display: block;
+
+  @include media('desktop') {
+    display: none;
+  }
+}
+
+.desktop--only {
+  display: none;
+
+  @include media('desktop') {
+    display: block;
+  }
+}

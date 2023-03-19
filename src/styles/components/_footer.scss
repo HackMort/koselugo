@@ -1,0 +1,125 @@
+.footer {
+  background-color: $color-aqua;
+  color: $color-white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 0.81rem;
+  line-height: 0.975rem;
+
+  @include media('tablet') {
+    font-size: 1rem;
+    line-height: 1.606rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  @include media('desktop') {
+    padding-top: 4rem;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include flex-gap(1.25rem);
+    text-align: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    @include media('tablet') {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      @include flex-gap(1rem);
+      text-align: left;
+      padding-left: 0;
+      padding-right: 0;
+
+      >* {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 33.33%;
+      }
+
+    }
+
+  }
+
+  &__branding {
+    display: flex;
+    flex-direction: column;
+    @include flex-gap(1.5rem);
+
+    @include media('tablet') {
+      align-items: flex-start;
+      // @include flex-gap(2rem);
+    }
+
+    &_social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include flex-gap(1rem);
+
+      @include media('tablet') {
+        margin-bottom: 1.5625rem;
+      }
+
+      @include media('desktop') {
+        font-size: 1.0625rem;
+        line-height: 1.6062rem;
+        margin-bottom: 1rem;
+      }
+
+      .facebook_logo {
+        width: 1.4375rem;
+
+        @include media('tablet') {
+          width: 2.125rem;
+        }
+      }
+    }
+
+    &_link_logo {
+      margin-right: auto;
+
+      margin-left: auto;
+      width: 7.5rem;
+
+      @include media('tablet') {
+        margin-bottom: 1rem;
+        width: 11.625rem;
+      }
+    }
+
+    &_disclaimer {
+      @include media('tablet') {
+        max-width: 11.625rem;
+      }
+
+      @include media('desktop') {
+        font-size: 1.125rem;
+        line-height: 1.6062rem;
+      }
+
+    }
+  }
+
+
+  &__text {
+    @include media('tablet') {
+      max-width: 21.875rem
+    }
+  }
+
+  &__nav_menu_item_link {
+    color: $color-white;
+    display: block;
+    margin-bottom: .46rem;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+}

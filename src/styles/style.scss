@@ -1,29 +1,12 @@
 // Import
-@import './components/header.scss';
-
-body {
-  background: red;
-  color: yellow;
-  padding: 1rem;
-  text-align: center;
-  margin: 20px;
-  text-decoration: underline;
-  opacity: 3;
-}
-
-.test {
-  color: blue;
-  font-size: 2rem;
-  text-align: center;
-  margin: 20px;
-  text-decoration: underline;
-  opacity: 3;
-}
-
-.another-one {
-  text-decoration: none;
-}
-
-.pic {
-  color: blue;
-}
+@import './settings/_reset.scss';
+@import './settings/_variables.scss';
+@import './settings/_fonts.scss';
+@import './settings/_mixins.scss';
+@import './settings/_layouts.scss';
+@import './settings/_global.scss';
+@import './settings/_utils.scss';
+@import './components/_buttons.scss';
+@import './components/_header.scss';
+@import './components/_isi.scss';
+@import './components/_footer.scss';

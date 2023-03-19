@@ -4,10 +4,10 @@
   "version": "0.0.1",
   "scripts": {
     "start": "astro dev",
+    "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "dev": "npm run start & sass --watch src/styles/style.scss:public/css/style.css"
+    "astro": "astro"
   },
   "dependencies": {
     "astro": "2.0.18"

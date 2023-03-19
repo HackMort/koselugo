@@ -2,28 +2,229 @@
 ---
 
 <header class="site__header">
-  <div class="site__header_logo">
-    <a href="/" class="site__header_logo_link">
-      <img
-        src="images/logo.png"
-        alt="logo"
-        class="site__header_logo_link_img"
-      />
-    </a>
+  <div class="site__header_top mobile--only">
+    <nav class="site__header_nav_menu">
+      <ul class="site__header_nav_menu_list">
+        <li class="site__header_nav_menu_list_item">
+          <a href="#" class="site__header_nav_menu_list_item_link"
+            >Important Safety Information</a
+          >
+        </li>
+        <li class="site__header_nav_menu_list_item">
+          <a href="#" class="site__header_nav_menu_list_item_link"
+            >Prescribing Information</a
+          >
+        </li>
+        <li class="site__header_nav_menu_list_item">
+          <a href="#" class="site__header_nav_menu_list_item_link"
+            >For Healthcare Professionals</a
+          >
+        </li>
+      </ul>
+    </nav>
   </div>
-  <div class="site__header_nav">
-    <ul class="site__header_nav_list">
-      <li class="site__header_nav_list_item">
-        <a href="/" class="site__header_nav_list_item_link">Home</a>
-      </li>
-      <li class="site__header_nav_list_item">
-        <a href="about.html" class="site__header_nav_list_item_link">About</a>
-      </li>
-      <li class="site__header_nav_list_item">
-        <a href="contact.html" class="site__header_nav_list_item_link"
-          >Contact</a
-        >
-      </li>
-    </ul>
+  <div class="site__header_middle wrapper">
+    <div class="site__header_logo">
+      <a href="/" class="site__header_logo_link">
+        <img
+          src="/images/logo.svg"
+          alt="Header logo"
+          class="site__header_logo_link_img"
+        />
+      </a>
+    </div>
+    <div class="site__header_right desktop--only">
+      <nav class="site__header_nav_menu">
+        <ul class="site__header_nav_menu_list">
+          <li class="site__header_nav_menu_list_item">
+            <a href="#" class="site__header_nav_menu_list_item_link"
+              >Important Safety Information</a
+            >
+          </li>
+          <li class="site__header_nav_menu_list_item">
+            <a href="#" class="site__header_nav_menu_list_item_link"
+              >Prescribing Information</a
+            >
+          </li>
+          <li class="site__header_nav_menu_list_item">
+            <a href="#" class="site__header_nav_menu_list_item_link"
+              >For Healthcare Professionals</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <button id="toggle-menu-button" class="nav__menu_toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div class="site__header_bottom site__header_nav">
+    <div class="wrapper">
+      <nav id="main__navigation" class="site__header_nav_menu">
+        <ul class="site__header_nav_menu_list">
+          <li class="site__header_nav_menu_list_item">
+            <a href="#" class="site__header_nav_menu_list_item_link"
+              >UNDERSTANDING NF1</a
+            >
+            <!-- Sub Nav -->
+            <ul class="site__header_nav_menu_list sub__nav_menu">
+              <li class="sub__nav_menu_item">
+                <a href="#" class="sub__nav_menu_item_link">About NF1 PN</a>
+              </li>
+              <li class="sub__nav_menu_item">
+                <a href="#" class="sub__nav_menu_item_link"
+                  >Treatment for NF1 PN</a
+                >
+              </li>
+              <li class="sub__nav_menu_item">
+                <a
+                  href="#"
+                  class="site__header_nav_menu_list_item sub__nav_menu_item_link"
+                  >Living with NF1 PN</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="site__header_nav_menu_list_item">
+            <a href="#" class="site__header_nav_menu_list_item_link"
+              >ABOUT KOSELUGO</a
+            >
+            <!-- Sub Nav -->
+            <ul class="site__header_nav_menu_list sub__nav_menu">
+              <li class="sub__nav_menu_item">
+                <a
+                  href="/about-koselugo/what-is-it/"
+                  class="sub__nav_menu_item_link">What Is Koselugo?</a
+                >
+              </li>
+              <li class="sub__nav_menu_item">
+                <a href="#" class="sub__nav_menu_item_link">Tumor response</a>
+              </li>
+            </ul>
+          </li>
+          <li class="site__header_nav_menu_list_item">
+            <a href="#" class="site__header_nav_menu_list_item_link"
+              >SAFETY AND SIDE EFFECTS</a
+            >
+            <!-- Sub Nav -->
+            <ul class="site__header_nav_menu_list sub__nav_menu">
+              <li class="sub__nav_menu_item">
+                <a
+                  href="/about-koselugo/what-is-it/"
+                  class="sub__nav_menu_item_link">Possible Side Effects</a
+                >
+              </li>
+              <li class="sub__nav_menu_item">
+                <a href="#" class="sub__nav_menu_item_link"
+                  >Before Starting Treatment</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="site__header_nav_menu_list_item">
+            <a href="#" class="site__header_nav_menu_list_item_link"
+              >TAKING KOSELUGO</a
+            >
+            <!-- Sub Nav -->
+            <ul class="site__header_nav_menu_list sub__nav_menu">
+              <li class="sub__nav_menu_item">
+                <a
+                  href="/about-koselugo/what-is-it/"
+                  class="sub__nav_menu_item_link">Taking Koselugo</a
+                >
+              </li>
+              <li class="sub__nav_menu_item">
+                <a href="#" class="sub__nav_menu_item_link">Tips for Taking</a>
+              </li>
+              <li class="sub__nav_menu_item">
+                <a href="#" class="sub__nav_menu_item_link">Taking It on Time</a
+                >
+              </li>
+              <li class="sub__nav_menu_item">
+                <a href="#" class="sub__nav_menu_item_link"
+                  >Tracking Their Treatment</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="site__header_nav_menu_list_item">
+            <a href="#" class="site__header_nav_menu_list_item_link"
+              >FAMILY RESOURCES</a
+            >
+            <!-- Sub Nav -->
+            <ul class="site__header_nav_menu_list sub__nav_menu">
+              <li class="sub__nav_menu_item">
+                <a
+                  href="/about-koselugo/what-is-it/"
+                  class="sub__nav_menu_item_link">Resources</a
+                >
+              </li>
+              <li class="sub__nav_menu_item">
+                <a href="#" class="sub__nav_menu_item_link">Videos</a>
+              </li>
+              <li class="sub__nav_menu_item">
+                <a href="#" class="sub__nav_menu_item_link"
+                  >Advocacy Organizations</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="site__header_nav_menu_list_item">
+            <a href="#" class="site__header_nav_menu_list_item_link"
+              >TAKING TAKING KOSELUGO</a
+            >
+            <!-- Sub Nav -->
+            <ul class="site__header_nav_menu_list sub__nav_menu">
+              <li class="sub__nav_menu_item">
+                <a
+                  href="/about-koselugo/what-is-it/"
+                  class="sub__nav_menu_item_link">PEM Finder</a
+                >
+              </li>
+              <li class="sub__nav_menu_item">
+                <a href="#" class="sub__nav_menu_item_link"
+                  >OneSource<sup>&trade;</sup></a
+                >
+              </li>
+              <li class="sub__nav_menu_item">
+                <a href="#" class="sub__nav_menu_item_link">Register</a>
+              </li>
+            </ul>
+          </li>
+          <li class="site__header_nav_menu_list_item">
+            <a href="#" class="site__header_nav_menu_list_item_link"
+              >SAVINGS AND SUPPORT</a
+            >
+          </li>
+          <li class="site__header_nav_menu_list_item">
+            <a href="#" class="site__header_nav_menu_list_item_link">EVENTS</a>
+          </li>
+          <li class="site__header_nav_menu_list_item">
+            <a href="#" class="site__header_nav_menu_list_item_link">GLOSSARY</a
+            >
+          </li>
+          <li class="site__header_nav_item mobile--only">
+            <a href="#" target="_blank" class="site__header_nav_item_link">
+              <img
+                src="/icons/facebook.svg"
+                alt="Facebook"
+                class="site__header_nav_item_link_icon"
+                style="width:20px;"
+              />
+            </a>
+          </li>
+          <li class="site__header_nav_item mobile--only">
+            <a
+              href="#"
+              target="_blank"
+              class="site__header_nav_item_link signup__nav_link"
+              >Sign Up for an Event</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
