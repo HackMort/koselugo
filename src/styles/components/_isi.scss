@@ -30,6 +30,7 @@
     background-color: $color-white;
 
     .wrapper__inner {
+      max-width: 100%;
 
       .isi__section_content,
       .isi__section_footer {
@@ -51,6 +52,7 @@
 
     .wrapper__inner {
       position: relative;
+      max-width: calc(100% - 2rem);
     }
 
     .isi__section_toggle {
