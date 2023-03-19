@@ -52,6 +52,7 @@
 
     .wrapper__inner {
       position: relative;
+      max-width: calc(100% - 2rem);
     }
 
     .isi__section_toggle {
