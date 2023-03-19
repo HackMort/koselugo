@@ -24,7 +24,9 @@ const { title } = Astro.props;
 	<body>
 		<Header />
 		<Hero />
-		<slot />
+		<main class="main">
+			<slot />
+		</main>
 		<Isi />
 		<Footer />
 		<script src="../js/script.js"></script>
