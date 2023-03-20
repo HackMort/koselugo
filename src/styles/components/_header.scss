@@ -1,6 +1,6 @@
 .site__header {
   box-shadow: 0px 4px 10px rgba(67, 99, 168, 0.05);
-  backdrop-filter: blur(45px);
+  // backdrop-filter: blur(45px);
 
   // Top
   &_top {
@@ -30,6 +30,10 @@
   &_logo {
     &_link_img {
       width: 6.415rem;
+
+      @include media('desktop') {
+        width: 10.3125rem;
+      }
     }
   }
 
@@ -44,20 +48,237 @@
     justify-content: space-between;
     padding-top: .9375rem;
     padding-bottom: .9375rem;
+
+    @include media('desktop') {
+      grid-template-columns: auto 1fr;
+      align-items: flex-start;
+    }
+
+    .site__header_nav_menu_list {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      @include flex-gap(1rem);
+      margin-top: .5rem;
+
+      &_item_link {
+        color: $color-granite-gray;
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+    }
+
   }
 
   // bottom - main nav
   &_bottom {
     .site__header_nav_menu {
       display: none;
+      font-size: .75rem;
+      line-height: 1rem;
+      letter-spacing: .075rem;
+      text-transform: uppercase;
+      transition: 0.5s ease-in;
+
+      &_list_item_link {
+        position: relative;
+        color: $color-dark-purple;
+        font-family: Lato;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+
+        &.is--active::after {
+          transform: rotate(180deg);
+        }
+      }
+
+      &_list_item_link.has__sub_nav::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        background-image: url('/icons/angle-down.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: .4rem;
+        width: .68rem;
+
+        @include media('desktop') {
+          display: none;
+        }
+      }
+
+
+
+      .sub__nav_menu {
+        display: none;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        transition: 0.5s ease-in;
+
+        @include media('desktop') {
+          background: $color-white;
+          border: 0.5px solid $color-dark-purple;
+          margin-bottom: 0;
+        }
+
+        &.is--active {
+          display: block;
+        }
+
+        &_item_link {
+          position: relative;
+          color: $color-dark-purple;
+          font-family: Lato;
+          font-weight: 500;
+          margin-right: 1rem;
+          padding-top: 1.25rem;
+          padding-bottom: 1.25rem;
+          text-transform: capitalize;
+
+          @include media('desktop') {
+            padding-right: 1rem;
+            padding-left: 1rem;
+            margin-right: 0;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-bottom: 1px solid $color-light-gray;
+            border-radius: 7px;
+            height: 1px;
+            width: 100%;
+          }
+        }
+
+        &_item:first-of-type {
+          .sub__nav_menu_item_link {
+            padding-top: 0.5rem;
+
+            @include media('desktop') {
+              padding-top: 1rem;
+            }
+          }
+        }
+
+        &_item:last-of-type {
+          .sub__nav_menu_item_link {
+            padding-bottom: 0.5rem;
+
+            @include media('desktop') {
+              padding-bottom: 1.25rem;
+            }
+
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
 
       @include media('desktop') {
         display: block;
+
+        >.site__header_nav_menu_list {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+
+          .site__header_nav_menu_list_item_link {
+            position: relative;
+            padding-top: 0.5rem;
+            padding-right: 0.5rem;
+            padding-bottom: 0.5rem;
+            padding-left: 0.5rem;
+            z-index: 2;
+
+            &:hover,
+            &:focus,
+            &:focus-within {
+              background-color: $color-rose;
+              color: $color-white;
+
+              ~.sub__nav_menu {
+                position: absolute;
+                display: block;
+                background-color: $color-white;
+                margin-left: 0;
+                width: 196px;
+                z-index: 3;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .site__header_nav_menu.is--open {
+      display: block;
+      position: relative;
+      height: 100vh;
+      z-index: 3;
+
+      @include media('desktop') {
+        height: auto;
+      }
+
+
+      .mobile--only {
+        margin-top: 2rem;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
       }
     }
   }
 
+  .site__header_nav_item_link_icon {
+    margin: 0 auto;
+    width: 28px;
+
+    @include media('desktop') {
+      margin-right: 0;
+      margin-left: 0;
+      margin-top: -5px;
+      width: .9375rem;
+    }
+  }
+
+  .signup__nav_link {
+    background-color: $color-rose;
+    color: $color-white;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 16px;
+    height: 46px;
+    margin-right: auto;
+    margin-left: auto;
+    text-transform: none;
+    text-align: center;
+    width: 215px;
+
+    @include media('desktop') {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
   .nav__menu_toggle {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,13 +286,35 @@
     width: 1.5rem;
 
     >span {
-      display: block;
-      width: 1.5rem;
-      height: .125rem;
-      background-color: $color-black;
+      background-color: $color-rose;
+      border-radius: 2px;
       margin-bottom: .25rem;
+      height: .25rem;
+      transition: 0.25s ease-in-out;
+      width: 1.75rem;
     }
 
+    &.is--active {
+      >span {
+        &:nth-child(1) {
+          position: absolute;
+          transform: rotate(45deg);
+          top: 1.6rem;
+          left: 0;
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          position: absolute;
+          transform: rotate(-45deg);
+          top: 1.6rem;
+          left: 0;
+        }
+      }
+    }
 
     @include media('desktop') {
       display: none;
