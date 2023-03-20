@@ -1,1 +1,56 @@
 // We should import the fonts here.
+@font-face {
+  font-family: ITC-Franklin-Gothic;
+  src: url("/fonts/ITC-Franklink-Gothic/ITCFranklinGothicStd-Book.woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: ITC-Franklin-Gothic;
+  src: url("/fonts/ITC-Franklink-Gothic/ITCFranklinGothicStd-Demi.woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: ITC-Franklin-Gothic;
+  src: url("/fonts/ITC-Franklink-Gothic/ITCFranklinGothicStd-DmCd.woff");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: ITC-Franklin-Gothic;
+  src: url("/fonts/ITC-Franklink-Gothic/ITCFranklinGothicStd-MdCd.woff");
+  font-weight: bold;
+}
+
+//  Font Lato
+@font-face {
+  font-family: Lato;
+  src: url("/fonts/Lato/Lato-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("/fonts/Lato/Lato-Regular.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("/fonts/Lato/Lato-Bold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("/fonts/Lato/Lato-Black.woff");
+  font-weight: bold;
+}
+
+
+*,
+*::before,
+*::after {
+  font-family: ITC-Franklin-Gothic, Arial, Helvetica, sans-serif;
+}
