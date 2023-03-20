@@ -41,14 +41,15 @@
 
   &__section_header.is--fixed {
     position: fixed;
-    width: 100%;
-    z-index: 2;
-    height: 9.0625rem;
-    left: 0;
     right: 0;
     bottom: 0;
+    left: 0;
+    background-color: $color-white;
+    height: 9.0625rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    width: 100%;
+    z-index: 2;
 
     .wrapper__inner {
       position: relative;
