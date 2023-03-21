@@ -347,6 +347,10 @@ ul li::marker {
 main {
   background-color: #F6FAFB;
 }
+main a {
+  color: #870051;
+  text-decoration: underline;
+}
 main ul ul {
   padding-left: 1rem;
 }
