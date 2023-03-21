@@ -1,0 +1,28 @@
+---
+type Props = {
+  titleWhite?: string;
+  titleYellow?: string;
+};
+
+const { titleWhite, titleYellow } = Astro.props;
+---
+
+<section class="section">
+  {
+    titleWhite && (
+      <div class="section__header">
+        <h2 class="section__title">
+          <span class="color--white">{titleWhite}</span>
+          <span class="color--yellow">{titleYellow}</span>
+        </h2>
+      </div>
+    )
+  }
+  <div class="wrapper">
+    <div class="section__content">
+      <slot />
+    </div>
+  </div>
+</section>
+
+<style></style>
