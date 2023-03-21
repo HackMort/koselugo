@@ -1,0 +1,228 @@
+---
+import AccordionItem from "../components/AccordionItem.astro";
+import Card from "../components/Card.astro";
+import Section from "../components/Section.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Design">
+  <section class="design__system">
+    <div class="wrapper">
+      <h1 class="title" style="margin-top:0;">Colors</h1>
+      <div class="colors">
+        <div class="color">
+          <div class="color__box" style="background-color: #559CB5;">
+            <p class="color__hex" style="color: white;">#559CB5</p>
+          </div>
+          <p class="color__variable">$color-aqua</p>
+        </div>
+        <div class="color">
+          <div class="color__box" style="background-color: #E2EBF2;">
+            <p class="color__hex" style="color: black;">#E2EBF2</p>
+          </div>
+          <p class="color__variable">$color-light-blue</p>
+        </div>
+        <div class="color">
+          <div class="color__box" style="background-color: #EEF5F7;">
+            <p class="color__hex">#EEF5F7</p>
+          </div>
+          <p class="color__variable">$color-soft-blue</p>
+        </div>
+        <div class="color">
+          <div class="color__box" style="background-color: #636466;">
+            <p class="color__hex" style="color: white;">#636466</p>
+          </div>
+          <p class="color__variable">$color-gray</p>
+        </div>
+        <div class="color">
+          <div class="color__box" style="background-color: #666666;">
+            <p class="color__hex" style="color: white;">#666666</p>
+          </div>
+          <p class="color__variable">$color-granite-gray</p>
+        </div>
+        <div class="color">
+          <div class="color__box" style="background-color: #C4C4C4;">
+            <p class="color__hex" style="color: white;">#C4C4C4</p>
+          </div>
+          <p class="color__variable">$color-light-gray</p>
+        </div>
+        <div class="color">
+          <div class="color__box" style="background-color: #DCD9DA;">
+            <p class="color__hex" style="color: white;">#DCD9DA</p>
+          </div>
+          <p class="color__variable">$color-lighter-gray</p>
+        </div>
+        <div class="color">
+          <div class="color__box" style="background-color: #F1F1F1;">
+            <p class="color__hex">#F1F1F1</p>
+          </div>
+          <p class="color__variable">$color-soft-gray</p>
+        </div>
+        <div class="color">
+          <div class="color__box" style="background-color: #870051;">
+            <p class="color__hex">#870051</p>
+          </div>
+          <p class="color__variable">$color-rose</p>
+        </div>
+        <div class="color">
+          <div class="color__box" style="background-color: #210022;">
+            <p class="color__hex">#210022</p>
+          </div>
+          <p class="color__variable">$color-dark-purple</p>
+        </div>
+        <div class="color">
+          <div class="color__box" style="background-color: #FFF200;">
+            <p class="color__hex">#FFF200</p>
+          </div>
+          <p class="color__variable">$color-yellow</p>
+        </div>
+        <div class="color">
+          <div class="color__box" style="background-color: #727477;">
+            <p class="color__hex">#727477</p>
+          </div>
+          <p class="color__variable">$color-silver</p>
+        </div>
+        <div class="color">
+          <div
+            class="color__box"
+            style="background-color: #ffffff; border: 1px solid #000"
+          >
+            <p class="color__hex">#ffffff</p>
+          </div>
+          <p class="color__variable">$color-white</p>
+        </div>
+        <div class="color">
+          <div class="color__box" style="background-color: #000000;">
+            <p class="color__hex" style="color: #fff;">#000000</p>
+          </div>
+          <p class="color__variable">$color-black</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section role="tablist" class="design__system accordion">
+    <div class="wrapper">
+      <h1 class="title">Accordion</h1>
+      <AccordionItem
+        header="Accordion Item Sample Expanded"
+        id="acc-1"
+        expanded
+      >
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad a fugit,
+          dolorum obcaecati vero temporibus delectus est tempora ipsum
+          repudiandae tenetur earum, consectetur eaque ducimus. Voluptas veniam
+          culpa beatae necessitatibus?
+        </p>
+      </AccordionItem>
+      <AccordionItem header="Accordion Item Sample Collapsed" id="acc-1">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad a fugit,
+          dolorum obcaecati vero temporibus delectus est tempora ipsum
+          repudiandae tenetur earum, consectetur eaque ducimus. Voluptas veniam
+          culpa beatae necessitatibus?
+        </p>
+      </AccordionItem>
+    </div>
+  </section>
+
+  <section class="design__system">
+    <div class="wrapper">
+      <h1 class="title">Card</h1>
+      <Card title="Card Item #1" image="/images/logo.svg" alt="Koselugo Logo">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi
+          distinctio quaerat ut facilis laborum aliquam deleniti eaque, voluptas
+          nisi eligendi atque aliquid praesentium! Provident, fugit modi
+          asperiores a sequi cumque.
+        </p>
+        <p>
+          <a href="#">Link</a>
+        </p>
+      </Card>
+      <Card title="Card Item #2" image="/images/logo.svg" alt="Koselugo Logo">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi
+          distinctio quaerat ut facilis laborum aliquam deleniti eaque, voluptas
+          nisi eligendi atque aliquid praesentium! Provident, fugit modi
+          asperiores a sequi cumque.
+        </p>
+        <p>
+          <a href="#">Link</a>
+        </p>
+      </Card>
+    </div>
+  </section>
+  <section class="design__system">
+    <div class="wrapper">
+      <h1 class="title">Section</h1>
+      <Section
+        titleWhite="WHAT IS"
+        titleYellow="NEUROFIBROMATOSIS TYPE 1 (NF1)?"
+      >
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          voluptates, quae, quod, voluptatibus quibusdam voluptatem quia
+          voluptatum quos quidem natus quas. Quisquam, quae. Quisquam, quae.
+          Quisquam, quae. Quisquam, quae.
+        </p>
+      </Section>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  main {
+    max-width: 90vw;
+    margin: 2rem auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .colors {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    transition: all 100ms ease-in-out;
+  }
+
+  .color {
+    width: 6.25rem;
+  }
+
+  .color__box {
+    width: 6.25rem;
+    height: 4.375rem;
+    padding: 0.2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 0.5rem;
+  }
+
+  .color__hex {
+    margin: auto;
+    font-size: 0.75em;
+  }
+
+  .color__variable {
+    font-size: 0.75em;
+  }
+
+  .buttons .button {
+    max-width: max-content;
+  }
+</style>
