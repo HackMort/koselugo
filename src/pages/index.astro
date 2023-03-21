@@ -1,9 +1,36 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import AccordionItem from "../components/AccordionItem.astro";
 ---
 
 <Layout title="koselugo ®">
 	<div class="wrapper">
 		<h1>Welcome to Koselugo</h1>
+
+		<hr />
+		<section role="tablist" class="accordion">
+			<AccordionItem header="What is Koselugo?" id="acc-1" expanded>
+				<p>
+					Koselugo is a prescription medicine that is used to treat children 2
+					years of age and older with neurofibromatosis type 1 (NF1) who have
+					plexiform neurofibromas that cannot be completely removed by surgery.
+					It is not known if Koselugo is safe and effective in children under 2
+					years of age. <a href="">Learn more about taking Koselugo</a>.
+				</p>
+				<p>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
+					veritatis error voluptas quas unde distinctio ea natus, tempore
+					pariatur consequatur repudiandae quae earum hic harum delectus at
+					sequi alias autem!
+				</p>
+			</AccordionItem>
+			<AccordionItem header="Is Koselugo chemotherapy?" id="acc-2">
+				Koselugo is a prescription medicine that is used to treat children 2
+				years of age and older with neurofibromatosis type 1 (NF1) who have
+				plexiform neurofibromas that cannot be completely removed by surgery. It
+				is not known if Koselugo is safe and effective in children under 2 years
+				of age. Learn more about taking Koselugo.
+			</AccordionItem>
+		</section>
 	</div>
 </Layout>
