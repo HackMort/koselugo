@@ -82,6 +82,14 @@
       text-transform: uppercase;
       transition: 0.5s ease-in;
 
+      &_list_item:first-of-type {
+        @include media('desktop') {
+          a::after {
+            display: none;
+          }
+        }
+      }
+
       &_list_item_link {
         position: relative;
         color: $color-dark-purple;
@@ -94,8 +102,25 @@
         padding-top: 1.25rem;
         padding-bottom: 1.25rem;
 
+        &::after {
+          @include media('desktop') {
+            content: '';
+            position: absolute;
+            top: 4.3px;
+            left: 0;
+            border: 0.5px solid #A3A3A3;
+            height: 23.41px;
+            width: 0px;
+            left: -5px;
+          }
+        }
+
         &.is--active::after {
           transform: rotate(180deg);
+
+          @include media('desktop') {
+            transform: none;
+          }
         }
       }
 
@@ -110,11 +135,16 @@
         width: .68rem;
 
         @include media('desktop') {
-          display: none;
+          content: '';
+          position: absolute;
+          top: 4.3px;
+          left: 0;
+          border: 0.5px solid #A3A3A3;
+          height: 23.41px;
+          width: 0px;
+          left: -5px;
         }
       }
-
-
 
       .sub__nav_menu {
         display: none;
@@ -126,11 +156,15 @@
           background: $color-white;
           border: 0.5px solid $color-dark-purple;
           margin-bottom: 0;
+          padding-right: 1rem;
+          padding-left: 1rem;
         }
 
         &.is--active {
           display: block;
         }
+
+
 
         &_item_link {
           position: relative;
@@ -143,8 +177,8 @@
           text-transform: capitalize;
 
           @include media('desktop') {
-            padding-right: 1rem;
-            padding-left: 1rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
             margin-right: 0;
           }
 
@@ -157,29 +191,33 @@
             border-radius: 7px;
             height: 1px;
             width: 100%;
+
+            @include media('desktop') {
+              display: block !important;
+            }
           }
         }
 
         &_item:first-of-type {
           .sub__nav_menu_item_link {
-            padding-top: 0.5rem;
+            // padding-top: 0.5rem;
 
             @include media('desktop') {
-              padding-top: 1rem;
+              // padding-top: 1rem;
             }
           }
         }
 
         &_item:last-of-type {
           .sub__nav_menu_item_link {
-            padding-bottom: 0.5rem;
+            // padding-bottom: 0.5rem;
 
             @include media('desktop') {
-              padding-bottom: 1.25rem;
+              // padding-bottom: 1rem;
             }
 
             &::after {
-              display: none;
+              // display: none !important;
             }
           }
         }
@@ -194,21 +232,16 @@
           justify-content: space-between;
           align-items: center;
 
-          .site__header_nav_menu_list_item_link {
+          .site__header_nav_menu_list_item {
             position: relative;
-            padding-top: 0.5rem;
-            padding-right: 0.5rem;
-            padding-bottom: 0.5rem;
-            padding-left: 0.5rem;
-            z-index: 2;
 
-            &:hover,
-            &:focus,
-            &:focus-within {
-              background-color: $color-rose;
-              color: $color-white;
+            &:hover {
+              >a {
+                background-color: $color-rose;
+                color: $color-white;
+              }
 
-              ~.sub__nav_menu {
+              .sub__nav_menu {
                 position: absolute;
                 display: block;
                 background-color: $color-white;
@@ -217,6 +250,15 @@
                 z-index: 3;
               }
             }
+          }
+
+          .site__header_nav_menu_list_item_link {
+            position: relative;
+            padding-top: 0.5rem;
+            padding-right: 0.5rem;
+            padding-bottom: 0.5rem;
+            padding-left: 0.5rem;
+            z-index: 2;
           }
         }
       }
@@ -257,19 +299,19 @@
   .signup__nav_link {
     background-color: $color-rose;
     color: $color-white;
-    padding: 12px 24px;
+    padding: 0.75rem 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: Lato;
     font-weight: 500;
-    font-size: 16px;
-    height: 46px;
+    font-size: 1rem;
+    height: 2.875rem;
     margin-right: auto;
     margin-left: auto;
     text-transform: none;
     text-align: center;
-    width: 215px;
+    width: 13.4375rem;
 
     @include media('desktop') {
       margin-right: 0;
