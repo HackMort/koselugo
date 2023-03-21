@@ -731,6 +731,60 @@ main ul li::marker {
   }
 }
 
+.accordion__item_content {
+  color: #727477;
+  display: none;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  margin-top: 1rem;
+}
+.accordion__item_content a {
+  color: #870051;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.accordion__item_content p:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+.accordion [aria-expanded=true] {
+  background-color: #EEF5F7;
+}
+.accordion [aria-expanded=true] .accordion__item_content {
+  display: block;
+}
+.accordion [aria-expanded=true] .accordion__item_title::after {
+  transform: rotate(180deg);
+}
+.accordion__item {
+  border: 1px solid #559CB5;
+  margin-bottom: 0.25rem;
+  padding-top: 1rem;
+  padding-right: 1.25rem;
+  padding-bottom: 1rem;
+  padding-left: 1.25rem;
+}
+.accordion__item_title {
+  color: #559CB5;
+  cursor: pointer;
+  font-size: 1.375rem;
+  line-height: 1.5588rem;
+  text-align: center;
+}
+.accordion__item_title::after {
+  content: "";
+  display: block;
+  background-image: url("/icons/acc-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-top: 0.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  height: 0.8087rem;
+  width: 1.3313rem;
+}
+
 .isi {
   background-color: #FFFFFF;
   color: #333333;
