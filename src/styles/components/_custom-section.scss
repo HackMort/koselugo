@@ -1,0 +1,48 @@
+.custom-section {
+    background: $color-white;
+    font-size: 16px;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        height: 9.5625rem;
+        width: 100%;
+        max-width: fit-content;
+        background: $color-aqua;
+
+        @media screen and (min-width: 768px) {
+            height: 6.0625rem;
+        }
+    }
+
+    &__headline {
+        max-width: fit-content;
+        height: 100%;
+    }
+
+    &__title {
+        color: $color-white;
+        font-weight: 600;
+        font-size: 1.5em;
+        line-height: 29px;
+        width: 100%;
+
+        padding: 0 .5rem;
+
+        @media screen and (min-width: 425px) {
+            padding: 0 1rem;
+        }
+
+        @media screen and (min-width: 768px) {
+            padding: 0 2.1875rem;
+        }
+
+        .color-yellow {
+            color: $color-yellow
+        }
+    }
+
+    &__content {
+        margin-top: 1.875rem;
+    }
+}

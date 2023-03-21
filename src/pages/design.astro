@@ -3,6 +3,8 @@ import AccordionItem from "../components/AccordionItem.astro";
 import Card from "../components/Card.astro";
 import Section from "../components/Section.astro";
 import Layout from "../layouts/Layout.astro";
+
+import CustomSection from '../components/CustomSection.astro';
 ---
 
 <Layout title="Design">
@@ -155,9 +157,8 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
   <section class="design__system">
-    <div class="wrapper">
-      <h1 class="title">Section</h1>
-      <Section
+    <h1 class="title">Section</h1>
+      <!-- <Section
         titleWhite="WHAT IS"
         titleYellow="NEUROFIBROMATOSIS TYPE 1 (NF1)?"
       >
@@ -167,8 +168,19 @@ import Layout from "../layouts/Layout.astro";
           voluptatum quos quidem natus quas. Quisquam, quae. Quisquam, quae.
           Quisquam, quae. Quisquam, quae.
         </p>
-      </Section>
-    </div>
+      </Section> -->
+
+      <CustomSection>
+        <Fragment slot="section-title">
+            <span class="color-yellow">WHAT ARE SOME </span>ADVOCACY ORGANIZATIONS <span class="color-yellow">FOR PATIENTS WITH NF1 PN?</span>
+        </Fragment>
+
+        <div class="wrapper">
+            <h6>
+                The following organizations can help you connect with the NF1 community and learn valuable information about the disease
+            </h6>
+        </div>
+      </CustomSection>
   </section>
 </Layout>
 

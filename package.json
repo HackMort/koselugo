@@ -5,7 +5,7 @@
   "scripts": {
     "start": "astro dev",
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && npm run css:build",
     "preview": "astro preview",
     "astro": "astro",
     "css:build": "sass src/styles:public/css"
