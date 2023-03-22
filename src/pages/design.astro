@@ -1,6 +1,7 @@
 ---
 import AccordionItem from "../components/AccordionItem.astro";
 import Card from "../components/Card.astro";
+import PEM from "../components/PEM.astro";
 import Section from "../components/Section.astro";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -168,6 +169,29 @@ import Layout from "../layouts/Layout.astro";
           Quisquam, quae. Quisquam, quae.
         </p>
       </Section>
+    </div>
+  </section>
+  <section class="design__system">
+    <div class="wrapper">
+      <h1 class="title">PEM Section</h1>
+      <PEM
+        email="test@mail.com"
+        name="John"
+        phone="7878-8787"
+        photoAlt="John"
+        photoSrc="/images/pems/pem-1.svg"
+      >
+        <p slot="motivates">
+          I enjoy understanding a problem or issue, thinking about the possible
+          solutions, and coming up with a plan to make the situation better. I
+          enjoy accepting challenges that make some uncomfortable and finding a
+          way to make something happen for the good of others.
+        </p>
+        <p slot="goal">
+          My #1 goal when helping patients is to give them hope and equip them
+          with the resources to manage their condition more effectively.
+        </p>
+      </PEM>
     </div>
   </section>
 </Layout>
