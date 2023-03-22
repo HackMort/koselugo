@@ -60,21 +60,28 @@ document.addEventListener('DOMContentLoaded', function (event) {
   const mainNav = document.getElementById('main__navigation')
   if (mobileMenuToogleBtn) {
     mobileMenuToogleBtn.addEventListener('click', () => {
-      console.log('Mobile menu clicked')
+      // console.log('Mobile menu clicked')
       mobileMenuToogleBtn.classList.toggle('is--active')
       mainNav.classList.toggle('is--open')
     })
   }
 
-  const parentMenuItems = mainNav.querySelectorAll('.has__sub_nav')
-
-  parentMenuItems.forEach((parentMenuItem) => {
-    parentMenuItem.addEventListener('click', (e) => {
-      e.preventDefault()
-      parentMenuItem.classList.toggle('is--active')
-      const subNav = parentMenuItem.nextElementSibling
-      if (subNav) {
-        subNav.classList.toggle('is--active')
+  const menuItems = document.querySelectorAll('.site__header_nav_menu_list_item_link')
+  const mobileQuery = window.matchMedia('(max-width: 1200px)')
+  menuItems.forEach((item) => {
+    if (item.getAttribute('href') === window.location.pathname) {
+      item.classList.add('current-page')
+    }
+    item.addEventListener('click', (e) => {
+      if (!mobileQuery.matches) {
+        return
+      }
+      if (item.classList.contains('has__sub_nav')) {
+        e.preventDefault()
+        const subNav = item.nextElementSibling
+        if (subNav) {
+          subNav.classList.toggle('is--active')
+        }
       }
     })
   })
@@ -85,8 +92,7 @@ const accordion = document.querySelector('.accordion')
 if (accordion) {
   const accordionItems = document.querySelectorAll('.accordion__item')
   accordionItems.forEach((accordionItem) => {
-    accordionItem.addEventListener('click', (e) => {
-      e.preventDefault()
+    accordionItem.addEventListener('click', () => {
       const expanded = accordionItem.getAttribute('aria-expanded') === 'true' || false
       accordionItem.setAttribute('aria-expanded', !expanded)
       // close all other accordion items... maybe?
