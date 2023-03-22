@@ -85,7 +85,7 @@
 
       &_list_item:first-of-type {
         @include media('desktop') {
-          a::after {
+          a::before {
             display: none;
           }
         }
@@ -102,13 +102,31 @@
         align-items: center;
         padding-top: 1.25rem;
         padding-bottom: 1.25rem;
+        transition: all 0.2s ease-in;
 
-        &::after {
+        &.current-page {
+          color: $color-rose;
+          font-weight: 500;
+
+          @include media('desktop') {
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              border-bottom: 1px solid $color-rose;
+              border-radius: 7px;
+              height: 1px;
+              width: 100%;
+            }
+          }
+        }
+
+        &::before {
           @include media('desktop') {
             content: '';
             position: absolute;
             top: 4.3px;
-            left: 0;
             border: 0.5px solid #A3A3A3;
             height: 23.41px;
             width: 0px;
@@ -136,16 +154,25 @@
         width: .68rem;
 
         @include media('desktop') {
-          content: '';
-          position: absolute;
-          top: 4.3px;
-          left: 0;
-          border: 0.5px solid #A3A3A3;
-          height: 23.41px;
-          width: 0px;
-          left: -5px;
+          display: none;
         }
       }
+
+      // &_list_item_link.has__sub_nav::before {
+
+
+      //   @include media('desktop') {
+      //     content: '';
+      //     position: absolute;
+      //     top: 4.3px;
+      //     left: 0;
+      //     border: 0.5px solid #A3A3A3;
+      //     height: 23.41px;
+      //     width: 0px;
+      //     left: -5px;
+      //   }
+      // }
+
 
       .sub__nav_menu {
         display: none;
