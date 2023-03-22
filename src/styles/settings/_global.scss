@@ -8,6 +8,8 @@ h3 {
   letter-spacing: normal;
 }
 
+
+
 p {
   color: currentColor;
   font-weight: 400;
@@ -26,6 +28,13 @@ ul li::marker {
 }
 
 main {
+  background-color: #F6FAFB;
+
+  a {
+    color: $color-rose;
+    text-decoration: underline;
+  }
+
   ul ul {
     padding-left: 1rem;
   }

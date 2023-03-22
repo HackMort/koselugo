@@ -10,6 +10,10 @@
     margin-bottom: .5rem;
   }
 
+  strong {
+    font-weight: 500;
+  }
+
   &__section_heading {
     font-size: 1.5rem;
     line-height: 1.8rem;
@@ -41,14 +45,16 @@
 
   &__section_header.is--fixed {
     position: fixed;
-    width: 100%;
-    z-index: 2;
-    height: 9.0625rem;
-    left: 0;
     right: 0;
     bottom: 0;
+    left: 0;
+    background-color: $color-white;
+    border-top: 1px solid $color-lighter-gray;
+    height: 9.0625rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    width: 100%;
+    z-index: 2;
 
     .wrapper__inner {
       position: relative;

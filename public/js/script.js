@@ -1,10 +1,7 @@
-// Put your custom javascript here.
 document.addEventListener('DOMContentLoaded', function (event) {
-  // Listen for scroll event
   window.addEventListener('scroll', () => {
     isiHeaderFixed()
   })
-  // Listen for resize event
   window.addEventListener('resize', () => {
     isiHeaderFixed()
   })
@@ -20,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
    * @see https://caniuse.com/#feat=intersectionobserver
   */
   function isiHeaderFixed () {
-    // const mobileMedia = window.matchMedia('(min-width: 768px)')
+    const mobileMedia = window.matchMedia('(min-width: 1200px)')
     const isiHeader = document.querySelector('.isi__section_header')
     const isiSection = document.querySelector('.isi')
     const observerOptions = {
@@ -30,7 +27,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
     const isiObserver = new window.IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
-        // if (!mobileMedia.matches) return
+        if (!mobileMedia.matches) {
+          isiHeader.classList.remove('is--fixed')
+          return
+        } else {
+          isiHeader.classList.add('is--fixed')
+        }
         if (entry.isIntersecting) {
           isiHeader.classList.remove('is--fixed', 'is--open')
         } else {
@@ -53,4 +55,46 @@ document.addEventListener('DOMContentLoaded', function (event) {
       isiHeader.classList.toggle('is--open')
     })
   }
+
+  const mobileMenuToogleBtn = document.getElementById('toggle-menu-button')
+  const mainNav = document.getElementById('main__navigation')
+  if (mobileMenuToogleBtn) {
+    mobileMenuToogleBtn.addEventListener('click', () => {
+      console.log('Mobile menu clicked')
+      mobileMenuToogleBtn.classList.toggle('is--active')
+      mainNav.classList.toggle('is--open')
+    })
+  }
+
+  const parentMenuItems = mainNav.querySelectorAll('.has__sub_nav')
+
+  parentMenuItems.forEach((parentMenuItem) => {
+    parentMenuItem.addEventListener('click', (e) => {
+      e.preventDefault()
+      parentMenuItem.classList.toggle('is--active')
+      const subNav = parentMenuItem.nextElementSibling
+      if (subNav) {
+        subNav.classList.toggle('is--active')
+      }
+    })
+  })
 })
+
+// Accordion script
+const accordion = document.querySelector('.accordion')
+if (accordion) {
+  const accordionItems = document.querySelectorAll('.accordion__item')
+  accordionItems.forEach((accordionItem) => {
+    accordionItem.addEventListener('click', (e) => {
+      e.preventDefault()
+      const expanded = accordionItem.getAttribute('aria-expanded') === 'true' || false
+      accordionItem.setAttribute('aria-expanded', !expanded)
+      // close all other accordion items... maybe?
+      // accordionItems.forEach((accordionItem) => {
+      //   if (accordionItem !== e.currentTarget) {
+      //     accordionItem.setAttribute('aria-expanded', false)
+      //   }
+      // })
+    })
+  })
+}
