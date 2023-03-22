@@ -92,8 +92,7 @@ const accordion = document.querySelector('.accordion')
 if (accordion) {
   const accordionItems = document.querySelectorAll('.accordion__item')
   accordionItems.forEach((accordionItem) => {
-    accordionItem.addEventListener('click', (e) => {
-      e.preventDefault()
+    accordionItem.addEventListener('click', () => {
       const expanded = accordionItem.getAttribute('aria-expanded') === 'true' || false
       accordionItem.setAttribute('aria-expanded', !expanded)
       // close all other accordion items... maybe?
