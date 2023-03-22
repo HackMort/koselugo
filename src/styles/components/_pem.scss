@@ -1,0 +1,101 @@
+.pem {
+  color: $color-dark-purple;
+  display: grid;
+  grid-template-columns: 1fr;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  @include media('tablet') {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  @include media('desktop') {
+    background-color: $color-white;
+    gap: 4.6875rem;
+    padding-bottom: 5.3913rem;
+  }
+
+  &__photo {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+
+    @media screen and (min-width: 375px) {
+      width: 19.8438rem;
+    }
+
+    @include media('tablet') {
+      width: 19.8125rem;
+    }
+
+    @include media('desktop') {
+      width: 25.7294rem;
+    }
+  }
+
+  &__name {
+    color: $color-aqua;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__heading {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    font-weight: 500;
+  }
+
+  &__link_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @include flex-gap(1rem);
+    list-style-type: none;
+    margin-top: 1.5rem;
+
+    &_item {
+      flex: 1 1 100%;
+      list-style-type: none;
+
+      @include media('tablet') {
+        flex: 0 1 auto;
+      }
+    }
+
+    .pem__link {
+      font-size: 1rem;
+      line-height: 1.375rem;
+      letter-spacing: 1.2px;
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
+
+      @include media('tablet') {
+        width: auto;
+      }
+    }
+
+    .button {
+      background-color: $color-rose;
+      color: $color-white;
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+}

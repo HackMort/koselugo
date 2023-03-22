@@ -898,6 +898,110 @@ main ul li::marker {
   }
 }
 
+.pem {
+  color: #210022;
+  display: grid;
+  grid-template-columns: 1fr;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .pem {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .pem {
+    background-color: #FFFFFF;
+    gap: 4.6875rem;
+    padding-bottom: 5.3913rem;
+  }
+}
+.pem__photo {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+@media screen and (min-width: 375px) {
+  .pem__photo {
+    width: 19.8438rem;
+  }
+}
+@media (min-width: 768px) {
+  .pem__photo {
+    width: 19.8125rem;
+  }
+}
+@media (min-width: 1200px) {
+  .pem__photo {
+    width: 25.7294rem;
+  }
+}
+.pem__name {
+  color: #559CB5;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.pem__heading {
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  font-weight: 500;
+}
+.pem__link_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style-type: none;
+  margin-top: 1.5rem;
+}
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  .pem__link_list > * {
+    margin: calc(1rem / 2);
+  }
+}
+.pem__link_list_item {
+  flex: 1 1 100%;
+  list-style-type: none;
+}
+@media (min-width: 768px) {
+  .pem__link_list_item {
+    flex: 0 1 auto;
+  }
+}
+.pem__link_list .pem__link {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  letter-spacing: 1.2px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .pem__link_list .pem__link {
+    width: auto;
+  }
+}
+.pem__link_list .button {
+  background-color: #870051;
+  color: #FFFFFF;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+.pem p {
+  margin-bottom: 1rem;
+}
+
 .isi {
   background-color: #FFFFFF;
   color: #333333;
