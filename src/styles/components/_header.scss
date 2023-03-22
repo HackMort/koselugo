@@ -127,8 +127,8 @@
 
       &_list_item_link.has__sub_nav::after {
         content: '';
-        position: absolute;
-        right: 0;
+        // position: absolute;
+        // right: 0;
         background-image: url('/icons/angle-down.svg');
         background-repeat: no-repeat;
         background-size: cover;
