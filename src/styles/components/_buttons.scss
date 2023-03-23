@@ -1,0 +1,22 @@
+.button{
+    min-width: 93.28px;
+    min-height: 30px;
+    background: #559CB5;
+    color:$color-white;
+    line-height: 24px;
+    font-family: $franklin-font;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px ;
+    padding-right:11.0406px;
+    padding-bottom:3px;
+    padding-left:  11.2406px;
+}
+
+.button--social{
+    width: 38px;
+    height: 34px;
+}
+
