@@ -1,17 +1,50 @@
 .custom-section {
     background: $color-white;
     font-size: 16px;
+    position: relative;
+
+    width: 100%;
+    max-width: 72.8125rem;
+    margin: 0 auto;
+
+    @media screen and (min-width: 900px) {
+        min-height: 10rem;
+        margin-top: 3.0313rem;
+        padding-top: 3.0313rem;
+    }
 
     &__header {
         display: flex;
-        align-items: center;
         height: 9.5625rem;
         width: 100%;
         max-width: fit-content;
-        background: $color-aqua;
 
         @media screen and (min-width: 768px) {
             height: 6.0625rem;
+        }
+
+        @media screen and (min-width: 900px) {
+            position: absolute;
+            top: -3.0313rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            left: .625rem;
+        }
+
+        @media screen and (min-width: 1300px) {
+            left: -3rem;
+        }
+    }
+
+    &__title-wrapper {
+        background: $color-aqua;
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        @media screen and (min-width: 1024px) {
+            margin-left: -1px;
         }
     }
 
