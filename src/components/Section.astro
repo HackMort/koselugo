@@ -1,28 +1,28 @@
 ---
 type Props = {
-  titleWhite?: string;
-  titleYellow?: string;
+    noHeader?: boolean;
 };
-
-const { titleWhite, titleYellow } = Astro.props;
+const { noHeader } = Astro.props;
 ---
 
-<section class="section">
-  {
-    titleWhite && (
-      <div class="section__header">
-        <h2 class="section__title">
-          <span class="color--white">{titleWhite}</span>
-          <span class="color--yellow">{titleYellow}</span>
-        </h2>
-      </div>
-    )
-  }
-  <div class="wrapper">
-    <div class="section__content">
-      <slot />
-    </div>
-  </div>
-</section>
+<section class="custom-section">
+    {
+        !noHeader && (
+            <div class="custom-section__header">
+                <img
+                    class="custom-section__headline"
+                    src="/assets/icons/headline.png"
+                />
+                <div class="custom-section__title-wrapper">
+                    <h3 class="custom-section__title">
+                        <slot name="section-title" />
+                    </h3>
+                </div>
+            </div>
+        )
+    }
 
-<style></style>
+    <article class="custom-section__content">
+        <slot />
+    </article>
+</section>

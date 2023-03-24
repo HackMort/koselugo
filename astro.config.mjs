@@ -16,7 +16,7 @@ export default defineConfig({
       minify: false,
       rollupOptions: {
         output: {
-          assetFileNames: 'css/style[extname]'
+          assetFileNames: 'assets/css/style[extname]'
         }
       }
     }

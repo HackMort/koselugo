@@ -147,7 +147,7 @@
         content: '';
         // position: absolute;
         // right: 0;
-        background-image: url('/icons/angle-down.svg');
+        background-image: url('/assets/icons/angle-down.svg');
         background-repeat: no-repeat;
         background-size: cover;
         height: .4rem;
@@ -188,6 +188,10 @@
           padding-left: 1rem;
         }
 
+        li:last-of-type a::after {
+          display: none;
+        }
+
         &.is--active {
           display: block;
         }
@@ -221,7 +225,7 @@
             width: 100%;
 
             @include media('desktop') {
-              display: block !important;
+              display: block;
             }
           }
         }
@@ -274,8 +278,15 @@
                 display: block;
                 background-color: $color-white;
                 margin-left: 0;
-                width: 196px;
+                width: 205px;
                 z-index: 3;
+
+                a:hover,
+                a:focus {
+                  color: $color-light-rose;
+                  transition: all 0.2s ease-in;
+                }
+
               }
             }
           }
@@ -325,25 +336,25 @@
   }
 
   .signup__nav_link {
-    background-color: $color-rose;
-    color: $color-white;
-    padding: 0.75rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Lato;
-    font-weight: 500;
-    font-size: 1rem;
-    height: 2.875rem;
-    margin-right: auto;
-    margin-left: auto;
-    text-transform: none;
-    text-align: center;
-    width: 13.4375rem;
+    // background-color: $color-rose;
+    // color: $color-white;
+    // padding: 0.75rem 1.5rem;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // font-family: Lato;
+    // font-weight: 500;
+    // font-size: 1rem;
+    // height: 2.875rem;
+    // margin-right: auto;
+    // margin-left: auto;
+    // text-transform: none;
+    // text-align: center;
+    margin: 0 auto;
+    width: 15rem;
 
     @include media('desktop') {
-      margin-right: 0;
-      margin-left: 0;
+      width: 13.5rem;
     }
   }
 
