@@ -1,6 +1,7 @@
 .button{
     
     color: $color-white;
+    width: 1px;
     padding: 0.75rem 1.5rem;
     display: flex;
     align-items: center;
@@ -9,23 +10,79 @@
     font-weight: 500;
     font-size: 1rem;
     height: 2.875rem;
-    margin-right: auto;
-    margin-left: auto;
     text-align: center;
-    width: 13.4375rem;
+    width: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    
+    @media screen and (min-width:700px) {
+        width: auto;
+    }
+    
+    &.button--basic{
+        color: $color-rose;
+        text-transform:none;
+        text-decoration: underline;
+        width: auto!important;
+
+        &:hover{
+            color: $color-light-rose;
+        }
+
+    }
 
     &.button--primary{
         background-color: $color-rose;
         text-transform: capitalize;
+        
+        &::after{
+            content: '';
+            background-image: url("/koselugo/public/assets/icons/hover-arrow.svg");
+            width: 34px;
+            height: inherit;
+            background-repeat: no-repeat;
+            background-position: right;
+            background-color: $color-light-rose;
+            margin-left: 1rem;
+            display: none;
+        }
+        &:hover{
+            padding-right: 0;
+            padding-left: 1.2rem;
+
+            &.button--primary::after{
+                display: block;
+            }
+        }
     }
 
     &.button--secondary{
         color: $color-rose;
+        background-color: $color-white;
         text-transform: capitalize;
+        border: 1px solid $color-rose;
         
+        &::after{
+            content: '';
+            background-image: url("/koselugo/public/assets/icons/hover-arrow.svg");
+            width: 32px;
+            height: inherit;
+            background-color: $color-rose;
+            margin-left: 1rem;
+            display: none;
+        }
+        &:hover{
+            display: flex;
+            justify-content: space-between;
+            padding-right: 0;
+            padding-left: 1.2rem;
+            
+            &.button--secondary::after{
+                display: block;
+            }
+        }
     }
 }
-
 
 
 
