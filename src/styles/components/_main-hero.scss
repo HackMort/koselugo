@@ -5,6 +5,8 @@
 
     background: $color-white;
 
+    position: relative;
+
     @media screen and (min-width: 900px) {
         padding-top: 0;
         padding-bottom: 1rem;
@@ -15,8 +17,11 @@
         padding-bottom: 2rem;
     }
 
+    @media screen and (min-width: 1440px) {
+        padding-bottom: 4rem;
+    }
+
     .main-hero__wrapper {
-        position: relative;
 
         @media screen and (min-width: 900px) {
             display: flex;
@@ -83,6 +88,10 @@
                     display: block;
                     margin-top: .5rem;
                 }
+
+                @media screen and (min-width: 1440px) {
+                    margin-top: 1.5rem;
+                }
             }
         }
 
@@ -144,28 +153,43 @@
                         }
 
                         @media screen and (min-width: 1400px) {
-                            transform: scale(1.9) translate(163px, 53px);
+                            transform: scale(1.5) translate(100px, 50px);
                         }
                     }
                 }
             }
         }
+    }
+    .main-hero__bottom-transition {
+        position: absolute;
+        bottom: -10px;
 
-        .main-hero__bottom-transition {
-            position: absolute;
-            bottom: -15px;
+        @media screen and (min-width: 768px) {
+            bottom: -31px;
+        }
 
-            @media screen and (min-width: 900px) {
-                bottom: -55px;
-            }
+        @media screen and (min-width: 900px) {
+            bottom: -55px;
+        }
 
-            @media screen and (min-width: 1024px) {
-                bottom: -75px;
-            }
+        @media screen and (min-width: 1024px) {
+            bottom: -45px;
+        }
 
-            @media screen and (min-width: 1320px) {
-                bottom: -87px;
-            }
+        @media screen and (min-width: 1320px) {
+            bottom: -55px;
+        }
+
+        @media screen and (min-width: 1629px) {
+            bottom: -65px;
+        }
+
+        @media screen and (min-width: 2000px) {
+            bottom: -92px;
+        }
+
+        @media screen and (min-width: 2715px) {
+            bottom: -108px;
         }
     }
 }
