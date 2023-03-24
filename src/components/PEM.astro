@@ -22,10 +22,12 @@ const { name, photoSrc, photoAlt, email, phone } = Astro.props;
     <slot name="goal" />
     <ul class="pem__link_list">
       <li class="pem__link_list_item">
-        <a class="pem__link button" href={`mailto:${email}`}> Email {name}</a>
+        <a class="pem__link button button--primary" href={`mailto:${email}`}>
+          Email {name}</a
+        >
       </li>
       <li class="pem__link_list_item">
-        <a class="pem__link" href={`tel:${phone}`}>
+        <a class="pem__link pem__link--phone button" href={`tel:${phone}`}>
           Or call {phone}
         </a>
       </li>
