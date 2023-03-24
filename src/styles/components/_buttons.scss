@@ -15,8 +15,10 @@
     cursor: pointer;
     text-decoration: none;
     
-    @media screen and (min-width:700px) {
-        width: auto;
+    @include media('tablet') {
+
+      width: auto;
+        
     }
     
     &.button--basic{
