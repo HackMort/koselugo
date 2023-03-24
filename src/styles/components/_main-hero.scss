@@ -1,5 +1,6 @@
 .main-hero {
     padding-top: 1.4837rem;
+    overflow: hidden;
     
     .main-hero__wrapper {
 
@@ -7,6 +8,19 @@
             .main-hero__title,
             .main-hero__copy {
                 margin-bottom: 1rem;
+            }
+        }
+
+        .main-hero__image {
+            position: relative;
+
+            .main-hero__picture {
+
+            }
+
+            .main-hero__bottom-transition {
+                position: absolute;
+                bottom: 16px;
             }
         }
     }
