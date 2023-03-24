@@ -1,10 +1,39 @@
+html.is--menu-open {
+  @include media('mobile') {
+    height: 100vh;
+    overflow: hidden;
+
+    .site__header {
+      overflow-y: scroll;
+      height: 100vh;
+    }
+  }
+}
+
 .site__header {
   background-color: $color-white;
   box-shadow: 0px 4px 10px rgba(67, 99, 168, 0.05);
   // backdrop-filter: blur(45px);
+
   position: sticky;
   top: 0;
-  z-index: 3;
+  right: 0;
+  left: 0;
+  touch-action: none;
+
+  @include media('desktop') {
+    height: auto;
+  }
+
+  z-index: 5;
+
+  // &.is--fixed {
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   z-index: 5;
+  // }
 
   // Top
   &_top {
