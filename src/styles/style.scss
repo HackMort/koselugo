@@ -14,3 +14,84 @@
 @import './components/_pem.scss';
 @import './components/_isi.scss';
 @import './components/_footer.scss';
+
+//--------------------UNDERSTANDING NF1--------------------
+.plexiform-percentage{
+    width: 163px;
+    height: 30px;
+    margin-right: 1rem;
+    display: none;
+    
+    @include media('tablet') {
+        width: 272px;
+        height: 51px;
+        display: unset;
+    }
+}
+
+.plexiform-percentage-two{
+    width: 163px;
+    height: 30px;
+    margin-right: 1rem;
+    float: left;
+
+    @include media('tablet') {
+        width: 272px; 
+        height: 51px;
+    }
+}
+
+.percentage-box{
+    height: 14px;
+    @include media('tablet') {
+        display: none;
+    }
+}
+
+.plexiform-paragraph{
+    margin-top: 1rem;
+    @include media('tablet') {
+
+        display: flex;
+        
+        align-items: center;
+    }
+    
+}
+
+#nf1-box{
+    p{
+        max-width: 986px;
+    }
+}
+
+.kid-box{
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+
+    .kid-nf1{
+            width: 279px;
+            margin: auto;
+            height: 186;
+
+        @media screen and (min-width:393px) {
+            height: 256px;
+            width: 360px;
+
+        } 
+
+    }
+    h6{
+        text-align: center;
+    }
+
+    @media screen and (min-width:768px) {
+        margin-bottom: -145px!important;
+    }
+    
+
+}
+
+
+//--------------------UNDERSTANDING NF1--------------------
