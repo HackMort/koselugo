@@ -31,9 +31,10 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro --help` | Get help using the Astro CLI       
 
 <!-- Note -->
-## 📝 Note
-You only need to run `npm run css:build` before you commit your changes to the repository. In Development, you can use `npm run dev` and let Astro translate the SCSS to CSS on the fly.
+## 📝 Notes:
 
+1. You need to have `Nodejs` installed on your machine. You can follow our guide [here](https://tech.dev-jdoutstanding.com/en/install-nodejs-windows-11/) to install along with other tools we use in our projects.
+2. You only need to run `npm run css:build` before you commit your changes to the repository. In Development, you can use `npm run dev` and let Astro translate the SCSS to CSS on the fly.
 ## Astro Extenstion
 Install VSCode Extenstion Astro [here](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode) to get syntax highlighting and other features.
 

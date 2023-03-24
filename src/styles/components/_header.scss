@@ -1,7 +1,37 @@
+html.is--menu-open {
+  @include media('mobile') {
+    height: -webkit-fill-available;
+    overflow-y: hidden;
+
+    .site__header {
+      height: -webkit-fill-available;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+
+      .site__header_nav_menu {
+        overflow-y: scroll;
+      }
+
+    }
+  }
+}
+
 .site__header {
   background-color: $color-white;
   box-shadow: 0px 4px 10px rgba(67, 99, 168, 0.05);
   // backdrop-filter: blur(45px);
+
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  @include media('desktop') {
+    height: auto;
+  }
+
+  z-index: 5;
+
 
   // Top
   &_top {
@@ -145,8 +175,6 @@
 
       &_list_item_link.has__sub_nav::after {
         content: '';
-        // position: absolute;
-        // right: 0;
         background-image: url('/assets/icons/angle-down.svg');
         background-repeat: no-repeat;
         background-size: cover;
@@ -157,22 +185,6 @@
           display: none;
         }
       }
-
-      // &_list_item_link.has__sub_nav::before {
-
-
-      //   @include media('desktop') {
-      //     content: '';
-      //     position: absolute;
-      //     top: 4.3px;
-      //     left: 0;
-      //     border: 0.5px solid #A3A3A3;
-      //     height: 23.41px;
-      //     width: 0px;
-      //     left: -5px;
-      //   }
-      // }
-
 
       .sub__nav_menu {
         display: none;
@@ -195,8 +207,6 @@
         &.is--active {
           display: block;
         }
-
-
 
         &_item_link {
           position: relative;
@@ -226,30 +236,6 @@
 
             @include media('desktop') {
               display: block;
-            }
-          }
-        }
-
-        &_item:first-of-type {
-          .sub__nav_menu_item_link {
-            // padding-top: 0.5rem;
-
-            @include media('desktop') {
-              // padding-top: 1rem;
-            }
-          }
-        }
-
-        &_item:last-of-type {
-          .sub__nav_menu_item_link {
-            // padding-bottom: 0.5rem;
-
-            @include media('desktop') {
-              // padding-bottom: 1rem;
-            }
-
-            &::after {
-              // display: none !important;
             }
           }
         }
@@ -336,20 +322,6 @@
   }
 
   .signup__nav_link {
-    // background-color: $color-rose;
-    // color: $color-white;
-    // padding: 0.75rem 1.5rem;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // font-family: Lato;
-    // font-weight: 500;
-    // font-size: 1rem;
-    // height: 2.875rem;
-    // margin-right: auto;
-    // margin-left: auto;
-    // text-transform: none;
-    // text-align: center;
     margin: 0 auto;
     width: 15rem;
 

@@ -15,3 +15,26 @@
 @import './components/_isi.scss';
 @import './components/_footer.scss';
 @import './components/_main-hero.scss';
+
+/******************************************************
+-- Home Page
+******************************************************/
+
+.cards {
+  display: grid;
+  margin: 0 auto;
+  max-width: 55.375rem;
+  padding-top: 1rem;
+  width: 100%;
+
+  @include media('tablet') {
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media('desktop') {
+    gap: 3.75rem;
+    max-width: 67.5rem;
+  }
+
+}

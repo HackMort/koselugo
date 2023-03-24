@@ -80,18 +80,21 @@
       text-decoration: none;
       width: 100%;
 
+      &:not(.button--primary):hover,
+      &:not(.button--primary):focus {
+        color: $color-light-rose;
+      }
+
+      &--phone {
+        color: $color-rose;
+        padding-right: 0;
+        padding-left: 0;
+      }
+
       @include media('tablet') {
         width: auto;
       }
     }
-
-    .button {
-      background-color: $color-rose;
-      color: $color-white;
-      padding-right: 1.5rem;
-      padding-left: 1.5rem;
-    }
-
 
   }
 
