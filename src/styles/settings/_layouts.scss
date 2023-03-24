@@ -6,4 +6,20 @@
   @media screen and (min-width: 428px) {
     max-width: calc(100% - 2.5rem);
   }
+
+  @media screen and (min-width: 768px) {
+    max-width: calc(100% - 4rem);
+  }
+
+  @media screen and (min-width: 1024px) {
+    max-width: calc(100% - 4.2813rem);
+  }
+
+  @media screen and (min-width: 1366px) {
+    max-width: calc(100% - 5.2813rem);
+  }
+
+  @media screen and (min-width: 1366px) {
+    max-width: calc(100% - 8.2813rem);
+  }
 }
