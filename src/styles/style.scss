@@ -42,3 +42,63 @@
   }
 
 }
+
+/******************************************************
+-- Safety and Side Effects
+******************************************************/
+
+.side-effects {
+  padding: 20px;
+
+  h3 {
+    font-size: 22px;
+  }
+
+  @include media('mobile') {
+    padding: 0;
+  }
+}
+
+.side-effects--callout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+
+  img {
+    width: 43px;
+    height: 66px;
+    margin: 10px
+  }
+
+  p {
+    align-self: center;
+    margin: auto;
+  }
+
+  @include media('mobile') {
+    flex-direction: column;
+
+    img {
+      width: 66px;
+      height: 100px;
+      margin: 10px auto;
+    }
+  }
+}
+
+.side-effects .side-effects--list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  @include flex-gap(20px);
+
+  padding-left: 15px;
+
+  @include media('mobile') {
+    flex-direction: column;
+    @include flex-gap(0px);
+  }
+}
