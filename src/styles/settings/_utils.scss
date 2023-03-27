@@ -47,6 +47,10 @@
   white-space: nowrap;
 }
 
+.text--decoration-underline {
+  text-decoration: underline !important;
+}
+
 .color--yellow {
   color: $color-yellow;
 }
@@ -61,4 +65,8 @@
 
 .color--light-rose {
   color: $color-light-rose;
+}
+
+.color--aqua {
+  color: $color-aqua;
 }
