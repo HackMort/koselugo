@@ -5,14 +5,6 @@
 
     background-color: $color-white;
     position: relative;
-
-    .simple-hero__content {
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        z-index: 2;
-        background: transparent;
-    }
+    
+    margin-bottom: 2.25rem;
 }
