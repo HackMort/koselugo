@@ -50,12 +50,24 @@
 ******************************************************/
 
 .savings__page {
+  .custom-section {
+    // @include media('mobile') {
+    //   background-color: $color-soft-blue;
+    // }
+  }
+
   .custom-section__content p {
     margin-bottom: 2.125rem;
   }
 
   .custom-section__content p+.list {
     margin-top: -2rem;
+  }
+
+  .custom-section__content .grid__content_heading {
+    font-size: 1.125rem;
+    line-height: 1.4287rem;
+    margin-bottom: .3125rem;
   }
 
   .custom-section__content .list {
@@ -77,16 +89,17 @@
   }
 
 
-  .video__text {
+  .video__text p {
     color: $color-aqua;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.5rem;
     line-height: 1.6875rem;
     text-align: center;
     padding-top: 2.625rem;
-    padding-right: 3.25rem;
     padding-bottom: 2.625rem;
-    padding-left: 3.25rem;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 16.8rem;
   }
 
   .stay__informed {
