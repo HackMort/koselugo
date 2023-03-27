@@ -53,9 +53,6 @@
  .nf1-margin{
     margin-bottom: 0rem!important;
     @media screen and (min-width: 768px) {
-        margin-bottom: 9rem!important;
-    }
-    @media screen and (min-width: 900px) {
         margin-bottom: 16rem!important;
     }
 } 
@@ -209,14 +206,14 @@
 //third-section
 .nf1-margin-two{
     margin-bottom: 9rem;
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 768px) {
         margin-bottom: 16rem!important;
     }
 }
 
 .nf1-margin-three{
     margin-bottom: 9rem;
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 768px) {
         margin-bottom: 16rem!important;
     }
 }
