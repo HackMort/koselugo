@@ -1,6 +1,43 @@
 .event-joiner {
+    margin-top: 3.7338rem;
 
     .event-joiner__wrapper {
-        
+        .event-joiner__info {
+
+            .event-joiner__title,
+            .event-joiner__description,
+            .button {
+                margin-bottom: 1rem;
+            }
+
+            .event-joiner__description {
+                color: $color-dark-purple;
+                font-size: 1.125rem;
+            }
+
+            .event-joiner__topics {
+
+                .event-joiner__topic {
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+
+                    &:not(:last-of-type) {
+                        margin-bottom: 1.5rem;
+                    }
+                }
+
+                .event-joiner__topic-image {
+                    width: 3.75rem;
+                    margin-right: 1.5rem;
+                }
+
+                .event-joiner__topic-description {
+                    font-size: 1.125rem;
+                    font-weight: 600;
+                    color: #000000;
+                }
+            }
+        }
     }
 }
