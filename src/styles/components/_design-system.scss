@@ -1,0 +1,64 @@
+ @import '../settings/mixins';
+
+ main {
+   //  max-width: 90vw;
+   //  margin: 2rem auto;
+
+   display: flex;
+   flex-direction: column;
+   @include flex-gap(3rem);
+   padding-top: 2rem;
+ }
+
+ .title {
+   font-size: 2rem;
+   margin-top: 2rem;
+   margin-bottom: 1rem;
+ }
+
+ .colors {
+   display: flex;
+   flex-direction: row;
+   @include flex-gap(1rem);
+   flex-wrap: wrap;
+
+   transition: all 100ms ease-in-out;
+ }
+
+ .color {
+   width: 6.25rem;
+ }
+
+ .color__box {
+   width: 6.25rem;
+   height: 4.375rem;
+   padding: 0.2rem;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   margin-bottom: 0.5rem;
+ }
+
+ .color__hex {
+   margin: auto;
+   font-size: 0.75em;
+ }
+
+ .color__variable {
+   font-size: 0.75em;
+ }
+
+ .buttons {
+   display: flex;
+   flex-direction: row;
+   @include flex-gap(1rem);
+   flex-wrap: wrap;
+   margin-bottom: 2rem;
+   transition: all 100ms ease-in-out;
+ }
+
+ .button {
+   max-width: max-content;
+ }

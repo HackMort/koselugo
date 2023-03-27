@@ -1,10 +1,12 @@
 ---
+import "../styles/components/_design-system.scss";
 import AccordionItem from "../components/AccordionItem.astro";
 import Card from "../components/Card.astro";
 import PEM from "../components/PEM.astro";
 import Layout from "../layouts/Layout.astro";
 
-import Section from '../components/Section.astro';
+import Section from "../components/Section.astro";
+import OneSource from "../components/OneSource.astro";
 ---
 
 <Layout title="Design">
@@ -132,7 +134,11 @@ import Section from '../components/Section.astro';
   <section class="design__system">
     <div class="wrapper">
       <h1 class="title">Card</h1>
-      <Card title="Card Item #1" image="/assets/images/logo.svg" alt="Koselugo Logo">
+      <Card
+        title="Card Item #1"
+        image="/assets/icons/icon-educational-events.svg"
+        alt="Koselugo Logo"
+      >
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi
           distinctio quaerat ut facilis laborum aliquam deleniti eaque, voluptas
@@ -143,7 +149,11 @@ import Section from '../components/Section.astro';
           <a href="#">Link</a>
         </p>
       </Card>
-      <Card title="Card Item #2" image="/assets/images/logo.svg" alt="Koselugo Logo">
+      <Card
+        title="Card Item #2"
+        image="/assets/icons/icon-support-team-1.svg"
+        alt="Koselugo Logo"
+      >
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi
           distinctio quaerat ut facilis laborum aliquam deleniti eaque, voluptas
@@ -157,20 +167,24 @@ import Section from '../components/Section.astro';
     </div>
   </section>
   <section class="design__system">
-    <h1 class="title">Section</h1>
+    <div class="wrapper">
+      <h1 class="title">Section</h1>
+    </div>
 
-      <Section>
-       
-        <Fragment slot="section-title">
-            <span class="color-yellow">WHAT ARE SOME </span>ADVOCACY ORGANIZATIONS <span class="color-yellow">FOR PATIENTS WITH NF1 PN?</span>
-        </Fragment>
+    <Section>
+      <Fragment slot="section-title">
+        <span class="color-yellow">WHAT ARE SOME</span>ADVOCACY ORGANIZATIONS <span
+          class="color-yellow">FOR PATIENTS WITH NF1 PN?</span
+        >
+      </Fragment>
 
-        <div class="wrapper">
-            <h6>
-                The following organizations can help you connect with the NF1 community and learn valuable information about the disease
-            </h6>
-        </div>
-      </Section>
+      <div class="wrapper">
+        <h6>
+          The following organizations can help you connect with the NF1
+          community and learn valuable information about the disease
+        </h6>
+      </div>
+    </Section>
   </section>
   <section class="design__system">
     <div class="wrapper">
@@ -198,67 +212,17 @@ import Section from '../components/Section.astro';
   <section class="design__system">
     <div class="wrapper">
       <h1 class="title" style="margin-top:0;">BUTTONS</h1>
-      
+      <div class="buttons">
         <button class="button button--primary">primary button</button>
-        <br>
-        <button class="button button--secondary">secondary button </button>
-        <br>
+        <button class="button button--secondary">secondary button</button>
         <button class="button button--basic">basic button</button>
+      </div>
+    </div>
+  </section>
+  <section class="design__system">
+    <div class="wrapper">
+      <h1 class="title" style="margin-top:0;">One Source</h1>
+      <OneSource />
     </div>
   </section>
 </Layout>
-
-<style>
-  main {
-    max-width: 90vw;
-    margin: 2rem auto;
-
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-  }
-
-  .title {
-    font-size: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  .colors {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    flex-wrap: wrap;
-
-    transition: all 100ms ease-in-out;
-  }
-
-  .color {
-    width: 6.25rem;
-  }
-
-  .color__box {
-    width: 6.25rem;
-    height: 4.375rem;
-    padding: 0.2rem;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin-bottom: 0.5rem;
-  }
-
-  .color__hex {
-    margin: auto;
-    font-size: 0.75em;
-  }
-
-  .color__variable {
-    font-size: 0.75em;
-  }
-
-  .buttons .button {
-    max-width: max-content;
-  }
-</style>
