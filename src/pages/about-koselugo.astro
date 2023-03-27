@@ -7,13 +7,6 @@ import SimpleHero from "../components/SimpleHero.astro";
 <Layout title="About Koselugo">
     <div class="wrapper">
         <SimpleHero folder="about-koselugo" alt="" />
-        <h2>About Koselugo</h2>
-          <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
-              veritatis error voluptas quas unde distinctio ea natus, tempore
-              pariatur consequatur repudiandae quae earum hic harum delectus at
-              sequi alias autem!
-            </p>
         <Section>
           <Fragment slot="section-title">
             WHAT IS <span class="color-yellow">KOSELUGO?</span>
@@ -29,6 +22,25 @@ import SimpleHero from "../components/SimpleHero.astro";
           noHeader>
           <h4>Visit the Koselugo Frequently Asked Questions page</h4>
           <button class="button button--basic">Visit the FAQs here</button>
+        </Section>        
+        <Section>
+          <Fragment slot="section-title">
+            CAN KOSELUGO HELP <span class="color-yellow">SHRINK PLEXIFORM TUMORS?</span>
+          </Fragment>
+          <div class="wrapper">
+            <h6>KOSELUGO HAS BEEN SHOWN TO SHRINK PLEXIFORM TUMORS IN CHILDREN AGED 2 YEARS AND OLDER</h6>
+            <p>In a clinical study, Koselugo was proven to work for children with NF1 who have plexiform neurofibromas (PN) that cannot be completely removed by surgery:</p>
+            <img src="assets/images/about/66-percent-pie-chart.svg" alt=" ">
+            <div class="wrapper">
+              <h6>66% or 33 of 50 patients in the clinical study saw their plexiform neurofibromas (PN) shrink*</h6>
+              <p>82% or 27 of 33 patients who responded continued to benefit for at least one year.</p>
+            </div>
+            <div class="wrapper">
+              <h5>What did people taking Koselugo treatment experience in a clinical study?</h5>
+              <button class="button button--basic">See their journeys</button>
+            </div>
+            <p>Patients saw a 20% or more decrease in the size of their plexiform neurofibromas, confirmed by 3D magnetic resonance imaging scan.</p>
+          </div>
         </Section>
       </div>
 </Layout>
