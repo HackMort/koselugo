@@ -5,22 +5,23 @@ import Section from '../components/Section.astro';
 ---
 
 <Layout title="Glossary">
-  <div class="glossary-gap"><br><br><br></div>
+
     
+  <div class="glossary-page">
       <Section>
        
 
-         <Fragment slot="section-title">
-             <span class="color-yellow glossary-header">GLOSSARY</span>
-         </Fragment>
-      
-
+  <Fragment slot="section-title">
+      <span class="color-yellow glossary-header">GLOSSARY</span>
+  </Fragment>
+  
+  
       <div class="wrapper">
-        <div class="glossary-terms">
+        <div class="glossary-page__terms">
           <p>
             <span>Clinical study: </span>Clinical studies are research studies that evaluate potential medicines by testing them in a group of people. They are the primary way researchers determine the safety and efficacy of potential treatment.
             </p>
-
+            
 
             <p>
               <span>Efficacy: </span>The ability of a medication to produce a desired, beneficial outcome. In a clinical study, the efficacy of a drug is evaluated in patients.
@@ -68,5 +69,6 @@ import Section from '../components/Section.astro';
         </div>
       </div>
     </Section>
-    <div class="glossary-gap"><br><br><br></div>
+  </div>
+    
 </Layout>
