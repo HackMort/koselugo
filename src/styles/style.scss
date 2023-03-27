@@ -100,8 +100,21 @@
       text-align: center;
   
       .button {
+        display: none;
         margin: 0 auto;
         padding-top: 0;
+
+        &--only-mobile {
+          display: flex;
+        }
+
+        @include media('tablet') {
+          display: flex;
+
+          &--only-mobile {
+            display: none;
+          }
+        }
       }
     }
   }
