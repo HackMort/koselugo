@@ -1,11 +1,42 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import MainHero from '../components/MainHero.astro';
 import AccordionItem from "../components/AccordionItem.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="koselugo ®">
+    <MainHero></MainHero>
 	<div class="wrapper">
-		<h1>Welcome to Koselugo</h1>
-		<hr />
+		<div class="cards">
+			<Card
+				title="Koselugo comes with a team"
+				image="/assets/icons/icon-support-team-1.svg"
+				alt="Koselugo comes with a team"
+			>
+				<p>
+					Connect with a Patient Education Manager (PEM) to get personal
+					one-to-one support. PEMs are just one of the resources available
+					through OneSource<sup>&trade;</sup>.
+				</p>
+				<p>
+					<a href="/savings-and-support.html#pem-finder">Find your PEM</a>
+				</p>
+			</Card>
+			<Card
+				title="Educational events"
+				image="/assets/icons/icon-educational-events.svg"
+				alt="Educational events"
+			>
+				<p>
+					Explore live and virtual events that cover a range of topics that can
+					help in the care of your child with NF1 PN. Registering is simple and
+					free. Get started today.
+				</p>
+				<p>
+					<a class="color--rose" href="/events.html">See events</a>
+				</p>
+			</Card>
+		</div>
 	</div>
 </Layout>

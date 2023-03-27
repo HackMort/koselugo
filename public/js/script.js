@@ -58,10 +58,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
   const mobileMenuToogleBtn = document.getElementById('toggle-menu-button')
   const mainNav = document.getElementById('main__navigation')
+  const root = document.documentElement
   if (mobileMenuToogleBtn) {
     mobileMenuToogleBtn.addEventListener('click', () => {
-      // console.log('Mobile menu clicked')
       mobileMenuToogleBtn.classList.toggle('is--active')
+      root.classList.toggle('is--menu-open')
       mainNav.classList.toggle('is--open')
     })
   }
