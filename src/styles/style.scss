@@ -44,3 +44,65 @@
   }
 
 }
+
+/******************************************************
+-- About Page
+******************************************************/
+.about-koselugo {
+  .custom-section {
+    &__footnote {
+      font-size: 13px;
+      padding: 20px;
+      padding-bottom: 6rem;
+    }
+
+    &__image {
+      margin: 1.5rem auto;
+      width: 80%;
+
+      &--half {
+        width: 50%;
+      }
+    }
+
+    &__list {
+      margin-top: 5px;
+
+      &-item {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .one__source {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+
+  .wrapper {
+    &--primary {
+      h6 {
+        margin-bottom: 10px;
+      }
+    }
+
+    &--center-aligned {
+      text-align: center;
+
+      h6 {
+        margin-bottom: 5px;
+      }
+    }
+
+    &--visit {
+      padding-bottom: 3.5rem;
+      padding-top: 3.5rem;
+      text-align: center;
+  
+      .button {
+        margin: 0 auto;
+        padding-top: 0;
+      }
+    }
+  }
+}
