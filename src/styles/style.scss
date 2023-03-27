@@ -16,6 +16,26 @@
 @import './components/_footer.scss';
 
 //--------------------UNDERSTANDING NF1--------------------
+//nf1-section
+ .nf1-margin{
+    margin-bottom: 0rem!important;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 9rem!important;
+    }
+    @media screen and (min-width: 900px) {
+        margin-bottom: 16rem!important;
+    }
+} 
+
+.nf1{
+    a{
+        padding-top: 0;
+    }
+  h6{
+    font-size: 22px;
+  }  
+}
+
 .plexiform-percentage{
     width: 163px;
     height: 30px;
@@ -92,6 +112,94 @@
     
 
 }
+//nf1-sectione
 
+//second-section
+.nf1-second{
+    max-width: 735px;
+    margin: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+  
+
+    img{
+        margin: auto;
+        width: 94px;
+        height: 115px;
+        margin-top: 32px;
+        margin-bottom: 1rem;
+    }
+
+    &__bold{
+        margin-top: 1rem;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .document-nf1{
+         width: 68px;
+         height: 93px;
+    }
+
+    .last-nf1-title{
+        margin: auto;
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        max-width: 537px;
+    }
+
+    #last-nf1{
+        margin-bottom: -9rem;
+        margin-top: 4rem;
+        max-width: 644px;
+
+        a{
+            font-size: 18px;
+            padding-top: 0;
+        }
+    }
+
+
+}
+
+//second-section
+
+//third-section
+.nf1-margin-two{
+    margin-bottom: 9rem;
+    @media screen and (min-width: 900px) {
+        margin-bottom: 16rem!important;
+    }
+}
+
+.nf1-margin-three{
+    margin-bottom: 9rem;
+    @media screen and (min-width: 900px) {
+        margin-bottom: 16rem!important;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #last-third{
+        padding-bottom: 1rem; 
+    }
+}
+
+.nf1-head{
+    width: 75px!important;
+    height: 88px!important;
+}
+
+.nf1-house{
+    width: 83px!important;
+    height: 83px!important;
+}
+
+.two-people{
+    width: 87px!important;
+    height: 119px!important;
+}
+//third-section
 
 //--------------------UNDERSTANDING NF1--------------------
