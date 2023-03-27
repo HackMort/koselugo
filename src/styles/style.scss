@@ -53,4 +53,56 @@
   .custom-section__content p {
     margin-bottom: 2.125rem;
   }
+
+  .custom-section__content p+.list {
+    margin-top: -2rem;
+  }
+
+  .custom-section__content .list {
+    margin-bottom: 1.5rem;
+    margin-left: 1rem;
+  }
+
+  .custom-section__content .icon {
+    display: block;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+    margin-left: auto;
+    width: 7.75rem;
+
+    &.financial {
+      width: 9.625rem;
+    }
+
+  }
+
+
+  .video__text {
+    color: $color-aqua;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.6875rem;
+    text-align: center;
+    padding-top: 2.625rem;
+    padding-right: 3.25rem;
+    padding-bottom: 2.625rem;
+    padding-left: 3.25rem;
+  }
+
+  .stay__informed {
+    .custom-section {
+      padding-bottom: 2rem;
+    }
+
+    .form {
+      background-color: $color-soft-blue-2;
+      min-height: 300px;
+      padding: 20px;
+
+      * {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
 }
