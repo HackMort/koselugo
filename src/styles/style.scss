@@ -233,3 +233,29 @@
 //third-section
 
 //--------------------UNDERSTANDING NF1--------------------
+
+//--------------------GLOSSARY--------------------
+
+.glossary-terms{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 15px;
+    @include media('tablet') {
+        padding-left: 34px;
+        padding-right: 34px;
+        padding-bottom: 15px;
+    }
+    span{
+        color: $color-aqua;
+        font-weight: 600;
+        font-style: normal;
+    }
+    p{
+        margin-bottom: 1rem;
+    }
+
+}
+.glossary-gap{
+    display: none;
+}
+//--------------------GLOSSARY--------------------
