@@ -1,4 +1,5 @@
 ---
+import Section from "../components/Section.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -11,6 +12,16 @@ import Layout from "../layouts/Layout.astro";
               pariatur consequatur repudiandae quae earum hic harum delectus at
               sequi alias autem!
             </p>
-
+        <Section>
+          <Fragment slot="section-title">
+            WHAT IS <span class="color-yellow">KOSELUGO?</span>
+          </Fragment>
+          <div class="wrapper">
+            <h6>
+              Koselugo is the FIRST and ONLY FDA-approved treatment shown to reduce the size of plexiform neurofibromas (PN)*
+            </h6>
+            <img src="/assets/images/about/bottles_d.svg" alt=" ">
+          </div>
+        </Section>
       </div>
 </Layout>
