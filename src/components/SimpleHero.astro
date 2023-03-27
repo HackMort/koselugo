@@ -1,0 +1,42 @@
+---
+const basePath = "/assets/images/";
+
+type Props = {
+    folder: string;
+    filename?: string;
+    ext?: string;
+    alt: string;
+    className?: string;
+    tabletMinWidth?: string;
+    content?: boolean;
+};
+
+const {
+    folder,
+    filename = "hero",
+    ext = "png",
+    alt,
+    className,
+    tabletMinWidth = "500px",
+    content = false,
+} = Astro.props;
+
+const mobile = basePath + folder + "/" + filename + "-mobile" + "." + ext;
+const tablet = basePath + folder + "/" + filename + "-tablet" + "." + ext;
+const desktop = basePath + folder + "/" + filename + "-desktop" + "." + ext;
+---
+
+<section class={`simple-hero ${className}`}>
+    <picture>
+        <source srcset={desktop} media="(min-width: 1100px)" />
+        <source srcset={tablet} media={`(min-width: ${tabletMinWidth})`} />
+        <img src={mobile} alt={alt} />
+    </picture>
+    {
+        content && (
+            <div class="simple-hero__content">
+                <slot />
+            </div>
+        )
+    }
+</section>
