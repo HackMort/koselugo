@@ -24,6 +24,10 @@ h1 {
 h6 {
     font-size: 1.125rem;
     line-height: 20.41px;
+    
+    @include media('tablet') {
+    font-size: 22px;
+  }
 }
 
 p {

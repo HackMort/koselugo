@@ -12,12 +12,15 @@
 @import './components/_card.scss';
 @import './components/_custom-section.scss';
 @import './components/_pem.scss';
+@import './components/_one-source.scss';
+@import './components/_callout.scss';
 @import './components/_isi.scss';
 @import './components/_footer.scss';
 
 
 
 @import './components/_main-hero.scss';
+@import './components/_simple-hero.scss';
 
 /******************************************************
 -- Home Page
@@ -61,12 +64,19 @@
     a{
         padding-top: 0;
     }
-  h6{
-    font-size: 22px;
-  }  
+ 
 }
 
-.plexiform-percentage{
+
+.plexiform-paragraph{
+    margin-top: 1rem;
+    @include media('tablet') {
+
+        display: flex;
+        align-items: center;
+    }
+    
+&__percentage{
     width: 163px;
     height: 30px;
     margin-right: 1rem;
@@ -78,35 +88,25 @@
         display: unset;
     }
 }
-
-.plexiform-percentage-two{
+&__percentage-two{
     width: 163px;
     height: 30px;
     margin-right: 1rem;
     float: left;
 
     @include media('tablet') {
+        
         width: 272px; 
         height: 51px;
     }
 }
 
-.percentage-box{
+&__percentage-box{
     height: 14px;
     @include media('tablet') {
         display: none;
     }
-}
-
-.plexiform-paragraph{
-    margin-top: 1rem;
-    @include media('tablet') {
-
-        display: flex;
-        
-        align-items: center;
-    }
-    
+}    
 }
 
 #nf1-box{
@@ -148,16 +148,25 @@
 .nf1-second{
     max-width: 735px;
     margin: auto;
-    padding-left: 32px;
-    padding-right: 32px;
-  
+    padding-left: 10px;
+    padding-right: 10px;
+    @include media('tablet') {
+    padding-left: 0px;
+    padding-right: 0px;
+    }
 
     img{
         margin: auto;
-        width: 94px;
-        height: 115px;
         margin-top: 32px;
         margin-bottom: 1rem;
+    }
+
+    .second-person{
+        width: 82px;
+    }
+
+    .document-nf1{
+        width: 66px;
     }
 
     &__bold{
@@ -168,7 +177,10 @@
 
     .document-nf1{
          width: 68px;
-         height: 93px;
+    }
+
+    .three-people{
+        width: 94px;
     }
 
     .last-nf1-title{
@@ -185,7 +197,6 @@
         max-width: 644px;
 
         a{
-            font-size: 18px;
             padding-top: 0;
         }
     }
@@ -217,18 +228,15 @@
 }
 
 .nf1-head{
-    width: 75px!important;
-    height: 88px!important;
+    width: 75px;
 }
 
 .nf1-house{
-    width: 83px!important;
-    height: 83px!important;
+    width: 83px;
 }
 
 .two-people{
-    width: 87px!important;
-    height: 119px!important;
+    width: 87px;
 }
 //third-section
 

@@ -1,11 +1,12 @@
 ---
+import SimpleHero from '../components/SimpleHero.astro';
 import Layout from "../layouts/Layout.astro";
 import Section from '../components/Section.astro';
 ---
 
 <Layout title="Understanding NF1 PN">
-    
-<br><br>
+    <SimpleHero folder="understanding-nf1-pn" alt="" />
+
               <Section>
                    <Fragment slot="section-title">
                        WHAT IS <span class="color-yellow">NEUROFIBROMATOSIS TYPE 1 (NF1)?</span>
@@ -21,9 +22,9 @@ import Section from '../components/Section.astro';
                     </h6>
                     <div class="plexiform-paragraph">
                         
-                        <img class="plexiform-percentage" src="/assets/images/30-to-50-percentage.png.svg" alt="">
-                        <figure class="percentage-box">
-                            <img class="plexiform-percentage-two" src="/assets/images/30-to-50-percentage.png.svg" alt="">
+                        <img class="plexiform-paragraph__percentage" src="/assets/images/30-to-50-percentage.png.svg" alt="">
+                        <figure class="plexiform-paragraph__percentage-box">
+                            <img class="plexiform-paragraph__percentage-two" src="/assets/images/30-to-50-percentage.png.svg" alt="">
                         </figure>
                         <p>
                             of children with NF1 may develop benign (noncancerous) tumors called plexiform neurofibromas or plexiform tumors, which grow along nerves.
@@ -65,7 +66,7 @@ import Section from '../components/Section.astro';
                     </p>
 
 
-                    <img class="second-person" src="/assets/images/second-person.svg" alt="">
+                    <img class="second-person" src="/assets/images/second-person-i.svg" alt="">
                     <h6>
                         Why can’t some NF1 plexiform neurofibromas (PN) be completely removed by surgery?
                     </h6>
@@ -75,7 +76,7 @@ import Section from '../components/Section.astro';
 
 
 
-                    <img class="document-nf1" src="/assets/images/nf1-document.svg" alt="">
+                    <img class="document-nf1" src="/assets/images/nf1-document-i.svg" alt="">
                     <h6>
                         Are there any other ways to treat NF1 plexiform neurofibromas (PN)?
                     </h6>
