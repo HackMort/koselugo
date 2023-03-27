@@ -59,6 +59,10 @@
     .wrapper__inner {
       position: relative;
       max-width: calc(100% - 2rem);
+
+      @media screen and (min-width: 1440px) {
+        max-width: 90rem;
+      }
     }
 
     .isi__section_toggle {
@@ -67,7 +71,7 @@
   }
 
   &__section_header.is--fixed.is--open {
-    top: 20%;
+    top: 30%;
     overflow-y: scroll;
     height: auto;
 

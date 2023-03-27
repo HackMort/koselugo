@@ -12,6 +12,7 @@
 @import './components/_card.scss';
 @import './components/_custom-section.scss';
 @import './components/_pem.scss';
+@import './components/_one-source.scss';
 @import './components/_isi.scss';
 @import './components/_footer.scss';
 @import './components/_main-hero.scss';
@@ -26,16 +27,19 @@
   margin: 0 auto;
   max-width: 55.375rem;
   padding-top: 1rem;
+  margin-bottom: 5.7813rem;
   width: 100%;
 
   @include media('tablet') {
     gap: 1.5rem;
     grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 2.9375rem;
   }
 
   @include media('desktop') {
     gap: 3.75rem;
     max-width: 67.5rem;
+    margin-bottom: 4.66rem;
   }
 
 }
