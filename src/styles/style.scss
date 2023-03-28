@@ -627,17 +627,6 @@
         width: 3.5rem;
       }
     }
-
-    & + .one__source {      
-
-      @include media('tablet') {
-        bottom: -6rem;
-        left: 0;
-        margin: auto;
-        position: absolute;
-        right: 0;
-      }
-    }
   }
 
   &__what-is {
@@ -736,6 +725,25 @@
       }
     }
   }
+
+  .one__source {
+    margin-right: 1rem;
+    margin-left: 1rem;
+
+    @include media('tablet') {
+      position: relative;
+      margin-top: -75px;
+      margin-right: 1.5rem;
+      margin-left: 1.5rem;
+      z-index: 2;
+    }
+
+    @include media('desktop') {
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: -60px;
+    }
+  }
   
   .simple-hero + .custom-section {
     @include media('tablet') {
@@ -747,12 +755,12 @@
     padding-top: 3rem;
 
     @include media('tablet') {
-      margin-top: 11rem;
+      margin-top: 5rem;
       padding-top: 1rem;
     }
 
     @include media('desktop') {
-      margin-top: 10rem;
+      margin-top: 3rem;
     }
   }
 
