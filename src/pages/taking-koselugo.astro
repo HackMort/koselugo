@@ -1,18 +1,50 @@
 ---
 import SimpleHero from '../components/SimpleHero.astro';
 import Layout from "../layouts/Layout.astro";
+import Section from '../components/Section.astro';
+import Callout from '../components/Callout.astro';
 ---
 
 <Layout title="Taking Koselugo">
     <SimpleHero folder="taking-koselugo" alt="" />
-    <div class="wrapper">
-        <h2>Taking Koselugo</h2>
-          <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
-              veritatis error voluptas quas unde distinctio ea natus, tempore
-              pariatur consequatur repudiandae quae earum hic harum delectus at
-              sequi alias autem!
-            </p>
-
-      </div>
+    <div class="wrapper taking-koselugo">
+      <Section>
+        <Fragment slot="section-title">
+          <span class="color-yellow">HOW IS</span> KOSELUGO TAKEN?
+        </Fragment>
+        <div class="wrapper">
+          <img src="/assets/images/taking-koselugo/12-hours-icon.png" alt=" ">
+          <p><b>Doses should be taken—on an empty stomach—approximately the same time each day, about 12 hours apart</b></p>
+          <ul>
+            <li><span class="color-aqua">Your child must take Koselugo on an empty stomach,</span> which means your child should not eat 2 hours before each dose or 1 hour after each dose</li>
+          </ul>
+          <img src="/assets/images/taking-koselugo/atleast.png" alt=" ">
+          <img src="/assets/images/taking-koselugo/capsule-icon.jpg" alt=" ">
+          <p><b>Remember:</b></p>
+          <p><b>Koselugo capsules must only be swallowed whole with water. They must not be chewed, dissolved, or opened.</b>  Taking Koselugo in a different way than instructed may affect how it works. To learn more, visit the <a href="https://koselugo.com/dosing-schedule.html#tips-for-taking">Tips For Taking Koselugo</a> page.</p>
+          <ul>
+            <li><span class="color-aqua">If your child misses a dose,</span> they should take it as soon as you remember. If it is less than 6 hours before the next scheduled dose, give the next dose at the regular time. Do not make up for the missed dose</li>
+            <li><span class="color-aqua">If your child vomits at any time after taking Koselugo,</span> they should not take an additional dose. The next dose should be taken at the regular time</li>
+          </ul>
+          <article>
+            <header>
+              <p>It's important to GIVE KOSELUGO EXACTLY AS YOUR CHILD’S DOCTOR PRESCRIBES AND KEEP TO A DOSING SCHEDULE THAT FITS BEST WITH YOUR CHILD’S DAILY ROUTINE.</p>
+              <p>The goal is to make it easy to stay on track to get the most out of treatment.</p>
+            </header>
+            <ul>
+              <li><b>Do not change the dose or stop taking Koselugo unless directed by your child’s doctor</b></li>
+              <li>Your child’s doctor may change the dose, temporarily stop, or permanently stop treatment if your child has side effects</li>
+              <li>Your child’s doctor will decide on the right dose of Koselugo based on your child’s weight or size (body surface area), and how many capsules of Koselugo to take</li>
+            </ul>
+          </article>
+          <Callout />
+        </div>
+      </Section>
+      <Section noHeader>
+        <div class="wrapper">
+          <h6>Explore the treatment journeys of children who took Koselugo in a clinical study.</h6>
+          <a href="https://koselugo.com/dosing-schedule.html#track-their-treatment">Explore the treatment journeys of children who took Koselugo in a clinical study.</a>
+        </div>
+      </Section>
+    </div>
 </Layout>
