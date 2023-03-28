@@ -7,9 +7,9 @@
     max-width: 72.8125rem;
     margin: 0 auto;
 
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 768px) {
         min-height: 10rem;
-        margin-top: 3.0313rem;
+        margin-top: calc(3.0313rem + 2.25rem);
         padding-top: 3.0313rem;
         padding-bottom: 1rem;
     }
@@ -22,9 +22,6 @@
 
         @media screen and (min-width: 768px) {
             height: 6.0625rem;
-        }
-
-        @media screen and (min-width: 900px) {
             position: absolute;
             top: -3.0313rem;
         }
