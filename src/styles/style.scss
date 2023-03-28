@@ -283,77 +283,74 @@
 
 //--------------------UNDERSTANDING NF1--------------------
 //nf1-section
-.nf1-margin {
-  margin-bottom: 0rem !important;
+ .nf1-margin{
+    margin-bottom: 0rem!important;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 16rem!important;
+    }
+} 
 
-  @media screen and (min-width: 768px) {
-    margin-bottom: 9rem !important;
-  }
-
-  @media screen and (min-width: 900px) {
-    margin-bottom: 16rem !important;
-  }
+.nf1{
+    
+    a{
+        padding-top: 0;
+    }
+ 
 }
 
-.nf1 {
-  a {
-    padding-top: 0;
-  }
 
-  h6 {
-    font-size: 22px;
-  }
-}
+.plexiform-paragraph{
+    margin-top: 1rem;
+    @include media('tablet') {
 
-.plexiform-percentage {
-  width: 163px;
-  height: 30px;
-  margin-right: 1rem;
-  display: none;
-
-  @include media('tablet') {
-    width: 272px;
-    height: 51px;
-    display: unset;
-  }
-}
-
-.plexiform-percentage-two {
-  width: 163px;
-  height: 30px;
-  margin-right: 1rem;
-  float: left;
-
-  @include media('tablet') {
-    width: 272px;
-    height: 51px;
-  }
-}
-
-.percentage-box {
-  height: 14px;
-
-  @include media('tablet') {
+        display: flex;
+        align-items: center;
+    }
+    
+&__percentage{
+    width: 163px;
+    height: 30px;
+    margin-right: 1rem;
     display: none;
-  }
+    
+    @include media('tablet') {
+        width: 272px;
+        height: 51px;
+        display: unset;
+    }
+}
+&__percentage-two{
+    width: 163px;
+    height: 30px;
+    margin-right: 1rem;
+    float: left;
+
+    @include media('tablet') {
+        
+        width: 272px; 
+        height: 51px;
+    }
 }
 
-.plexiform-paragraph {
-  margin-top: 1rem;
-
-  @include media('tablet') {
-
-    display: flex;
-
-    align-items: center;
-  }
-
+&__percentage-box{
+    height: 14px;
+    @include media('tablet') {
+        display: none;
+    }
+}    
 }
 
-#nf1-box {
-  p {
-    max-width: 986px;
-  }
+#nf1-box{
+    p{
+        max-width: 986px;
+    }
+    .wrapper{
+        .nf1{
+            margin: 0 auto;
+            width: 100%;
+            max-width: calc(100% - 2rem);
+        }
+    }
 }
 
 .kid-box {
@@ -388,20 +385,25 @@
 //nf1-sectione
 
 //second-section
-.nf1-second {
-  max-width: 735px;
-  margin: auto;
-  padding-left: 32px;
-  padding-right: 32px;
-
-
-  img {
+.nf1-second{
+    max-width: 735px;
     margin: auto;
-    width: 94px;
-    height: 115px;
-    margin-top: 32px;
-    margin-bottom: 1rem;
-  }
+    padding-left: 0px;
+    padding-right: 0px;
+
+    img{
+        margin: auto;
+        margin-top: 32px;
+        margin-bottom: 1rem; 
+    }
+
+    .second-person{
+        width: 82px;
+    }
+
+    .document-nf1{
+        width: 66px;
+    }
 
   &__bold {
     margin-top: 1rem;
@@ -409,10 +411,13 @@
     font-weight: 600;
   }
 
-  .document-nf1 {
-    width: 68px;
-    height: 93px;
-  }
+    .document-nf1{
+         width: 68px;
+    }
+
+    .three-people{
+        width: 94px;
+    }
 
   .last-nf1-title {
     margin: auto;
@@ -427,11 +432,10 @@
     margin-top: 4rem;
     max-width: 644px;
 
-    a {
-      font-size: 18px;
-      padding-top: 0;
+        a{
+            padding-top: 0;
+        }
     }
-  }
 
 
 }
@@ -439,20 +443,18 @@
 //second-section
 
 //third-section
-.nf1-margin-two {
-  margin-bottom: 9rem;
-
-  @media screen and (min-width: 900px) {
-    margin-bottom: 16rem !important;
-  }
+.nf1-margin-two{
+    margin-bottom: 9rem;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 16rem!important;
+    }
 }
 
-.nf1-margin-three {
-  margin-bottom: 9rem;
-
-  @media screen and (min-width: 900px) {
-    margin-bottom: 16rem !important;
-  }
+.nf1-margin-three{
+    margin-bottom: 9rem;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 16rem!important;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -461,19 +463,16 @@
   }
 }
 
-.nf1-head {
-  width: 75px !important;
-  height: 88px !important;
+.nf1-head{
+    width: 75px;
 }
 
-.nf1-house {
-  width: 83px !important;
-  height: 83px !important;
+.nf1-house{
+    width: 83px;
 }
 
-.two-people {
-  width: 87px !important;
-  height: 119px !important;
+.two-people{
+    width: 87px;
 }
 
 //third-section
