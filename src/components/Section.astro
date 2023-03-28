@@ -23,6 +23,8 @@ const { noHeader } = Astro.props;
     }
 
     <article class="custom-section__content">
-        <slot />
+        <div class="section-wrapper">
+            <slot />
+        </div>
     </article>
 </section>

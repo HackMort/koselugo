@@ -59,8 +59,8 @@
     //   background-color: $color-soft-blue;
     // }
     .wrapper {
-      @media screen and (min-width: 1366px) {
-        max-width: calc(100% - 8.2813rem);
+      @media screen and (min-width: 768px) {
+        max-width: calc(100% - 4.25rem);
       }
     }
   }
