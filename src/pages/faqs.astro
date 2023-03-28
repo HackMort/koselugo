@@ -2,88 +2,219 @@
 import AccordionItem from "../components/AccordionItem.astro";
 import SimpleHero from "../components/SimpleHero.astro";
 import Layout from "../layouts/Layout.astro";
+import Section from "../components/Section.astro";
 ---
 
 <Layout title="FAQs">
     <SimpleHero folder="faqs" alt="" />
-    <section role="tablist" class="accordion">
-        <div class="wrapper">
-            <p>&nbsp;</p>
-            <AccordionItem header="What is Koselugo?" id="acc-1" expanded>
-                <p>
-                    Koselugo is a prescription medicine that is used to treat
-                    children 2 years of age and older with neurofibromatosis
-                    type 1 (NF1) who have plexiform neurofibromas that cannot be
-                    completely removed by surgery. It is not known if Koselugo
-                    is safe and effective in children under 2 years of age. <a
-                        href="">Learn more about taking Koselugo</a
-                    >.
-                </p>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Blanditiis veritatis error voluptas quas unde distinctio ea
-                    natus, tempore pariatur consequatur repudiandae quae earum
-                    hic harum delectus at sequi alias autem!
-                </p>
-            </AccordionItem>
-            <AccordionItem header="Is Koselugo chemotherapy?" id="acc-2">
-                Koselugo is a prescription medicine that is used to treat
-                children 2 years of age and older with neurofibromatosis type 1
-                (NF1) who have plexiform neurofibromas that cannot be completely
-                removed by surgery. It is not known if Koselugo is safe and
-                effective in children under 2 years of age. Learn more about
-                taking Koselugo.
-            </AccordionItem>
-            <AccordionItem header="What is Koselugo?" id="acc-3">
-                <p>
-                    Koselugo is a prescription medicine that is used to treat
-                    children 2 years of age and older with neurofibromatosis
-                    type 1 (NF1) who have plexiform neurofibromas that cannot be
-                    completely removed by surgery. It is not known if Koselugo
-                    is safe and effective in children under 2 years of age. <a
-                        href="">Learn more about taking Koselugo</a
-                    >.
-                </p>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Blanditiis veritatis error voluptas quas unde distinctio ea
-                    natus, tempore pariatur consequatur repudiandae quae earum
-                    hic harum delectus at sequi alias autem!
-                </p>
-            </AccordionItem>
-            <AccordionItem header="Is Koselugo chemotherapy?" id="acc-4">
-                Koselugo is a prescription medicine that is used to treat
-                children 2 years of age and older with neurofibromatosis type 1
-                (NF1) who have plexiform neurofibromas that cannot be completely
-                removed by surgery. It is not known if Koselugo is safe and
-                effective in children under 2 years of age. Learn more about
-                taking Koselugo.
-            </AccordionItem>
-            <AccordionItem header="What is Koselugo?" id="acc-5">
-                <p>
-                    Koselugo is a prescription medicine that is used to treat
-                    children 2 years of age and older with neurofibromatosis
-                    type 1 (NF1) who have plexiform neurofibromas that cannot be
-                    completely removed by surgery. It is not known if Koselugo
-                    is safe and effective in children under 2 years of age. <a
-                        href="">Learn more about taking Koselugo</a
-                    >.
-                </p>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Blanditiis veritatis error voluptas quas unde distinctio ea
-                    natus, tempore pariatur consequatur repudiandae quae earum
-                    hic harum delectus at sequi alias autem!
-                </p>
-            </AccordionItem>
-            <AccordionItem header="Is Koselugo chemotherapy?" id="acc-6">
-                Koselugo is a prescription medicine that is used to treat
-                children 2 years of age and older with neurofibromatosis type 1
-                (NF1) who have plexiform neurofibromas that cannot be completely
-                removed by surgery. It is not known if Koselugo is safe and
-                effective in children under 2 years of age. Learn more about
-                taking Koselugo.
-            </AccordionItem>
-        </div>
-    </section>
+    <Section>
+                   <Fragment slot="section-title">
+                    FREQUENTLY ASKED <span class="color-yellow">QUESTIONS</span>
+                </Fragment> 
+        
+
+            
+                <section role="tablist" class="accordion">
+            
+                    
+                        <p>&nbsp;</p>
+                        <AccordionItem header="What is Koselugo?" id="acc-1" expanded>
+                            <p>
+                                Koselugo is a prescription medicine that is used to treat
+                                children 2 years of age and older with neurofibromatosis
+                                type 1 (NF1) who have plexiform neurofibromas that cannot be
+                                completely removed by surgery. It is not known if Koselugo
+                                is safe and effective in children under 2 years of age. <a
+                                    href="">Learn more about taking Koselugo</a
+                                >.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Blanditiis veritatis error voluptas quas unde distinctio ea
+                                natus, tempore pariatur consequatur repudiandae quae earum
+                                hic harum delectus at sequi alias autem!
+                            </p>
+                        </AccordionItem>
+                        <AccordionItem header="Is Koselugo chemotherapy?" id="acc-2">
+                            Koselugo is a prescription medicine that is used to treat
+                            children 2 years of age and older with neurofibromatosis type 1
+                            (NF1) who have plexiform neurofibromas that cannot be completely
+                            removed by surgery. It is not known if Koselugo is safe and
+                            effective in children under 2 years of age. Learn more about
+                            taking Koselugo.
+                        </AccordionItem>
+                        <AccordionItem header="How is Koseugo taken" id="acc-3">
+                            <p>
+                                Koselugo is a prescription medicine that is used to treat
+                                children 2 years of age and older with neurofibromatosis
+                                type 1 (NF1) who have plexiform neurofibromas that cannot be
+                                completely removed by surgery. It is not known if Koselugo
+                                is safe and effective in children under 2 years of age. <a
+                                    href="">Learn more about taking Koselugo</a
+                                >.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Blanditiis veritatis error voluptas quas unde distinctio ea
+                                natus, tempore pariatur consequatur repudiandae quae earum
+                                hic harum delectus at sequi alias autem!
+                            </p>
+                        </AccordionItem>
+                        <AccordionItem header="Where can I fill my Koselugo prescription?" id="acc-4">
+                            Koselugo is a prescription medicine that is used to treat
+                            children 2 years of age and older with neurofibromatosis type 1
+                            (NF1) who have plexiform neurofibromas that cannot be completely
+                            removed by surgery. It is not known if Koselugo is safe and
+                            effective in children under 2 years of age. Learn more about
+                            taking Koselugo.
+                        </AccordionItem>
+                        <AccordionItem header="How much does Koselugo cost?" id="acc-5">
+                            <p>
+                                Koselugo is a prescription medicine that is used to treat
+                                children 2 years of age and older with neurofibromatosis
+                                type 1 (NF1) who have plexiform neurofibromas that cannot be
+                                completely removed by surgery. It is not known if Koselugo
+                                is safe and effective in children under 2 years of age. <a
+                                    href="">Learn more about taking Koselugo</a
+                                >.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Blanditiis veritatis error voluptas quas unde distinctio ea
+                                natus, tempore pariatur consequatur repudiandae quae earum
+                                hic harum delectus at sequi alias autem!
+                            </p>
+                        </AccordionItem>
+                        <AccordionItem header="How do I know if my child is eligible to receive Koselugo?" id="acc-6">
+                            Koselugo is a prescription medicine that is used to treat
+                            children 2 years of age and older with neurofibromatosis type 1
+                            (NF1) who have plexiform neurofibromas that cannot be completely
+                            removed by surgery. It is not known if Koselugo is safe and
+                            effective in children under 2 years of age. Learn more about
+                            taking Koselugo.
+                        </AccordionItem>
+                        <AccordionItem header="How is Koselugo taken?" id="acc-7">
+                            <p>
+                                Koselugo is a prescription medicine that is used to treat
+                                children 2 years of age and older with neurofibromatosis
+                                type 1 (NF1) who have plexiform neurofibromas that cannot be
+                                completely removed by surgery. It is not known if Koselugo
+                                is safe and effective in children under 2 years of age. <a
+                                    href="">Learn more about taking Koselugo</a
+                                >.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Blanditiis veritatis error voluptas quas unde distinctio ea
+                                natus, tempore pariatur consequatur repudiandae quae earum
+                                hic harum delectus at sequi alias autem!
+                            </p>
+                        </AccordionItem>
+                        <AccordionItem header="My child has trouble swallowing capsules. Can they still take Koselugo?" id="acc-8">
+                            <p>
+                                Koselugo is a prescription medicine that is used to treat
+                                children 2 years of age and older with neurofibromatosis
+                                type 1 (NF1) who have plexiform neurofibromas that cannot be
+                                completely removed by surgery. It is not known if Koselugo
+                                is safe and effective in children under 2 years of age. <a
+                                    href="">Learn more about taking Koselugo</a
+                                >.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Blanditiis veritatis error voluptas quas unde distinctio ea
+                                natus, tempore pariatur consequatur repudiandae quae earum
+                                hic harum delectus at sequi alias autem!
+                            </p>
+                        </AccordionItem>
+                        <AccordionItem header="Can I crush the capsules?" id="acc-9">
+                            <p>
+                                Koselugo is a prescription medicine that is used to treat
+                                children 2 years of age and older with neurofibromatosis
+                                type 1 (NF1) who have plexiform neurofibromas that cannot be
+                                completely removed by surgery. It is not known if Koselugo
+                                is safe and effective in children under 2 years of age. <a
+                                    href="">Learn more about taking Koselugo</a
+                                >.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Blanditiis veritatis error voluptas quas unde distinctio ea
+                                natus, tempore pariatur consequatur repudiandae quae earum
+                                hic harum delectus at sequi alias autem!
+                            </p>
+                        </AccordionItem>
+                        <AccordionItem header="What side effects are associated with Koselugo?" id="acc-10">
+                            <p>
+                                Koselugo is a prescription medicine that is used to treat
+                                children 2 years of age and older with neurofibromatosis
+                                type 1 (NF1) who have plexiform neurofibromas that cannot be
+                                completely removed by surgery. It is not known if Koselugo
+                                is safe and effective in children under 2 years of age. <a
+                                    href="">Learn more about taking Koselugo</a
+                                >.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Blanditiis veritatis error voluptas quas unde distinctio ea
+                                natus, tempore pariatur consequatur repudiandae quae earum
+                                hic harum delectus at sequi alias autem!
+                            </p>
+                        </AccordionItem>
+                        <AccordionItem header="How long does Koselugo take to work?" id="acc-11">
+                            <p>
+                                Koselugo is a prescription medicine that is used to treat
+                                children 2 years of age and older with neurofibromatosis
+                                type 1 (NF1) who have plexiform neurofibromas that cannot be
+                                completely removed by surgery. It is not known if Koselugo
+                                is safe and effective in children under 2 years of age. <a
+                                    href="">Learn more about taking Koselugo</a
+                                >.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Blanditiis veritatis error voluptas quas unde distinctio ea
+                                natus, tempore pariatur consequatur repudiandae quae earum
+                                hic harum delectus at sequi alias autem!
+                            </p>
+                        </AccordionItem>
+                        <AccordionItem header="What if my child misses a dose?" id="acc-12">
+                            <p>
+                                Koselugo is a prescription medicine that is used to treat
+                                children 2 years of age and older with neurofibromatosis
+                                type 1 (NF1) who have plexiform neurofibromas that cannot be
+                                completely removed by surgery. It is not known if Koselugo
+                                is safe and effective in children under 2 years of age. <a
+                                    href="">Learn more about taking Koselugo</a
+                                >.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Blanditiis veritatis error voluptas quas unde distinctio ea
+                                natus, tempore pariatur consequatur repudiandae quae earum
+                                hic harum delectus at sequi alias autem!
+                            </p>
+                        </AccordionItem>
+                        <AccordionItem header="Can Koselugo be taken with meals?" id="acc-13">
+                            <p>
+                                Koselugo is a prescription medicine that is used to treat
+                                children 2 years of age and older with neurofibromatosis
+                                type 1 (NF1) who have plexiform neurofibromas that cannot be
+                                completely removed by surgery. It is not known if Koselugo
+                                is safe and effective in children under 2 years of age. <a
+                                    href="">Learn more about taking Koselugo</a
+                                >.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Blanditiis veritatis error voluptas quas unde distinctio ea
+                                natus, tempore pariatur consequatur repudiandae quae earum
+                                hic harum delectus at sequi alias autem!
+                            </p>
+                        </AccordionItem>
+            
+
+                </section>
+            </Section>
+            <h6 class="accordion__second-anchor">To learn about patient support from Alexion, visit our <a class='button button--basic'href="#">Support Programs</a> page</h6>
 </Layout>
