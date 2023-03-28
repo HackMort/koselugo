@@ -5,12 +5,13 @@ type Props = {
   photoAlt: string;
   email: string;
   phone: string;
+  show?: string;
 };
 
-const { name, photoSrc, photoAlt, email, phone } = Astro.props;
+const { name, photoSrc, photoAlt, email, phone, show } = Astro.props;
 ---
 
-<div class="pem">
+<div class="pem" aria-show={show ? "true" : "false"}>
   <div class="pem__photo">
     <img class="pem__photo_img" src={photoSrc} alt={photoAlt} />
   </div>
