@@ -1,17 +1,211 @@
 ---
-import SimpleHero from '../components/SimpleHero.astro';
+import SimpleHero from "../components/SimpleHero.astro";
 import Layout from "../layouts/Layout.astro";
+import PEM from "../components/PEM.astro";
+import Section from "../components/Section.astro";
+import OneSource from "../components/OneSource.astro";
 ---
 
 <Layout title="Savings & Support">
-    <div class="wrapper">
-        <h2>Savings & Support</h2>
-          <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
-              veritatis error voluptas quas unde distinctio ea natus, tempore
-              pariatur consequatur repudiandae quae earum hic harum delectus at
-              sequi alias autem!
+  <div class="savings__page">
+    <div class="hero">
+      <SimpleHero folder="savings-and-support" alt="PEM Team">
+        <Fragment slot="content">
+          <div class="hero__content">
+            <h1 class="hero__title">KOSELUGO COMES WITH A TEAM</h1>
+            <p>
+              Contact your Patient Education Manager (PEM) today for one-on-one
+              support and education to help you gain a greater understanding of
+              NF1 PN and how it can affect your child.
             </p>
+            <div class="hero__content_form">
+              <form class="form" action="" method="post">
+                <label for="zip"
+                  >Enter your ZIP code to find the PEM closest to you.</label
+                >
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__control"
+                    id="zip"
+                    name="zip"
+                  />
+                  <input type="submit" class="form__submit" value="Submit" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </Fragment>
+      </SimpleHero>
+    </div>
 
+    <div class="wrapper">
+      <PEM
+        email="test@mail.com"
+        name="Mike"
+        show="true"
+        phone="1-330-217-2642"
+        photoAlt="Mike"
+        photoSrc="/assets/images/pems/mike.png"
+      >
+        <p slot="motivates">
+          I enjoy understanding a problem or issue, thinking about the possible
+          solutions, and coming up with a plan to make the situation better. I
+          enjoy accepting challenges that make some uncomfortable and finding a
+          way to make something happen for the good of others.
+        </p>
+        <p slot="goal">
+          My #1 goal when helping patients is to give them hope and equip them
+          with the resources to manage their condition more effectively.
+        </p>
+      </PEM>
+      <PEM
+        email="test@mail.com"
+        name="Bonnie"
+        show="true"
+        phone="1-415-713-6242"
+        photoAlt="Bonnie"
+        photoSrc="/assets/images/pems/bonnie.png"
+      >
+        <p slot="motivates">Helping people however I can.</p>
+        <p slot="goal">To support them in meeting their #1 goal.</p>
+      </PEM>
+      <PEM
+        email="test@mail.com"
+        name="Liz"
+        show="true"
+        phone="1-318-507-9592"
+        photoAlt="Liz"
+        photoSrc="/assets/images/pems/liz.png"
+      >
+        <p slot="motivates">
+          I am motivated by hearing patients’, caregivers’, and family members’
+          stories. I believe that by listening you allow each family member to
+          tell their story. This builds trust and a partnership for future
+          education and support.
+        </p>
+        <p slot="goal">
+          My #1 goal is to be an advocate for the NF1 PN community of patients,
+          caregivers, and family members. I’m always looking for ways to improve
+          Alexion Rare Disease to support the NF1 PN community.
+        </p>
+      </PEM>
+    </div>
+
+    <Section>
+      <Fragment slot="section-title">
+        HELPING YOUR CHILD <span class="color-yellow"
+          >ACCESS THE CARE THEY NEED</span
+        >
+      </Fragment>
+      <div class="wrapper">
+        <p>
+          OneSource™ is a free, personalized patient support program offered by
+          Alexion. Whether your child is newly diagnosed or has had their
+          condition for some time, our specialists will be by your side. We can
+          help you make sense of your health insurance coverage, answer
+          questions about your child's treatment with KOSELUGO® (selumetinib),
+          and connect you to community resources.
+        </p>
+        <p>
+          We're committed to helping your child start and stay on track with
+          their prescribed treatment.
+        </p>
+
+        <div class="grid__wrapper">
+          <div class="grid__icon">
+            <img
+              src="/assets/images/savings-and-support/personal-support-icon.png"
+              class="icon"
+              alt="Personal Support Image"
+            />
+          </div>
+          <div class="grid__content">
+            <h3 class="grid__content_heading">
+              OneSource<sup>&trade;</sup> Support Services
+            </h3>
+            <p>
+              Your dedicated Patient Access Navigator is here to guide and give
+              you the support you deserve—whatever your care plan may be. They
+              can:
+            </p>
+            <ul class="list">
+              <li>
+                Answer questions about neurofibromatosis type 1 (NF1) plexiform
+                neurofibromas (PN), Koselugo, your insurance coverage, and more
+              </li>
+              <li>Provide support during treatment</li>
+              <li>
+                Help you avoid interruptions in your child’s treatment during
+                insurance changes, travel plans, or other life events
+              </li>
+              <li>
+                Help you get involved with the rare disease community through
+                events and meetings
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid__wrapper">
+          <div class="grid__icon">
+            <img
+              src="/assets/images/savings-and-support/financial-icon.png"
+              class="icon financial"
+              alt="Financial Icon"
+            />
+          </div>
+          <div class="grid__content">
+            <h3 class="grid__content_heading">
+              Health insurance can be complicated. We’re here to help make sense
+              of it all.
+            </h3>
+            <p>OneSource can help by:</p>
+            <ul class="list">
+              <li>
+                Providing information that explains your insurance coverage for
+                Koselugo
+              </li>
+              <li>
+                Answering questions regarding financial concerns or gaps in
+                coverage
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </Section>
+
+    <OneSource />
+
+    <div class="video__text">
+      <p>
+        To see the inspiring story of how 8-year-old Cooper and his family
+        helped manage his treatment, view the <a href="#">video</a>.
+      </p>
+    </div>
+
+    <div class="stay__informed">
+      <Section>
+        <Fragment slot="section-title">
+          <span class="color-yellow">STAY INFORMED</span> ABOUT NF1 PN
+        </Fragment>
+        <div class="wrapper">
+          <p>
+            To receive the latest updates, tools, and tips about NF1 plexiform
+            neurofibromas (PN) and Koselugo, please provide us with some
+            information about yourself.
+          </p>
+        </div>
+      </Section>
+      <div class="form">
+        <div class="wrapper">
+          <p>
+            Are you a caregiver of someone who has been diagnosed with NF1
+            plexiform neurofibromas? *
+          </p>
+          <h1>Form here...</h1>
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>
