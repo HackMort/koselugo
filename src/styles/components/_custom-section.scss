@@ -11,6 +11,7 @@
         min-height: 10rem;
         margin-top: calc(3.0313rem + 2.25rem);
         padding-top: 3.0313rem;
+        padding-bottom: 1rem;
     }
 
     &__header {
@@ -74,5 +75,9 @@
 
     &__content {
         margin-top: 1.875rem;
+    }
+
+    h6{
+        margin-top: 1rem;
     }
 }
