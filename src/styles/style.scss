@@ -48,8 +48,12 @@
 /******************************************************
 -- Safety and Side Effects
 ******************************************************/
+.side-effect-page {
+  margin-bottom: 40px;
 
-.side-effects {
+}
+
+.side-effects-page--section {
   padding: 20px;
 
   h3 {
@@ -63,10 +67,11 @@
 
   @include media('mobile') {
     padding: 0;
+    padding-bottom: 3rem;
   }
 }
 
-.side-effects--callout {
+.side-effects-page--callout {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,7 +99,7 @@
   }
 }
 
-.side-effects .side-effects--list {
+.side-effects .side-effects-page--list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -116,7 +121,7 @@
 
 }
 
-.side-effects--commun-list {
+.side-effects-page--commun-list {
   display: flex;
   img {
     width: fit-content;
@@ -131,7 +136,7 @@
 
 }
 
-.side-effects--commun-list__column  {
+.side-effects-page--commun-list__column  {
   width: 40%;
 
   @include media('mobile') {
@@ -139,7 +144,7 @@
   }
 }
 
-.side-effects--commun-list__item {
+.side-effects-page--commun-list__item {
   display: grid;
   grid-template-columns: 70px 30px 1fr;
   margin-bottom: 15px;
@@ -165,16 +170,79 @@
 
 }
 
-.side-effects--commun-list__point {
+.side-effects-page--commun-list__point {
   background-color: $color-aqua;
   border-radius: 50%;
   width: 10px;
   height: 10px;
   margin-right: 10px;
   margin-left: 10px;
+
+  @include media('tablet') {
+    display: block; //Overwrite the display: none; from the .only-desktop class
+  }
 }
 
 .side-effects__link {
   text-decoration: none;
   font-weight: 500;
+}
+
+.side-effects-page--disclaimer {
+  font-weight: 600;
+  font-size: 22px;
+  background-color: $color-white;
+  border: 1px solid #404040; //This color is not in the variables.scss file
+  width: 70%;
+  margin: 20px auto;
+  padding: 25px;
+
+  @include media('mobile') {
+    width: 100%;
+  }
+
+
+}
+
+.side-effects-page--paragraph {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.side-effects-page--secondary-section {
+  margin: 20px auto;
+}
+
+.side-effects-page--secondary-section__bg-white {
+  background-color: $color-white;
+}
+
+.side-effects-page--problems-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include flex-gap(20px);
+
+  img {
+    width: fit-content;
+    height: fit-content;
+  }
+}
+
+.side-effects-page--steps {
+  :first-child {
+    display: block;
+    
+    @include media('desktop') {display: none;}
+    @include media('tablet') {display: none;}
+  }
+
+  :nth-child(2) {
+    display: none;
+    
+    @include media('desktop') {display: block;}
+    @include media('tablet') {display: block;}
+  }
+
 }
