@@ -6,6 +6,7 @@
 @import './settings/_layouts.scss';
 @import './settings/_global.scss';
 @import './settings/_utils.scss';
+@import './components/_form.scss';
 @import './components/_buttons.scss';
 @import './components/_header.scss';
 @import './components/_accordion.scss';
@@ -21,7 +22,8 @@
 
 @import './components/_main-hero.scss';
 @import './components/_simple-hero.scss';
-@import './components/event-joiner.scss';
+@import './components/_event-joiner.scss';
+@import './components/_events-form.scss';
 
 /******************************************************
 -- Home Page
