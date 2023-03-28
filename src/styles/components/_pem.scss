@@ -16,7 +16,7 @@
   }
 
   @include media('desktop') {
-    background-color: $color-white;
+    // background-color: $color-white;
     gap: 4.6875rem;
     padding-bottom: 5.3913rem;
   }
@@ -48,6 +48,7 @@
   }
 
   &__heading {
+    color: $color-dark-purple;
     font-size: 1.125rem;
     line-height: 1.625rem;
     font-weight: 500;
