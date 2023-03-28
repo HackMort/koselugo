@@ -29,10 +29,14 @@ h3 {
 h6 {
     font-size: 1.125rem;
     line-height: 20.41px;
+    
+    @include media('tablet') {
+    font-size: 22px;
+  }
 }
 
 p {
-  color: currentColor;
+  color: $color-black;
   font-size: 1rem;
   font-weight: 400;
   font-stretch: normal;
