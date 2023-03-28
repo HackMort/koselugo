@@ -53,7 +53,9 @@
 ******************************************************/
 .side-effect-page {
   margin-bottom: 40px;
-
+  @include media('mobile') {
+    max-width: 100% !important;
+  }
 }
 
 .side-effects-page--section {
@@ -61,16 +63,27 @@
 
   h3 {
     font-size: 22px;
-    margin: 15px 0;
+    margin: 15px 20px 0 20px;
+
+    @include media('tablet') {
+      margin: 15px 0 0 0;
+    }
   }
 
   p {
     line-height: 26px;
   }
 
+  @include media('tablet') {
+    padding: 0px;
+  }
+
+}
+
+.side-effects-page--section__overlapping {
   @include media('mobile') {
     padding: 0;
-    padding-bottom: 3rem;
+    padding-bottom: 8rem;
   }
 }
 
@@ -102,7 +115,7 @@
   }
 }
 
-.side-effects .side-effects-page--list {
+.side-effects-page--list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -119,7 +132,7 @@
   }
 
   @include media('tablet') {
-    @include flex-gap(20px);
+    @include flex-gap(10px);
   }
 
 }
@@ -196,20 +209,26 @@
   font-size: 22px;
   background-color: $color-white;
   border: 1px solid #404040; //This color is not in the variables.scss file
-  width: 70%;
+  width: 90%;
   margin: 20px auto;
   padding: 25px;
 
-  @include media('mobile') {
-    width: 100%;
+  @include media('desktop') {
+    width: 70%;
   }
+}
 
-
+.side-effects-page--disclaimer__overlapping {
+  @include media('mobile') {
+    position: relative;
+    margin-top: -100px;
+  }
 }
 
 .side-effects-page--paragraph {
   font-weight: 600;
   font-size: 22px;
+  margin: 20px;
 }
 
 .side-effects-page--secondary-section {
