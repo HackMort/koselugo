@@ -271,7 +271,11 @@
         }
 
         .custom-section{
-            margin-bottom: 7rem;
+            margin-bottom: 124px;
+            @include media('tablet') {
+                margin-bottom: 101px;
+            }
+
         }
         
     }
