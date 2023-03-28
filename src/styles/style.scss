@@ -281,236 +281,6 @@
 
 }
 
-/******************************************************
--- About Page
-******************************************************/
-.about-koselugo {
-  &__clinical-study {
-    .about-koselugo {
-      &__container {
-        &--align-center {
-          text-align: center;
-
-          .about-koselugo__title {
-            margin-bottom: 5px;
-          }
-        }
-      }
-
-      &__image {
-        width: 50%;
-  
-        @include media('tablet') {
-          width: fit-content;
-        }
-      }
-    }
-
-    & > .about-koselugo__title {
-      margin-bottom: 10px;
-    }
-  }
-
-  &__faq {
-    background-color: #F6FAFB;
-
-    &.about-koselugo__container--visit {
-        .button {
-          display: none;
-
-          &--only-mobile {
-            display: flex;
-          }
-  
-          @include media('tablet') {
-            display: flex;
-  
-            &--only-mobile {
-              display: none;
-            }
-          }
-        }
-
-        .about-koselugo__title {
-          &--hide-tablet {
-            @include media('tablet') {
-              display: none;
-            }
-
-            @include media('desktop') {
-              display: block;
-            }
-          }
-
-          &--only-tablet {
-            display: none;
-
-            @include media('tablet') {
-              display: block;
-            }
-
-            @include media('desktop') {
-              display: none;
-            }
-          }
-        }
-      }
-  }
-
-  &__journeys {
-    background-color: #F6FAFB;
-  }
-
-  &__support-program {
-
-    @include media('tablet') {
-      position: relative;
-      padding-bottom: 6rem;
-    }
-
-    @include media('desktop') {
-      padding-bottom: 4rem;
-    }
-
-    .about-koselugo__image {
-      width: 50%;
-
-      @include media('tablet') {
-        width: 3.5rem;
-      }
-    }
-
-    & + .one__source {
-      margin: 0 20px;
-
-      @include media('tablet') {
-        bottom: -6rem;
-        left: 0;
-        margin: auto;
-        position: absolute;
-        right: 0;
-      }
-    }
-  }
-
-  &__what-is {
-    .about-koselugo__image {
-      width: 80%;
-
-      @include media('tablet') {
-        width: 35%;
-      }
-    }
-  }
-
-  &__container {
-    width: 100%;
-    
-    &--flex {
-      @include media('tablet') {
-        display: flex;
-        align-items: center;
-        @include flex-gap(1.5rem)
-      }
-    }
-
-    &--footnote {
-      padding: 4rem 0 4.5rem;
-
-      p {
-        font-size: 13px;
-      }
-  
-      @include media('tablet') {
-        padding: 0;
-      }
-    }
-
-    &--visit {
-      text-align: center;
-  
-      .button {
-        margin: 0 auto;
-        padding-top: 0;
-      }
-
-      .about-koselugo__title {
-        font-size: 22px;
-        margin: 0 auto;
-        
-        @include media('tablet') {
-          max-width: 38ch;
-        }
-
-        @include media('desktop') {
-          max-width: 50ch;
-        }
-      }
-    }
-  }
-
-  &__image {
-    margin: 1.5rem auto;
-  }
-
-  &__list {
-    margin-top: 5px;
-
-    &-item {
-      margin-bottom: 5px;
-    }
-  }
-
-  &.wrapper {
-    max-width: 100%;
-  }
-
-  .custom-section__content {
-    @include media('tablet') {
-      margin-top: 0;
-    }
-  }
-
-  .custom-section {
-    @include media('tablet') {
-      margin-top: 2rem;
-    }
-    
-    &:nth-child(odd) {
-      background-color: #F6FAFB;
-      
-      @include media('tablet') {
-        margin-top: 0;
-      }
-    }
-  }
-  
-  .simple-hero + .custom-section {
-    @include media('tablet') {
-      margin-top: calc(3.0313rem + 2.25rem);
-    }
-  }
-
-  & + .isi {
-    padding-top: 3rem;
-
-    @include media('tablet') {
-      margin-top: 11rem;
-      padding-top: 1rem;
-    }
-
-    @include media('desktop') {
-      margin-top: 10rem;
-    }
-  }
-
-  &__title {
-    @include media('tablet') {
-      font-size: 22px;
-    }
-  }
-}
-
 //--------------------UNDERSTANDING NF1--------------------
 //nf1-section
 .nf1-margin {
@@ -758,3 +528,238 @@
 }
 
 //--------------------GLOSSARY--------------------
+
+
+/******************************************************
+-- About Page
+******************************************************/
+.about-koselugo {
+  &__clinical-study {
+    .about-koselugo {
+      &__container {
+        &--align-center {
+          text-align: center;
+
+          .about-koselugo__title {
+            margin-bottom: 5px;
+          }
+        }
+      }
+
+      &__image {
+        width: 50%;
+  
+        @include media('tablet') {
+          width: fit-content;
+        }
+      }
+    }
+
+    & > .about-koselugo__title {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__faq {
+    background-color: transparent;
+
+    &.about-koselugo__container--visit {
+        .button {
+          display: none;
+
+          &--only-mobile {
+            display: flex;
+          }
+  
+          @include media('tablet') {
+            display: flex;
+  
+            &--only-mobile {
+              display: none;
+            }
+          }
+        }
+
+        .about-koselugo__title {
+          &--hide-tablet {
+            @include media('tablet') {
+              display: none;
+            }
+
+            @include media('desktop') {
+              display: block;
+            }
+          }
+
+          &--only-tablet {
+            display: none;
+
+            @include media('tablet') {
+              display: block;
+            }
+
+            @include media('desktop') {
+              display: none;
+            }
+          }
+        }
+      }
+  }
+
+  &__journeys {
+    background-color: transparent;
+  }
+
+  &__support-program {
+
+    @include media('tablet') {
+      position: relative;
+      padding-bottom: 6rem;
+    }
+
+    @include media('desktop') {
+      padding-bottom: 4rem;
+    }
+
+    .about-koselugo__image {
+      width: 50%;
+
+      @include media('tablet') {
+        width: 3.5rem;
+      }
+    }
+
+    & + .one__source {      
+
+      @include media('tablet') {
+        bottom: -6rem;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+
+  &__what-is {
+    .about-koselugo__image {
+      width: 80%;
+
+      @include media('tablet') {
+        width: 35%;
+      }
+    }
+  }
+
+  &__container {
+    width: 100%;
+    
+    &--flex {
+      @include media('tablet') {
+        display: flex;
+        align-items: center;
+        @include flex-gap(1.5rem)
+      }
+    }
+
+    &--footnote {
+      padding: 4rem 0 4.5rem;
+
+      p {
+        font-size: 13px;
+      }
+  
+      @include media('tablet') {
+        padding: 0;
+      }
+    }
+
+    &--visit {
+      text-align: center;
+  
+      .button {
+        margin: 0 auto;
+        padding-top: 0;
+      }
+
+      .about-koselugo__title {
+        font-size: 22px;
+        margin: 0 auto;
+        
+        @include media('tablet') {
+          max-width: 38ch;
+        }
+
+        @include media('desktop') {
+          max-width: 50ch;
+        }
+      }
+    }
+  }
+
+  &__image {
+    margin: 1.5rem auto;
+  }
+
+  &__list {
+    margin-top: 5px;
+
+    &-item {
+      margin-bottom: 5px;
+    }
+  }
+
+  &.wrapper {
+    max-width: 100%;
+  }
+
+  .custom-section__content {
+    @include media('tablet') {
+      margin-top: 0;
+    }
+  }
+
+  .custom-section {
+    @include media('tablet') {
+      margin-top: 2rem;
+      padding-left: 0.75rem;
+    }
+
+    @include media('desktop') {
+      padding-left: 0;
+    }
+    
+    &:nth-child(odd) {
+      background-color: #F6FAFB;
+      
+      @include media('tablet') {
+        margin-top: 0;
+      }
+    }
+  }
+  
+  .simple-hero + .custom-section {
+    @include media('tablet') {
+      margin-top: calc(3.0313rem + 2.25rem);
+    }
+  }
+
+  & + .isi {
+    padding-top: 3rem;
+
+    @include media('tablet') {
+      margin-top: 11rem;
+      padding-top: 1rem;
+    }
+
+    @include media('desktop') {
+      margin-top: 10rem;
+    }
+  }
+
+  &__title {
+    @include media('tablet') {
+      font-size: 22px;
+    }
+  }
+}
