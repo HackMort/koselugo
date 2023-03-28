@@ -1,145 +1,196 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Section from '../components/Section.astro';
+import Section from "../components/Section.astro";
+import SimpleHero from "../components/SimpleHero.astro";
 ---
 
 <Layout title="Understanding NF1 PN">
-    
-<br><br>
-              <Section>
-                   <Fragment slot="section-title">
-                       WHAT IS <span class="color-yellow">NEUROFIBROMATOSIS TYPE 1 (NF1)?</span>
-                </Fragment>
-        
-                <div class="wrapper nf1" id="nf1-box">
-                    <p>
-                        NF1 is a rare, progressive condition caused by a mutation or flaw in a particular gene. NF1 is usually diagnosed in early childhood. It appears in an estimated 1 out of every 3000 infants worldwide.
-                    </p>
-                    
-                    <h6>
-                        WHAT ARE PLEXIFORM NEUROFIBROMAS (PN)?
-                    </h6>
-                    <div class="plexiform-paragraph">
-                        
-                        <img class="plexiform-percentage" src="/assets/images/30-to-50-percentage.png.svg" alt="">
-                        <figure class="percentage-box">
-                            <img class="plexiform-percentage-two" src="/assets/images/30-to-50-percentage.png.svg" alt="">
-                        </figure>
-                        <p>
-                            of children with NF1 may develop benign (noncancerous) tumors called plexiform neurofibromas or plexiform tumors, which grow along nerves.
-                        </p>
-                    </div>
-                    <h6>
-                        Where do NF1 plexiform neurofibromas occur?
-                    </h6>
-                    <p>
-                        These tumors can grow on any nerve in the body and can be large or small in size.
-                    </p>
-                    <figure class="kid-box">
-                        <img class="kid-nf1" src="/assets/images/kid-nf1.svg" alt="">
-                        <h6>
-                            Discover Koselugo’s PROVEN ability to treat NF1 plexiform neurofibromas
-                        </h6>
-                        <a href="/about-koselugo.html" class="button button--basic">Learn about Koselugo</a>
-                    </figure>
-                </div>
-              </Section>
-        <div class="nf1-margin"></div>      
-              <Section>
-               
-                  <Fragment slot="section-title">
-                    HOW ARE NF1 PLEXIFORM <span class="color-yellow">NEUROFIBROMAS (PN) TREATED?</span>
-                </Fragment>
-        
-                <div class="wrapper">
-                <div class="nf1-second nf1">
-                    <img class='three-people' src="/assets/images/three-people.svg" alt="">
-                    <h6>
-                        Which doctors and healthcare specialists treat pediatric NF1 plexiform neurofibromas (PN)?
-                    </h6>
-                    <p>
-                        NF1 plexiform neurofibromas are usually treated by a team of healthcare specialists, including neuro-oncologists, oncologists, neurologists, geneticists, surgeons, and others who specialize in treating symptoms related to this disease.
-                    </p>
-                    <p class="nf1-second__bold">
-                        The location of your child’s plexiform neurofibromas will help determine which doctors are best to see for treatment.
-                    </p>
+    <SimpleHero folder="understanding-nf1-pn" alt="" />
 
+    <Section>
+        <Fragment slot="section-title">
+            WHAT IS <span class="color-yellow"
+                >NEUROFIBROMATOSIS TYPE 1 (NF1)?</span
+            >
+        </Fragment>
 
-                    <img class="second-person" src="/assets/images/second-person.svg" alt="">
-                    <h6>
-                        Why can’t some NF1 plexiform neurofibromas (PN) be completely removed by surgery?
-                    </h6>
-                    <p>
-                        Surgery for NF1 plexiform neurofibromas may not be recommended by your child’s healthcare provider. One reason is plexiform neurofibromas may be closely intertwined with critical nerves, many blood vessels, and located near major organs. Also, PN may not be completely removed by surgery.
-                    </p>
+        <div id="nf1-box">
+            <p>
+                NF1 is a rare, progressive condition caused by a mutation or
+                flaw in a particular gene. NF1 is usually diagnosed in early
+                childhood. It appears in an estimated 1 out of every 3000
+                infants worldwide.
+            </p>
 
+            <h6>WHAT ARE PLEXIFORM NEUROFIBROMAS (PN)?</h6>
+            <div class="plexiform-paragraph">
+                <img
+                    class="plexiform-paragraph__percentage"
+                    src="/assets/images/30-to-50-percentage.png.svg"
+                    alt=""
+                />
+                <figure class="plexiform-paragraph__percentage-box">
+                    <img
+                        class="plexiform-paragraph__percentage-two"
+                        src="/assets/images/30-to-50-percentage.png.svg"
+                        alt=""
+                    />
+                </figure>
+                <p>
+                    of children with NF1 may develop benign (noncancerous)
+                    tumors called plexiform neurofibromas or plexiform tumors,
+                    which grow along nerves.
+                </p>
+            </div>
+            <h6>Where do NF1 plexiform neurofibromas occur?</h6>
+            <p>
+                These tumors can grow on any nerve in the body and can be large
+                or small in size.
+            </p>
+            <figure class="kid-box">
+                <img class="kid-nf1" src="/assets/images/kid-nf1.svg" alt="" />
+                <h6>
+                    Discover Koselugo’s PROVEN ability to treat NF1 plexiform
+                    neurofibromas
+                </h6>
+                <a href="/about-koselugo.html" class="button button--basic"
+                    >Learn about Koselugo</a
+                >
+            </figure>
+        </div>
+    </Section>
+    <div class="nf1-margin"></div>
+    <Section>
+        <Fragment slot="section-title">
+            HOW ARE NF1 PLEXIFORM <span class="color-yellow"
+                >NEUROFIBROMAS (PN) TREATED?</span
+            >
+        </Fragment>
 
+        <div class="nf1-second nf1">
+            <img
+                class="three-people"
+                src="/assets/images/three-people.svg"
+                alt=""
+            />
+            <h6>
+                Which doctors and healthcare specialists treat pediatric NF1
+                plexiform neurofibromas (PN)?
+            </h6>
+            <p>
+                NF1 plexiform neurofibromas are usually treated by a team of
+                healthcare specialists, including neuro-oncologists,
+                oncologists, neurologists, geneticists, surgeons, and others
+                who specialize in treating symptoms related to this disease.
+            </p>
+            <p class="nf1-second__bold">
+                The location of your child’s plexiform neurofibromas will
+                help determine which doctors are best to see for treatment.
+            </p>
 
-                    <img class="document-nf1" src="/assets/images/nf1-document.svg" alt="">
-                    <h6>
-                        Are there any other ways to treat NF1 plexiform neurofibromas (PN)?
-                    </h6>
-                    <p>
-                        Your child’s doctor may prescribe therapies or medicines to help relieve symptoms of NF1 plexiform neurofibromas (PN).
-                    </p>
+            <img
+                class="second-person"
+                src="/assets/images/second-person-i.svg"
+                alt=""
+            />
+            <h6>
+                Why can’t some NF1 plexiform neurofibromas (PN) be
+                completely removed by surgery?
+            </h6>
+            <p>
+                Surgery for NF1 plexiform neurofibromas may not be
+                recommended by your child’s healthcare provider. One reason
+                is plexiform neurofibromas may be closely intertwined with
+                critical nerves, many blood vessels, and located near major
+                organs. Also, PN may not be completely removed by surgery.
+            </p>
 
-                    <h6 class="last-nf1-title">
-                        Before Koselugo, there was no FDA-approved medication proven to reduce the size of NF1 plexiform neurofibromas (PN).
-                    </h6>
-                
-                        <h6 class="last-nf1-title" id="last-nf1">
-                            Ask your child’s doctor about Koselugo—a prescription treatment for NF1 PN patients who have symptomatic, inoperable plexiform neurofibromas.        
-                            <a href="/about-koselugo#what-is-koselugo.html" class="button button--basic">What is Koselugo?</a>
-                        </h6>
-                </div>
-                </div>
-              </Section>
-              <div class="nf1-margin-two"></div>      
-             <Section>
-               
-                <Fragment slot="section-title">
-                    WHAT ARE SOME WAYS FAMILIES CAN <span class="color-yellow"> NAVIGATE NF1 PN?</span>
-                </Fragment>
-        
-                <div class="wrapper">
-                <div class="nf1-second nf1">
-                    <img class='nf1-head' src="/assets/images/nf1-head.svg" alt="">
-                    <p>
-                        Plexiform neurofibromas (PN) can cause a lot of uncertainty. Creating daily routines for children can help them feel secure and give them a positive sense of control.
-                    </p>
+            <img
+                class="document-nf1"
+                src="/assets/images/nf1-document-i.svg"
+                alt=""
+            />
+            <h6>
+                Are there any other ways to treat NF1 plexiform
+                neurofibromas (PN)?
+            </h6>
+            <p>
+                Your child’s doctor may prescribe therapies or medicines to
+                help relieve symptoms of NF1 plexiform neurofibromas (PN).
+            </p>
 
+            <h6 class="last-nf1-title">
+                Before Koselugo, there was no FDA-approved medication proven
+                to reduce the size of NF1 plexiform neurofibromas (PN).
+            </h6>
 
-                    <img class="nf1-house" src="/assets/images/nf1-house.svg" alt="">
-                  
-                    <p>
-                        Building a supportive home environment in which all family members are treated equally with respect and acceptance can benefit not only the child with NF1 plexiform neurofibromas, but also siblings, who may feel they’re getting less attention.
-                    </p>
+            <h6 class="last-nf1-title" id="last-nf1">
+                Ask your child’s doctor about Koselugo—a prescription
+                treatment for NF1 PN patients who have symptomatic,
+                inoperable plexiform neurofibromas.
+                <a
+                    href="/about-koselugo#what-is-koselugo.html"
+                    class="button button--basic">What is Koselugo?</a
+                >
+            </h6>
+        </div>
+    </Section>
+    <div class="nf1-margin-two"></div>
+    <Section>
+        <Fragment slot="section-title">
+            WHAT ARE SOME WAYS FAMILIES CAN <span class="color-yellow">
+                NAVIGATE NF1 PN?</span
+            >
+        </Fragment>
 
+        <div class="nf1-second nf1">
+            <img
+                class="nf1-head"
+                src="/assets/images/nf1-head.svg"
+                alt=""
+            />
+            <p>
+                Plexiform neurofibromas (PN) can cause a lot of uncertainty.
+                Creating daily routines for children can help them feel
+                secure and give them a positive sense of control.
+            </p>
 
+            <img
+                class="nf1-house"
+                src="/assets/images/nf1-house.svg"
+                alt=""
+            />
 
-                    <img class="two-people" src="/assets/images/two-people.svg" alt="">
-                
-                    <p id="last-third">
-                        Making the transition from childhood to teenage years can be especially difficult when living with NF1 PN. Helping your child gradually take more control of their health care, medications, and treatment decisions can encourage responsibility and help them feel empowered.
-                    </p>
-                
-                        <h6 class="last-nf1-title" id="last-nf1">
-                            Ask your child's doctor if Koselugo is right for your child        
-                            <a href="/about-koselugo#what-is-koselugo.html" class="button button--basic">Get to know Koselugo</a>
-                        </h6>
-                </div>
-                </div>
-              </Section>
-              <div class="nf1-margin-three"></div>      
-              
+            <p>
+                Building a supportive home environment in which all family
+                members are treated equally with respect and acceptance can
+                benefit not only the child with NF1 plexiform neurofibromas,
+                but also siblings, who may feel they’re getting less
+                attention.
+            </p>
 
-              
-        <!-- <h2>Understanding NF1 PN</h2>
-          <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
-              veritatis error voluptas quas unde distinctio ea natus, tempore
-              pariatur consequatur repudiandae quae earum hic harum delectus at
-              sequi alias autem!
-            </p> -->
+            <img
+                class="two-people"
+                src="/assets/images/two-people.svg"
+                alt=""
+            />
 
+            <p id="last-third">
+                Making the transition from childhood to teenage years can be
+                especially difficult when living with NF1 PN. Helping your
+                child gradually take more control of their health care,
+                medications, and treatment decisions can encourage
+                responsibility and help them feel empowered.
+            </p>
+
+            <h6 class="last-nf1-title" id="last-nf1">
+                Ask your child's doctor if Koselugo is right for your child
+                <a
+                    href="/about-koselugo#what-is-koselugo.html"
+                    class="button button--basic">Get to know Koselugo</a
+                >
+            </h6>
+        </div>
+    </Section>
+    <div class="nf1-margin-three"></div>
 </Layout>

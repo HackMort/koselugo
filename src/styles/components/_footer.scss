@@ -6,6 +6,10 @@
   font-size: 0.81rem;
   line-height: 0.975rem;
 
+  * {
+    color: currentColor;
+  }
+
   @include media('tablet') {
     font-size: 1rem;
     line-height: 1.606rem;
