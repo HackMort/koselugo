@@ -697,10 +697,6 @@
     }
   }
 
-  &.wrapper {
-    max-width: 100%;
-  }
-
   .custom-section__content {
     @include media('tablet') {
       margin-top: 0;
