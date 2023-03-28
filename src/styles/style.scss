@@ -16,6 +16,9 @@
 @import './components/_callout.scss';
 @import './components/_isi.scss';
 @import './components/_footer.scss';
+
+
+
 @import './components/_main-hero.scss';
 @import './components/_simple-hero.scss';
 
@@ -24,25 +27,25 @@
 ******************************************************/
 
 .cards {
-  display: grid;
-  margin: 0 auto;
-  max-width: 55.375rem;
-  padding-top: 1rem;
-  margin-bottom: 5.7813rem;
-  width: 100%;
+    display: grid;
+    margin: 0 auto;
+    max-width: 55.375rem;
+    padding-top: 1rem;
+    margin-bottom: 5.7813rem;
+    width: 100%;
 
   @include media('tablet') {
-    gap: 1.5rem;
+      gap: 1.5rem;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 2.9375rem;
   }
 
   @include media('desktop') {
-    gap: 3.75rem;
+      gap: 3.75rem;
     max-width: 67.5rem;
     margin-bottom: 4.66rem;
   }
-
+  
 }
 
 /******************************************************
@@ -119,3 +122,236 @@
     }
   }
 }
+
+//--------------------UNDERSTANDING NF1--------------------
+//nf1-section
+ .nf1-margin{
+    margin-bottom: 0rem!important;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 9rem!important;
+    }
+    @media screen and (min-width: 900px) {
+        margin-bottom: 16rem!important;
+    }
+} 
+
+.nf1{
+    a{
+        padding-top: 0;
+    }
+  h6{
+    font-size: 22px;
+  }  
+}
+
+.plexiform-percentage{
+    width: 163px;
+    height: 30px;
+    margin-right: 1rem;
+    display: none;
+    
+    @include media('tablet') {
+        width: 272px;
+        height: 51px;
+        display: unset;
+    }
+}
+
+.plexiform-percentage-two{
+    width: 163px;
+    height: 30px;
+    margin-right: 1rem;
+    float: left;
+
+    @include media('tablet') {
+        width: 272px; 
+        height: 51px;
+    }
+}
+
+.percentage-box{
+    height: 14px;
+    @include media('tablet') {
+        display: none;
+    }
+}
+
+.plexiform-paragraph{
+    margin-top: 1rem;
+    @include media('tablet') {
+
+        display: flex;
+        
+        align-items: center;
+    }
+    
+}
+
+#nf1-box{
+    p{
+        max-width: 986px;
+    }
+}
+
+.kid-box{
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+
+    .kid-nf1{
+            width: 279px;
+            margin: auto;
+            height: 186;
+
+        @media screen and (min-width:393px) {
+            height: 256px;
+            width: 360px;
+
+        } 
+
+    }
+    h6{
+        text-align: center;
+    }
+
+    @media screen and (min-width:768px) {
+        margin-bottom: -145px!important;
+    }
+    
+
+}
+//nf1-sectione
+
+//second-section
+.nf1-second{
+    max-width: 735px;
+    margin: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+  
+
+    img{
+        margin: auto;
+        width: 94px;
+        height: 115px;
+        margin-top: 32px;
+        margin-bottom: 1rem;
+    }
+
+    &__bold{
+        margin-top: 1rem;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .document-nf1{
+         width: 68px;
+         height: 93px;
+    }
+
+    .last-nf1-title{
+        margin: auto;
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        max-width: 537px;
+    }
+
+    #last-nf1{
+        margin-bottom: -9rem;
+        margin-top: 4rem;
+        max-width: 644px;
+
+        a{
+            font-size: 18px;
+            padding-top: 0;
+        }
+    }
+
+
+}
+
+//second-section
+
+//third-section
+.nf1-margin-two{
+    margin-bottom: 9rem;
+    @media screen and (min-width: 900px) {
+        margin-bottom: 16rem!important;
+    }
+}
+
+.nf1-margin-three{
+    margin-bottom: 9rem;
+    @media screen and (min-width: 900px) {
+        margin-bottom: 16rem!important;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #last-third{
+        padding-bottom: 1rem; 
+    }
+}
+
+.nf1-head{
+    width: 75px!important;
+    height: 88px!important;
+}
+
+.nf1-house{
+    width: 83px!important;
+    height: 83px!important;
+}
+
+.two-people{
+    width: 87px!important;
+    height: 119px!important;
+}
+//third-section
+
+//--------------------UNDERSTANDING NF1--------------------
+
+//--------------------GLOSSARY--------------------
+.glossary-page{
+    margin-bottom: 10rem;
+    &__terms{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 15px;
+        
+    @include media('tablet') {
+        padding-left: 34px;
+        padding-right: 34px;
+        padding-bottom: 15px;
+    }  
+    span{
+        color: $color-aqua;
+        font-weight: 600;
+        font-style: normal; 
+    }
+    p{
+        margin-bottom: 1rem;
+    }
+    
+        }
+    
+        .custom-section__header{
+            display: none;
+            
+            @include media('tablet') {
+                display: flex;
+            }
+            
+        }
+
+        .custom-section{
+            margin-bottom: 7.75rem;
+            @include media('tablet') {
+                margin-bottom: 6.3125rem;
+            }
+
+        }
+        
+    }
+//--------------------GLOSSARY--------------------
