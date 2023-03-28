@@ -162,6 +162,15 @@ html.is--menu-open {
             width: 0px;
             left: -5px;
           }
+
+          @media screen and (min-width: 1365px) {
+            left: -12px;
+          }
+
+          @media screen and (min-width: 1600px) {
+            left: -18px;
+          }
+
         }
 
         &.is--active::after {
@@ -278,6 +287,7 @@ html.is--menu-open {
           }
 
           .site__header_nav_menu_list_item_link {
+            font-size: .6875rem;
             position: relative;
             padding-top: 0.5rem;
             padding-right: 0.5rem;
@@ -287,6 +297,13 @@ html.is--menu-open {
           }
         }
       }
+
+      @media screen and (min-width: 1250px) {
+        .site__header_nav_menu_list_item_link {
+          font-size: .75rem;
+        }
+      }
+
     }
 
     .site__header_nav_menu.is--open {

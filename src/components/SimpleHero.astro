@@ -30,4 +30,5 @@ const desktop = basePath + folder + "/" + filename + "-desktop" + "." + ext;
         <source srcset={tablet} media={`(min-width: ${tabletMinWidth})`} />
         <img src={mobile} alt={alt} />
     </picture>
+    <slot name="content" />
 </section>
