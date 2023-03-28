@@ -7,15 +7,19 @@ import Section from "../components/Section.astro";
 
 <Layout title="FAQs">
     <SimpleHero folder="faqs" alt="" />
+    <div class="faqs-section">
     <Section>
-                   <Fragment slot="section-title">
-                    FREQUENTLY ASKED <span class="color-yellow">QUESTIONS</span>
-                </Fragment> 
+        
+        <Fragment slot="section-title">
+            FREQUENTLY ASKED <span class="color-yellow">QUESTIONS</span>
+        </Fragment> 
+        
+        
+            <a id='faqs-pdf' href="#" class="button button--basic">DOWNLOAD all FAQs as a PDF</a>
         
 
             
                 <section role="tablist" class="accordion">
-            
                     
                         <p>&nbsp;</p>
                         <AccordionItem header="What is Koselugo?" id="acc-1" expanded>
@@ -216,5 +220,6 @@ import Section from "../components/Section.astro";
 
                 </section>
             </Section>
+        </div>
             <h6 class="accordion__second-anchor">To learn about patient support from Alexion, visit our <a class='button button--basic'href="#">Support Programs</a> page</h6>
 </Layout>

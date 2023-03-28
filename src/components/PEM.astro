@@ -5,12 +5,14 @@ type Props = {
   photoAlt: string;
   email: string;
   phone: string;
+  show?: string;
+  zip?: string;
 };
 
-const { name, photoSrc, photoAlt, email, phone } = Astro.props;
+const { name, photoSrc, photoAlt, email, phone, show, zip } = Astro.props;
 ---
 
-<div class="pem">
+<div class="pem" data-show={show ? "true" : "false"} data-zip={zip}>
   <div class="pem__photo">
     <img class="pem__photo_img" src={photoSrc} alt={photoAlt} />
   </div>
