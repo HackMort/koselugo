@@ -589,5 +589,40 @@
     margin-left: 7rem;
   }
 }
-
 //--------------------FAQS--------------------
+
+//--------------------VALIDATE--------------------
+.paragraph {
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    font-size: 1.125em;
+    line-height: 1.5;
+    color: #000000;
+    text-align: center;
+
+&--16 {
+    font-size: 1em;
+    line-height: 1.75px;
+}
+
+&--14 {
+    font-size: .875em;
+    line-height: 1.35;
+}
+
+&--12 {
+    font-size: .75em;
+    line-height: normal;
+}
+
+} 
+
+@media screen and (min-width: 1024px) {
+    h2 {
+        font-size: 2em;
+    }
+} 
+//--------------------VALIDATE--------------------
