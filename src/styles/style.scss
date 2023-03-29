@@ -686,6 +686,35 @@
     }
   }
 
+  &__important-tip {
+    color: $color-white;
+
+    header {
+      background-color: $color-aqua;
+      text-align: center;
+      padding: 1.75rem;
+    }
+
+    .taking-koselugo__list {
+      background-color: #E2EBF2;
+      color: $color-black;
+      margin: 5px 0 1.75rem;
+      padding: 2rem;
+
+      &-item {
+        margin-bottom: 1rem;
+      }
+    }
+
+    p {
+      color: $color-white;
+
+      &:first-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
   &__list {
     margin-top: 0.6rem;
     padding-left: 1rem;
@@ -703,7 +732,14 @@
     }
   }
 
-  .color-aqua {
-    color: $color-aqua;
+  .custom-section:nth-child(2),
+  .custom-section:nth-child(6) {
+    background-color: #E2EBF2;
+    text-align: center;
+
+    .taking-koselugo__title {
+      margin: 0 auto 0.5rem;
+      max-width: 30ch;
+    }
   }
 }
