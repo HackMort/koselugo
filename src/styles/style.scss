@@ -611,6 +611,7 @@
   }
 
   &__support-program {
+    padding-top: 2.75rem;
 
     @include media('tablet') {
       position: relative;
@@ -666,7 +667,7 @@
     }
 
     &--footnote {
-      padding: 4rem 0 4.5rem;
+      padding: 4rem 0 2rem;
 
       p {
         font-size: 13px;
