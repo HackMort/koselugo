@@ -540,8 +540,18 @@
           text-align: center;
 
           @media (min-width: 700px) {
+            background-image: url('/assets/images/about-koselugo/box-bg-tablet.png');
+            background-position: bottom right;
+            background-repeat: no-repeat;
             max-width: 50ch;
+            padding-right: 35px;
             text-align: left;
+          }
+
+          @include media('desktop') {
+            background-image: url('/assets/images/about-koselugo/box-bg-desktop.jpg');
+            padding-bottom: 10px;
+            padding-right: 15px;
           }
 
           .about-koselugo__title {
