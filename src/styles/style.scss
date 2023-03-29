@@ -536,11 +536,26 @@
   &__clinical-study {
     .about-koselugo {
       &__container {
-        &--align-center {
+        &--results-description {
           text-align: center;
+
+          @media (min-width: 700px) {
+            max-width: 50ch;
+            text-align: left;
+          }
 
           .about-koselugo__title {
             margin-bottom: 5px;
+          }
+        }
+
+        &--flex {
+          @media (min-width: 700px) {
+            display: flex;
+            align-items: center;
+            @include flex-gap(1.5rem);
+            justify-content: center;
+            margin-top: 1rem;
           }
         }
       }
@@ -549,7 +564,8 @@
         max-width: 180px;
         width: 50%;
   
-        @include media('tablet') {
+        @media (min-width: 700px) {
+          margin: 0;
           width: fit-content;
         }
       }
@@ -562,6 +578,10 @@
 
   &__faq {
     background-color: transparent;
+
+    @include media('tablet') {
+      padding-bottom: 3rem;
+    }
 
     &.about-koselugo__container--visit {
         .button {
@@ -614,8 +634,8 @@
     padding-top: 2.75rem;
 
     @include media('tablet') {
+      padding-top: 0;
       position: relative;
-      // padding-bottom: 0rem;
     }
 
     @include media('desktop') {
@@ -624,6 +644,15 @@
 
     .about-koselugo {
       &__container {
+        &--flex {
+          @media (min-width: 700px) {
+            display: flex;
+            align-items: center;
+            @include flex-gap(1.5rem);
+            margin-top: 1.5rem;
+          }
+        }
+
         .about-koselugo__title {
           margin-top: 0;
         }
@@ -633,6 +662,10 @@
         margin-top: 3rem;
         max-width: 124px;
         width: 50%;
+
+        @media (min-width: 700px) {
+          margin: 0;
+        }
   
         @include media('tablet') {
           width: 3.5rem;
@@ -641,6 +674,10 @@
   
       &__list-item:last-child {
         margin-bottom: 3rem;
+
+        @media (min-width: 700px) {
+          margin-bottom: 5px;
+        }
       }
     }
   }
@@ -736,6 +773,19 @@
         margin-top: 0;
       }
     }
+    
+    &:first-child {
+      @include media('tablet') {
+        margin-top: calc(3.0313rem + 2.25rem);
+      }
+    }
+    
+    &:last-child {
+      @include media('tablet') {
+        margin-top: 0;
+        padding-top: 1.5rem;
+      }
+    }
   }
 
   .one__source {
@@ -755,11 +805,11 @@
     }
   }
   
-  .simple-hero + .custom-section {
+  /* .simple-hero + .custom-section {
     @include media('tablet') {
       margin-top: calc(3.0313rem + 2.25rem);
     }
-  }
+  } */
 
   & + .isi {
     padding-top: 3rem;
