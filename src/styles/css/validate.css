@@ -21,6 +21,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
     margin-bottom: 2rem;
+    text-transform: capitalize;
     color: #559CB5;
     text-align: center;
 }
@@ -42,14 +43,14 @@
     width: 92%;
 }
 .wrapper-color{
-    background-color: white;
+    background-color: #E2EBF2;
     width: 411px;
     padding: 15px;
 }
 .validate__section input[type="submit"] {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
-    background-color: #870051;
-    border: 1px solid #007aa8;
+    background-color: #559CB5;
+    border: 1px solid #559CB5;
     border-radius: 5px;
     box-shadow: 0 2px 0 #1b2c2e;
     color: #FFFFFF;
@@ -67,7 +68,7 @@
 
     .validate__section input[type="submit"]:hover {
         border-color: #1b2c2e;
-        background-color: #B24399;
+        background-color: #4a8499;
     }
 
 
