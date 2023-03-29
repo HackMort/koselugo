@@ -1,9 +1,80 @@
 ---
+import Section from "../components/Section.astro";
 import Layout from "../layouts/Layout.astro";
 import SimpleHero from "../components/SimpleHero.astro";
+import OneSource from "../components/OneSource.astro";
 ---
 
 <Layout title="About Koselugo">
-    <SimpleHero folder="about-koselugo" alt="" />
-    <div class="wrapper"></div>
+  <SimpleHero folder="about-koselugo" alt="" />
+  <div class="about-koselugo">
+    <Section>
+      <Fragment slot="section-title">
+        WHAT IS <span class="color-yellow">KOSELUGO?</span>
+      </Fragment>
+      <div class="about-koselugo__what-is">
+        <div class="about-koselugo__container about-koselugo__container--flex">
+          <h6 class="about-koselugo__title" >
+            Koselugo is the FIRST and ONLY FDA-approved treatment shown to reduce the size of plexiform neurofibromas (PN)*
+          </h6>
+          <img class="about-koselugo__image" src="/assets/images/about-koselugo/bottles_m.jpg" alt=" ">
+        </div>
+      </div>
+    </Section>
+    <Section noHeader>
+      <div class="about-koselugo__faq about-koselugo__container about-koselugo__container--visit">
+        <h4 class="about-koselugo__title about-koselugo__title--hide-tablet">Visit the Koselugo Frequently Asked Questions page</h4>
+        <h4 class="about-koselugo__title about-koselugo__title--only-tablet">Do you have questions about Koselugo? Talk to your child's doctor and download our</h4>
+        <a href="/faqs" class="button button--basic">Visit the FAQs here</a>
+        <a href="tel:+1888-765-4747" class="button button--basic button--only-mobile">Visit the FAQs here</a>
+      </div>
+    </Section>
+    <Section>
+      <Fragment slot="section-title">
+        CAN KOSELUGO HELP <span class="color-yellow">SHRINK PLEXIFORM TUMORS?</span>
+      </Fragment>
+      <div class="about-koselugo__clinical-study">
+        <h6 class="about-koselugo__title">KOSELUGO HAS BEEN SHOWN TO SHRINK PLEXIFORM TUMORS IN CHILDREN AGED 2 YEARS AND OLDER</h6>
+        <p>In a clinical study, Koselugo was proven to work for children with NF1 who have plexiform neurofibromas (PN) that cannot be completely removed by surgery:</p>
+        <div class="about-koselugo__container about-koselugo__container--flex">
+          <img class="about-koselugo__image" src="/assets/images/about-koselugo/66-percent-pie-chart.jpg" alt=" ">
+          <div class="about-koselugo__container about-koselugo__container--results-description">
+            <h6 class="about-koselugo__title">66% or 33 of 50 patients in the clinical study saw their plexiform neurofibromas (PN) shrink*</h6>
+            <p>82% or 27 of 33 patients who responded continued to benefit for at least one year.</p>
+          </div>
+        </div>
+      </div>
+    </Section>
+    <Section noHeader>
+      <div class="about-koselugo__journeys">
+        <div class="about-koselugo__container about-koselugo__container--clinical-study about-koselugo__container--visit">
+          <h4 class="about-koselugo__title">What did people taking Koselugo treatment experience in a clinical study?</h4>
+          <a href="/dosing-schedule#track-their-treatment" class="button button--basic">See their journeys</a>
+        </div>
+        <div class="about-koselugo__container about-koselugo__container--footnote">
+          <p>*Patients saw a 20% or more decrease in the size of their plexiform neurofibromas, confirmed by 3D magnetic resonance imaging scan.</p>
+          <p>NF1=neurofibromatosis type 1.</p>
+        </div>
+      </div>
+    </Section>
+    <Section noHeader>
+      <div class="about-koselugo__support-program">
+        <h6 class="about-koselugo__title">IS THERE A SUPPORT PROGRAM TO HELP MY CHILD ACCESS TREATMENT?</h6>
+        <h6 class="about-koselugo__title">OneSource™ Support Services</h6>
+        <div class="about-koselugo about-koselugo__container--flex">
+          <img class="about-koselugo__image" src="/assets/images/about-koselugo/personal-support-icon.png" alt=" ">
+          <div class="about-koselugo__container">
+            <h6 class="about-koselugo__title">Your dedicated Patient Access Navigator is here to guide and give you the support you deserve—whatever your care plan may be. They can:</h6>
+            <ul class="about-koselugo__list">
+              <li class="about-koselugo__list-item">Answer questions about neurofibromatosis type 1 (NF1) plexiform neurofibromas (PN), Koselugo, your insurance coverage, and more</li>
+              <li class="about-koselugo__list-item">Provide support during treatment</li>
+              <li class="about-koselugo__list-item">Help you avoid interruptions in your child’s treatment during insurance changes, travel plans, or other life events</li>
+              <li class="about-koselugo__list-item">Help you to get involved with the rare disease community through events and meetings</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <OneSource />
+    </Section>
+  </div>
 </Layout>
