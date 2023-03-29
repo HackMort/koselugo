@@ -1,0 +1,154 @@
+.modal{
+       
+    display: none;
+     padding-top: 41px;
+     padding-right: 74px;
+     padding-bottom: 41px;
+     padding-left: 74px;
+     max-width: 677px;
+    border-radius: 15px;    
+
+    &__wrapper{
+        height: auto;
+        margin: auto;
+        border-radius: 15px;
+        background-color: white;
+        position: relative;
+
+        .modal__close{
+            width: 18px;
+            height: 44px;
+            font-size: 20px;
+            position: absolute;
+            right: -57px;
+            top: -40px;
+            cursor: pointer;
+            color: $primary-navy-500;
+        }
+
+        @media screen and (max-width:990px) {
+            .modal__close{
+                right: -5px;
+                top: -19px;
+            }
+        }
+        @media screen and (max-width:570px) {
+            .modal__close{
+                right: -12px;
+            }
+        }
+    }
+
+    &__content{
+        max-width: 585px;
+    }
+/* 
+    &__image{
+        text-align: center;
+
+        img{
+            max-width: 387px;
+            margin-bottom: 1rem;
+        }
+
+        @media screen and (max-width:715px) {
+            img{
+                width: 332px;
+            }
+        }
+
+        @media screen and (max-width:570px) {
+            img{
+                width: 240px;
+            }
+        }
+
+        @media screen and (max-width:420px) {
+            img{
+                width: 280px;
+            }
+        }
+    } */
+
+    &__title {
+
+        font-family: 'Arvo';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        text-align: center;
+        letter-spacing: 0.56px;
+        margin-bottom: 20px;
+        color: $gradient-light;
+    }
+
+    &__text{
+        text-align: center;
+        margin-bottom: 49px;
+    }
+
+    &__buttons{
+        display: flex;
+        justify-content: center;
+    }
+
+    @media screen and (max-width:570px) {
+    
+        &__title {
+            font-size: 32px;
+            line-height: 32px;
+        }
+    }
+    
+}
+@media screen and (max-width:1260px) {
+    .modal{
+        width: 950px;
+    }
+}
+@media screen and (max-width:990px) {
+    .modal{
+        max-width: 550px;
+        padding-top: unset;
+        padding-right: unset;
+        padding-bottom: unset;
+        padding-left: unset;
+    }
+
+    .modal{
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }
+}   
+@media screen and (max-width:570px) {
+    .modal{
+        max-width: 350px;
+    }
+}
+
+@media screen and (max-width:345px) {
+    .modal{
+        max-width: 320px;
+    }
+}
+
+.fancybox__backdrop{
+    background-color: rgba(0,0,0,0.4)!important;
+    position: absolute;
+    height: 110%;
+}
+
+.fancybox__content>.f-button.is-close-btn{
+    display: none;
+}
+.fancybox__container{
+    position: absolute!important;
+}
+
+
+html.with-fancybox {
+    overflow: hidden;
+}
