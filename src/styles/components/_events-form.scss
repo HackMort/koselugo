@@ -1,4 +1,111 @@
 .events-form {
     background: $color-white;
     box-shadow: 0px 2px 34px rgba(0, 0, 0, 0.05);
+
+    .events-form__wrapper {
+        padding: 1.25rem 2.5rem;
+        position: relative;
+
+        .events-list__wrapper {
+
+            .events-list__title {
+                margin-bottom: 1rem;
+            }
+
+            .events-list__filters {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+
+                margin-bottom: 2.5rem;
+
+                .events-filter {
+                    height: 2.1875rem;
+                    width: fit-content;
+                    border-radius: 2.5rem;
+                    padding: .25rem 1rem;
+                    background: $color-silver-chalice;
+                    color: $color-emperor;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:not(:last-child) {
+                        margin-right: 1rem;
+                    }
+
+                    &--active {
+                        color: $color-white;
+                        background: $color-light-rose;
+                    }
+                }
+            }
+
+            .events-list {
+
+                .event {
+
+                    &:not(:last-of-type) {
+                        padding-bottom: .6875rem;
+                        margin-bottom: .8125rem;
+
+                        border-bottom: .25px solid #686F7E;
+                    }
+
+                    .event__header {
+
+                        .event__schedule {
+                            display: flex;
+                            margin-bottom: .0625rem;
+                            span {
+                                color: $color-navy-300;
+                                &:first-of-type {
+                                    padding-right: .5rem;
+                                }
+
+                                &:not(:first-of-type) {
+                                    padding: 0 .5rem;
+                                    border-left: 1px solid $color-navy-300;
+                                }
+                            }
+                        }
+
+                        .event__title {
+                            font-size: 1.125rem;
+                            font-weight: 600;
+                            line-height: 21.6px;
+                        }
+
+                        .event__subtitle {
+                            font-size: .75rem;
+                            font-weight: 400;
+                            line-height: 17.14px;
+                            color: $color-light-granite-gray;
+                        }
+                    }
+
+                    .event__description {
+                        font-size: .875rem;
+                        font-weight: 400;
+                        line-height: 20px;
+                        margin-bottom: .6875rem;
+                    }
+
+                    .event__actions {
+                        .button {
+                            max-width: max-content;
+                        }
+                    }
+                }
+
+                .event-list__toggler {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
