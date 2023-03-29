@@ -10,6 +10,12 @@
             overflow-y: hidden;
             max-height: 48.125rem;
 
+            transition: max-height 200ms ease;
+
+            &--expanded {
+                max-height: calc(48.125rem + (48.125rem * .5));
+            }
+
             .events-list__title {
                 margin-bottom: 1rem;
             }
@@ -117,6 +123,18 @@
             cursor: pointer;
 
             background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, $color-white 100%);
+
+            .event-list__toggler-button {
+                cursor: pointer;
+
+                .event-list__toggler-arrow {
+                    transition: transform 200ms ease-in-out;
+
+                    &--expanded {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
         }
     }
 }
