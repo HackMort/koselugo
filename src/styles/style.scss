@@ -623,3 +623,84 @@
     }
 } 
 //--------------------VALIDATE--------------------
+
+/******************************************************
+-- Taking Koselugo Page
+******************************************************/
+
+.taking-koselugo {
+  &--tips {
+    .taking-koselugo__image {
+      max-width: 106px;
+
+      @include media('tablet') {
+        max-width: 40px;
+      }
+    }
+  }
+
+  &__image {
+    margin: 0 auto;
+    width: 100%;
+
+    &.hours-icon {
+      margin-bottom: 1.45rem;
+      max-width: 180px;
+    }
+
+    &.atleast-image {
+      margin-bottom: 2.25rem;
+      margin-top: 2rem;
+      max-width: 340px;
+
+      @include media('tablet') {
+        max-width: 398px;
+      }
+    }
+
+    &.capsule-icon {
+      margin-bottom: 3.5rem;
+      max-width: 150px;
+    }
+
+    &.koselugo-bottle {
+      max-width: 296px;
+
+      @include media('tablet') {
+        max-width: 183px;
+      }
+    }
+
+    &--only-mobile {
+      @include media('tablet') {
+        display: none;
+      }
+    }
+
+    &--tablet-desktop {
+      display: none;
+
+      @include media('tablet') {
+        display: inline;
+      }
+    }
+  }
+
+  &__list {
+    margin-top: 0.6rem;
+
+    
+  }
+
+  &__paragraph {
+  
+    &--emphasis {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  .color-aqua {
+    color: $color-aqua;
+  }
+}
