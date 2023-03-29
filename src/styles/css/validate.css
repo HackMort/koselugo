@@ -1,8 +1,5 @@
-
-*,
-*::before,
-*::after {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+#validate-page{
+    background-color: #E2EBF2;
 }
 
 
@@ -13,20 +10,24 @@
     justify-content: center;
     flex-direction: column;
     height: 100vh;
-    padding-right: 1rem;
-    padding-left: 1rem;
     width: 100%;
+    width: 35%;
+    margin: auto;
 }
 
 .validate__section--title {
     font-size: 2rem;
     font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
+    margin-bottom: 2rem;
+    color: #559CB5;
     text-align: center;
 }
 
 .validate__section label {
     font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top: 1rem;
 }
 
@@ -36,19 +37,25 @@
     border-radius: 5px;
     height: 40px;
     margin-top: 5px;
+    margin-bottom: 2rem;
     padding: 0 10px;
-    width: 100%;
+    width: 92%;
 }
-
+.wrapper-color{
+    background-color: white;
+    width: 411px;
+    padding: 15px;
+}
 .validate__section input[type="submit"] {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
-    background-color: #007aa8;
+    background-color: #870051;
     border: 1px solid #007aa8;
     border-radius: 5px;
     box-shadow: 0 2px 0 #1b2c2e;
     color: #FFFFFF;
     display: block;
     font-weight: bold;
+    font-size: 15px;
     height: 40px;
     margin: auto;
     margin-top: 1rem;
@@ -60,7 +67,7 @@
 
     .validate__section input[type="submit"]:hover {
         border-color: #1b2c2e;
-        background-color: #1b2c2e;
+        background-color: #B24399;
     }
 
 
@@ -72,30 +79,3 @@ section a {
     color: #4462a7;
     text-decoration: underline;
 }
-
-h1,
-h2,
-h3 {
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    text-align: left;
-    color: #4462a7;
-    letter-spacing: normal;
-}
-
-h1 {
-    font-size: 2em;
-    line-height: 1.25;
-}
-
-h2 {
-    font-size: 1.75em;
-    line-height: 1.35;
-}
-
-h3 {
-    font-size: 1.5em;
-    line-height: 1.35;
-}
-
