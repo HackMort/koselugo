@@ -621,12 +621,25 @@
       padding-bottom: 4rem;
     }
 
-    .about-koselugo__image {
-      max-width: 124px;
-      width: 50%;
-
-      @include media('tablet') {
-        width: 3.5rem;
+    .about-koselugo {
+      &__container {
+        .about-koselugo__title {
+          margin-top: 0;
+        }
+      }
+  
+      &__image {
+        margin-top: 3rem;
+        max-width: 124px;
+        width: 50%;
+  
+        @include media('tablet') {
+          width: 3.5rem;
+        }
+      }
+  
+      &__list-item:last-child {
+        margin-bottom: 3rem;
       }
     }
   }
