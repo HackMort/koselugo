@@ -58,26 +58,17 @@
   }
 }
 
-.side-effects-page--section {
-  padding: 20px;
-
-  h3 {
+.side-effects-page--section__heading {
+  &.side-effects-page--section__heading__3 {
     font-size: 22px;
-    margin: 15px 20px 0 20px;
-
     @include media('tablet') {
       margin: 15px 0 0 0;
     }
   }
+}
 
-  p {
-    line-height: 26px;
-  }
-
-  @include media('tablet') {
-    padding: 0px;
-  }
-
+.side-effects-page--section__paragraph {
+  line-height: 26px;
 }
 
 .side-effects-page--section__overlapping {
@@ -89,60 +80,50 @@
 
 .side-effects-page--callout {
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
 
-  img {
-    width: 43px;
-    height: 66px;
-    margin: 10px
-  }
-
-  p {
-    align-self: center;
-    margin: auto;
-  }
-
   @include media('mobile') {
     flex-direction: column;
-
-    img {
-      width: 66px;
-      height: 100px;
-      margin: 10px auto;
-    }
   }
+}
+
+.side-effects-page--callout__img {
+  width: 43px;
+  margin: 10px;
+
+  @include media('mobile') { 
+    width: 66px;
+    margin: 0px auto 33px auto;
+  }
+}
+
+.side-effects-page--callout__content {
+  align-self: center;
+  margin: auto;
 }
 
 .side-effects-page--list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
-
-  @include flex-gap(20px);
 
   margin-left: 15px;
   margin-bottom: 15px;
 
-  @include media('mobile') {
-    flex-direction: column;
-    @include flex-gap(0px);
-  }
-
   @include media('tablet') {
-    @include flex-gap(10px);
+    flex-direction: row;
+    gap: 0px 30px;
   }
 
 }
 
 .side-effects-page--commun-list {
   display: flex;
-  img {
-    width: fit-content;
-    height: 100%;
-  }
+  margin-bottom: 35px;
 
   @include media('mobile') {
     display: flex;
@@ -167,23 +148,22 @@
   justify-items: flex-start;
   align-items: center;
 
-  img {
-    width: fit-content;
-    height: fit-content;
-    margin: auto;
-  }
-
   @include media('mobile') {
     display: flex;
     flex-direction: column;
     align-items: center;
 
     margin-bottom: 5px;
-    img {
-      margin: 15px auto;
-    }
   }
 
+}
+
+.side-effects-page--commun-list__item__img {
+  width: fit-content;
+  margin: auto;
+  @include media('mobile') {
+    margin: 15px auto;
+  }
 }
 
 .side-effects-page--commun-list__point {
@@ -211,11 +191,15 @@
   border: 1px solid #404040; //This color is not in the variables.scss file
   width: 90%;
   margin: 20px auto;
-  padding: 25px;
+  padding: 39px 49px;
 
   @include media('desktop') {
     width: 70%;
   }
+}
+
+.side-effects-page--disclaimer__two {
+  padding: 39px 20px !important;
 }
 
 .side-effects-page--disclaimer__overlapping {
@@ -228,7 +212,7 @@
 .side-effects-page--paragraph {
   font-weight: 600;
   font-size: 22px;
-  margin: 20px;
+  margin: 39px 60px 0px 60px;
 }
 
 .side-effects-page--secondary-section {
@@ -244,15 +228,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @include flex-gap(20px);
+  @include flex-gap(30px);
+}
 
-  img {
-    width: fit-content;
-    height: fit-content;
-  }
+.side-effects-page--problems-section__img {
+  width: fit-content;
+}
+
+.side-effects-page--problems-section__heading {
+  font-size: 18px;
+  line-height: 100%;
 }
 
 .side-effects-page--steps {
+  margin-top: 15px;
   :first-child {
     display: block;
     
