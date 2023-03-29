@@ -868,10 +868,6 @@
     @include media('tablet') {
       margin-top: 2rem;
     }
-
-    @include media('desktop') {
-      padding-left: 0;
-    }
     
     &:nth-child(even) {
       background-color: transparent;
