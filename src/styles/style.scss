@@ -867,7 +867,6 @@
   .custom-section {
     @include media('tablet') {
       margin-top: 2rem;
-      padding-left: 0.75rem;
     }
 
     @include media('desktop') {
