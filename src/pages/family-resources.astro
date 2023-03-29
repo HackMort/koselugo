@@ -1,18 +1,88 @@
 ---
 import SimpleHero from '../components/SimpleHero.astro';
 import Layout from "../layouts/Layout.astro";
+import Section from '../components/Section.astro';
 ---
 
 <Layout title="Family Resources">
     <SimpleHero folder="family-resources" alt="" />
-    <div class="wrapper">
-        <h2>Family Resources</h2>
-          <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
-              veritatis error voluptas quas unde distinctio ea natus, tempore
-              pariatur consequatur repudiandae quae earum hic harum delectus at
-              sequi alias autem!
-            </p>
+    <div class="family-resources-page">
+      <Section>
+        <Fragment slot="section-title">
+          <span class="color-yellow">HOW CAN I LEARN</span>
+          MORE ABOUT TREATMENT WITH KOSELUGO?
+        </Fragment>
 
-      </div>
+        <p class="family-resources-page--paragraph">The following resources and <a class="family-resources-page--link__inserted" href=" ">videos</a> can help provide you and your family with more information about Koselugo and about NF1 plexiform neurofibromas. As you review the materials, write down your questions and share them with your doctor at your child’s next visit.</p>
+
+
+        <div class="family-resources-page--resources">
+
+          <div class="family-resources-page--resources_column">
+            
+            <!-- First resource -->
+            <div class="family-resources-page--resource">
+              <div class="family-resources-page--resource__img">
+                <img src="/assets/images/family-resources/resource_1.png" alt=" ">
+              </div>
+
+              <div class="family-resources-page--resource__content">
+                <h3 class="family-resources-page--resource__title">Caregiver Brochure</h3>
+                <p class="family-resources-page--resource__description">Download this brochure to learn more about neurofibromatosis type 1 (NF1) plexiform neurofibromas (PN) and treatment with Koselugo.</p>
+                <a class="family-resources-page--resource__link button button--basic" href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/761085s000lbl.pdf" target="_blank">Download</a>
+              </div>
+            </div>
+
+            <!-- Second resource -->
+            <div class="family-resources-page--resource">
+              <div class="family-resources-page--resource__img">
+                <img src="/assets/images/family-resources/resource_2.png" alt=" ">
+              </div>
+
+              <div class="family-resources-page--resource__content">
+                <h3 class="family-resources-page--resource__title">Treatment Journey Tracker</h3>
+                <p class="family-resources-page--resource__description">Download this booklet to record your child’s treatment, and write down notes about their treatment so you can discuss them with your child’s doctor at their next appointment.</p>
+                <a class="family-resources-page--resource__link button button--basic" href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/761085s000lbl.pdf" target="_blank">Download</a>
+              </div>
+              
+            </div>
+            
+          </div>
+
+          <div class="family-resources-page--resources_column">
+            <!-- Third resource -->
+            <div class="family-resources-page--resource">
+
+              <div class="family-resources-page--resource__img">
+                <img src="/assets/images/family-resources/resource_3.png" alt=" ">
+              </div>
+
+              <div class="family-resources-page--resource__content">
+                <h3 class="family-resources-page--resource__title">Symptom Guide for Caregivers</h3>
+                <p class="family-resources-page--resource__description">Learn about signs of symptomatic plexiform neurofibromas (PN) to look out for in your child, so you can talk to your child’s doctor if you notice anything similar.</p>
+                <a class="family-resources-page--resource__link button button--basic" href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/761085s000lbl.pdf" target="_blank">Download</a>
+              </div>
+
+            </div>
+
+            <!-- Fourth resource -->
+            <div class="family-resources-page--resource">
+              
+              <div class="family-resources-page--resource__img">
+                <img src="/assets/images/family-resources/resource_4.png" alt=" ">
+              </div>
+
+              <div class="family-resources-page--resource__content">
+                <h3 class="family-resources-page--resource__title">Koselugo Information Guide</h3>
+                <p class="family-resources-page--resource__description">Download this guide to learn more about NF1 PN and Koselugo; talk to your doctor to see if Koselugo is right for your child.</p>
+                <a class="family-resources-page--resource__link button button--basic" href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/761085s000lbl.pdf" target="_blank">Download</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+
+      </Section>
+    </div>
 </Layout>

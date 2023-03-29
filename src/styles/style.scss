@@ -588,3 +588,57 @@
 }
 
 //--------------------FAQS--------------------
+
+/******************************************************
+-- Family Resources Page
+******************************************************/
+
+.family-resources-page--paragraph {
+  line-height: 143%;
+}
+.family-resources-page--link__inserted {
+  font-weight: 600;
+  line-height: 143%;
+}
+
+//RESOURCES SECTION
+.family-resources-page--resources {
+  display: flex;
+  flex-direction: column;
+
+  @include media('tablet') {
+    flex-direction: row;
+  }
+}
+.family-resources-page--resource {
+  @include media('tablet') {
+    display: flex;
+    
+  }
+}
+
+.family-resources-page--resource__img {
+  width: fit-content;
+  margin: 29px auto;
+  @include media('tablet') {
+    width: 40%;
+    height: 100%;
+    margin: 0px 10px;
+  }
+}
+
+.family-resources-page--resource__content {
+  @include media('tablet') {
+    flex: 1;
+    margin: auto 10px;
+  }
+}
+
+.family-resources-page--resource__title {
+  font-size: 18px;
+  line-height: 20px;
+}
+.family-resources-page--resource__link {
+  padding: 0.5rem 0.75rem 1.5rem 0;
+  justify-content: start !important;
+}
