@@ -10,14 +10,14 @@ const { header, id, expanded } = Astro.props;
 
 <article id={id} role="tab" class="accordion__item" aria-expanded={expanded}>
   <div class="accordion__item_header">
-    <h2
+    <h6
       class="accordion__item_title"
       role="button"
       tabindex="0"
       aria-controls={id}
     >
       {header}
-    </h2>
+    </h6>
   </div>
 
   <div

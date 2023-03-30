@@ -2,88 +2,260 @@
 import AccordionItem from "../components/AccordionItem.astro";
 import SimpleHero from "../components/SimpleHero.astro";
 import Layout from "../layouts/Layout.astro";
+import Section from "../components/Section.astro";
 ---
 
 <Layout title="FAQs">
     <SimpleHero folder="faqs" alt="" />
-    <section role="tablist" class="accordion">
-        <div class="wrapper">
-            <p>&nbsp;</p>
-            <AccordionItem header="What is Koselugo?" id="acc-1" expanded>
-                <p>
-                    Koselugo is a prescription medicine that is used to treat
-                    children 2 years of age and older with neurofibromatosis
-                    type 1 (NF1) who have plexiform neurofibromas that cannot be
-                    completely removed by surgery. It is not known if Koselugo
-                    is safe and effective in children under 2 years of age. <a
-                        href="">Learn more about taking Koselugo</a
-                    >.
-                </p>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Blanditiis veritatis error voluptas quas unde distinctio ea
-                    natus, tempore pariatur consequatur repudiandae quae earum
-                    hic harum delectus at sequi alias autem!
-                </p>
-            </AccordionItem>
-            <AccordionItem header="Is Koselugo chemotherapy?" id="acc-2">
-                Koselugo is a prescription medicine that is used to treat
-                children 2 years of age and older with neurofibromatosis type 1
-                (NF1) who have plexiform neurofibromas that cannot be completely
-                removed by surgery. It is not known if Koselugo is safe and
-                effective in children under 2 years of age. Learn more about
-                taking Koselugo.
-            </AccordionItem>
-            <AccordionItem header="What is Koselugo?" id="acc-3">
-                <p>
-                    Koselugo is a prescription medicine that is used to treat
-                    children 2 years of age and older with neurofibromatosis
-                    type 1 (NF1) who have plexiform neurofibromas that cannot be
-                    completely removed by surgery. It is not known if Koselugo
-                    is safe and effective in children under 2 years of age. <a
-                        href="">Learn more about taking Koselugo</a
-                    >.
-                </p>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Blanditiis veritatis error voluptas quas unde distinctio ea
-                    natus, tempore pariatur consequatur repudiandae quae earum
-                    hic harum delectus at sequi alias autem!
-                </p>
-            </AccordionItem>
-            <AccordionItem header="Is Koselugo chemotherapy?" id="acc-4">
-                Koselugo is a prescription medicine that is used to treat
-                children 2 years of age and older with neurofibromatosis type 1
-                (NF1) who have plexiform neurofibromas that cannot be completely
-                removed by surgery. It is not known if Koselugo is safe and
-                effective in children under 2 years of age. Learn more about
-                taking Koselugo.
-            </AccordionItem>
-            <AccordionItem header="What is Koselugo?" id="acc-5">
-                <p>
-                    Koselugo is a prescription medicine that is used to treat
-                    children 2 years of age and older with neurofibromatosis
-                    type 1 (NF1) who have plexiform neurofibromas that cannot be
-                    completely removed by surgery. It is not known if Koselugo
-                    is safe and effective in children under 2 years of age. <a
-                        href="">Learn more about taking Koselugo</a
-                    >.
-                </p>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Blanditiis veritatis error voluptas quas unde distinctio ea
-                    natus, tempore pariatur consequatur repudiandae quae earum
-                    hic harum delectus at sequi alias autem!
-                </p>
-            </AccordionItem>
-            <AccordionItem header="Is Koselugo chemotherapy?" id="acc-6">
-                Koselugo is a prescription medicine that is used to treat
-                children 2 years of age and older with neurofibromatosis type 1
-                (NF1) who have plexiform neurofibromas that cannot be completely
-                removed by surgery. It is not known if Koselugo is safe and
-                effective in children under 2 years of age. Learn more about
-                taking Koselugo.
-            </AccordionItem>
-        </div>
-    </section>
+    <div class="faqs-section">
+        <Section>
+            <Fragment slot="section-title">
+                FREQUENTLY ASKED <span class="color-yellow">QUESTIONS</span>
+            </Fragment>
+
+            <a
+                id="faqs-pdf"
+                href="https://koselugo.com/Content/koselugo_com/content/dam/open-digital/koselugo-dtc/en/pdfs/koselugo-downloadable-faqs.pdf"
+                target="_blank"
+                class="button button--basic">DOWNLOAD all FAQs as a PDF</a
+            >
+
+            <section role="tablist" class="accordion">
+                <AccordionItem header="What is Koselugo?" id="acc-1" expanded>
+                    <p>
+                        Koselugo is a prescription medicine that is used to
+                        treat children 2 years of age and older with
+                        neurofibromatosis type 1 (NF1) who have plexiform
+                        neurofibromas that cannot be completely removed by
+                        surgery. It is not known if Koselugo is safe and
+                        effective in children under 2 years of age. <a href=""
+                            >Learn more about taking Koselugo</a
+                        >.
+                    </p>
+                </AccordionItem>
+                <AccordionItem header="Is Koselugo chemotherapy?" id="acc-2">
+                    <p>
+                        Koselugo is not chemotherapy. Koselugo is an oral,
+                        targeted treatment option proven to shrink PN in
+                        children 2 years of age and older with NF1 who have
+                        plexiform neurofibromas that cannot be completely
+                        removed by surgery.
+                    </p>
+                </AccordionItem>
+                <AccordionItem header="How is Koseugo taken" id="acc-3">
+                    <p>
+                        After prescribing Koselugo, your child’s doctor will
+                        monitor his or her response to treatment and perform
+                        periodic testing, and will determine the appropriate
+                        length of therapy. Treatment duration of Koselugo can be
+                        different for every patient, so it’s important to
+                        carefully follow the instructions provided by your
+                        child’s doctor.
+                    </p>
+                </AccordionItem>
+                <AccordionItem
+                    header="Where can I fill my Koselugo prescription?"
+                    id="acc-4"
+                >
+                    <p>
+                        Koselugo is a prescription medicine for children 2 years
+                        of age and older with NF1 who have plexiform
+                        neurofibromas that cannot be completely removed by
+                        surgery. It is available only through specialty
+                        pharmacies and is not available at your local retail
+                        pharmacy. For more specific information about specialty
+                        pharmacies and other distribution channels that carry
+                        Koselugo and to learn more about insurance coverage and
+                        out-of-pocket costs, visit <a
+                            href="https://alexiononesource.com/"
+                            target="_blank">www.AlexionOneSource.com</a
+                        >.
+                    </p>
+                </AccordionItem>
+                <AccordionItem header="How much does Koselugo cost?" id="acc-5">
+                    <p>
+                        Koselugo is a prescription medicine for children 2 years
+                        of age and older with NF1 who have plexiform
+                        neurofibromas that cannot be completely removed by
+                        surgery. It is available only through specialty
+                        pharmacies and is not available at your local retail
+                        pharmacy. For more specific information about specialty
+                        pharmacies and other distribution channels that carry
+                        Koselugo and to learn more about insurance coverage and
+                        out-of-pocket costs, visit <a
+                            href="https://alexiononesource.com/"
+                            target="_blank">www.AlexionOneSource.com</a
+                        >.
+                    </p>
+                </AccordionItem>
+                <AccordionItem
+                    header="How do I know if my child is eligible to receive Koselugo?"
+                    id="acc-6"
+                >
+                    <p>
+                        Your child’s doctor will decide if Koselugo is right for
+                        your child. Koselugo is a prescription medicine that is
+                        used to treat children 2 years of age and older with NF1
+                        who have plexiform neurofibromas that cannot be
+                        completely removed by surgery. It is not known if
+                        Koselugo is safe and effective in children under 2 years
+                        of age. <a href="/taking-koselugo.html"
+                            >Learn more about taking Koselugo</a
+                        >.
+                    </p>
+                </AccordionItem>
+
+                <AccordionItem header="How is Koselugo taken?" id="acc-7">
+                    <p>
+                        Your child should take Koselugo exactly as your child’s
+                        healthcare provider tells you to and should not change
+                        the dose or stop taking Koselugo unless your child’s
+                        healthcare provider tells you to.
+                    </p>
+                    <p>
+                        Your child's healthcare provider may change the dose,
+                        temporarily stop, or permanently stop treatment with
+                        Koselugo if your child has side effects. Your child's
+                        healthcare provider will decide on the right dose of
+                        Koselugo based on their weight or size (body surface
+                        area) and how many Koselugo capsules your child should
+                        take.
+                    </p>
+                    <p>
+                        Koselugo should be taken around the same time each day,
+                        about 12 hours apart.
+                    </p>
+                    <p>
+                        Your child must take Koselugo on an empty stomach. Do
+                        not let them eat food for 2 hours before the dose and
+                        for 1 hour after the dose. Your child should swallow
+                        Koselugo capsules whole with water. Do not let them
+                        chew, dissolve, or open the capsules. If your child
+                        misses a dose of Koselugo, they should take it as soon
+                        as you remember. If it is less than 6 hours before the
+                        next scheduled dose, give the next dose at your regular
+                        time. Do not make up for the missed dose. If your child
+                        vomits at any time after taking Koselugo, do not give
+                        them an additional dose. Give the next dose at your
+                        regular time. <a href="/taking-koselugo.html"
+                            >Learn more about taking Koselugo</a
+                        >.
+                    </p>
+                </AccordionItem>
+                <AccordionItem
+                    header="My child has trouble swallowing capsules. Can they still take Koselugo?"
+                    id="acc-8"
+                >
+                    <p>
+                        Tell your doctor if your child has trouble swallowing
+                        capsules. To learn more or to contact your dedicated
+                        Patient Access Navigator, please call <strong
+                            class="color--rose">1-888-765-4747</strong
+                        >, Monday through Friday, 8:30 AM–8 PM ET, or visit <a
+                            target="_blank"
+                            href="https://AlexionOneSource.com"
+                            >www.AlexionOneSource.com</a
+                        >. To learn how to help your child take capsules more
+                        easily, visit our <a href="/taking-koselugo.html"
+                            >Information page</a
+                        >.
+                    </p>
+                </AccordionItem>
+                <AccordionItem header="Can I crush the capsules?" id="acc-9">
+                    <p>
+                        No, Koselugo capsules must be swallowed whole with
+                        water. Do not let your child chew, dissolve, or open a
+                        capsule. Tell your child’s doctor if your child has
+                        trouble swallowing a capsule. To learn more, visit the <a
+                            href="/taking-koselugo.html"
+                        >
+                            Taking Koselugo</a
+                        > page.
+                    </p>
+                </AccordionItem>
+                <AccordionItem
+                    header="What side effects are associated with Koselugo?"
+                    id="acc-10"
+                >
+                    <p>
+                        Koselugo may cause serious side effects, including heart
+                        problems, eye problems, severe diarrhea, skin rash, and
+                        muscle problems (rhabdomyolysis). Your child’s
+                        healthcare provider may change, temporarily stop, or
+                        permanently ask your child to stop taking Koselugo if
+                        your child has any of these side effects. The most
+                        common side effects of Koselugo are vomiting, stomach
+                        pain, nausea, dry skin, feeling of tiredness, weakness,
+                        or lacking energy, muscle and bone pain, fever,
+                        inflammation of the mouth, headache, redness around the
+                        fingernails, and itching. These are not all the possible
+                        side effects of Koselugo. Please visit our <a
+                            href="/safety-and-side-effects.html#possible-side-effects"
+                            >Possible Side Effects</a
+                        > page to learn more. Call your child’s doctor for medical
+                        advice about side effects. You may report side effects to
+                        the FDA at <strong class="color--rose"
+                            >1-800-FDA-1088.</strong
+                        >
+                    </p>
+                </AccordionItem>
+                <AccordionItem
+                    header="How long does Koselugo take to work?"
+                    id="acc-11"
+                >
+                    <p>
+                        Of the 33 patients that responded to Koselugo treatment
+                        in the clinical trial, approximately one-half saw their
+                        tumor volume shrink by at least 20% within 7 months. The
+                        time to onset of response ranged from 3.3 months to 19.2
+                        months. It’s important to know that results are
+                        different for each patient. Your child’s experience may
+                        be different. Your child’s doctor will determine if
+                        Koselugo is working for your child. <a
+                            href="/about-koselugo.html#tumor-response"
+                            >Learn the results of pediatric patients taking
+                            Koselugo in a clinical study</a
+                        >.
+                    </p>
+                </AccordionItem>
+                <AccordionItem
+                    header="What if my child misses a dose?"
+                    id="acc-12"
+                >
+                    <p>
+                        If your child misses a dose, they should take it as soon
+                        as you remember. If it is less than 6 hours before the
+                        next scheduled dose, give the next dose at the regular
+                        time. Do not make up for the missed dose. If your child
+                        vomits at any time after taking Koselugo, they should
+                        not take an additional dose. The next dose should be
+                        taken at the regular time. To learn more about taking
+                        Koselugo, visit our <a href="/taking-koselugo.html"
+                            >Taking Koselugo page</a
+                        >.
+                    </p>
+                </AccordionItem>
+                <AccordionItem
+                    header="Can Koselugo be taken with meals?"
+                    id="acc-13"
+                >
+                    <p>
+                        Your child must take Koselugo on an empty stomach. Your
+                        child should not eat 2 hours before each dose or 1 hour
+                        after each dose because food can affect the absorption
+                        of Koselugo. To learn more about taking Koselugo, visit
+                        our <a href="/taking-koselugo.html"
+                            >Taking Koselugo page</a
+                        >.
+                    </p>
+                </AccordionItem>
+            </section>
+        </Section>
+        <h6 class="accordion__second-anchor">
+            To learn about patient support from Alexion, visit our <a
+                class="button button--basic"
+                href="/savings-and-support.html">Support Programs</a
+            > page
+        </h6>
+    </div>
 </Layout>
