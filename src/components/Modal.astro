@@ -1,25 +1,90 @@
 ---
 ---
 
-<div class="modal" id="modal">
-    <div class="modal__wrapper" tabindex="-1">
-        <button class="button modal__close" data-dismiss="modal" aria-label="Close modal">
-            x
-        </button>
-        <div class="modal__content">
-
-            <h1 class="modal__title">
-                You are now leaving ahussource.com
-            </h1>
-            <p class="modal__text">
-                You are now leaving the aHUSSource.com website.
-                Alexion is not responsible for content included on third-party websites. Do you want to proceed?
-            </p>
-            <div class="modal__buttons">
-                <a href="#" class="button button--primary modal--continue">PROCEED</a>
-                <button data-dismiss="modal" class="button button--secondary modal--stay">STAY HERE</button>
-            </div>
-
-        </div>
+<div class="modal" id="modal" style="display: none;">
+  <div class="modal__wrapper" tabindex="-1">
+    <button
+      class="button modal__close"
+      data-dismiss="modal"
+      aria-label="Close modal"
+    >
+      x
+    </button>
+    <div class="modal__content">
+      <h1 class="modal__title">You are now leaving ahussource.com</h1>
+      <p class="modal__text">
+        You are now leaving the aHUSSource.com website. Alexion is not
+        responsible for content included on third-party websites. Do you want to
+        proceed?
+      </p>
+      <div class="modal__buttons">
+        <a href="#" class="button button--primary modal--continue">PROCEED</a>
+        <button
+          data-dismiss="modal"
+          class="button button--secondary modal--stay">STAY HERE</button
+        >
+      </div>
     </div>
+  </div>
 </div>
+
+<script>
+  import { Fancybox } from "@fancyapps/ui";
+
+  const externalLinks = document.querySelectorAll(
+    'a[target="_blank"]:not(.document-link)'
+  );
+
+  if (externalLinks && externalLinks.length > 0) {
+    externalLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const href = link.getAttribute("href");
+        const modal = document.querySelector("#modal");
+        const continueButton = modal.querySelector(".modal--continue");
+        const stayButton = modal.querySelector(".modal--stay");
+        const modalClose = modal.querySelector(".modal__close");
+
+        continueButton.setAttribute("href", href);
+        continueButton.setAttribute("target", "_blank");
+
+        stayButton.addEventListener("click", () => {
+          Fancybox.close();
+        });
+        modalClose.addEventListener("click", () => {
+          Fancybox.close();
+        });
+
+        Fancybox.show(
+          [
+            {
+              src: modal,
+              type: "inline",
+              //dragToClose: false,
+              autoFocus: true,
+              placeFocusBack: true,
+              trapFocus: true,
+            },
+          ],
+          {
+            on: {
+              done: () => {
+                if (link.classList.contains("button--continue")) {
+                  Fancybox.close();
+                  setTimeout(() => {
+                    window.open(href, "_blank");
+                  }, 500);
+                  return;
+                }
+              },
+              close: () => {
+                continueButton.setAttribute("href", "");
+              },
+            },
+          }
+        );
+      });
+    });
+  }
+</script>
