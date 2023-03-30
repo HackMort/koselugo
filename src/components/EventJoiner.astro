@@ -1,0 +1,48 @@
+---
+import EventsForm from './EventsForm.astro';
+
+---
+
+<section class="event-joiner">
+    <div class="event-joiner__wrapper">
+        <div class="wrapper">
+            <div class="event-joiner__info">
+                <h3 class="event-joiner__title">
+                    Join an event to learn more, access resources, and connect with others living with NF1 PN.
+                </h3>
+    
+                <p class="event-joiner__description">
+                    Ask questions and gather information about NF1 PN at a free webinar or in-person event. These events are intended for parents and caregivers of children with NF1 PN.
+                </p>
+    
+                <button class="button button--primary">
+                    See events
+                </button>
+    
+                <p class="event-joiner__description">
+                    Our events cover a range of topics surrounding NF1 PN. Based on the event you attend, you could receive information about one or more of the following:
+                </p>
+    
+                <ul class="event-joiner__topics">
+                    <li class="event-joiner__topic">
+                        <img class="event-joiner__topic-image" src="/assets/images/events/disease-education.svg" alt=" ">
+                        <p class="event-joiner__topic-description">Disease education from a physician</p>
+                    </li>
+                    <li class="event-joiner__topic">
+                        <img class="event-joiner__topic-image" src="/assets/images/events/treatment-tips.svg" alt=" ">
+                        <p class="event-joiner__topic-description">Tips to prepare for treatment</p>
+                    </li>
+                    <li class="event-joiner__topic">
+                        <img class="event-joiner__topic-image" src="/assets/images/events/nf1-stories.svg" alt=" ">
+                        <p class="event-joiner__topic-description">Stories from people living with NF1</p>
+                    </li>
+                    <li class="event-joiner__topic">
+                        <img class="event-joiner__topic-image" src="/assets/images/events/recognizing-symptoms-tips.svg" alt=" ">
+                        <p class="event-joiner__topic-description">Tips for recognizing symptoms</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <EventsForm />
+    </div>
+</section>
