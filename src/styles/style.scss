@@ -52,6 +52,348 @@
 }
 
 /******************************************************
+-- Safety and Side Effects
+******************************************************/
+.mx-15 {
+  margin: 0 15%;
+}
+
+.mobile--only-2 {
+  //In this case, the mobile--only is considering all the screen sizes bigger than mobile
+  display: block;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.side-effect-page {
+  margin-bottom: 40px;
+  @include media('mobile') {
+    max-width: 100% !important;
+  }
+}
+
+.side-effects-page--section__heading {
+  &.side-effects-page--section__heading--3 {
+    font-size: 18px;
+    @include media('tablet') {
+      font-size: 22px;
+      margin: 15px 0 0 0;
+    }
+  }
+}
+
+.side-effects-page--section__overlapping {
+  padding-bottom: 8rem;
+  @include media('tablet') {
+    padding-bottom: 8rem;
+  }
+  @include media('desktop') {
+    padding-bottom: 0rem;
+  }
+}
+
+.side-effects-page--callout {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @include media('mobile') {
+    flex-direction: column;
+  }
+}
+
+.side-effects-page--callout__img {
+  width: 43px;
+  margin: 10px;
+
+  @include media('mobile') { 
+    width: 66px;
+    margin: 0px auto 33px auto;
+  }
+}
+
+.side-effects-page--callout__content {
+  align-self: center;
+  margin: auto;
+}
+.side-effects-page--list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  margin-left: 15px;
+
+  @include media('tablet') {
+    flex-direction: row;
+    gap: 0px 30px;
+  }
+
+}
+
+.side-effects-page--problems-section__long {
+  @include media('tablet') {
+    margin: 0px 10% 15px 10%;
+  }
+  @include media('desktop') {
+    margin: 0px 15% 15px 15%;
+  }
+}
+
+.side-effects-page--list__tests {
+  flex-direction: column;
+}
+
+.side-effects-page--commun-list {
+  display: flex;
+  margin-bottom: 35px;
+
+  @include media('mobile') {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+.side-effects-page--commun-list__column  {
+  width: 40%;
+
+  @include media('mobile') {
+    width: 100%;
+  }
+}
+
+.side-effects-page--commun-list__item {
+  display: grid;
+  grid-template-columns: 70px 30px 1fr;
+  margin-bottom: 15px;
+  justify-items: flex-start;
+  align-items: center;
+
+  @include media('mobile') {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 0 59px;
+  }
+
+}
+
+.side-effects-page--steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10%;
+  margin-top: 15px;
+
+  @media screen and (min-width: 540px) and (max-width: 767px) {
+    flex-direction: row;
+    padding: 10px 8%;
+  }
+
+  @include media('tablet') {
+    padding: 10px 5%;
+    margin-top: 40px;
+    flex-direction: row;
+  }
+  @include media('desktop') {
+    padding: 15px 10%;
+  }
+
+}
+
+.bg--paper {
+ @include media('tablet') {
+    position: relative;
+    background-color: #fff;
+    background-image: url(assets/images/safety-and-side-effects/bg-paper-tablet.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+    padding: 10px;
+  }
+  @include media('desktop') {
+    background-image: url(assets/images/safety-and-side-effects/bg-paper.png);
+  }
+  @media screen and (min-width: 540px) and (max-width: 767px) {
+    background-image: url(assets/images/safety-and-side-effects/bg-paper-tablet.png);
+    background-position: bottom right;
+  }
+}
+
+.side-effects-page--steps__step {
+  margin-bottom: 24px;
+  @include media('tablet') {
+    display: flex;
+    width: 33%;
+  }
+  @media screen and (min-width: 540px) and (max-width: 767px) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.side-effects-page--steps__step--bullet {
+  position: relative;
+  width: 85px;
+  height: 85px;
+
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  @include media('tablet') {
+    width: 75px;
+    height: 25px;
+    align-items: center;
+  }
+  @media screen and (min-width: 540px) and (max-width: 767px) {
+    align-items: center;
+  }
+}
+
+.side-effects-page--steps__step--number {
+  font-size: 28px;
+  font-weight: 600;
+  color: $color-aqua;
+}
+
+.side-effects-page--steps__step--figure {
+  position: absolute;
+  display: inline-block;
+  width: 85px;
+  height: 85px;
+  transform: rotate(225deg);
+  border: 10px solid #FFF200;
+  border-right: none;
+  border-bottom: none;
+  bottom: 45px;
+  @include media('tablet') {
+    width: 75px;
+    height: 75px;
+    transform: rotate(135deg);
+    bottom: -23px;
+    right: -12px;
+  }
+  @media screen and (min-width: 540px) and (max-width: 767px) {
+    width: 80px;
+    height: 80px;
+    transform: rotate(135deg);
+    bottom: 6px;
+    right: -15px;
+  }
+}
+
+.side-effects-page--steps__content {
+  text-align: center;
+  margin: 0 20%;
+  @include media('tablet') {
+    margin: 0 0 0 35px;
+    text-align: left;
+  }
+  @media screen and (min-width: 540px) and (max-width: 767px) {
+    margin: 0 5% 0 20%;
+  }
+}
+
+.side-effects-page--commun-list__item__img {
+  width: fit-content;
+  margin: auto;
+  @include media('mobile') {
+    margin: 15px auto;
+  }
+}
+
+.side-effects-page--commun-list__point {
+  background-color: $color-aqua;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  margin-right: 10px;
+  margin-left: 10px;
+
+  @include media('tablet') {
+    display: block; //Overwrite the display: none; from the .only-desktop class
+  }
+}
+
+.side-effects__link {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.side-effects-page--disclaimer {
+  font-weight: 600;
+  font-size: 20px;
+  background-color: $color-white;
+  border: 1px solid #404040; //This color is not in the variables.scss file
+  width: 90%;
+  margin: 20px auto;
+  padding: 39px 49px;
+
+  @include media('desktop') {
+    width: 70%;
+  }
+}
+
+.side-effects-page--disclaimer__two {
+  padding: 39px 20px !important;
+}
+
+.side-effects-page--disclaimer__overlapping {
+  position: relative;
+  margin-top: -100px;
+  @include media('tablet') {
+    position: relative;
+    margin-top: -100px;
+  }
+  @include media('desktop') {
+    margin-top: 0px;
+  }
+}
+
+.side-effects-page--paragraph {
+  font-weight: 600;
+  font-size: 20px;
+  margin: 39px 60px 0px 60px;
+}
+
+.side-effects-page--secondary-section {
+  margin: 20px auto;
+}
+
+.side-effects-page--secondary-section__bg-white {
+  background-color: $color-white;
+}
+
+.side-effects-page--problems-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  @include flex-gap(30px);
+}
+
+.side-effects-page--problems-section__img {
+  width: fit-content;
+}
+
+.side-effects-page--problems-section__heading {
+  font-size: 18px;
+  line-height: 100%;
+  margin: 0;
+}
+
+/******************************************************
 -- Savings and Support Page
 ******************************************************/
 
