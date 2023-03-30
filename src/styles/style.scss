@@ -933,6 +933,36 @@
 
 .taking-koselugo {
 
+  &__doses {
+    @include media('tablet') {
+      .taking-koselugo {
+        &__container {
+          &--flex {
+            align-items: center;
+            display: flex;
+            @include flex-gap(5px);
+
+            & > .taking-koselugo__container {
+              width: fit-content;
+            }
+
+            &.flex-wrap {
+              flex-wrap: wrap;
+            }
+
+            .taking-koselugo__paragraph.limit-width {
+              max-width: 65ch;
+            }
+
+            .taking-koselugo__list.limit-width {
+              max-width: 41ch;
+            }
+          }
+        }
+      }
+    }
+  }
+
   &__experience {
 
     .taking-koselugo {
@@ -957,9 +987,28 @@
     .taking-koselugo__paragraph {
       margin: 1.5rem auto;
 
-      &--limit-width {
+      @include media('tablet') {
+        margin: 0;
+        text-align: left;
+      }
+
+      &.limit-width {
         color: $color-gray;
         max-width: 25ch;
+
+        @include media('tablet') {
+          max-width: 23ch;
+        }
+      }
+    }
+
+    .taking-koselugo__container--flex {
+      @include media('tablet') {
+        align-items: center;
+        display: flex;
+        @include flex-gap(1.5rem);
+        justify-content: center;
+        margin-top: 2rem;
       }
     }
   }
@@ -991,6 +1040,10 @@
     &.hours-icon {
       margin-bottom: 1.45rem;
       max-width: 180px;
+
+      @include media('tablet') {
+        margin-bottom: 0;
+      }
     }
 
     &.atleast-image {
@@ -1000,44 +1053,44 @@
 
       @include media('tablet') {
         max-width: 398px;
+        margin: 0;
       }
     }
 
     &.capsule-icon {
       margin-bottom: 3.5rem;
       max-width: 150px;
+
+      @include media('tablet') {
+        margin-bottom: 0;
+      }
     }
 
     &.koselugo-bottle {
       max-width: 296px;
 
       @include media('tablet') {
+        margin: 0;
         max-width: 183px;
-      }
-    }
-
-    &--only-mobile {
-      @include media('tablet') {
-        display: none;
-      }
-    }
-
-    &--tablet-desktop {
-      display: none;
-
-      @include media('tablet') {
-        display: inline;
       }
     }
   }
 
   &__important-tip {
     color: $color-white;
+    margin: 0 auto;
+    max-width: 900px;
+
 
     header {
       background-color: $color-aqua;
       text-align: center;
       padding: 1.75rem;
+
+      .taking-koselugo__paragraph {
+        margin: 0 auto;
+        max-width: 60ch;
+      }
     }
 
     .taking-koselugo__list {
@@ -1046,8 +1099,14 @@
       margin: 5px 0 1.75rem;
       padding: 2rem;
 
+      
       &-item {
         margin-bottom: 1rem;
+
+        @include media('tablet') {
+          margin: 0 auto;
+          max-width: 60ch;
+        }
       }
     }
 
@@ -1078,9 +1137,23 @@
       margin-top: 3rem;
       padding-left: 0;
 
+      @include media('tablet') {
+        align-items: center;
+        display: flex;
+        // @include flex-gap(2rem);
+        justify-content: space-evenly;
+      }
+
       .taking-koselugo__list-item {
         text-align: center;
         margin-bottom: 2.5rem;
+
+        @include media('tablet') {
+          display: flex;
+          @include flex-gap(5px);
+          margin-bottom: 0;
+          max-width: 23ch;
+        }
 
         &::marker {
           color: transparent;
@@ -1109,10 +1182,18 @@
   .custom-section:nth-child(6) {
     background-color: transparent;
     text-align: center;
+
+    @include media('tablet') {
+      margin-top: 0;
+    }
     
     .custom-section__content {
       margin-top: 0;
       padding: 3rem 0;
+
+      @include media('tablet') {
+        padding: 0;
+      }
     }
 
     .taking-koselugo__title {

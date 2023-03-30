@@ -13,23 +13,31 @@ import Callout from '../components/Callout.astro';
           <span class="color-yellow">HOW IS</span> KOSELUGO TAKEN?
         </Fragment>
         <div class="taking-koselugo__doses">
-          <img class="taking-koselugo__image hours-icon" src="/assets/images/taking-koselugo/12-hours-icon.png" alt=" ">
-          <p><b>Doses should be taken—on an empty stomach—approximately the same time each day, about 12 hours apart</b></p>
-          <ul class="taking-koselugo__list taking-koselugo__list--no-margin-bottom">
-            <li class="taking-koselugo__list-item"><span class="color--aqua">Your child must take Koselugo on an empty stomach,</span> which means your child should not eat 2 hours before each dose or 1 hour after each dose</li>
-          </ul>
-          <img class="taking-koselugo__image atleast-image" src="/assets/images/taking-koselugo/atleast.png" alt=" ">
-          <img class="taking-koselugo__image capsule-icon" src="/assets/images/taking-koselugo/capsule-icon.png" alt=" ">
-          <p class="taking-koselugo__paragraph taking-koselugo__paragraph--emphasis"><b>Remember:</b></p>
-          <p><b>Koselugo capsules must only be swallowed whole with water. They must not be chewed, dissolved, or opened.</b>  Taking Koselugo in a different way than instructed may affect how it works. To learn more, visit the <a href="/dosing-schedule.html#tips-for-taking" class="text--decoration-underline color--rose">Tips For Taking Koselugo</a> page.</p>
+          <div class="taking-koselugo__container taking-koselugo__container--flex">
+            <div class="taking-koselugo__container">
+              <img class="taking-koselugo__image hours-icon" src="/assets/images/taking-koselugo/12-hours-icon.png" alt=" ">
+            </div>
+            <div class="taking-koselugo__container taking-koselugo__container--flex flex-wrap">              
+              <p class="taking-koselugo__paragraph"><b>Doses should be taken—on an empty stomach—approximately the same time each day, about 12 hours apart</b></p>
+              <ul class="taking-koselugo__list taking-koselugo__list--no-margin-bottom limit-width">
+                <li class="taking-koselugo__list-item"><span class="color--aqua">Your child must take Koselugo on an empty stomach,</span> which means your child should not eat 2 hours before each dose or 1 hour after each dose</li>
+              </ul>
+              <img class="taking-koselugo__image atleast-image" src="/assets/images/taking-koselugo/atleast.png" alt=" ">
+              <img class="taking-koselugo__image capsule-icon" src="/assets/images/taking-koselugo/capsule-icon.png" alt=" ">
+              <div class="taking-koselugo__container">
+                <p class="taking-koselugo__paragraph taking-koselugo__paragraph--emphasis"><b>Remember:</b></p>
+                <p  class="taking-koselugo__paragraph limit-width"><b>Koselugo capsules must only be swallowed whole with water. They must not be chewed, dissolved, or opened.</b>  Taking Koselugo in a different way than instructed may affect how it works. To learn more, visit the <a href="/dosing-schedule.html#tips-for-taking" class="text--decoration-underline color--rose">Tips For Taking Koselugo</a> page.</p>
+              </div>
+            </div>
+          </div>
           <ul class="taking-koselugo__list">
             <li class="taking-koselugo__list-item"><span class="color--aqua">If your child misses a dose,</span> they should take it as soon as you remember. If it is less than 6 hours before the next scheduled dose, give the next dose at the regular time. Do not make up for the missed dose</li>
             <li class="taking-koselugo__list-item"><span class="color--aqua">If your child vomits at any time after taking Koselugo,</span> they should not take an additional dose. The next dose should be taken at the regular time</li>
           </ul>
           <article class="taking-koselugo__important-tip">
             <header>
-              <p>It's important to <b>GIVE KOSELUGO EXACTLY AS YOUR CHILD’S DOCTOR PRESCRIBES AND KEEP TO A DOSING SCHEDULE THAT FITS BEST WITH YOUR CHILD’S DAILY ROUTINE.</b></p>
-              <p>The goal is to make it easy to stay on track to get the most out of treatment.</p>
+              <p class="taking-koselugo__paragraph">It's important to <b>GIVE KOSELUGO EXACTLY AS YOUR CHILD’S DOCTOR PRESCRIBES AND KEEP TO A DOSING SCHEDULE THAT FITS BEST WITH YOUR CHILD’S DAILY ROUTINE.</b></p>
+              <p class="taking-koselugo__paragraph">The goal is to make it easy to stay on track to get the most out of treatment.</p>
             </header>
             <ul class="taking-koselugo__list">
               <li class="taking-koselugo__list-item"><b>Do not change the dose or stop taking Koselugo unless directed by your child’s doctor</b></li>
@@ -90,8 +98,10 @@ import Callout from '../components/Callout.astro';
             <img class="taking-koselugo__image schedules-for-dose" src="/assets/images/taking-koselugo/schedules-for-dose-mobile.png" alt=" ">
           </picture>
           <p class="taking-koselugo__paragraph">These sample schedules are designed as suggestions only.</p>
-          <p class="taking-koselugo__paragraph taking-koselugo__paragraph--limit-width text--center"><b>You may want to use a dose-alert timer, or the alarm on your smartphone, as a reminder to take the medicine on time as part of your child’s daily dosing routine.</b></p>
-          <img class="taking-koselugo__image koselugo-bottle" src="/assets/images/taking-koselugo/koselugo-bottle.png" alt=" ">
+          <div class="taking-koselugo__container taking-koselugo__container--flex">
+            <p class="taking-koselugo__paragraph limit-width text--center"><b>You may want to use a dose-alert timer, or the alarm on your smartphone, as a reminder to take the medicine on time as part of your child’s daily dosing routine.</b></p>
+            <img class="taking-koselugo__image koselugo-bottle" src="/assets/images/taking-koselugo/koselugo-bottle.png" alt=" ">
+          </div>
         </div>
       </Section>
       <Section>
