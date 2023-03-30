@@ -932,7 +932,41 @@
 ******************************************************/
 
 .taking-koselugo {
+
+  &__experience {
+
+    .taking-koselugo {
+      
+      &__image {
+        margin: 1.5rem auto 2.25rem;
+      }
+
+      &__important-tip {
+        margin-top: 1.5rem;
+      }
+
+      &__paragraph {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  &__schedule {
+    padding-bottom: 2.5rem;
+    
+    .taking-koselugo__paragraph {
+      margin: 1.5rem auto;
+
+      &--limit-width {
+        color: $color-gray;
+        max-width: 25ch;
+      }
+    }
+  }
+
   &__tips {
+    padding-bottom: 1.5rem;
+
     .taking-koselugo__image {
       max-width: 106px;
 
@@ -940,6 +974,14 @@
         max-width: 40px;
       }
     }
+
+    .taking-koselugo__footnote {
+      margin-top: 1rem;
+    }
+  }
+
+  &__footnote {
+    font-size: 13px;
   }
 
   &__image {
@@ -1081,5 +1123,9 @@
         max-width: 48ch;
       }
     }
+  }
+
+  .text--italic {
+    font-style: italic;
   }
 }

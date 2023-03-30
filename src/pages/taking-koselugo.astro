@@ -50,7 +50,7 @@ import Callout from '../components/Callout.astro';
         <Fragment slot="section-title">
           <span class="color-yellow">ARE THERE</span> ANY TIPS FOR TAKING KOSELUGO?
         </Fragment>
-        <div class="taking-koselugo__container taking-koselugo__tips">
+        <div class="taking-koselugo__tips">
             <h6 class="taking-koselugo__title">Encouraging a child to take medicine can be a difficult task. Common reasons why children don’t want to take medicine may include:</h6>
             <ul class="taking-koselugo__list taking-koselugo__list--reasons">
               <li class="taking-koselugo__list-item">
@@ -74,21 +74,23 @@ import Callout from '../components/Callout.astro';
             </ul>
             <p>
               <b>For some helpful tips to teach your child how to swallow pills,</b> you may want to download the brochure
-              <a href="https://ccr.cancer.gov/sites/default/files/medbooklet.pdf#search=swallowing" class="text--decoration-underline color--rose">Medicine & Your Child: A Guide for Parents on Adherence and Administration</a> or visit <a href="https://kidshealth.org/en/parents/swallowing-pills.html" class="text--decoration-underline color--rose">www.kidshealth.org</a> to see Teaching Your Child How to Swallow Pills for additional suggestions.
+              <a href="https://ccr.cancer.gov/sites/default/files/medbooklet.pdf#search=swallowing" target="_blank" class="text--decoration-underline color--rose text--italic">Medicine & Your Child: A Guide for Parents on Adherence and Administration</a> or visit <a href="https://kidshealth.org/en/parents/swallowing-pills.html" target="_blank" class="text--decoration-underline color--rose">www.kidshealth.org</a> to see <span class="text--italic">Teaching Your Child How to Swallow Pills</span> for additional suggestions.
             </p>
-            <p>Please note: These links will take you to sites that are maintained by a third party who is solely responsible for its contents. Alexion is not responsible for the privacy policy of any third-party websites. We encourage you to read the privacy policy of every website you visit.</p>             
+            <p class="taking-koselugo__footnote">Please note: These links will take you to sites that are maintained by a third party who is solely responsible for its contents. Alexion is not responsible for the privacy policy of any third-party websites. We encourage you to read the privacy policy of every website you visit.</p>             
         </div>
       </Section>
       <Section>
         <Fragment slot="section-title">
           HOW CAN I ESTABLISH A DAILY SCHEDULE FOR <span class="color-yellow">TAKING KOSELUGO?</span>
         </Fragment>
-        <div class="taking-koselugo__container">
-          <p>Work with your child’s doctor to establish a dosing routine that can be easily followed. Taking each dose of Koselugo as directed, every day, is the best way to benefit from treatment.</p>
-          <img class="taking-koselugo__image taking-koselugo__image--only-mobile schedules-for-dose" src="/assets/images/taking-koselugo/schedules-for-dose-mobile.png" alt=" ">
-          <img class="taking-koselugo__image taking-koselugo__image--tablet-desktop schedules-for-dose" src="/assets/images/taking-koselugo/schedules-for-dose-desktop.png" alt=" ">
-          <p>These sample schedules are designed as suggestions only.</p>
-          <p>You may want to use a dose-alert timer, or the alarm on your smartphone, as a reminder to take the medicine on time as part of your child’s daily dosing routine.</p>
+        <div class="taking-koselugo__schedule">
+          <p class="taking-koselugo__paragraph">Work with your child’s doctor to establish a dosing routine that can be easily followed. Taking each dose of Koselugo as directed, every day, is the best way to benefit from treatment.</p>
+          <picture class="taking-koselugo__image-container">
+            <source media="(min-width: 768px )" srcset="/assets/images/taking-koselugo/schedules-for-dose-desktop.png">
+            <img class="taking-koselugo__image schedules-for-dose" src="/assets/images/taking-koselugo/schedules-for-dose-mobile.png" alt=" ">
+          </picture>
+          <p class="taking-koselugo__paragraph">These sample schedules are designed as suggestions only.</p>
+          <p class="taking-koselugo__paragraph taking-koselugo__paragraph--limit-width text--center"><b>You may want to use a dose-alert timer, or the alarm on your smartphone, as a reminder to take the medicine on time as part of your child’s daily dosing routine.</b></p>
           <img class="taking-koselugo__image koselugo-bottle" src="/assets/images/taking-koselugo/koselugo-bottle.png" alt=" ">
         </div>
       </Section>
@@ -96,19 +98,25 @@ import Callout from '../components/Callout.astro';
         <Fragment slot="section-title">
           WHAT WAS THE EXPERIENCE LIKE FOR THOSE PATIENTS <span class="color-yellow">TAKING KOSELUGO?</span>
         </Fragment>
-        <div class="taking-koselugo__container">
-            <p>
+        <div class="taking-koselugo__experience">
+            <p class="taking-koselugo__paragraph">
               <b>Your child is beginning treatment. It may be helpful to see what other patients experienced.</b> The chart below is an overview of the first year of patients who took Koselugo in a clinical study. It notes when patients responded to treatment and when they experienced side effects.
             </p>
-            <p>It’s important to remember that everyone may respond to treatment differently, so your child may not experience the same efficacy results (tumor shrinkage) or the same side effects described below.</p>
-            <p>Please know that these are not all the possible efficacy results or side effects your child may experience during treatment with Koselugo.</p>
-            <h6 class="taking-koselugo__title">Use the chart below to track your child’s progress and any side effects that may occur. Be sure to share your child’s experience with their doctor.</h6>
-            <img class="taking-koselugo__image taking-koselugo__image--only-mobile patient-journey-chart" src="/assets/images/taking-koselugo/patient-journey-chart-mobile.png" alt="">
-            <img class="taking-koselugo__image taking-koselugo__image--tablet-desktop patient-journey-chart" src="/assets/images/taking-koselugo/patient-journey-chart-mobile.png" alt="">
-            <p>*Of the 33 patients that responded to Koselugo treatment in the clinical trial, approximately one-half saw their tumor volume shrink by at least 20% within 7 months. The time of onset of response ranged from 3.3 months to 19.2 months.</p>
-            <p>†Koselugo can lower the amount of blood pumped by the heart. Your child’s doctor should do tests before and during treatment to check how well your child’s heart is working.</p>
-            <p>‡Koselugo can cause eye problems. Tell your child’s doctor as soon as possible if your child’s vision blurs or if any other changes to their sight occur during treatment.</p>
-            <p>Having the right support can make all the difference in your child’s treatment journey. Learn about the Patient Access Navigators who are ready to connect caregivers and patients to the personal assistance they need here.</p>
+            <p class="taking-koselugo__paragraph">It’s important to remember that everyone may respond to treatment differently, so your child may not experience the same efficacy results (tumor shrinkage) or the same side effects described below.</p>
+            <p class="taking-koselugo__paragraph">Please know that these are not all the possible efficacy results or side effects your child may experience during treatment with Koselugo.</p>
+            <p class="taking-koselugo__paragraph color--aqua"><b>Use the chart below to track your child’s progress and any side effects that may occur. Be sure to share your child’s experience with their doctor.</b></p>
+            <picture class="taking-koselugo__image-container">
+              <source media="(min-width: 768px)" srcset="/assets/images/taking-koselugo/patient-journey-chart-desktop.png">
+              <img class="taking-koselugo__image patient-journey-chart" src="/assets/images/taking-koselugo/patient-journey-chart-mobile.png" alt="">
+            </picture>
+            <p class="taking-koselugo__footnote">*Of the 33 patients that responded to Koselugo treatment in the clinical trial, approximately one-half saw their tumor volume shrink by at least 20% within 7 months. The time of onset of response ranged from 3.3 months to 19.2 months.</p>
+            <p class="taking-koselugo__footnote">†Koselugo can lower the amount of blood pumped by the heart. Your child’s doctor should do tests before and during treatment to check how well your child’s heart is working.</p>
+            <p class="taking-koselugo__footnote">‡Koselugo can cause eye problems. Tell your child’s doctor as soon as possible if your child’s vision blurs or if any other changes to their sight occur during treatment.</p>
+            <article class="taking-koselugo__important-tip">
+              <header>
+                <p><b>Having the right support can make all the difference in your child’s treatment journey. Learn about the Patient Access Navigators who are ready to connect caregivers and patients to the personal assistance they need here.</b></p>
+              </header>
+            </article>
         </div>
       </Section>
       <Section noHeader>
