@@ -60,21 +60,21 @@
 
 .side-effects-page--section__heading {
   &.side-effects-page--section__heading__3 {
-    font-size: 22px;
+    font-size: 18px;
     @include media('tablet') {
+      font-size: 22px;
       margin: 15px 0 0 0;
     }
   }
 }
 
-.side-effects-page--section__paragraph {
-  line-height: 26px;
-}
-
 .side-effects-page--section__overlapping {
-  @include media('mobile') {
-    padding: 0;
+  padding-bottom: 8rem;
+  @include media('tablet') {
     padding-bottom: 8rem;
+  }
+  @include media('desktop') {
+    padding-bottom: 0rem;
   }
 }
 
@@ -120,6 +120,14 @@
   }
 
 }
+.side-effects-page--list__tests {
+  @include media('tablet') {
+    margin: 0px 10% 15px 10%;
+  }
+  @include media('desktop') {
+    margin: 0px 15% 15px 15%;
+  }
+}
 
 .side-effects-page--commun-list {
   display: flex;
@@ -153,9 +161,95 @@
     flex-direction: column;
     align-items: center;
 
+    text-align: center;
     margin-bottom: 5px;
+    padding: 0 59px;
   }
 
+}
+
+.side-effects-page--steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10%;
+  margin-top: 15px;
+
+  @include media('tablet') {
+    padding: 10px 10%;
+    margin-top: 40px;
+    flex-direction: row;
+  }
+
+}
+
+.bg--paper {
+ @include media('tablet') {
+    position: relative;
+    background-color: #fff;
+    background-image: url(assets/images/safety-and-side-effects/bg-paper.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+    padding: 10px;
+  } 
+}
+
+.side-effects-page--steps__step {
+  margin-bottom: 24px;
+  @include media('tablet') {
+    display: flex;
+    width: 33%;
+  }
+}
+
+.side-effects-page--steps__step--bullet {
+  position: relative;
+  width: 85px;
+  height: 85px;
+
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  @include media('tablet') {
+    width: 75px;
+    height: 25px;
+  }
+}
+
+.side-effects-page--steps__step--number {
+  font-size: 28px;
+  font-weight: 600;
+  color: $color-aqua;
+}
+
+.side-effects-page--steps__step--figure {
+  position: absolute;
+  display: inline-block;
+  width: 85px;
+  height: 85px;
+  transform: rotate(225deg);
+  border: 10px solid #FFF200;
+  border-right: none;
+  border-bottom: none;
+  bottom: 45px;
+  @include media('tablet') {
+    width: 75px;
+    height: 75px;
+    transform: rotate(135deg);
+    bottom: -25px;
+    right: -12px;
+  }
+}
+
+.side-effects-page--steps__content {
+  text-align: center;
+  margin: 0 20%;
+  @include media('tablet') {
+    margin: 0 0 0 35px;
+    text-align: left;
+  }
 }
 
 .side-effects-page--commun-list__item__img {
@@ -169,8 +263,8 @@
 .side-effects-page--commun-list__point {
   background-color: $color-aqua;
   border-radius: 50%;
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   margin-right: 10px;
   margin-left: 10px;
 
@@ -186,7 +280,7 @@
 
 .side-effects-page--disclaimer {
   font-weight: 600;
-  font-size: 22px;
+  font-size: 20px;
   background-color: $color-white;
   border: 1px solid #404040; //This color is not in the variables.scss file
   width: 90%;
@@ -203,15 +297,20 @@
 }
 
 .side-effects-page--disclaimer__overlapping {
-  @include media('mobile') {
+  position: relative;
+  margin-top: -100px;
+  @include media('tablet') {
     position: relative;
     margin-top: -100px;
+  }
+  @include media('desktop') {
+    margin-top: 0px;
   }
 }
 
 .side-effects-page--paragraph {
   font-weight: 600;
-  font-size: 22px;
+  font-size: 20px;
   margin: 39px 60px 0px 60px;
 }
 
@@ -238,24 +337,6 @@
 .side-effects-page--problems-section__heading {
   font-size: 18px;
   line-height: 100%;
-}
-
-.side-effects-page--steps {
-  margin-top: 15px;
-  :first-child {
-    display: block;
-    
-    @include media('desktop') {display: none;}
-    @include media('tablet') {display: none;}
-  }
-
-  :nth-child(2) {
-    display: none;
-    
-    @include media('desktop') {display: block;}
-    @include media('tablet') {display: block;}
-  }
-
 }
 
 /******************************************************
