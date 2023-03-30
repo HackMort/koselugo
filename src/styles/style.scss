@@ -51,6 +51,19 @@
 /******************************************************
 -- Safety and Side Effects
 ******************************************************/
+.mx-15 {
+  margin: 0 15%;
+}
+
+.mobile--only-2 {
+  //In this case, the mobile--only is considering all the screen sizes bigger than mobile
+  display: block;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
 .side-effect-page {
   margin-bottom: 40px;
   @include media('mobile') {
@@ -59,7 +72,7 @@
 }
 
 .side-effects-page--section__heading {
-  &.side-effects-page--section__heading__3 {
+  &.side-effects-page--section__heading--3 {
     font-size: 18px;
     @include media('tablet') {
       font-size: 22px;
@@ -104,7 +117,6 @@
   align-self: center;
   margin: auto;
 }
-
 .side-effects-page--list {
   display: flex;
   flex-direction: column;
@@ -112,7 +124,6 @@
   justify-content: flex-start;
 
   margin-left: 15px;
-  margin-bottom: 15px;
 
   @include media('tablet') {
     flex-direction: row;
@@ -120,13 +131,18 @@
   }
 
 }
-.side-effects-page--list__tests {
+
+.side-effects-page--problems-section__long {
   @include media('tablet') {
     margin: 0px 10% 15px 10%;
   }
   @include media('desktop') {
     margin: 0px 15% 15px 15%;
   }
+}
+
+.side-effects-page--list__tests {
+  flex-direction: column;
 }
 
 .side-effects-page--commun-list {
@@ -176,10 +192,18 @@
   padding: 20px 10%;
   margin-top: 15px;
 
+  @media screen and (min-width: 540px) and (max-width: 767px) {
+    flex-direction: row;
+    padding: 10px 8%;
+  }
+
   @include media('tablet') {
-    padding: 10px 10%;
+    padding: 10px 5%;
     margin-top: 40px;
     flex-direction: row;
+  }
+  @include media('desktop') {
+    padding: 15px 10%;
   }
 
 }
@@ -188,12 +212,19 @@
  @include media('tablet') {
     position: relative;
     background-color: #fff;
-    background-image: url(assets/images/safety-and-side-effects/bg-paper.png);
+    background-image: url(assets/images/safety-and-side-effects/bg-paper-tablet.png);
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: contain;
     padding: 10px;
-  } 
+  }
+  @include media('desktop') {
+    background-image: url(assets/images/safety-and-side-effects/bg-paper.png);
+  }
+  @media screen and (min-width: 540px) and (max-width: 767px) {
+    background-image: url(assets/images/safety-and-side-effects/bg-paper-tablet.png);
+    background-position: bottom right;
+  }
 }
 
 .side-effects-page--steps__step {
@@ -201,6 +232,10 @@
   @include media('tablet') {
     display: flex;
     width: 33%;
+  }
+  @media screen and (min-width: 540px) and (max-width: 767px) {
+    display: flex;
+    flex-direction: row;
   }
 }
 
@@ -215,6 +250,10 @@
   @include media('tablet') {
     width: 75px;
     height: 25px;
+    align-items: center;
+  }
+  @media screen and (min-width: 540px) and (max-width: 767px) {
+    align-items: center;
   }
 }
 
@@ -238,8 +277,15 @@
     width: 75px;
     height: 75px;
     transform: rotate(135deg);
-    bottom: -25px;
+    bottom: -23px;
     right: -12px;
+  }
+  @media screen and (min-width: 540px) and (max-width: 767px) {
+    width: 80px;
+    height: 80px;
+    transform: rotate(135deg);
+    bottom: 6px;
+    right: -15px;
   }
 }
 
@@ -249,6 +295,9 @@
   @include media('tablet') {
     margin: 0 0 0 35px;
     text-align: left;
+  }
+  @media screen and (min-width: 540px) and (max-width: 767px) {
+    margin: 0 5% 0 20%;
   }
 }
 
@@ -327,6 +376,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 40px;
   @include flex-gap(30px);
 }
 
@@ -337,6 +387,7 @@
 .side-effects-page--problems-section__heading {
   font-size: 18px;
   line-height: 100%;
+  margin: 0;
 }
 
 /******************************************************
