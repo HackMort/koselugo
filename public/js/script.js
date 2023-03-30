@@ -154,7 +154,7 @@ const externalLinks = document.querySelectorAll('a:not(.site__header_nav_menu_li
                       return;
                     }
                     Fancybox.show([{
-                      src: interstitial,
+                      src: "#modal",
                       type: 'inline',
                       //dragToClose: false,  
                       autoFocus: true,
