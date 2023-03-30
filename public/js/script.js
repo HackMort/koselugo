@@ -116,3 +116,58 @@ if (form) {
     console.log(data)
   })
 }
+
+// -----------------------------anchor-pop-up-------------------------------------
+
+/* const externalLinks = document.querySelectorAll('a[target="_blank"])')
+
+if (externalLinks && externalLinks.length > 0) {
+  externalLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault()
+
+      const href = link.getAttribute('href')
+      const continueButton = document.querySelector('.modal--continue')
+      const stayButton = document.querySelector('.modal--stay')
+      const modalClose = document.querySelector('.modal__close')
+
+      continueButton.setAttribute('href', href)
+
+      stayButton.addEventListener('click', () => {
+        Fancybox.close()
+      })
+      modalClose.addEventListener('click', () => {
+        Fancybox.close()
+      })
+
+      if (link.classList.contains('button--continue')) {
+        stayButton.click()
+        setTimeout(() => {
+          window.open(href, '_blank')
+        }, 100)
+        return
+      }
+      Fancybox.show(
+        [
+          {
+            src: '#modal',
+            type: 'inline',
+            // dragToClose: false,
+            autoFocus: true,
+            placeFocusBack: true,
+            trapFocus: true
+          }
+        ],
+        {
+          on: {
+            closing: () => {
+              continueButton.setAttribute('href', '')
+            }
+          }
+        }
+      )
+    })
+  })
+} */
+
+// -----------------------------anchor-pop-up-------------------------------------
