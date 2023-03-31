@@ -624,3 +624,307 @@
     }
 } 
 //--------------------VALIDATE--------------------
+
+
+
+/******************************************************
+-- About Page
+******************************************************/
+.about-koselugo {
+  &__clinical-study {
+    .about-koselugo {
+      &__container {
+        &--results-description {
+          text-align: center;
+
+          @media (min-width: 700px) {
+            background-image: url('/assets/images/about-koselugo/box-bg-tablet.png');
+            background-position: bottom right;
+            background-repeat: no-repeat;
+            max-width: 50ch;
+            padding-right: 35px;
+            text-align: left;
+          }
+
+          @include media('desktop') {
+            background-image: url('/assets/images/about-koselugo/box-bg-desktop.jpg');
+            padding-bottom: 10px;
+            padding-right: 15px;
+          }
+
+          .about-koselugo__title {
+            margin-bottom: 5px;
+          }
+        }
+
+        &--flex {
+          @media (min-width: 700px) {
+            display: flex;
+            align-items: center;
+            @include flex-gap(1.5rem);
+            justify-content: center;
+            margin-top: 1rem;
+          }
+        }
+      }
+
+      &__image {
+        max-width: 180px;
+        width: 50%;
+  
+        @media (min-width: 700px) {
+          margin: 0;
+          width: fit-content;
+        }
+      }
+    }
+
+    & > .about-koselugo__title {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__faq {
+    background-color: transparent;
+
+    @include media('tablet') {
+      padding-bottom: 3rem;
+    }
+
+    &.about-koselugo__container--visit {
+        .button {
+          display: none;
+
+          &--only-mobile {
+            display: flex;
+          }
+  
+          @include media('tablet') {
+            display: flex;
+  
+            &--only-mobile {
+              display: none;
+            }
+          }
+        }
+
+        .about-koselugo__title {
+          &--hide-tablet {
+            @include media('tablet') {
+              display: none;
+            }
+
+            @include media('desktop') {
+              display: block;
+            }
+          }
+
+          &--only-tablet {
+            display: none;
+
+            @include media('tablet') {
+              display: block;
+            }
+
+            @include media('desktop') {
+              display: none;
+            }
+          }
+        }
+      }
+  }
+
+  &__journeys {
+    background-color: transparent;
+  }
+
+  &__support-program {
+    padding-top: 2.75rem;
+
+    @include media('tablet') {
+      padding-top: 0;
+      position: relative;
+    }
+
+    @include media('desktop') {
+      padding-bottom: 4rem;
+    }
+
+    .about-koselugo {
+      &__container {
+        &--flex {
+          @media (min-width: 700px) {
+            display: flex;
+            align-items: center;
+            @include flex-gap(1.5rem);
+            margin-top: 1.5rem;
+          }
+        }
+
+        .about-koselugo__title {
+          margin-top: 0;
+        }
+      }
+  
+      &__image {
+        margin-top: 3rem;
+        max-width: 124px;
+        width: 50%;
+
+        @media (min-width: 700px) {
+          margin: 0;
+        }
+  
+        @include media('tablet') {
+          width: 3.5rem;
+        }
+      }
+  
+      &__list-item:last-child {
+        margin-bottom: 3rem;
+
+        @media (min-width: 700px) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  &__what-is {
+    .about-koselugo__image {
+      width: 80%;
+
+      @include media('tablet') {
+        width: 35%;
+      }
+    }
+  }
+
+  &__container {
+    width: 100%;
+    
+    &--flex {
+      @include media('tablet') {
+        display: flex;
+        align-items: center;
+        @include flex-gap(1.5rem)
+      }
+    }
+
+    &--footnote {
+      padding: 4rem 0 2rem;
+
+      p {
+        font-size: 13px;
+      }
+  
+      @include media('tablet') {
+        padding: 0;
+      }
+    }
+
+    &--visit {
+      text-align: center;
+  
+      .button {
+        margin: 0 auto;
+        padding-top: 0;
+      }
+
+      .about-koselugo__title {
+        font-size: 22px;
+        margin: 0 auto;
+        
+        @include media('tablet') {
+          max-width: 38ch;
+        }
+
+        @include media('desktop') {
+          max-width: 50ch;
+        }
+      }
+    }
+  }
+
+  &__image {
+    margin: 1.5rem auto;
+  }
+
+  &__list {
+    margin-top: 5px;
+    padding-left: 1rem;
+
+    &-item {
+      margin-bottom: 5px;
+    }
+  }
+
+  .custom-section__content {
+    @include media('tablet') {
+      margin-top: 0;
+    }
+  }
+
+  .custom-section {
+    @include media('tablet') {
+      margin-top: 2rem;
+    }
+    
+    &:nth-child(even) {
+      background-color: transparent;
+      
+      @include media('tablet') {
+        margin-top: 0;
+      }
+    }
+    
+    &:first-child {
+      @include media('tablet') {
+        margin-top: calc(3.0313rem + 2.25rem);
+      }
+    }
+    
+    &:last-child {
+      @include media('tablet') {
+        margin-top: 0;
+        padding-top: 1.5rem;
+      }
+    }
+  }
+
+  .one__source {
+
+    @include media('tablet') {
+      position: relative;
+      margin-bottom: -135px;
+      margin-right: 1.5rem;
+      margin-left: 1.5rem;
+      z-index: 2;
+    }
+
+    @include media('desktop') {
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: -60px;
+    }
+  }
+
+  & + .isi {
+    padding-top: 3rem;
+
+    @include media('tablet') {
+      margin-top: 12.5rem;
+      padding-top: 1rem;
+    }
+
+    @include media('desktop') {
+      margin-top: 10.5rem;
+    }
+  }
+
+  &__title {
+    @include media('tablet') {
+      font-size: 22px;
+    }
+  }
+}
