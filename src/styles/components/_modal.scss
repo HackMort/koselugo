@@ -5,95 +5,166 @@
      padding-right: 74px;
      padding-bottom: 41px;
      padding-left: 74px;
-     max-width: 677px;
-    border-radius: 15px;    
+     max-width: 960px;
+    border-radius: 50px;    
 
     &__wrapper{
         height: auto;
         margin: auto;
         border-radius: 15px;
-        background-color: white;
-        position: relative;
+        
 
         .modal__close{
             width: 18px;
             height: 44px;
-            font-size: 20px;
+            font-size: 32px;
+            color: $color-rose!important;
             position: absolute;
-            right: -57px;
-            top: -40px;
+            right: 0;
+            top: 0;
             cursor: pointer;
-            color: $primary-navy-500;
+            color: black;
         }
 
-        @media screen and (max-width:990px) {
+        @media screen and (max-width:768px) {
             .modal__close{
-                right: -5px;
-                top: -19px;
+                right: -10px;
+                top: -9px;
             }
         }
-        @media screen and (max-width:570px) {
-            .modal__close{
-                right: -12px;
-            }
-        }
+
     }
 
     &__content{
-        max-width: 585px;
+        height: 100%;
+        max-width: 38.875rem;
+        margin: auto;
     }
-/* 
-    &__image{
-        text-align: center;
-
-        img{
-            max-width: 387px;
-            margin-bottom: 1rem;
-        }
-
-        @media screen and (max-width:715px) {
-            img{
-                width: 332px;
-            }
-        }
-
-        @media screen and (max-width:570px) {
-            img{
-                width: 240px;
-            }
-        }
-
-        @media screen and (max-width:420px) {
-            img{
-                width: 280px;
-            }
-        }
-    } */
 
     &__title {
-
-        font-family: 'Arvo';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 40px;
-        line-height: 48px;
         text-align: center;
-        letter-spacing: 0.56px;
-        margin-bottom: 20px;
-        color: $gradient-light;
+        font-size: 50px;
+        padding: 13px 0 50px;
+        margin-bottom: 28px;
+        max-height: 162px;
+        line-height: 1.1;
+        color: $color-rose;
+
+        @media screen and (max-width:768px) {
+          padding-bottom: 18px;
+        }           
     }
 
     &__text{
         text-align: center;
-        margin-bottom: 49px;
+        margin-bottom: 57px;
+
+        @media screen and (max-width:1024px) {
+            margin-bottom: 72px;
+        }
+        @media screen and (max-width:590px) {
+            margin-bottom: 33px;
+        }
+        @media screen and (max-width:400px) {
+            margin-bottom: 67px;
+        }
     }
 
     &__buttons{
         display: flex;
-        justify-content: center;
+        position: absolute;        
+        left: 0;
+        width: 100%;
+        height: 16%;
+        #proceed{
+            width:50%;
+            font-size: 20px;
+            height: 100%;
+            background-color: $color-aqua;
+
+            @media screen and (max-width:590px) {
+                font-size: 16px;
+            }
+            @media screen and (max-width:415px) {
+                font-size: 14px;
+            }
+
+            &::after{
+                content: '';
+                background-image: url('/assets/icons/next_arrow.png');
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                right: 35px;
+                top: 50%;
+                transform: translate(0, -50%);
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                @media screen and (max-width:890px) {
+                    width: 37px;
+                    top: 61%;
+                }
+                @media screen and (max-width:590px) {
+                    right: 13px;
+                }
+                @media screen and (max-width:415px) {
+                    width: 32px;
+                }
+                @media screen and (max-width:340px) {
+                    right: 7px;
+                }
+            }
+            
+            
+            
+        }
+        #back{
+            width:50%;
+            font-size: 20px;
+            height: 100%;
+            background-color: $color-aqua;
+            color: white;
+            border-color: $color-aqua;
+            margin-right: 3px;
+            position: relative;
+
+            
+            @media screen and (max-width:590px) {
+                font-size: 16px;
+            }
+            @media screen and (max-width:415px) {
+                font-size: 14px;
+            }
+
+            &::before{
+                content: '';
+                background-image: url('/assets/icons/back_arrow.png');
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                left: 35px;
+                top: 50%;
+                transform: translate(0, -50%);
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                @media screen and (max-width:890px) {
+                    width: 37px;
+                    top: 61%;
+                }
+                @media screen and (max-width:590px) {
+                    left: 13px;
+                }
+                @media screen and (max-width:415px) {
+                    width: 32px;
+                }   
+            }
+        }
+        
     }
 
-    @media screen and (max-width:570px) {
+    @media screen and (max-width:768px) {
     
         &__title {
             font-size: 32px;
@@ -141,13 +212,41 @@
     height: 110%;
 }
 
+.fancybox__content {
+    width: 860px!important;
+    height: 485.27px!important;
+    background-color: $color-light-blue!important;
+    /* padding-left: 0!important;
+    padding-right: 0!important; */
+    position: relative;
+    margin-left: 80px!important;
+    margin-right: 80px!important;
+
+    @media screen and (max-width:890px) {
+        width: 560px!important;
+    }
+    @media screen and (max-width:768px) {
+        height: 406px!important;
+    }
+    @media screen and (max-width:590px) {
+        width: 420px!important;
+        height: 440px!important;
+    }
+
+    @media screen and (max-width:400px) {
+        height: 520px!important;
+    }
+    @media screen and (max-width:369px) {
+        height: 547px!important;
+    }
+    @media screen and (max-width:330px) {
+        height: 574px!important;
+    }
+} 
+
 .fancybox__content>.f-button.is-close-btn{
     display: none;
 }
-.fancybox__container{
-    position: absolute!important;
-}
-
 
 html.with-fancybox {
     overflow: hidden;
