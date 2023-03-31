@@ -1281,6 +1281,12 @@
 
   &__doses {
 
+    .taking-koselugo {
+      &__paragraph {
+        line-height: 22px;
+      }
+    }
+
     @media(min-width: 925px) {
       .taking-koselugo {
         &__container {
@@ -1316,6 +1322,18 @@
             }
           }
         }
+
+        &__list-item {
+          line-height: 26px;
+        }
+
+        &__paragraph {
+          line-height: 26px;
+
+          &.lheight--18 {
+            line-height: 26px;
+          }
+        }
       }
     }
   }
@@ -1329,10 +1347,42 @@
 
       &__important-tip {
         margin-top: 1.5rem;
+
+        b {
+          @include media('tablet') {
+              font-size: 21px;
+              font-weight: 400;
+              line-height: 23.81px;
+          }
+        }
       }
 
       &__paragraph {
         margin-bottom: 0.5rem;
+
+        &--highlight {
+          font-size: 18px;
+          line-height: 20.41px;
+          margin-bottom: 1.5rem;
+
+          @media (min-width:1000px) {
+            font-size: 22px;
+            line-height: 24.94px;
+          }
+        }
+      }
+    }
+
+    &-continue {
+      margin-top: 0;
+      padding-top: 2.5rem;
+
+      @media(min-width: 1000px) {
+        padding: 3rem;
+      }
+
+      .custom-section__content {
+        margin-top: 0;
       }
     }
   }
@@ -1383,14 +1433,6 @@
         margin-top: 0;
       }
     }
-
-    & + .taking-koselugo__image-container {
-      background-color: $color-white;
-      margin: 0 auto;
-      max-width: 72.8125rem;
-      text-align: center;
-      width: 100%;
-    }
   }
 
   &__tips {
@@ -1407,6 +1449,12 @@
       }
     }
 
+    .taking-koselugo__list-item {
+      @include media('tablet') {
+        line-height: 26px;
+      }
+    }
+
     .taking-koselugo__footnote {
       margin-top: 1rem;
     }
@@ -1418,6 +1466,14 @@
 
     @include media('tablet') {
       margin-top: 0;
+    }
+
+    .taking-koselugo__title {
+      line-height: 22px;
+
+      @include media('tablet') {
+        line-height: 26px;
+      }
     }
 
     .custom-section__content {
@@ -1437,15 +1493,28 @@
         max-width: 48ch;
       }
     }
+
+    a {
+      line-height: 22px;
+    }
   }
 
   &__footnote {
     font-size: 13px;
+    line-height: 18px;
   }
 
   &__image {
     margin: 0 auto;
     width: 100%;
+
+    &-container {
+      background-color: $color-white;
+      margin: 0 auto;
+      max-width: 72.8125rem;
+      text-align: center;
+      width: 100%;
+    }
 
     &.hours-icon {
       margin-bottom: 1.45rem;
@@ -1583,6 +1652,7 @@
     }
 
     &-item {
+      line-height: 22px;
       margin-bottom: 5px;
     }
 
@@ -1599,12 +1669,13 @@
       }
 
       .taking-koselugo__list-item {
-        text-align: center;
         margin-bottom: 2.5rem;
+        text-align: center;
 
         @include media('tablet') {
           align-items: center;
           display: flex;
+          line-height: 26px;
           margin-bottom: 0;
 
           span {
@@ -1628,6 +1699,11 @@
   }
 
   &__paragraph {
+    line-height: 22px;
+
+    @include media('tablet') {
+      line-height: 26px;
+    }
 
     &--emphasis {
       font-size: 20px;
@@ -1653,5 +1729,9 @@
 
   .color--arsenic-black {
     color: #434343;
+  }
+
+  .lheight--18 {
+    line-height: 18px;
   }
 }
