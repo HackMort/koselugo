@@ -8,13 +8,13 @@ import Section from '../components/Section.astro';
     <SimpleHero folder="family-resources" alt="" />
 
     <div class="family-resources-page-content">
-      <Section>
+      <Section className="text-resources">
         <Fragment slot="section-title">
-          <span class="color-yellow">HOW CAN I LEARN</span>
+          <span class="color-yellow" id="resources">HOW CAN I LEARN</span>
           MORE ABOUT TREATMENT WITH KOSELUGO?
         </Fragment>
 
-        <p class="family-resources-page--paragraph">The following resources and <a class="family-resources-page--link__inserted" href=" ">videos</a> can help provide you and your family with more information about Koselugo and about NF1 plexiform neurofibromas. As you review the materials, write down your questions and share them with your doctor at your child’s next visit.</p>
+        <p class="family-resources-page--paragraph">The following resources and <a class="family-resources-page--link__inserted color--rose" href=" ">videos</a> can help provide you and your family with more information about Koselugo and about NF1 plexiform neurofibromas. As you review the materials, write down your questions and share them with your doctor at your child’s next visit.</p>
 
 
         <div class="family-resources-page--resources">
@@ -88,9 +88,9 @@ import Section from '../components/Section.astro';
 
       </Section>
 
-      <Section>
+      <Section className="video-resources">
         <Fragment slot="section-title">
-          <span class="color-yellow">VIDEO</span>
+          <span class="color-yellow" id="resources-videos">VIDEO</span>
           LIBRARY                     
         </Fragment>
 
@@ -112,12 +112,12 @@ import Section from '../components/Section.astro';
 
                 <div class="family-resources-page--resource__bottom">
                   <span class="family-resources-page--resource__bottom-view"><strong>View</strong></span>
-                  <a class="family-resources-page--resource__link" href="#isi">Important Safety Information.</a>
+                  <a class="family-resources-page--resource__link color--rose" href="#isi">Important Safety Information.</a>
                 </div>
 
                 <div class="family-resources-page--resource__bottom">
                   <span class="family-resources-page--resource__bottom-view"><strong>View</strong></span>
-                  <a class="family-resources-page--resource__link" href="http://www.azpicentral.com/pi.html?product=koselugo" target="_blank">Prescribing Information.</a>
+                  <a class="family-resources-page--resource__link color--rose" href="http://www.azpicentral.com/pi.html?product=koselugo" target="_blank">Prescribing Information.</a>
                 </div>
 
               </div>
@@ -128,9 +128,9 @@ import Section from '../components/Section.astro';
 
       </Section>
 
-      <Section>
+      <Section className="advocacy-resources">
         <Fragment slot="section-title">
-          <span class="color-yellow">WHAT ARE SOME</span> ADVOCACY ORGANIZATIONS 
+          <span class="color-yellow" id="advocacy-organizations">WHAT ARE SOME</span> ADVOCACY ORGANIZATIONS 
           <span class="color-yellow">FOR PATIENTS WITH NF1 PN?</span>
         </Fragment>
 
@@ -141,17 +141,17 @@ import Section from '../components/Section.astro';
 
           <div class="family-resources-page--resources__advocacy">
             <img class="family-resources-page--resources__advocacy--img" src="/assets/images/family-resources/advocacy_1.png" alt=" ">
-            <p class="family-resources-page--resources__advocacy--content">The mission of the <a class="family-resources-page--resources__advocacy--content-link" href="https://www.ctf.org/" target="_blank">Children's Tumor Foundation</a> is to drive research, expand knowledge, and advance care of the NF community.</p>
+            <p class="family-resources-page--resources__advocacy--content">The mission of the <a class="family-resources-page--resources__advocacy--content-link color--rose" href="https://www.ctf.org/" target="_blank">Children's Tumor Foundation</a> is to drive research, expand knowledge, and advance care of the NF community.</p>
           </div>
 
           <div class="family-resources-page--resources__advocacy row--reverse">
             <img class="family-resources-page--resources__advocacy--img" src="/assets/images/family-resources/advocacy_2.png" alt=" ">
-            <p class="family-resources-page--resources__advocacy--content">Visit the <a class="family-resources-page--resources__advocacy--content-link" href="https://nfnetwork.org/" target="_blank">Neurofibromatosis Network</a> website to discover news about treatment and their work toward a neurofibromatosis cure. They provide outreach through education and awareness, while offering hope and support to those affected by NF.</p>
+            <p class="family-resources-page--resources__advocacy--content">Visit the <a class="family-resources-page--resources__advocacy--content-link color--rose" href="https://nfnetwork.org/" target="_blank">Neurofibromatosis Network</a> website to discover news about treatment and their work toward a neurofibromatosis cure. They provide outreach through education and awareness, while offering hope and support to those affected by NF.</p>
           </div>
 
           <div class="family-resources-page--resources__advocacy">
             <img class="family-resources-page--resources__advocacy--img" src="/assets/images/family-resources/advocacy_3.png" alt=" ">
-            <p class="family-resources-page--resources__advocacy--content">The <a class="family-resources-page--resources__advocacy--content-link" href="https://littlesttumor.org/" target="_blank">Littlest Tumor Foundation</a> is focused on increasing the understanding of neurofibromatosis (NF), empowering affected families, and advancing research of preventative therapies.</p>  
+            <p class="family-resources-page--resources__advocacy--content">The <a class="family-resources-page--resources__advocacy--content-link color--rose" href="https://littlesttumor.org/" target="_blank">Littlest Tumor Foundation</a> is focused on increasing the understanding of neurofibromatosis (NF), empowering affected families, and advancing research of preventative therapies.</p>  
           </div>
           
           <p class="family-resources-page--resources__advocacy--disclaimer">

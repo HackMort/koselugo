@@ -1315,6 +1315,9 @@
     }
   }
   &--resource {
+    @include media('mobile') {
+      margin-bottom: 25px;
+    }
     @include media('tablet') {
       width: 50%;
       display: flex;
@@ -1381,4 +1384,8 @@
     margin-top: 15px;
     margin-bottom: 15px;
   }
+}
+
+.advocacy-resources {
+  margin-bottom: 20px;
 }
