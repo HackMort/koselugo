@@ -1344,7 +1344,8 @@
     }
 
     .taking-koselugo__paragraph {
-      margin: 1.5rem auto;
+      margin: 0 auto;
+      padding-top: 1.5rem;
 
       @media(min-width:725px) {
         margin: 0;
@@ -1369,6 +1370,26 @@
         justify-content: center;
         margin-top: 2rem;
       }
+    }
+
+    &-continue {
+      margin-top: 0;
+
+      @media(min-width: 725px) {
+        padding: 0;
+      }
+
+      .custom-section__content {
+        margin-top: 0;
+      }
+    }
+
+    & + .taking-koselugo__image-container {
+      background-color: $color-white;
+      margin: 0 auto;
+      max-width: 72.8125rem;
+      text-align: center;
+      width: 100%;
     }
   }
 
@@ -1475,6 +1496,13 @@
       @include media('tablet') {
         margin: 0;
         max-width: 50px;
+      }
+    }
+
+    &.schedules-for-dose {
+
+      @media(min-width: 725px) {
+        max-width: 1000px;
       }
     }
   }
