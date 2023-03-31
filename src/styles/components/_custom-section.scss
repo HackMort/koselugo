@@ -43,6 +43,11 @@
         @media screen and (min-width: 1300px) {
             left: -3rem;
         }
+
+        @include media('mobile') {
+            width: 100%;
+            max-width: 100%;
+        }
     }
 
     &__title-wrapper {
@@ -50,9 +55,11 @@
         display: flex;
         align-items: center;
         height: 100%;
-
         @media screen and (min-width: 1024px) {
             margin-left: -1px;
+        }
+        @include media('mobile') {
+            width: 100%;
         }
     }
 
