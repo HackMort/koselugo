@@ -1,9 +1,43 @@
-/* It takes a list of events, and allows you to filter them by type */
+/**
+     * If the parent element of the child element has the class name, return the parent
+     * element, otherwise, call the function again with the parent element as the child
+     * element.
+     * @param child {HTMLElement} - the child element that you want to find the parent of
+     * @param className {string} - The class name of the parent element you're looking for.
+     * @returns {HTMLElement} The parent element of the child element.
+     */
+const getParent = function (child, className) {
+  const parent = child.parentElement
+  const isControlParent = parent.classList.contains(className)
+
+  if ((parent === null) || isControlParent) {
+    return parent
+  } else {
+    return getParent(parent, className)
+  }
+}
+
+/**
+
+Represents a list of events with filtering functionality.
+/
+class EventList {
+/*
+Creates an instance of the EventList class.
+@param {NodeList} eventList - The list of events to filter.
+*/
 class EventList {
   constructor (eventList) {
     this.eventList = eventList
   }
 
+  /**
+ * It loops through all the events and if the event type is not the same as the
+ * type passed in, it adds the class event--hidden and removes the class
+ * event--showed. If the event type is the same as the type passed in, it removes
+ * the class event--hidden and adds the class event--showed
+ * @param type - the type of event you want to filter
+ */
   filter (type) {
     this.eventList.forEach(function (event) {
       const { eventType } = event.dataset
@@ -17,6 +51,9 @@ class EventList {
     })
   }
 
+  /**
+ * It removes the class `event--hidden` from each event in the event list
+ */
   clearFilter () {
     this.eventList.forEach(function (event) {
       event.classList.remove('event--hidden')
@@ -24,10 +61,64 @@ class EventList {
   }
 }
 
+/**
+
+Enum for filter types.
+@readonly
+@enum {string}
+@property {string} ALL - Show all events.
+@property {string} VIRTUAL - Show virtual events only.
+@property {string} IN_PERSON - Show in-person events only.
+*/
 const filterTypes = {
   ALL: 'all',
   VIRTUAL: 'virtual',
   IN_PERSON: 'in-person'
+}
+
+class UpcomingEvent {
+/**
+ * @param {HTMLElement} event - The event object that was passed to the handler.
+ */
+  constructor (event) {
+    this.event = event
+  }
+
+  /**
+ * It returns an object with the event's data
+ * @returns An object with the event's id, type, date, hour, typeString, title,
+ * description, and presenter.
+ * @returns {
+ *  id: string,
+ *  type: string,
+ *  date: string,
+ *  hour: string,
+ *  typeString: string,
+ *  title: string,
+ *  description: string,
+ *  presenter: string
+ * }
+ */
+  toJSON () {
+    const { eventId, eventType } = this.event.dataset
+    const date = this.event.querySelector('.event__date').innerText.trim()
+    const hour = this.event.querySelector('.event__hour').innerText.trim()
+    const type = this.event.querySelector('.event__type').innerText.trim()
+    const title = this.event.querySelector('.event__title').innerText.trim()
+    const presenter = this.event.querySelector('.event__presenter').innerText.trim()
+    const description = this.event.querySelector('.event__description').innerText.trim()
+
+    return {
+      id: eventId,
+      type: eventType,
+      date,
+      hour,
+      typeString: type,
+      title,
+      description,
+      presenter
+    }
+  }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -75,5 +166,17 @@ document.addEventListener('DOMContentLoaded', function () {
         button.classList.add(activeFilterClass)
       })
     }
+  })
+  // Events filter
+
+  // Register event
+  const registerButtons = document.querySelectorAll('.register-event')
+
+  registerButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      const eventElement = getParent(button, 'event')
+      const event = new UpcomingEvent(eventElement)
+      console.log(event.toJSON())
+    })
   })
 })
