@@ -1,12 +1,13 @@
 ---
 type Props = {
     noHeader?: boolean;
-    className?: string
+    className?: string;
+    id?: string;
 };
-const { noHeader, className = "" } = Astro.props;
+const { noHeader, className = "", id="" } = Astro.props;
 ---
 
-<section class={`custom-section ${className}`}>
+<section class={`custom-section ${className}`} id={id}>
     {
         !noHeader && (
             <div class="custom-section__header">
