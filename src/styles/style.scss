@@ -1638,4 +1638,20 @@
   .text--italic {
     font-style: italic;
   }
+
+  .fweight--600 {
+    font-weight: 600;
+  }
+
+  .fweight--750 {
+    font-weight: 750;
+
+    @media(min-width: 725px) {
+      font-weight: 600;
+    }
+  }
+
+  .color--arsenic-black {
+    color: #434343;
+  }
 }
