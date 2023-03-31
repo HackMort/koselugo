@@ -55,3 +55,65 @@ input {
         }
     }
 }
+
+.form__control {
+    display: block;
+    position: relative;
+    padding-bottom: 0;
+    margin-bottom: .5rem;
+
+    transition: all 100ms ease-in-out;
+
+    * {
+        color: $color-black;
+    }
+
+    .form__control-label {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 14px;
+        color: $color-black;
+        display: inline-block;
+    }
+
+    .form__control-error {
+        display: none;
+        color: $color-red;
+    }
+
+    &[data-required="true"] {
+        .form__control-label::after {
+            content: '*';
+            color: $color-red;
+            display: inline-block;
+            margin-left: .25rem;
+        }
+    }
+
+    .form__control-input {
+        height: 2.125rem;
+        border-radius: .25rem;
+        padding: .5rem;
+        background-color: $color-concrete;
+
+        outline: 1px solid transparent;
+
+        &:hover,
+        &:focus,
+        &:focus-visible {
+            outline-color: $color-aqua;
+        }
+    }
+
+    &.form__control--invalid {
+        &[data-touched="true"][data-required="true"][data-is-valid="false"] {
+            .form__control-input {
+                outline-color: $color-red;
+            }
+
+            .form__control-error {
+                display: block;
+            }
+        }
+    }
+}

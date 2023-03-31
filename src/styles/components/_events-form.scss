@@ -75,8 +75,10 @@
                         .event__schedule {
                             display: flex;
                             margin-bottom: .0625rem;
+
                             span {
                                 color: $color-navy-300;
+
                                 &:first-of-type {
                                     padding-right: .5rem;
                                 }
@@ -143,6 +145,7 @@
 
             &--expanded {
                 background: transparent;
+
                 .event-list__toggler-arrow {
                     transform: rotate(180deg);
                 }
@@ -155,6 +158,54 @@
             padding: 1.25rem 2.5rem;
             overflow-y: hidden;
             // max-height: 48.125rem;
+
+            .events-form__header {
+                margin-bottom: 1.625rem;
+            }
+
+            .events-form__title {
+                margin-bottom: .5rem;
+            }
+
+            .events-form__schedule {
+                display: flex;
+                margin-bottom: .25rem;
+
+                span {
+                    color: $color-navy-300;
+
+                    &:first-of-type {
+                        padding-right: .5rem;
+                    }
+
+                    &:not(:first-of-type) {
+                        padding: 0 .5rem;
+                        border-left: 1px solid $color-navy-300;
+                    }
+                }
+            }
+
+            .events-form__address {
+                font-size: .75rem;
+                font-weight: 400;
+                line-height: 12px;
+                color: $color-boulder;
+                max-width: 5.625rem;
+                font-family: $montserrat-font;
+            }
+        }
+    }
+}
+
+.form__steps {
+
+    .step {
+
+        .step__header {
+            margin-bottom: .75rem;
+            .step__title {
+                font-weight: 500;
+            }
         }
     }
 }
