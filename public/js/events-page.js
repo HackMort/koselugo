@@ -76,48 +76,40 @@ const filterTypes = {
   IN_PERSON: 'in-person'
 }
 
-class UpcomingEvent {
 /**
- * @param {HTMLElement} event - The event object that was passed to the handler.
- */
-  constructor (event) {
-    this.event = event
-  }
-
-  /**
  * It returns an object with the event's data
+ * @param {HTMLElement} event - The event object that was passed to the handler.
  * @returns An object with the event's id, type, date, hour, typeString, title,
  * description, and presenter.
  * @returns {
- *  id: string,
- *  type: string,
- *  date: string,
- *  hour: string,
- *  typeString: string,
- *  title: string,
- *  description: string,
- *  presenter: string
- * }
- */
-  toJSON () {
-    const { eventId, eventType } = this.event.dataset
-    const date = this.event.querySelector('.event__date').innerText.trim()
-    const hour = this.event.querySelector('.event__hour').innerText.trim()
-    const type = this.event.querySelector('.event__type').innerText.trim()
-    const title = this.event.querySelector('.event__title').innerText.trim()
-    const presenter = this.event.querySelector('.event__presenter').innerText.trim()
-    const description = this.event.querySelector('.event__description').innerText.trim()
+  *  id: string,
+  *  type: string,
+  *  date: string,
+  *  hour: string,
+  *  typeString: string,
+  *  title: string,
+  *  description: string,
+  *  presenter: string
+  * }
+  */
+const eventToJSON = function (event) {
+  const { eventId, eventType } = event.dataset
+  const date = event.querySelector('.event__date').innerText.trim()
+  const hour = event.querySelector('.event__hour').innerText.trim()
+  const type = event.querySelector('.event__type').innerText.trim()
+  const title = event.querySelector('.event__title').innerText.trim()
+  const presenter = event.querySelector('.event__presenter').innerText.trim()
+  const description = event.querySelector('.event__description').innerText.trim()
 
-    return {
-      id: eventId,
-      type: eventType,
-      date,
-      hour,
-      typeString: type,
-      title,
-      description,
-      presenter
-    }
+  return {
+    id: eventId,
+    type: eventType,
+    date,
+    hour,
+    typeString: type,
+    title,
+    description,
+    presenter
   }
 }
 
@@ -175,8 +167,8 @@ document.addEventListener('DOMContentLoaded', function () {
   registerButtons.forEach(function (button) {
     button.addEventListener('click', function () {
       const eventElement = getParent(button, 'event')
-      const event = new UpcomingEvent(eventElement)
-      console.log(event.toJSON())
+      const eventData = eventToJSON(eventElement)
+      console.log(eventData)
     })
   })
 })
