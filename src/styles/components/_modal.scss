@@ -81,6 +81,42 @@
             font-size: 20px;
             height: 100%;
             background-color: $color-aqua;
+
+            @media screen and (max-width:590px) {
+                font-size: 16px;
+            }
+            @media screen and (max-width:415px) {
+                font-size: 14px;
+            }
+
+            &::after{
+                content: '';
+                background-image: url('/assets/icons/next_arrow.png');
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                right: 35px;
+                top: 50%;
+                transform: translate(0, -50%);
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                @media screen and (max-width:890px) {
+                    width: 37px;
+                    top: 61%;
+                }
+                @media screen and (max-width:590px) {
+                    right: 13px;
+                }
+                @media screen and (max-width:415px) {
+                    width: 32px;
+                }
+                @media screen and (max-width:340px) {
+                    right: 7px;
+                }
+            }
+            
+            
             
         }
         #back{
@@ -91,18 +127,38 @@
             color: white;
             border-color: $color-aqua;
             margin-right: 3px;
+            position: relative;
 
-            &::after{
+            
+            @media screen and (max-width:590px) {
+                font-size: 16px;
+            }
+            @media screen and (max-width:415px) {
+                font-size: 14px;
+            }
+
+            &::before{
                 content: '';
-                background-image: url(/Content/koselugo_com/content/dam/open-digital/koselugo-dtc/en/desktop/next_arrow.png);
+                background-image: url('/assets/icons/back_arrow.png');
                 width: 50px;
                 height: 50px;
                 position: absolute;
-                right: 35px;
+                left: 35px;
                 top: 50%;
                 transform: translate(0, -50%);
                 background-size: contain;
                 background-repeat: no-repeat;
+
+                @media screen and (max-width:890px) {
+                    width: 37px;
+                    top: 61%;
+                }
+                @media screen and (max-width:590px) {
+                    left: 13px;
+                }
+                @media screen and (max-width:415px) {
+                    width: 32px;
+                }   
             }
         }
         
