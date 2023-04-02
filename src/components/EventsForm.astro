@@ -5,7 +5,8 @@
             <div class="events-list__filters">
                 <button
                     data-filter="all"
-                    class="button events-filter events-filter--active">All</button
+                    class="button events-filter events-filter--active"
+                    >All</button
                 >
                 <button data-filter="virtual" class="button events-filter"
                     >Virtual</button
@@ -26,7 +27,9 @@
                             How to be your child’s advocate
                         </p>
                         <p class="event__subtitle">
-                            Presented by: <span class="event__presenter">Alexion Pharmaceuticals, Inc.</span>
+                            Presented by: <span class="event__presenter"
+                                >Alexion Pharmaceuticals, Inc.</span
+                            >
                         </p>
                     </div>
                     <p class="event__description">
@@ -36,10 +39,16 @@
                         NF1 PN journey.
                     </p>
                     <div class="event__actions">
-                        <button class="button button--primary register-event">Register</button>
+                        <button class="button button--primary register-event"
+                            >Register</button
+                        >
                     </div>
                 </div>
-                <div class="event" data-event-id="2" data-event-type="in-person">
+                <div
+                    class="event"
+                    data-event-id="2"
+                    data-event-type="in-person"
+                >
                     <div class="event__header">
                         <div class="event__schedule">
                             <span class="event__date">July 01, 2023</span>
@@ -52,7 +61,9 @@
                             KOSELUGO® (selumetinib)
                         </p>
                         <p class="event__subtitle">
-                            Presented by: <span class="event__presenter">Alexion Pharmaceuticals, Inc.</span>
+                            Presented by: <span class="event__presenter"
+                                >Alexion Pharmaceuticals, Inc.</span
+                            >
                         </p>
                     </div>
                     <p class="event__description">
@@ -62,10 +73,16 @@
                         help you and your family in your journey.
                     </p>
                     <div class="event__actions">
-                        <button class="button button--primary register-event">Register</button>
+                        <button class="button button--primary register-event"
+                            >Register</button
+                        >
                     </div>
                 </div>
-                <div class="event" data-event-id="3" data-event-type="in-person">
+                <div
+                    class="event"
+                    data-event-id="3"
+                    data-event-type="in-person"
+                >
                     <div class="event__header">
                         <div class="event__schedule">
                             <span class="event__date">July 01, 2023</span>
@@ -78,7 +95,9 @@
                             KOSELUGO® (selumetinib)
                         </p>
                         <p class="event__subtitle">
-                            Presented by: <span class="event__presenter">Alexion Pharmaceuticals, Inc.</span>
+                            Presented by: <span class="event__presenter"
+                                >Alexion Pharmaceuticals, Inc.</span
+                            >
                         </p>
                     </div>
                     <p class="event__description">
@@ -88,14 +107,20 @@
                         help you and your family in your journey.
                     </p>
                     <div class="event__actions">
-                        <button class="button button--primary register-event">Register</button>
+                        <button class="button button--primary register-event"
+                            >Register</button
+                        >
                     </div>
                 </div>
             </div>
         </div>
         <div class="event-list__toggler">
             <button class="event-list__toggler-button">
-                <img class="event-list__toggler-arrow" src="/assets/icons/arrow-rose.svg" alt="" />
+                <img
+                    class="event-list__toggler-arrow"
+                    src="/assets/icons/arrow-rose.svg"
+                    alt=""
+                />
             </button>
         </div>
     </div>
@@ -107,7 +132,6 @@
                 <div class="events-form__schedule">
                     <span class="events-form__date">July 01, 2023</span>
                     <span class="events-form__hour">7:00 PM</span>
-
                 </div>
                 <p class="events-form__address">
                     Venue name 1234 Street Rd City, MA 01234
@@ -252,6 +276,12 @@
                                     aria-placeholder="Select one"
                                 >
                                     <option
+                                        value=""
+                                        selected
+                                        disabled
+                                        >Select one</option
+                                    >
+                                    <option
                                         value="Parent of a child with NF1 PN"
                                         >Parent of a child with NF1 PN</option
                                     >
@@ -341,7 +371,7 @@
                                         Select all that apply.</legend
                                     >
                                     <div class="form__control-checkboxes">
-                                        <div class="form__control-checkbox">
+                                        <div class="form__control-checkbox form__control-checkbox--rounded">
                                             <input
                                                 id="vegerarian"
                                                 type="checkbox"
@@ -354,7 +384,7 @@
                                                 >Vegetarian</label
                                             >
                                         </div>
-                                        <div class="form__control-checkbox">
+                                        <div class="form__control-checkbox form__control-checkbox--rounded">
                                             <input
                                                 id="vegan"
                                                 type="checkbox"
@@ -366,7 +396,7 @@
                                                 for="vegan">Vegan</label
                                             >
                                         </div>
-                                        <div class="form__control-checkbox">
+                                        <div class="form__control-checkbox form__control-checkbox--rounded">
                                             <input
                                                 id="gluten-free"
                                                 type="checkbox"
@@ -379,7 +409,7 @@
                                                 >Gluten-free</label
                                             >
                                         </div>
-                                        <div class="form__control-checkbox">
+                                        <div class="form__control-checkbox form__control-checkbox--rounded">
                                             <input
                                                 id="kosher"
                                                 type="checkbox"
@@ -407,6 +437,7 @@
                                     class="form__control-select"
                                     aria-placeholder="Select one"
                                 >
+                                    <option value="" selected disabled>Select one</option>
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
                                     <option value="Nonbinary">Nonbinary</option>
@@ -431,7 +462,7 @@
                                         event? Select all that apply.</legend
                                     >
                                     <div class="form__control-checkboxes">
-                                        <div class="form__control-checkbox">
+                                        <div class="form__control-checkbox form__control-checkbox--rounded">
                                             <input
                                                 id="basic-education"
                                                 type="checkbox"
@@ -444,7 +475,7 @@
                                                 >Basic education about NF1 PN</label
                                             >
                                         </div>
-                                        <div class="form__control-checkbox">
+                                        <div class="form__control-checkbox form__control-checkbox--rounded">
                                             <input
                                                 id="learn-about-treatments"
                                                 type="checkbox"
@@ -457,7 +488,7 @@
                                                 >Learn about NF1 PN treatments</label
                                             >
                                         </div>
-                                        <div class="form__control-checkbox">
+                                        <div class="form__control-checkbox form__control-checkbox--rounded">
                                             <input
                                                 id="learn-about-support"
                                                 type="checkbox"
@@ -486,11 +517,20 @@
                                         type="checkbox"
                                         name="terms"
                                         aria-required="false"
+                                        checked
                                     />
                                     <label
                                         class="form__control-label"
-                                        for="terms-and-conditions">
-                                        By checking this box and submitting this form, I give Alexion permission to provide promotional information to me or otherwise contact me about Alexion products, services, programs, or other topics that Alexion thinks may interest me. I have read and understand the Alexion Privacy Notice.
+                                        for="terms-and-conditions"
+                                    >
+                                        By checking this box and submitting this
+                                        form, I give Alexion permission to
+                                        provide promotional information to me or
+                                        otherwise contact me about Alexion
+                                        products, services, programs, or other
+                                        topics that Alexion thinks may interest
+                                        me. I have read and understand the
+                                        Alexion Privacy Notice.
                                     </label>
                                 </div>
                             </div>
