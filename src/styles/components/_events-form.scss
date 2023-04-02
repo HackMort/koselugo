@@ -207,5 +207,43 @@
                 font-weight: 500;
             }
         }
+
+        .step__form-actions {
+            display: flex;
+            justify-content: space-between;
+
+            .button {
+                max-width: max-content;
+            }
+
+            .button--basic {
+                text-decoration: none;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .button--back {
+                color: $color-venus;
+                align-items: center;
+
+                &::before {
+                    content: "<";
+                    margin-top: .25rem;
+                    margin-right: .5rem;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        &:first-of-type {
+            .step__form-controls {
+                margin-bottom: 2.75rem;
+            }
+        }
+        
+        .form__control--last-select,
+        .form__control--basic-education {
+            margin-bottom: 2rem;
+        }
     }
 }

@@ -275,10 +275,7 @@
                                     class="form__control-select"
                                     aria-placeholder="Select one"
                                 >
-                                    <option
-                                        value=""
-                                        selected
-                                        disabled
+                                    <option value="" selected disabled
                                         >Select one</option
                                     >
                                     <option
@@ -347,7 +344,9 @@
                             </div>
                         </div>
                         <div class="step__form-actions">
-                            <button class="button button--basic">Back</button>
+                            <button class="button button--basic button--back"
+                                >Back</button
+                            >
                             <button class="button button--basic">Next</button>
                         </div>
                     </div>
@@ -371,7 +370,9 @@
                                         Select all that apply.</legend
                                     >
                                     <div class="form__control-checkboxes">
-                                        <div class="form__control-checkbox form__control-checkbox--rounded">
+                                        <div
+                                            class="form__control-checkbox form__control-checkbox--rounded"
+                                        >
                                             <input
                                                 id="vegerarian"
                                                 type="checkbox"
@@ -384,7 +385,9 @@
                                                 >Vegetarian</label
                                             >
                                         </div>
-                                        <div class="form__control-checkbox form__control-checkbox--rounded">
+                                        <div
+                                            class="form__control-checkbox form__control-checkbox--rounded"
+                                        >
                                             <input
                                                 id="vegan"
                                                 type="checkbox"
@@ -396,7 +399,9 @@
                                                 for="vegan">Vegan</label
                                             >
                                         </div>
-                                        <div class="form__control-checkbox form__control-checkbox--rounded">
+                                        <div
+                                            class="form__control-checkbox form__control-checkbox--rounded"
+                                        >
                                             <input
                                                 id="gluten-free"
                                                 type="checkbox"
@@ -409,7 +414,9 @@
                                                 >Gluten-free</label
                                             >
                                         </div>
-                                        <div class="form__control-checkbox form__control-checkbox--rounded">
+                                        <div
+                                            class="form__control-checkbox form__control-checkbox--rounded"
+                                        >
                                             <input
                                                 id="kosher"
                                                 type="checkbox"
@@ -427,17 +434,20 @@
                             <div
                                 class="form__control"
                                 data-touched="false"
-                                data-required="true"
+                                data-required="false"
                                 data-is-valid="false"
                             >
                                 <label class="form__control-label" for="gender"
                                     >Gender</label
                                 >
                                 <select
+                                    id="gender"
                                     class="form__control-select"
                                     aria-placeholder="Select one"
                                 >
-                                    <option value="" selected disabled>Select one</option>
+                                    <option value="" selected disabled
+                                        >Select one</option
+                                    >
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
                                     <option value="Nonbinary">Nonbinary</option>
@@ -450,7 +460,36 @@
                                 </p>
                             </div>
                             <div
-                                class="form__control"
+                                class="form__control form__control--last-select"
+                                data-touched="false"
+                                data-required="false"
+                                data-is-valid="false"
+                            >
+                                <label class="form__control-label" for="how-did-you-hear"
+                                    >How did you hear about this program?</label
+                                >
+                                <select
+                                    id="how-did-you-hear"
+                                    class="form__control-select"
+                                    aria-placeholder="Select one"
+                                >
+                                    <option value="" selected disabled
+                                        >Select one</option
+                                    >
+                                    <option value="Online">Online</option>
+                                    <option value="Emailed invitation">Emailed invitation</option>
+                                    <option value="Mailed invitation">Mailed invitation</option>
+                                    <option value="OneSource™">OneSource™</option>
+                                    <option value="Physician/Healthcare provider">Physician/Healthcare provider</option>
+                                    <option value="Another patient/caregiver">Another patient/caregiver</option>
+                                    <option value="Patient advocacy group">Patient advocacy group</option>
+                                </select>
+                                <p class="form__control-error">
+                                    Important info/error
+                                </p>
+                            </div>
+                            <div
+                                class="form__control form__control--basic-education"
                                 data-touched="false"
                                 data-field-index="9"
                                 data-required="false"
@@ -462,7 +501,9 @@
                                         event? Select all that apply.</legend
                                     >
                                     <div class="form__control-checkboxes">
-                                        <div class="form__control-checkbox form__control-checkbox--rounded">
+                                        <div
+                                            class="form__control-checkbox form__control-checkbox--rounded"
+                                        >
                                             <input
                                                 id="basic-education"
                                                 type="checkbox"
@@ -475,7 +516,9 @@
                                                 >Basic education about NF1 PN</label
                                             >
                                         </div>
-                                        <div class="form__control-checkbox form__control-checkbox--rounded">
+                                        <div
+                                            class="form__control-checkbox form__control-checkbox--rounded"
+                                        >
                                             <input
                                                 id="learn-about-treatments"
                                                 type="checkbox"
@@ -488,7 +531,9 @@
                                                 >Learn about NF1 PN treatments</label
                                             >
                                         </div>
-                                        <div class="form__control-checkbox form__control-checkbox--rounded">
+                                        <div
+                                            class="form__control-checkbox form__control-checkbox--rounded"
+                                        >
                                             <input
                                                 id="learn-about-support"
                                                 type="checkbox"
@@ -517,7 +562,6 @@
                                         type="checkbox"
                                         name="terms"
                                         aria-required="false"
-                                        checked
                                     />
                                     <label
                                         class="form__control-label"
@@ -536,7 +580,9 @@
                             </div>
                         </div>
                         <div class="step__form-actions">
-                            <button class="button button--basic">Back</button>
+                            <button class="button button--basic button--back"
+                                >Back</button
+                            >
                             <div class="button button--primary">
                                 <input type="submit" value="Register" />
                             </div>
