@@ -1142,6 +1142,58 @@
 } 
 //--------------------VALIDATE--------------------
 
+//--------------------SITEMAP--------------------
+.sitemap-page{
+    margin-bottom: 5rem;
+
+    li{
+        list-style: none;
+    }
+
+    &__title{
+        padding-top: 2rem;
+        font-size: 40px!important;
+    }
+
+    .site-list{
+        margin-top: 2.1875rem;
+        
+        &__item{
+            list-style: none;
+            padding-top: 0;
+            padding-right: 0;
+            padding-bottom: 1.0625rem;
+            padding-left: 0;
+            
+        }
+        
+        .site-list__anchor{
+            color: $color-aqua;
+            font-size: 1.3875rem;
+            font-weight: bold;
+            font-family: $franklin-font;
+            text-decoration: none;
+        }
+    }
+
+    .inner-list{
+        a{
+            color: #777;
+            font-family: $franklin-font;
+            font-size: 17.8px;
+            padding-bottom: 1rem;
+        }
+    }
+    #events-site-map{
+        margin-bottom: 2rem;
+      }
+
+    #site-faqs{
+        margin-bottom: 1rem;
+    }
+}
+//--------------------SITEMAP--------------------
+
 
 
 /******************************************************
