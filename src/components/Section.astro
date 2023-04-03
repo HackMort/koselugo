@@ -4,7 +4,7 @@ type Props = {
     className?: string;
     id?: string;
 };
-const { noHeader, className = "", id="" } = Astro.props;
+const { noHeader, className = "", id = "" } = Astro.props;
 ---
 
 <section class={`custom-section ${className}`} id={id}>
