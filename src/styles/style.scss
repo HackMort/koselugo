@@ -1496,8 +1496,546 @@
       font-size: 22px;
     }
   }
+}
+
+/******************************************************
+-- Family Resources Page
+******************************************************/
+.w-100 {
+  width: 100% !important;
+}
+.row--reverse {
+  flex-direction: row-reverse !important;
+}
 
 
+//RESOURCES SECTION
+.family-resources-page {
+  &--paragraph {
+    margin-bottom: 30px;
+  }
+  &--link__inserted {
+    font-weight: 600;
+    line-height: 143%;
+  }
+  &--resources {
+    display: flex;
+    flex-direction: column;
+
+    @include media('tablet') {
+      flex-direction: column !important;
+      margin: 0 50px;
+    }
+  }
+  &--resources-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+
+    @include media('tablet') {
+      flex-direction: row;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      margin: 15px 0 10px 0;
+    }
+  }
+  &--resource {
+    @include media('mobile') {
+      margin-bottom: 25px;
+    }
+    @include media('tablet') {
+      width: 50%;
+      display: flex;
+    }
+    &__img {
+      width: fit-content;
+      margin: 0 auto 30px auto;
+
+      @include media('tablet') {
+        width: 35%;
+        height: 100%;
+        margin: 0px 10px;
+      }
+    }
+    &__content {
+      @include media('tablet') {
+        flex: 1;
+        margin: 0 10px auto 10px;
+      }
+    }
+    &__title {
+      font-size: 18px;
+      line-height: 20px;
+      @include media('tablet') {
+        font-size: 22px;
+      }
+    }
+    &__link {
+      font-weight: 600 !important;
+      padding: 0.5rem 0.75rem 0 0;
+      justify-content: start !important;
+    }
+    //RESOURCES SECTION - VIDEOS
+    &__bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+    &__bottom-view {
+      padding: 9px 5px 0 0;
+    }
+  }
+}
+
+//ADVOCACY SECTION
+.family-resources-page--resources__advocacy {
+  @media screen and (min-width: 601px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &--img {
+    width: fit-content;
+    margin: 2rem auto;
+    @media screen and (min-width: 601px) {
+      margin: 1rem;
+    }
+  }
+  &--content-link {
+    font-weight: 600;
+  }
+  &--disclaimer {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.advocacy-resources {
+  .family-resources-page--resources {
+    @include media('tablet') {
+      margin: 0 15%;
+    }
+    @include media('desktop') {
+      margin: 0 10%;
+    }
+  }
+}
+
+/******************************************************
+-- Taking Koselugo Page
+******************************************************/
+
+.taking-koselugo {
+
+  &__doses {
+
+    .first-indication {
+      line-height: 18px;
+
+      @include media('tablet') {
+        font-size: 18px;
+        line-height: 20.41px;
+      }
+
+      @include media('desktop') {
+        line-height: 25.71px;
+      }
+    }
+
+    @media (min-width: 925px) {
+      .taking-koselugo {
+        &__container {
+          width: fit-content;
+
+          &--flex {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            @include flex-gap(0.5rem);
+
+            & > .taking-koselugo__container {
+              width: fit-content;
+            }
+
+            &.flex-wrap {
+              flex-wrap: wrap;
+            }
+
+            .taking-koselugo__paragraphs-container {
+              align-self: flex-start;
+              max-width: 75%;
+            }
+
+            .taking-koselugo__list.limit-width {
+              max-width: 40%;
+            }
+          }
+        }
+      }
+    }
+
+    @include media('desktop') {
+      .not-emphasis-desktop {
+        font-weight: 400;
+      }
+    }
+  }
+
+  &__experience {
+
+    .taking-koselugo {
+      &__image {
+        margin: 1.5rem auto 2.25rem;
+      }
+
+      &__important-tip {
+        margin-top: 1.5rem;
+
+        b {
+          @include media('tablet') {
+              font-size: 21px;
+              font-weight: 400;
+          }
+        }
+      }
+
+      &__paragraph {
+        margin-bottom: 0.5rem;
+
+        &--highlight {
+          font-size: 18px;
+          line-height: 20.41px;
+          margin-bottom: 1.5rem;
+
+          @media (min-width:1000px) {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+
+    &-continue {
+      margin-top: 0;
+      padding-top: 2.5rem;
+
+      @media(min-width: 1000px) {
+        padding: 3rem;
+      }
+
+      .custom-section__content {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__schedule {
+
+    .custom-section__content {
+      padding-bottom: 2.5rem;
+    }
+
+    .taking-koselugo__paragraph {
+      margin: 0 auto;
+      padding-top: 1.5rem;
+
+      @media(min-width:725px) {
+        margin: 0;
+        text-align: left;
+      }
+
+      &.limit-width {
+        color: $color-gray;
+        max-width: 25ch;
+
+        @media(min-width:725px) {
+          max-width: 23ch;
+        }
+      }
+    }
+
+    .taking-koselugo__container--flex {
+      @media(min-width:725px) {
+        align-items: center;
+        display: flex;
+        @include flex-gap(1.5rem);
+        justify-content: center;
+        margin-top: 2rem;
+      }
+    }
+
+    &-continue {
+      margin-top: 0;
+
+      @media(min-width: 725px) {
+        padding: 0;
+      }
+
+      .custom-section__content {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__tips {
+
+    .custom-section__content {
+      padding-bottom: 1.5rem;
+    }
+
+    .taking-koselugo__image {
+      max-width: 106px;
+
+      @include media('tablet') {
+        max-width: 40px;
+      }
+    }
+
+    .taking-koselugo__footnote {
+      margin-top: 1rem;
+    }
+  }
+
+  .taking-koselugo__container--visit {
+    background-color: transparent;
+    text-align: center;
+
+    @include media('tablet') {
+      margin-top: 0;
+    }
+
+    .custom-section__content {
+      margin-top: 0;
+      padding: 3rem 0;
+
+      @include media('tablet') {
+        padding: 0;
+      }
+    }
+
+    .taking-koselugo__title {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 auto 0.25rem;
+      max-width: 30ch;
+
+      @include media('tablet') {
+        font-size: 22px;
+        line-height: 24.94px;
+        max-width: 48ch;
+      }
+    }
+  }
+
+  &__footnote {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  &__image {
+    margin: 0 auto;
+    width: 100%;
+
+    &-container {
+      background-color: $color-white;
+      margin: 0 auto;
+      max-width: 72.8125rem;
+      text-align: center;
+      width: 100%;
+    }
+
+    &.hours-icon {
+      margin-bottom: 1.45rem;
+      max-width: 180px;
+      width: 180px;
+
+      @media (min-width: 925px) {
+        margin-bottom: 0;
+        max-width: 158px;
+      }
+    }
+
+    &.atleast-image {
+      margin-bottom: 2.25rem;
+      margin-top: 2rem;
+      max-width: 340px;
+
+      @media (min-width: 925px) {
+        max-width: 398px;
+        margin: 0;
+        width: 50%;
+      }
+    }
+
+    &.capsule-icon {
+      margin-bottom: 3.5rem;
+      max-width: 150px;
+
+      @media (min-width: 925px) {
+        align-self: flex-start;
+        margin: 0;
+        width: 20%;
+      }
+    }
+
+    &.koselugo-bottle {
+      max-width: 296px;
+
+      @media(min-width:725px)  {
+        margin: 0;
+        max-width: 183px;
+      }
+    }
+
+    &.taste-icon,
+    &.not-understanding-icon,
+    &.swallowing-tablets-icon {
+      max-width: 100px;
+
+      @include media('tablet') {
+        margin: 0;
+        max-width: 50px;
+      }
+    }
+
+    &.schedules-for-dose {
+
+      @media(min-width: 725px) {
+        max-width: 1000px;
+      }
+    }
+  }
+
+  &__important-tip {
+    margin: 0 auto;
+
+    header {
+      background-color: $color-aqua;
+      color: $color-white;
+      text-align: center;
+      padding: 1.75rem;
+
+      @media (min-width: 810px) {
+        margin: 0 auto;
+        padding: 1.75rem 5rem;
+        width: fit-content;
+      }
+
+      @media(min-width: 1024px) {
+        box-sizing: border-box;
+        width: 900px;
+      }
+
+      .taking-koselugo__paragraph {
+        color: $color-white;
+        margin: 0 auto;
+        max-width: 60ch;
+
+        &:first-child {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .taking-koselugo__list {
+      background-color: #E2EBF2;
+      color: $color-black;
+      margin: 5px 0 1.75rem;
+      padding: 2rem;
+
+      @media (min-width: 810px) {
+        margin: 5px auto 1.75rem;
+        padding: 1.75rem 5rem;
+        width: fit-content;
+      }
+
+      @media(min-width: 1024px) {
+        box-sizing: border-box;
+        width: 900px;
+      }
+
+      &-item {
+        margin-bottom: 1rem;
+
+        @include media('tablet') {
+          margin: 0 auto;
+          max-width: 60ch;
+        }
+      }
+    }
+  }
+
+  &__list {
+    margin-bottom: 1.5rem;
+    margin-top: 0.6rem;
+    padding-left: 1rem;
+
+    &--no-margin-bottom {
+      margin-bottom: 0;
+    }
+
+    &-item {
+      margin-bottom: 5px;
+    }
+
+    &--reasons {
+      list-style: none;
+      margin-top: 3rem;
+      padding-left: 0;
+
+      @include media('tablet') {
+        align-items: center;
+        display: flex;
+        @include flex-gap(2rem);
+        justify-content: center;
+      }
+
+      .taking-koselugo__list-item {
+        margin-bottom: 2.5rem;
+        text-align: center;
+
+        @include media('tablet') {
+          align-items: center;
+          display: flex;
+          @include flex-gap(1rem);
+          margin-bottom: 0;
+
+          p {
+            max-width: 20ch;
+            text-align: left;
+          }
+        }
+
+        &::marker {
+          color: transparent;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .taking-koselugo__image {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .text--italic {
+    font-style: italic;
+  }
+
+  .fweight--750 {
+    font-weight: 750;
+
+    @media(min-width: 725px) {
+      font-weight: 600;
+    }
+  }
+
+  .color--arsenic-black {
+    color: #434343;
+  }
 }
 
 /******************************************************
