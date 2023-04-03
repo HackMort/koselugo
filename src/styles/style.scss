@@ -1615,6 +1615,11 @@
 }
 
 .advocacy-resources {
+
+    @media screen and (min-width: 1024px) {
+        margin-bottom: 1.5888rem;
+    }
+
   .family-resources-page--resources {
     @include media('tablet') {
       margin: 0 15%;
