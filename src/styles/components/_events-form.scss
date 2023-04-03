@@ -200,6 +200,7 @@
 .form__steps {
 
     .step {
+        background: $color-white;
 
         .step__header {
             margin-bottom: .75rem;
@@ -244,6 +245,28 @@
         .form__control--last-select,
         .form__control--basic-education {
             margin-bottom: 2rem;
+        }
+    }
+
+    .form {
+        position: relative;
+        .step {
+
+            &.step__visible {
+                
+            }
+
+            &.step__1 {
+
+            }
+
+            &.step__2 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: -1;
+            }
         }
     }
 }
