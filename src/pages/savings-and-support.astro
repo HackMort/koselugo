@@ -185,26 +185,139 @@ import OneSource from "../components/OneSource.astro";
     </div>
 
     <div class="stay__informed">
-      <Section>
+      <Section className="stay__informed-section">
         <Fragment slot="section-title">
           <span class="color-yellow">STAY INFORMED</span> ABOUT NF1 PN
         </Fragment>
 
-        <p>
-          To receive the latest updates, tools, and tips about NF1 plexiform
-          neurofibromas (PN) and Koselugo, please provide us with some
-          information about yourself.
-        </p>
       </Section>
+      
+      <p class="stay__informed-section-info">
+        To receive the latest updates, tools, and tips about NF1 plexiform
+        neurofibromas (PN) and Koselugo, please provide us with some
+        information about yourself.
+      </p>
+
       <div class="form">
         <div class="wrapper">
-          <p>
-            Are you a caregiver of someone who has been diagnosed with NF1
-            plexiform neurofibromas? *
-          </p>
-          <h1>Form here...</h1>
+          
+          <form action=" ">
+
+            <div class="form__control">
+              <fieldset>
+                <legend class="form__control-legend">Are you a caregiver of someone who has been diagnosed with NF1 plexiform neurofibromas?*</legend>
+
+                <!-- Radio Buttons -->
+                <div class="form__control-radios">
+
+                  <div class="form__control-radio">
+                    <input type="radio" name="caregiver" id="caregiver-yes" required>
+                    <label class="form__control-label" for="caregiver-yes">Yes</label>
+                  </div>
+
+                  <div class="form__control-radio">
+                    <input type="radio" name="caregiver" id="caregiver-no" required>
+                    <label class="form__control-label" for="caregiver-no">No</label>
+                  </div>
+
+                </div>
+                
+
+                <p class="form__control-error"></p>
+              </fieldset>
+            </div>
+            
+            <div class="form__control">
+              <fieldset>
+                <legend class="form__control-legend">Do you care for someone who has been prescribed Koselugo?*</legend>
+
+                <!-- Radio Buttons -->
+                <div class="form__control-radios">
+
+                  <div class="form__control-radio">
+                    <input type="radio" name="care" id="care-yes" required>
+                    <label class="form__control-label" for="care-yes">Yes</label>
+                  </div>
+
+                  <div class="form__control-radio">
+                    <input type="radio" name="care" id="care-no" required>
+                    <label class="form__control-label" for="care-no">No</label>
+                  </div>
+
+                </div>
+                
+                <p class="form__control-error"></p>
+              </fieldset>
+            </div>
+
+            <div class="form__control-row">
+              <!-- Email -->
+              <div class="form__control">
+                <label class="form__control-label" for="email">Email adress*</label>
+                <input type="email" name="email" id="email" required>
+                <p class="form__control-error"></p>
+              </div>
+            
+              <!-- Confirm email -->
+              <div class="form__control">
+                <label class="form__control-label" for="confirm-email">Confirm email adress*</label>
+                <input type="email" name="confirm-email" id="confirm-email" required>
+                <p class="form__control-error"></p>
+              </div>
+
+            </div>
+
+            <div class="form__control-row">
+              <!-- First name -->
+              <div class="form__control">
+                <label class="form__control-label" for="first-name">First name*</label>
+                <input type="text" name="first-name" id="first-name" required>
+                <p class="form__control-error"></p>
+              </div>
+
+              <!-- Last name -->
+              <div class="form__control">
+                <label class="form__control-label" for="last-name">Last name*</label>
+                <input type="text" name="last-name" id="last-name" required>
+                <p class="form__control-error"></p>
+              </div>
+
+            </div>
+
+
+            
+
+            <!-- Disclaimer -->
+            <div class="form__control-disclaimer">
+              <fieldset>
+                <p class="form__control-legend">Alexion respects your personal health information. The information you provide may be used to send you health-related materials and to develop products, services, and programs. Alexion, or third parties working on our behalf, will not sell or rent personal health information. If in the future you no longer want to receive health-related materials, call  1-844-259-6783. Please click <a href=" ">here</a> to review our Privacy Notice.</p>
+
+                <div class="form__control form__control-checkbox">
+                  <input type="checkbox" name="disclaimer" id="disclaimer" required>
+                  <label class="form__control-label" for="disclaimer">By completing this registration, I confirm that I am 18 years of age or older and a US resident. I understand that I may also receive ongoing information and support related to NF1 PN, including treatment information.</label>
+                </div>
+                <p class="form__control-error"></p>
+
+              </fieldset>
+              
+            </div>
+
+            <!-- Required information -->
+            <p class="form__control-info">
+              *Required information
+            </p>
+            
+            <!-- Submit -->
+            <div class="form__control form__control-submit">
+              <button type="submit" class="button button--primary" name="submit">Submit</button>
+            </div>
+
+          </form>
         </div>
       </div>
+
     </div>
+
   </div>
+
 </Layout>
