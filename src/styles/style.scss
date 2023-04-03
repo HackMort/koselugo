@@ -1515,7 +1515,7 @@
 //RESOURCES SECTION
 .family-resources-page {
   &--paragraph {
-    line-height: 143%;
+    margin-bottom: 30px;
   }
   &--link__inserted {
     font-weight: 600;
@@ -1615,5 +1615,12 @@
 }
 
 .advocacy-resources {
-  margin-bottom: 20px;
+  .family-resources-page--resources {
+    @include media('tablet') {
+      margin: 0 15%;
+    }
+    @include media('desktop') {
+      margin: 0 10%;
+    }
+  }
 }
