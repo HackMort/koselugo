@@ -139,14 +139,14 @@
             </div>
             <div class="form__steps">
                 <form class="form" id="register-event-form" novalidate>
-                    <div class="step step__1">
+                    <div data-step-id="1" data-visible="true" class="step step__visible">
                         <div class="step__header">
                             <p class="step__title">Required Information</p>
                         </div>
                         <div class="step__form-controls">
                             <div
-                                class="form__control form__control--invalid"
-                                data-touched="true"
+                                class="form__control"
+                                data-touched="false"
                                 data-required="true"
                                 data-is-valid="false"
                             >
@@ -350,7 +350,7 @@
                             <button class="button button--basic">Next</button>
                         </div>
                     </div>
-                    <div class="step step__2">
+                    <div data-step-id="2" data-visible="false" class="step step__hidden">
                         <div class="step__header">
                             <p class="step__title">
                                 Additional information (optional)

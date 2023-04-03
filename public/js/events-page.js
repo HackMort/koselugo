@@ -171,4 +171,12 @@ document.addEventListener('DOMContentLoaded', function () {
       console.log(eventData)
     })
   })
+
+  // Form steps
+
+  function nextToLastStep () {
+    const steps = document.querySelectorAll('.form__steps .step')
+  }
+
+  // Form steps
 })

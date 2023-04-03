@@ -1,18 +1,164 @@
 ---
 import SimpleHero from '../components/SimpleHero.astro';
 import Layout from "../layouts/Layout.astro";
+import Section from '../components/Section.astro';
 ---
 
 <Layout title="Family Resources">
     <SimpleHero folder="family-resources" alt="" />
-    <div class="wrapper">
-        <h2>Family Resources</h2>
-          <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
-              veritatis error voluptas quas unde distinctio ea natus, tempore
-              pariatur consequatur repudiandae quae earum hic harum delectus at
-              sequi alias autem!
-            </p>
 
-      </div>
+    <div class="family-resources-page-content">
+      <Section className="text-resources">
+        <Fragment slot="section-title">
+          <span class="color-yellow" id="resources">HOW CAN I LEARN</span>
+          MORE ABOUT TREATMENT WITH KOSELUGO?
+        </Fragment>
+
+        <p class="family-resources-page--paragraph">The following resources and <a class="family-resources-page--link__inserted color--rose" href=" ">videos</a> can help provide you and your family with more information about Koselugo and about NF1 plexiform neurofibromas. As you review the materials, write down your questions and share them with your doctor at your child’s next visit.</p>
+
+
+        <div class="family-resources-page--resources">
+
+          <!-- Text resource -->
+          <div class="family-resources-page--resources-row">
+            
+            <!-- First resource -->
+            <div class="family-resources-page--resource">
+              <div class="family-resources-page--resource__img">
+                <img src="/assets/images/family-resources/resource_1.png" alt=" ">
+              </div>
+
+              <div class="family-resources-page--resource__content">
+                <h3 class="family-resources-page--resource__title">Caregiver Brochure</h3>
+                <p class="family-resources-page--resource__description">Download this brochure to learn more about neurofibromatosis type 1 (NF1) plexiform neurofibromas (PN) and treatment with Koselugo.</p>
+                <a class="family-resources-page--resource__link button button--basic" href="https://koselugo.com/Content/koselugo_com/content/dam/open-digital/koselugo-dtc/en/pdfs/Koselugo-Patient-Caregiver-Brochure.pdf" target="_blank">Download</a>
+              </div>
+            </div>
+
+            <!-- Second resource -->
+            <div class="family-resources-page--resource">
+              <div class="family-resources-page--resource__img">
+                <img src="/assets/images/family-resources/resource_2.png" alt=" ">
+              </div>
+
+              <div class="family-resources-page--resource__content">
+                <h3 class="family-resources-page--resource__title">Treatment Journey Tracker</h3>
+                <p class="family-resources-page--resource__description">Download this booklet to record your child’s treatment, and write down notes about their treatment so you can discuss them with your child’s doctor at their next appointment.</p>
+                <a class="family-resources-page--resource__link button button--basic" href="https://koselugo.com/Content/koselugo_com/content/dam/open-digital/koselugo-dtc/en/pdfs/KOSELUGO-Patient-Treatment-Tracking-Journal-Digital.pdf" target="_blank">Download</a>
+              </div>
+              
+            </div>
+            
+          </div>
+
+          <div class="family-resources-page--resources-row">
+            <!-- Third resource -->
+            <div class="family-resources-page--resource">
+
+              <div class="family-resources-page--resource__img">
+                <img src="/assets/images/family-resources/resource_3.png" alt=" ">
+              </div>
+
+              <div class="family-resources-page--resource__content">
+                <h3 class="family-resources-page--resource__title">Symptom Guide for Caregivers</h3>
+                <p class="family-resources-page--resource__description">Learn about signs of symptomatic plexiform neurofibromas (PN) to look out for in your child, so you can talk to your child’s doctor if you notice anything similar.</p>
+                <a class="family-resources-page--resource__link button button--basic" href="https://koselugo.com/Content/koselugo_com/content/dam/open-digital/koselugo-dtc/en/pdfs/KOSELUGO-Symptom-Guide.pdf" target="_blank">Download</a>
+              </div>
+
+            </div>
+
+            <!-- Fourth resource -->
+            <div class="family-resources-page--resource">
+              
+              <div class="family-resources-page--resource__img">
+                <img src="/assets/images/family-resources/resource_4.png" alt=" ">
+              </div>
+
+              <div class="family-resources-page--resource__content">
+                <h3 class="family-resources-page--resource__title">Koselugo Information Guide</h3>
+                <p class="family-resources-page--resource__description">Download this guide to learn more about NF1 PN and Koselugo; talk to your doctor to see if Koselugo is right for your child.</p>
+                <a class="family-resources-page--resource__link button button--basic" href="https://koselugo.com/Content/koselugo_com/content/dam/open-digital/koselugo-dtc/en/pdfs/KOSELUGO-Information-Guide-for-Caregivers.pdf" target="_blank">Download</a>
+              </div>
+              
+            </div>
+
+          </div>
+
+        </div>
+
+      </Section>
+
+      <Section className="video-resources">
+        <Fragment slot="section-title">
+          <span class="color-yellow" id="resources-videos">VIDEO</span>
+          LIBRARY                     
+        </Fragment>
+
+        <div class="family-resources-page--resources">
+          <!-- Video resource -->
+          <div class="family-resources-page--resources-row">
+            
+            <!-- First resource -->
+            <div class="family-resources-page--resource w-100">
+              <div class="family-resources-page--resource__img">
+                <a href="#">
+                  <img src="/assets/images/family-resources/resource_5.png" alt=" ">
+                </a>
+              </div>
+
+              <div class="family-resources-page--resource__content">
+                <h3 class="family-resources-page--resource__title">Meet Cooper and his family</h3>
+                <p class="family-resources-page--resource__description">Cooper is an 8-year-old boy who is living with NF1 plexiform neurofibromas. Listen to his family share their experiences in an early access program and learn how they currently manage his treatment with Koselugo.</p>
+
+                <div class="family-resources-page--resource__bottom">
+                  <span class="family-resources-page--resource__bottom-view"><strong>View</strong></span>
+                  <a class="family-resources-page--resource__link color--rose" href="#isi">Important Safety Information.</a>
+                </div>
+
+                <div class="family-resources-page--resource__bottom">
+                  <span class="family-resources-page--resource__bottom-view"><strong>View</strong></span>
+                  <a class="family-resources-page--resource__link color--rose" href="http://www.azpicentral.com/pi.html?product=koselugo" target="_blank">Prescribing Information.</a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </Section>
+
+      <Section className="advocacy-resources">
+        <Fragment slot="section-title">
+          <span class="color-yellow" id="advocacy-organizations">WHAT ARE SOME</span> ADVOCACY ORGANIZATIONS 
+          <span class="color-yellow">FOR PATIENTS WITH NF1 PN?</span>
+        </Fragment>
+
+        <div class="family-resources-page--resources">
+          <h3 class="family-resources-page--resource__title color--aqua">
+            The following organizations can help you connect with the NF1 community and learn valuable information about the disease
+          </h3>
+
+          <div class="family-resources-page--resources__advocacy">
+            <img class="family-resources-page--resources__advocacy--img" src="/assets/images/family-resources/advocacy_1.png" alt=" ">
+            <p class="family-resources-page--resources__advocacy--content">The mission of the <a class="family-resources-page--resources__advocacy--content-link color--rose" href="https://www.ctf.org/" target="_blank">Children's Tumor Foundation</a> is to drive research, expand knowledge, and advance care of the NF community.</p>
+          </div>
+
+          <div class="family-resources-page--resources__advocacy row--reverse">
+            <img class="family-resources-page--resources__advocacy--img" src="/assets/images/family-resources/advocacy_2.png" alt=" ">
+            <p class="family-resources-page--resources__advocacy--content">Visit the <a class="family-resources-page--resources__advocacy--content-link color--rose" href="https://nfnetwork.org/" target="_blank">Neurofibromatosis Network</a> website to discover news about treatment and their work toward a neurofibromatosis cure. They provide outreach through education and awareness, while offering hope and support to those affected by NF.</p>
+          </div>
+
+          <div class="family-resources-page--resources__advocacy">
+            <img class="family-resources-page--resources__advocacy--img" src="/assets/images/family-resources/advocacy_3.png" alt=" ">
+            <p class="family-resources-page--resources__advocacy--content">The <a class="family-resources-page--resources__advocacy--content-link color--rose" href="https://littlesttumor.org/" target="_blank">Littlest Tumor Foundation</a> is focused on increasing the understanding of neurofibromatosis (NF), empowering affected families, and advancing research of preventative therapies.</p>  
+          </div>
+          
+          <p class="family-resources-page--resources__advocacy--disclaimer">
+            The resources listed above are independent, nonprofit patient service organizations. Their listing in this website does not imply endorsement.
+          </p>
+
+        </div>
+      </Section>
+    </div>
 </Layout>

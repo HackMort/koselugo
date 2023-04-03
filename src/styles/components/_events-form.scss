@@ -250,22 +250,19 @@
 
     .form {
         position: relative;
+        overflow: hidden;
+        padding: 0 .25rem;
+
         .step {
-
             &.step__visible {
-                
+                position: relative;
             }
 
-            &.step__1 {
-
-            }
-
-            &.step__2 {
+            &.step__hidden {
                 position: absolute;
-                top: 0;
                 left: 0;
                 width: 100%;
-                z-index: -1;
+                bottom: 100%;
             }
         }
     }

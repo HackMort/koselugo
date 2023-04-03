@@ -1496,6 +1496,131 @@
       font-size: 22px;
     }
   }
-  
+}
 
+/******************************************************
+-- Family Resources Page
+******************************************************/
+.w-100 {
+  width: 100% !important;
+}
+.row--reverse {
+  flex-direction: row-reverse !important;
+}
+
+#resources, #resources-videos, #advocacy-organizations {
+  scroll-margin-top: 200px;
+}
+
+//RESOURCES SECTION
+.family-resources-page {
+  &--paragraph {
+    margin-bottom: 30px;
+  }
+  &--link__inserted {
+    font-weight: 600;
+    line-height: 143%;
+  }
+  &--resources {
+    display: flex;
+    flex-direction: column;
+  
+    @include media('tablet') {
+      flex-direction: column !important;
+      margin: 0 50px;
+    }
+  }
+  &--resources-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+  
+    @include media('tablet') {
+      flex-direction: row;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      margin: 15px 0 10px 0;
+    }
+  }
+  &--resource {
+    @include media('mobile') {
+      margin-bottom: 25px;
+    }
+    @include media('tablet') {
+      width: 50%;
+      display: flex;
+    }
+    &__img {
+      width: fit-content;
+      margin: 0 auto 30px auto;
+    
+      @include media('tablet') {
+        width: 35%;
+        height: 100%;
+        margin: 0px 10px;
+      }
+    }
+    &__content {
+      @include media('tablet') {
+        flex: 1;
+        margin: 0 10px auto 10px;
+      }
+    }
+    &__title {
+      font-size: 18px;
+      line-height: 20px;
+      @include media('tablet') {
+        font-size: 22px;
+      }
+    }
+    &__link {
+      font-weight: 600 !important;
+      padding: 0.5rem 0.75rem 0 0;
+      justify-content: start !important;
+    }
+    //RESOURCES SECTION - VIDEOS
+    &__bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+    &__bottom-view {
+      padding: 9px 5px 0 0;
+    }
+  }
+}
+
+//ADVOCACY SECTION
+.family-resources-page--resources__advocacy {
+  @media screen and (min-width: 601px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &--img {
+    width: fit-content;
+    margin: 2rem auto;
+    @media screen and (min-width: 601px) {
+      margin: 1rem;
+    }
+  }
+  &--content-link {
+    font-weight: 600;
+  }
+  &--disclaimer {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.advocacy-resources {
+  .family-resources-page--resources {
+    @include media('tablet') {
+      margin: 0 15%;
+    }
+    @include media('desktop') {
+      margin: 0 10%;
+    }
+  }
 }
