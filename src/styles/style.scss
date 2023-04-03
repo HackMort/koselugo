@@ -610,19 +610,191 @@
   }
 
   .stay__informed {
-    .custom-section {
-      padding-bottom: 2rem;
+    @include media('tablet') {
+      background-color: $color-white;
+      width: 100%;
+      max-width: 72.8125rem;
+      margin: 0 auto 3rem auto;
+      padding-bottom: 1rem;
+    }
+
+    .stay__informed-section {
+      @include media('tablet') {
+        height: 0;
+        min-height: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+      }
+    }
+
+    .custom-section__content {
+      padding-bottom: 0;
+      @include media('tablet') {
+        margin: 0 ;
+      }
+    }
+
+    .stay__informed-section-info {
+      @include media('tablet') {
+        padding-top: 5rem;
+        margin: 1rem 5rem;
+      }
+      margin: 1rem;
     }
 
     .form {
       background-color: $color-soft-blue-2;
       min-height: 300px;
-      padding: 20px;
+      padding: 20px 0;
 
-      * {
-        margin-bottom: 1.5rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: $color-gray;
+      margin-bottom: 5rem;
+
+      @include media('tablet') {
+        font-size: 1.125rem;
+        margin: 0 1rem 5rem 1rem;
+      }
+
+      @include media('desktop') {
+        margin: 0 5rem 5rem 5rem;
+      }
+
+      .wrapper {
+        @include media('tablet') {
+          padding: 1rem 3rem;
+          margin: 0 auto;
+          max-width: fit-content;
+        }
+      }
+
+      .form__control-row {
+        @include media('tablet') {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          @include flex-gap(2rem);
+        }
+
+        .form__control {
+          @include media('tablet') {
+            flex: 1 1 0;
+          }
+        }
+      }
+
+      .form__control {
+        legend {
+          margin-bottom: 1rem;
+        }
+
+        margin-bottom: 1rem;
+
+        @include media('tablet') {
+          margin-bottom: 2rem;
+        }
+      }
+
+      .form__control-radios {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        @include flex-gap(2rem);
+      }
+      
+      .form__control-radio {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        @include flex-gap(1rem);
+
+        input[type="radio"] {
+          box-sizing: border-box;
+          width: 23px;
+          height: 23px;
+          border-radius: 5px;
+          border: 1px solid #BCBEC0;
+          background-color: $color-white;
+          &::before {
+            content: "";
+            width: 9px;
+            height: 9px;
+            transform: scale(0);
+            transform-origin: center;
+            background-color: $color-white;
+            clip-path: polygon(7.36% 53.62%, 1.75% 63.5%, 48.5% 95.5%, 97.25% 14%, 87.5% 7%, 44.25% 79.25%);
+          }
+          &:checked {
+            border: 1px solid $color-neutral-500;
+            &::before {
+              transform: scale(2);
+            }
+          }
+        }
+
+      }
+
+      .form__control-checkbox {
+        display: flex;
+        flex-direction: row;
+        @include flex-gap(.8rem);
+
+        margin-top: 1rem;
+        input[type="checkbox"] {
+          width: 23px;
+          height: 23px;
+          border-radius: 5px;
+          
+          background-color: $color-white;
+          &::before {
+            width: 9px;
+            height: 9px;
+          }
+          &:checked {
+            border: 1px solid $color-neutral-500;
+            &::before {
+              transform: scale(2);
+            }
+          }
+        }
+
+      }
+
+      input[type="text"], 
+      input[type="email"] {
+        border-radius: 5px;
+        border: 1px solid #BCBEC0;
+        height: 35px;
+        padding-left: 5px;
+        padding-top: 4px;
+        background-color: #fff;
+      }
+
+      .form__control-error {
+        color: red;
+        margin: 0;
+      }
+
+      .form__control-info {
+        color: $color-gray;
+        margin: 0 0 1rem 0;
+      }
+
+      .form__control-submit {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .form__control-legend {
+        color: $color-gray;
       }
     }
+    
   }
 
 }
