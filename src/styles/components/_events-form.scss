@@ -201,6 +201,97 @@
             }
         }
     }
+
+    .confirmation__container {
+        overflow: hidden;
+        height: 100%;
+        position: relative;
+
+        .confirmation__info {
+            padding: 1.25rem 1.5rem;
+            padding-bottom: 1.5663rem;
+
+            @media screen and (min-width: 768px) {
+                padding: 2.25rem 2.5rem;
+                padding-bottom: 4.5663rem;
+            }
+        }
+
+        .confirmation__title {
+            margin-bottom: 1.25rem;
+        }
+
+        .confirmation__thank,
+        .confirmation__message {
+            font-size: .875rem;
+            line-height: 20px;
+            color: $color-bunting;
+        }
+
+        .confirmation__thank {
+            margin-bottom: 2rem;
+        }
+
+        .confirmation__event-title--wrapper {
+            color: $color-light-rose;
+        }
+
+        .confirmation__address {
+            font-size: .75rem;
+            font-weight: 400;
+            line-height: 12px;
+            color: $color-boulder;
+            max-width: 5.625rem;
+            font-family: $montserrat-font;
+
+            margin-bottom: 1.5rem;
+        }
+
+        .confirmation__callout {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 1.25rem 1rem;
+
+            background: $color-gallery;
+
+            @media screen and (min-width: 1200px) {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 20.3125rem;
+                border-bottom-left-radius: .5rem;
+                border-bottom-right-radius: .5rem;
+            }
+        }
+
+        .confirmation__phone-number {
+            font-size: 1.125rem;
+            font-weight: 600;
+            line-height: 21.6px;
+            margin-bottom: 1rem;
+
+            @media screen and (min-width: 1200px) {
+                max-width: 25rem;
+            }
+        }
+
+        .confirmation__alexion-logo {
+            width: 100%;
+            max-width: 17.7813rem;
+            margin-bottom: 1rem;
+        }
+
+        .confirmation__callout-footer {
+            font-size: .875rem;
+            line-height: 20px;
+        }
+    }
 }
 
 .form__steps {
@@ -210,6 +301,7 @@
 
         .step__header {
             margin-bottom: .75rem;
+
             .step__title {
                 font-weight: 500;
             }
@@ -247,7 +339,7 @@
                 margin-bottom: 2.75rem;
             }
         }
-        
+
         .form__control--last-select,
         .form__control--basic-education {
             margin-bottom: 2rem;

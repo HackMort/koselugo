@@ -6,7 +6,7 @@ export default defineConfig({
   build: {
     format: 'file',
     out: 'build',
-    assets: 'css'
+    assets: 'assets'
   },
   vite: {
     css: {

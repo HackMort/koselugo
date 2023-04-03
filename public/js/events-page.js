@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
      * If the parent element of the child element has the class name, return the parent
      * element, otherwise, call the function again with the parent element as the child
@@ -135,7 +136,44 @@ const eventToJSON = function (event) {
   }
 }
 
+/**
+ * Updates event form container with data from an event object
+ * @param {{id: string, type: string, date: string, hour: string, typeString: string, title: string, description: string, presenter: string}} eventData
+ * @param {HTMLDivElement} form
+*/
+const addEventDataToForm = (eventData, form) => {
+  const eventTitleEl = form.querySelector('.events-form__title')
+  const eventDateEl = form.querySelector('.events-form__date')
+  const eventHourEl = form.querySelector('.events-form__hour')
+  const eventIdInputEl = form.querySelector('.input-hidden')
+
+  eventTitleEl.innerText = eventData.title
+  eventDateEl.innerText = eventData.date
+  eventHourEl.innerText = eventData.hour
+  eventIdInputEl.value = eventData.id
+}
+
+const destroyForm = () => {
+  const form = document.querySelector('.events-form__container')
+  const parent = form.parentElement
+  parent.removeChild(form)
+  return parent
+}
+
+const showConfirmationView = (container) => {
+  const template = document.querySelector('#confirmation-view-template')
+  container.appendChild(template.content.cloneNode(true))
+}
+
 // Form steps
+
+function createFormSubmitListener () {
+  registerToEventFormSubmit.addEventListener('click', (event) => {
+    event.preventDefault()
+    const container = destroyForm()
+    showConfirmationView(container)
+  })
+}
 
 /**
   * Returns an array of HTML elements representing the form steps.
@@ -147,18 +185,35 @@ const getSteps = function () {
   return steps
 }
 
+/**
+
+Marks a given step as visible by setting the data-visible attribute to 'true'
+and adding the class step__visible, while removing the class step__hidden.
+@param {HTMLElement} step - The step to mark as visible.
+*/
 const markStepAsVisible = function (step) {
   step.dataset.visible = 'true'
   step.classList.add('step__visible')
   step.classList.remove('step__hidden')
 }
 
+/**
+
+Marks a given step as hidden by setting the data-visible attribute to 'false'
+and adding the class step__hidden, while removing the class step__visible.
+@param {HTMLElement} step - The step to mark as hidden.
+*/
 const markStepAsHidden = function (step) {
   step.dataset.visible = 'false'
   step.classList.remove('step__visible')
   step.classList.add('step__hidden')
 }
 
+/**
+
+Navigates to the first step of a two-step process by marking the first step as visible
+and the second step as hidden.
+*/
 function goToFirstStep () {
   const [step1, step2] = getSteps()
 
@@ -166,11 +221,34 @@ function goToFirstStep () {
   markStepAsHidden(step2)
 }
 
+/**
+
+Navigates to the last step of a two-step process by marking the first step as hidden
+and the second step as visible.
+*/
+let registerToEventFormSubmit
 function goToLastStep () {
   const [step1, step2] = getSteps()
 
   markStepAsHidden(step1)
   markStepAsVisible(step2)
+
+  registerToEventFormSubmit = document.querySelector('.input__submit')
+  createFormSubmitListener()
+}
+
+/**
+
+Removes the event form container and shows the events list container
+*/
+function goToEventList () {
+  const eventListContainer = document.querySelector('.events-list__container')
+  const eventFormContainer = document.querySelector('.events-form__container')
+
+  if (eventFormContainer) {
+    eventFormContainer.parentElement.removeChild(eventFormContainer)
+    eventListContainer.removeAttribute('style')
+  }
 }
 
 // Form steps
@@ -238,8 +316,14 @@ document.addEventListener('DOMContentLoaded', function () {
       if (eventListContainer) {
         eventListContainer.setAttribute('style', 'display: none;')
         const form = registerFormTemplate.content.cloneNode(true)
+        addEventDataToForm(eventData, form)
         container.appendChild(form)
       }
     })
   })
+  // Register event
+
+  // Submit register event form
+
+  // Submit register event form
 })
