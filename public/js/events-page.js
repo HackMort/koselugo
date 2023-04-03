@@ -64,7 +64,7 @@ class EventList {
     if (showedList && showedList.length > 0) {
       const lastShowedEvent = showedList[showedList.length - 1]
 
-      showedList.forEach((event) => { console.log(event) })
+      showedList.forEach((event) => { this.resetBorderBottom(event) })
 
       if (lastShowedEvent) {
         this.hideBorderBottom(lastShowedEvent)
@@ -224,13 +224,22 @@ document.addEventListener('DOMContentLoaded', function () {
   // Events filter
 
   // Register event
+  const eventListContainer = document.querySelector('.events-list__container')
   const registerButtons = document.querySelectorAll('.register-event')
+
+  const registerFormTemplate = document.querySelector('#register-form-template')
+
+  const container = document.querySelector('.events-form')
 
   registerButtons.forEach(function (button) {
     button.addEventListener('click', function () {
       const eventElement = getParent(button, 'event')
       const eventData = eventToJSON(eventElement)
-      console.log(eventData)
+      if (eventListContainer) {
+        eventListContainer.setAttribute('style', 'display: none;')
+        const form = registerFormTemplate.content.cloneNode(true)
+        container.appendChild(form)
+      }
     })
   })
 })
