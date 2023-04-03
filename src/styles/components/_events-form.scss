@@ -251,18 +251,23 @@
     .form {
         position: relative;
         overflow: hidden;
-        padding: 0 .25rem;
+        margin: 0 .25rem;
 
         .step {
+
+            transition: all 200ms ease-in-out;
+
             &.step__visible {
                 position: relative;
+                z-index: 2;
             }
 
             &.step__hidden {
                 position: absolute;
                 left: 0;
+                top: 0;
                 width: 100%;
-                bottom: 100%;
+                z-index: 1;
             }
         }
     }

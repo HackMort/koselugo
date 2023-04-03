@@ -31,6 +31,14 @@ class EventList {
     this.eventList = eventList
   }
 
+  hideBorderBottom (event) {
+    event.setAttribute('style', 'border-bottom: none; margin-bottom: 0; padding-bottom: 0')
+  }
+
+  resetBorderBottom (event) {
+    event.removeAttribute('style')
+  }
+
   /**
  * It loops through all the events and if the event type is not the same as the
  * type passed in, it adds the class event--hidden and removes the class
@@ -39,7 +47,7 @@ class EventList {
  * @param type - the type of event you want to filter
  */
   filter (type) {
-    this.eventList.forEach(function (event) {
+    this.eventList.forEach((event) => {
       const { eventType } = event.dataset
       if (eventType !== type) {
         event.classList.add('event--hidden')
@@ -49,14 +57,28 @@ class EventList {
         event.classList.add('event--showed')
       }
     })
+
+    const showedList = Array.from(this.eventList)
+      .filter((event) => { return event.classList.contains('event--showed') })
+
+    if (showedList && showedList.length > 0) {
+      const lastShowedEvent = showedList[showedList.length - 1]
+
+      showedList.forEach((event) => { console.log(event) })
+
+      if (lastShowedEvent) {
+        this.hideBorderBottom(lastShowedEvent)
+      }
+    }
   }
 
   /**
  * It removes the class `event--hidden` from each event in the event list
  */
   clearFilter () {
-    this.eventList.forEach(function (event) {
+    this.eventList.forEach((event) => {
       event.classList.remove('event--hidden')
+      this.resetBorderBottom(event)
     })
   }
 }
@@ -112,6 +134,46 @@ const eventToJSON = function (event) {
     presenter
   }
 }
+
+// Form steps
+
+/**
+  * Returns an array of HTML elements representing the form steps.
+  * @returns An array of HTML elements representing the form steps.
+  * @returns {HTMLElement[]}
+  */
+const getSteps = function () {
+  const steps = Array.from(document.querySelectorAll('.form__steps .step'))
+  return steps
+}
+
+const markStepAsVisible = function (step) {
+  step.dataset.visible = 'true'
+  step.classList.add('step__visible')
+  step.classList.remove('step__hidden')
+}
+
+const markStepAsHidden = function (step) {
+  step.dataset.visible = 'false'
+  step.classList.remove('step__visible')
+  step.classList.add('step__hidden')
+}
+
+function goToFirstStep () {
+  const [step1, step2] = getSteps()
+
+  markStepAsVisible(step1)
+  markStepAsHidden(step2)
+}
+
+function goToLastStep () {
+  const [step1, step2] = getSteps()
+
+  markStepAsHidden(step1)
+  markStepAsVisible(step2)
+}
+
+// Form steps
 
 document.addEventListener('DOMContentLoaded', function () {
   // Event list expander
@@ -171,12 +233,4 @@ document.addEventListener('DOMContentLoaded', function () {
       console.log(eventData)
     })
   })
-
-  // Form steps
-
-  function nextToLastStep () {
-    const steps = document.querySelectorAll('.form__steps .step')
-  }
-
-  // Form steps
 })

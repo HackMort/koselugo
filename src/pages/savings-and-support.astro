@@ -8,7 +8,7 @@ import OneSource from "../components/OneSource.astro";
 
 <Layout title="Savings & Support">
   <div class="savings__page">
-    <div class="hero">
+    <div class="hero" id="pem-finder">
       <SimpleHero folder="savings-and-support" alt="PEM Team">
         <Fragment slot="content">
           <div class="hero__content">
@@ -93,7 +93,7 @@ import OneSource from "../components/OneSource.astro";
       </PEM>
     </div>
 
-    <Section>
+    <Section className="onesource" id="onesource">
       <Fragment slot="section-title">
         HELPING YOUR CHILD <span class="color-yellow"
           >ACCESS THE CARE THEY NEED</span
@@ -185,7 +185,7 @@ import OneSource from "../components/OneSource.astro";
     </div>
 
     <div class="stay__informed">
-      <Section className="stay__informed-section">
+      <Section className="stay__informed-section register" id="register">
         <Fragment slot="section-title">
           <span class="color-yellow">STAY INFORMED</span> ABOUT NF1 PN
         </Fragment>
