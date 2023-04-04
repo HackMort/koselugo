@@ -283,7 +283,7 @@ function checkStepValidity (event) {
   const isInvalid = stepRequiredControls.some((control) => control.classList.contains('form__control--invalid') || control.dataset.touched === 'false')
 
   // Get the "Next" button for the current step.
-  const nextButton = step.querySelector('.button-next')
+  const nextButton = step.querySelector('.button--next')
 
   // If any required control is invalid or not yet touched, disable the "Next" button.
   if (isInvalid) {

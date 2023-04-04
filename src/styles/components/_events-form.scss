@@ -2,6 +2,8 @@
     background: $color-white;
     box-shadow: 0px 2px 34px rgba(0, 0, 0, 0.05);
 
+    scroll-margin-top: 125px;
+
     @media screen and (min-width: 1200px) {
         width: 100%;
         max-width: 39.6875rem;
@@ -325,6 +327,10 @@
                 padding-right: 0;
             }
 
+            .button--next {
+                color: $color-venus;
+            }
+
             .button--back {
                 color: $color-venus;
                 align-items: center;
@@ -335,6 +341,16 @@
                     margin-right: .5rem;
                     font-weight: 400;
                 }
+            }
+
+            .button--next:hover,
+            .button--back:hover {
+                color: $color-light-rose;
+            }
+
+            .button--next:disabled {
+                cursor: not-allowed;
+                color: $color-venus;
             }
         }
 
