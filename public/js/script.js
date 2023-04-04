@@ -95,6 +95,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
       internalNavigationScroll()
     }
   })
+
+  window.addEventListener('resize', function (event) {
+    changeScrollMarginTopVariable()
+  })
 })
 
 // Accordion script
@@ -192,12 +196,15 @@ function changeScrollMarginTopVariable () {
   const customSection = document.querySelector('.custom-section')
 
   const siteHeaderStyles = getComputedStyle(siteHeader)
-  const customSectionStyles = getComputedStyle(customSection)
-
-  const sectionMarginTop = parseInt(customSectionStyles.getPropertyValue('margin-top').slice(0, -2))
   const siteHeaderHeight = parseInt(siteHeaderStyles.getPropertyValue('height').slice(0, -2))
-  const marginScrollTop = sectionMarginTop + siteHeaderHeight
 
+  let sectionMarginTop = 0
+  if (customSection) {
+    const customSectionStyles = getComputedStyle(customSection)
+    sectionMarginTop = parseInt(customSectionStyles.getPropertyValue('margin-top').slice(0, -2))
+  }
+
+  const marginScrollTop = sectionMarginTop + siteHeaderHeight
   rootElement.style.setProperty('--margin-top-scroll-var', marginScrollTop + 'px')
 }
 
