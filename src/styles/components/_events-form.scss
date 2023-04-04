@@ -2,7 +2,15 @@
     background: $color-white;
     box-shadow: 0px 2px 34px rgba(0, 0, 0, 0.05);
 
-    .events-form__wrapper {
+    scroll-margin-top: var(--margin-top-scroll-var); // 125px;
+
+    @media screen and (min-width: 1200px) {
+        width: 100%;
+        max-width: 39.6875rem;
+        border-radius: .5rem;
+    }
+
+    .events-list__container {
         position: relative;
 
         .events-list__wrapper {
@@ -13,7 +21,7 @@
             transition: max-height 200ms ease;
 
             &--expanded {
-                max-height: calc(48.125rem + (48.125rem * .5));
+                max-height: calc(48.125rem + (48.125rem * 4));
             }
 
             .events-list__title {
@@ -51,6 +59,7 @@
             }
 
             .events-list {
+                margin-bottom: 2rem;
 
                 .event {
 
@@ -74,8 +83,10 @@
                         .event__schedule {
                             display: flex;
                             margin-bottom: .0625rem;
+
                             span {
                                 color: $color-navy-300;
+
                                 &:first-of-type {
                                     padding-right: .5rem;
                                 }
@@ -142,9 +153,241 @@
 
             &--expanded {
                 background: transparent;
+
                 .event-list__toggler-arrow {
                     transform: rotate(180deg);
                 }
+            }
+        }
+    }
+
+    .events-form__container {
+        .events-form__wrapper {
+            padding: 1.25rem 2.5rem;
+            overflow-y: hidden;
+            // max-height: 48.125rem;
+
+            .events-form__header {
+                margin-bottom: 1.625rem;
+            }
+
+            .events-form__title {
+                margin-bottom: .5rem;
+            }
+
+            .events-form__schedule {
+                display: flex;
+                margin-bottom: .25rem;
+
+                span {
+                    color: $color-navy-300;
+
+                    &:first-of-type {
+                        padding-right: .5rem;
+                    }
+
+                    &:not(:first-of-type) {
+                        padding: 0 .5rem;
+                        border-left: 1px solid $color-navy-300;
+                    }
+                }
+            }
+
+            .events-form__address {
+                font-size: .75rem;
+                font-weight: 400;
+                line-height: 12px;
+                color: $color-boulder;
+                max-width: 5.625rem;
+                font-family: $montserrat-font;
+            }
+        }
+    }
+
+    .confirmation__container {
+        overflow: hidden;
+        height: 100%;
+        position: relative;
+
+        .confirmation__info {
+            padding: 1.25rem 1.5rem;
+            padding-bottom: 1.5663rem;
+
+            @media screen and (min-width: 768px) {
+                padding: 2.25rem 2.5rem;
+                padding-bottom: 4.5663rem;
+            }
+        }
+
+        .confirmation__title {
+            margin-bottom: 1.25rem;
+        }
+
+        .confirmation__thank,
+        .confirmation__message {
+            font-size: .875rem;
+            line-height: 20px;
+            color: $color-bunting;
+        }
+
+        .confirmation__thank {
+            margin-bottom: 2rem;
+        }
+
+        .confirmation__event-title--wrapper {
+            color: $color-light-rose;
+
+            @media screen and (min-width: 1200px) {
+                max-width: 23.3125rem;
+            }
+        }
+
+        .confirmation__address {
+            font-size: .75rem;
+            font-weight: 400;
+            line-height: 12px;
+            color: $color-boulder;
+            max-width: 5.625rem;
+            font-family: $montserrat-font;
+
+            margin-bottom: 1.5rem;
+        }
+
+        .confirmation__callout {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 1.25rem 1rem;
+
+            background: $color-gallery;
+
+            @media screen and (min-width: 1200px) {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 15.3125rem;
+                border-bottom-left-radius: .5rem;
+                border-bottom-right-radius: .5rem;
+            }
+        }
+
+        .confirmation__phone-number {
+            font-size: 1.125rem;
+            font-weight: 600;
+            line-height: 21.6px;
+            margin-bottom: 1rem;
+
+            @media screen and (min-width: 1200px) {
+                max-width: 25rem;
+            }
+        }
+
+        .confirmation__alexion-logo {
+            width: 100%;
+            max-width: 17.7813rem;
+            margin-bottom: 1rem;
+        }
+
+        .confirmation__callout-footer {
+            font-size: .875rem;
+            line-height: 20px;
+        }
+    }
+}
+
+.form__steps {
+
+    .step {
+        background: $color-white;
+
+        .step__header {
+            margin-bottom: .75rem;
+
+            .step__title {
+                font-weight: 500;
+            }
+        }
+
+        .step__form-actions {
+            display: flex;
+            justify-content: space-between;
+
+            .button {
+                max-width: max-content;
+            }
+
+            .button--basic {
+                text-decoration: none;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .button--next {
+                color: $color-venus;
+            }
+
+            .button--back {
+                color: $color-venus;
+                align-items: center;
+
+                &::before {
+                    content: "<";
+                    margin-top: .25rem;
+                    margin-right: .5rem;
+                    font-weight: 400;
+                }
+            }
+
+            .button--next:hover,
+            .button--back:hover {
+                color: $color-light-rose;
+            }
+
+            .button--next:disabled {
+                cursor: not-allowed;
+                color: $color-venus;
+            }
+        }
+
+        &:first-of-type {
+            .step__form-controls {
+                margin-bottom: 2.75rem;
+            }
+        }
+
+        .form__control--last-select,
+        .form__control--basic-education {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .form {
+        position: relative;
+        overflow: hidden;
+        padding: 0 .25rem;
+
+        .step {
+
+            transition: all 200ms ease-in-out;
+
+            &.step__visible {
+                position: relative;
+                z-index: 2;
+                opacity: 1;
+            }
+
+            &.step__hidden {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                z-index: 1;
+                opacity: 0;
             }
         }
     }
