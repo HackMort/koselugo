@@ -78,6 +78,15 @@ input {
         color: $color-black;
     }
 
+    .legend-container {
+        display: flex;
+    }
+
+    .label__hint {
+        margin-left: .5rem;
+        color: $color-silver-chalice;
+    }
+
     .form__control-label,
     .form__control-legend {
         font-size: 1rem;

@@ -1,9 +1,5 @@
 /* eslint-disable no-unused-vars */
-function validateFormControl (event) {
-  const parentClassName = 'form__control'
-  const formClassName = 'form'
-
-  /**
+/**
      * If the parent element of the child element has the class name, return the parent
      * element, otherwise, call the function again with the parent element as the child
      * element.
@@ -11,16 +7,32 @@ function validateFormControl (event) {
      * @param className {string} - The class name of the parent element you're looking for.
      * @returns {HTMLElement} The parent element of the child element.
      */
-  const getParent = function (child, className) {
-    const parent = child.parentElement
-    const isControlParent = parent.classList.contains(className)
+const getParent = function (child, className) {
+  const parent = child.parentElement
+  const isControlParent = parent.classList.contains(className)
 
-    if ((parent === null) || isControlParent) {
-      return parent
-    } else {
-      return getParent(parent, className)
-    }
+  if ((parent === null) || isControlParent) {
+    return parent
+  } else {
+    return getParent(parent, className)
   }
+}
+
+/**
+     * It returns true if all the controls that have the data-required attribute set to
+     * true also have the data-is-valid attribute set to true
+     * @returns {boolean} A boolean value.
+     */
+const checkFormValidity = function (form) {
+  const controls = Array.from(form.querySelectorAll('.form__control'))
+  return controls
+    .filter((control) => control.dataset.required === 'true')
+    .every((control) => control.dataset.isValid === 'true')
+}
+
+function validateFormControl (event) {
+  const parentClassName = 'form__control'
+  const formClassName = 'form'
 
   /**
      * If any of the radio buttons in the group are checked, return true.
@@ -64,22 +76,11 @@ function validateFormControl (event) {
   }
 
   /**
-     * It returns true if all the controls that have the data-required attribute set to
-     * true also have the data-is-valid attribute set to true
-     * @returns A boolean value.
-     */
-  const checkFormValidity = function () {
-    return controls
-      .filter((control) => control.dataset.required === 'true')
-      .every((control) => control.dataset.isValid === 'true')
-  }
-
-  /**
      * If the form is valid, remove the disabled attribute from the submit button,
      * otherwise add the disabled attribute to the submit button
      */
   const toggleSubmitButtonState = function () {
-    if (form && checkFormValidity()) {
+    if (form && checkFormValidity(form)) {
       submitButton && submitButton.removeAttribute('disabled')
       form.classList.remove('form--invalid')
     } else {

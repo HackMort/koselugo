@@ -1,22 +1,5 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-/**
-     * If the parent element of the child element has the class name, return the parent
-     * element, otherwise, call the function again with the parent element as the child
-     * element.
-     * @param child {HTMLElement} - the child element that you want to find the parent of
-     * @param className {string} - The class name of the parent element you're looking for.
-     * @returns {HTMLElement} The parent element of the child element.
-     */
-const getParent = function (child, className) {
-  const parent = child.parentElement
-  const isControlParent = parent.classList.contains(className)
-
-  if ((parent === null) || isControlParent) {
-    return parent
-  } else {
-    return getParent(parent, className)
-  }
-}
 
 /**
 
@@ -407,18 +390,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
         registerToEventFormSubmit.addEventListener('click', (event) => {
           event.preventDefault()
-
           const form = getParent(event.target, 'form')
-          const data = new FormData(form)
 
-          const formData = {
-            firstName: data.get('first-name'),
-            email: data.get('email')
+          const formIsValid = checkFormValidity(form)
+
+          if (formIsValid) {
+            const data = new FormData(form)
+
+            const formData = {
+              firstName: data.get('first-name'),
+              email: data.get('email')
+            }
+
+            destroyForm()
+            showConfirmationView(container, eventData, formData)
+            scrollToViewTop()
           }
-
-          destroyForm()
-          showConfirmationView(container, eventData, formData)
-          scrollToViewTop()
         })
       }
     })

@@ -199,7 +199,9 @@
                                     name="first-name"
                                     required
                                     aria-required="true"
-                                    onblur="validateFormControl(event); checkStepValidity(event)" onchange="validateFormControl(event); checkStepValidity(event)"
+                                    pattern="^[a-zA-Z.'\\- ]{1,50}$"
+                                    onblur="validateFormControl(event); checkStepValidity(event)"
+                                    onchange="validateFormControl(event); checkStepValidity(event)"
                                 />
                                 <p class="form__control-error">
                                     Important info/error
@@ -223,7 +225,9 @@
                                     name="last-name"
                                     required
                                     aria-required="true"
-                                    onblur="validateFormControl(event); checkStepValidity(event)" onchange="validateFormControl(event); checkStepValidity(event)"
+                                    pattern="^[a-zA-Z.'\\- ]{1,50}$"
+                                    onblur="validateFormControl(event); checkStepValidity(event)"
+                                    onchange="validateFormControl(event); checkStepValidity(event)"
                                 />
                                 <p class="form__control-error">
                                     Important info/error
@@ -247,7 +251,9 @@
                                     name="email"
                                     required
                                     aria-required="true"
-                                    onblur="validateFormControl(event); checkStepValidity(event)" onchange="validateFormControl(event); checkStepValidity(event)"
+                                    pattern="^[a-zA-Z0-9._-]{1,100}@[a-zA-Z0-9]+\.[a-zA-Z]{2,10}$"
+                                    onblur="validateFormControl(event); checkStepValidity(event)"
+                                    onchange="validateFormControl(event); checkStepValidity(event)"
                                 />
                                 <p class="form__control-error">
                                     Important info/error
@@ -272,7 +278,9 @@
                                     name="zip-code"
                                     required
                                     aria-required="true"
-                                    onblur="validateFormControl(event); checkStepValidity(event)" onchange="validateFormControl(event); checkStepValidity(event)"
+                                    pattern="^[0-9]+"
+                                    onblur="validateFormControl(event); checkStepValidity(event)"
+                                    onchange="validateFormControl(event); checkStepValidity(event)"
                                 />
                                 <p class="form__control-error">
                                     Important info/error
@@ -292,12 +300,14 @@
                                 <input
                                     autocomplete="tel"
                                     class="form__control-input"
-                                    type="text"
+                                    type="tel"
                                     id="phone-number"
                                     name="phone-number"
                                     required
                                     aria-required="true"
-                                    onblur="validateFormControl(event); checkStepValidity(event)" onchange="validateFormControl(event); checkStepValidity(event)"
+                                    pattern="^[0-9]+"
+                                    onblur="validateFormControl(event); checkStepValidity(event)"
+                                    onchange="validateFormControl(event); checkStepValidity(event)"
                                 />
                                 <p class="form__control-error">
                                     Important info/error
@@ -318,7 +328,10 @@
                                     name="i-am-a"
                                     class="form__control-select"
                                     aria-placeholder="Select one"
-                                    onblur="validateFormControl(event); checkStepValidity(event)" onchange="validateFormControl(event); checkStepValidity(event)"
+                                    required
+                                    aria-required="true"
+                                    onblur="validateFormControl(event); checkStepValidity(event)"
+                                    onchange="validateFormControl(event); checkStepValidity(event)"
                                 >
                                     <option value="" selected disabled
                                         >Select one</option
@@ -347,12 +360,11 @@
                                 data-is-valid="false"
                             >
                                 <fieldset>
-                                    <legend class="form__control-legend"
-                                        >Are you bringing a guest? <span
-                                            class="label__hint"
-                                            >(Only one guest per registrant)</span
-                                        ></legend
+                                    <div class="legend-container">
+                                        <legend class="form__control-legend"
+                                        >Are you bringing a guest?</legend><span class="label__hint">(Only one guest per registrant)</span
                                     >
+                                    </div>
                                     <div class="form__control-radios">
                                         <div class="form__control-radio">
                                             <input
