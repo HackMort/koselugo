@@ -267,7 +267,31 @@ function goToEventList () {
   }
 }
 
-// Form steps
+/**
+
+Checks the validity of the current step in a multi-step form and enables/disables the "Next" button accordingly.
+@param {Event} event - The event object for the input event that triggered this function.
+@returns {void}
+*/
+function checkStepValidity (event) {
+  const step = getParent(event.target, 'step')
+
+  // Get an array of all required controls in the current step.
+  const stepRequiredControls = Array.from(step.querySelectorAll('.form__control[data-required="true"]'))
+
+  // Check if any required control is invalid or not yet touched.
+  const isInvalid = stepRequiredControls.some((control) => control.classList.contains('form__control--invalid') || control.dataset.touched === 'false')
+
+  // Get the "Next" button for the current step.
+  const nextButton = step.querySelector('.button-next')
+
+  // If any required control is invalid or not yet touched, disable the "Next" button.
+  if (isInvalid) {
+    nextButton.setAttribute('disabled', 'true')
+  } else {
+    nextButton.removeAttribute('disabled')
+  }
+}
 
 document.addEventListener('DOMContentLoaded', function () {
   // Event list expander

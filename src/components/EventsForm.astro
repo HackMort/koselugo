@@ -199,6 +199,7 @@
                                     name="first-name"
                                     required
                                     aria-required="true"
+                                    onblur="validateFormControl(event); checkStepValidity(event)" onchange="validateFormControl(event); checkStepValidity(event)"
                                 />
                                 <p class="form__control-error">
                                     Important info/error
@@ -222,6 +223,7 @@
                                     name="last-name"
                                     required
                                     aria-required="true"
+                                    onblur="validateFormControl(event); checkStepValidity(event)" onchange="validateFormControl(event); checkStepValidity(event)"
                                 />
                                 <p class="form__control-error">
                                     Important info/error
@@ -245,6 +247,7 @@
                                     name="email"
                                     required
                                     aria-required="true"
+                                    onblur="validateFormControl(event); checkStepValidity(event)" onchange="validateFormControl(event); checkStepValidity(event)"
                                 />
                                 <p class="form__control-error">
                                     Important info/error
@@ -269,6 +272,7 @@
                                     name="zip-code"
                                     required
                                     aria-required="true"
+                                    onblur="validateFormControl(event); checkStepValidity(event)" onchange="validateFormControl(event); checkStepValidity(event)"
                                 />
                                 <p class="form__control-error">
                                     Important info/error
@@ -293,6 +297,7 @@
                                     name="phone-number"
                                     required
                                     aria-required="true"
+                                    onblur="validateFormControl(event); checkStepValidity(event)" onchange="validateFormControl(event); checkStepValidity(event)"
                                 />
                                 <p class="form__control-error">
                                     Important info/error
@@ -313,6 +318,7 @@
                                     name="i-am-a"
                                     class="form__control-select"
                                     aria-placeholder="Select one"
+                                    onblur="validateFormControl(event); checkStepValidity(event)" onchange="validateFormControl(event); checkStepValidity(event)"
                                 >
                                     <option value="" selected disabled
                                         >Select one</option
@@ -354,6 +360,7 @@
                                                 type="radio"
                                                 value="yes"
                                                 name="bringing-guest"
+                                                onblur="validateFormControl(event); checkStepValidity(event)" onchange="validateFormControl(event); checkStepValidity(event)"
                                             />
                                             <label
                                                 class="form__control-label"
@@ -368,6 +375,7 @@
                                                 type="radio"
                                                 value="no"
                                                 name="bringing-guest"
+                                                onblur="validateFormControl(event); checkStepValidity(event)" onchange="validateFormControl(event); checkStepValidity(event)"
                                             />
                                             <label
                                                 class="form__control-label"
@@ -391,8 +399,9 @@
                                 onclick="goToEventList()">Back</button
                             >
                             <button
+                                disabled
                                 type="button"
-                                class="button button--basic"
+                                class="button button--basic button-next"
                                 onclick="goToLastStep()">Next</button
                             >
                         </div>
