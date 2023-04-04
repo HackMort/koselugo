@@ -721,17 +721,18 @@
           background-color: $color-white;
           &::before {
             content: "";
-            width: 9px;
-            height: 9px;
+            width: 8px;
+            height: 8px;
             transform: scale(0);
             transform-origin: center;
             background-color: $color-white;
+            box-shadow: inset 1em 1em $color-neutral-500;
             clip-path: polygon(7.36% 53.62%, 1.75% 63.5%, 48.5% 95.5%, 97.25% 14%, 87.5% 7%, 44.25% 79.25%);
           }
           &:checked {
             border: 1px solid $color-neutral-500;
             &::before {
-              transform: scale(2);
+              transform: scale(2) rotate(5deg);
             }
           }
         }
@@ -751,13 +752,19 @@
 
           background-color: $color-white;
           &::before {
-            width: 9px;
-            height: 9px;
+            width: 8px;
+            height: 8px;
+            top: unset;
+            right: unset;
+            border: unset !important;
+            transform: scale(0);
+            box-shadow: inset 1em 1em $color-neutral-500;
+            clip-path: polygon(7.36% 53.62%, 1.75% 63.5%, 48.5% 95.5%, 97.25% 14%, 87.5% 7%, 44.25% 79.25%);
           }
           &:checked {
             border: 1px solid $color-neutral-500;
             &::before {
-              transform: scale(2);
+              transform: scale(2) rotate(5deg);
             }
           }
         }
