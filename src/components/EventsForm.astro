@@ -309,6 +309,8 @@
                                     >I am a...</label
                                 >
                                 <select
+                                    id="i-am-a"
+                                    name="i-am-a"
                                     class="form__control-select"
                                     aria-placeholder="Select one"
                                 >
@@ -350,11 +352,12 @@
                                             <input
                                                 id="yes"
                                                 type="radio"
+                                                value="yes"
                                                 name="bringing-guest"
                                             />
                                             <label
                                                 class="form__control-label"
-                                                for="patient"
+                                                for="yes"
                                             >
                                                 Yes
                                             </label>
@@ -363,11 +366,12 @@
                                             <input
                                                 id="no"
                                                 type="radio"
+                                                value="no"
                                                 name="bringing-guest"
                                             />
                                             <label
                                                 class="form__control-label"
-                                                for="caregiver"
+                                                for="no"
                                             >
                                                 No
                                             </label>
@@ -423,7 +427,8 @@
                                             <input
                                                 id="vegerarian"
                                                 type="checkbox"
-                                                name="terms"
+                                                name="dietary-restriction"
+                                                value="Vegetarian"
                                                 aria-required="false"
                                             />
                                             <label
@@ -438,7 +443,8 @@
                                             <input
                                                 id="vegan"
                                                 type="checkbox"
-                                                name="terms"
+                                                name="dietary-restriction"
+                                                value="Vegan"
                                                 aria-required="false"
                                             />
                                             <label
@@ -452,7 +458,8 @@
                                             <input
                                                 id="gluten-free"
                                                 type="checkbox"
-                                                name="terms"
+                                                name="dietary-restriction"
+                                                value="Gluten-free"
                                                 aria-required="false"
                                             />
                                             <label
@@ -467,7 +474,8 @@
                                             <input
                                                 id="kosher"
                                                 type="checkbox"
-                                                name="terms"
+                                                name="dietary-restriction"
+                                                value="Kosher"
                                                 aria-required="false"
                                             />
                                             <label
@@ -489,6 +497,7 @@
                                 >
                                 <select
                                     id="gender"
+                                    name="gender"
                                     class="form__control-select"
                                     aria-placeholder="Select one"
                                 >
@@ -519,6 +528,7 @@
                                 >
                                 <select
                                     id="how-did-you-hear"
+                                    name="how-did-you-hear"
                                     class="form__control-select"
                                     aria-placeholder="Select one"
                                 >
@@ -569,7 +579,8 @@
                                             <input
                                                 id="basic-education"
                                                 type="checkbox"
-                                                name="terms"
+                                                name="hope-to-gain"
+                                                value="Basic education about NF1 PN"
                                                 aria-required="false"
                                             />
                                             <label
@@ -584,7 +595,8 @@
                                             <input
                                                 id="learn-about-treatments"
                                                 type="checkbox"
-                                                name="terms"
+                                                name="hope-to-gain"
+                                                value="Learn about NF1 PN treatments"
                                                 aria-required="false"
                                             />
                                             <label
@@ -599,7 +611,8 @@
                                             <input
                                                 id="learn-about-support"
                                                 type="checkbox"
-                                                name="terms"
+                                                name="hope-to-gain"
+                                                value="Learn about the support Alexion provides for NF1 families"
                                                 aria-required="false"
                                             />
                                             <label
@@ -622,7 +635,7 @@
                                     <input
                                         id="terms-and-conditions"
                                         type="checkbox"
-                                        name="terms"
+                                        name="terms-and-conditions"
                                         aria-required="false"
                                     />
                                     <label

@@ -41,12 +41,12 @@ class EventList {
   }
 
   /**
- * It loops through all the events and if the event type is not the same as the
- * type passed in, it adds the class event--hidden and removes the class
- * event--showed. If the event type is the same as the type passed in, it removes
- * the class event--hidden and adds the class event--showed
- * @param type - the type of event you want to filter
- */
+   * It loops through all the events and if the event type is not the same as the
+   * type passed in, it adds the class event--hidden and removes the class
+   * event--showed. If the event type is the same as the type passed in, it removes
+   * the class event--hidden and adds the class event--showed
+   * @param type - the type of event you want to filter
+   */
   filter (type) {
     this.eventList.forEach((event) => {
       const { eventType } = event.dataset
@@ -74,8 +74,8 @@ class EventList {
   }
 
   /**
- * It removes the class `event--hidden` from each event in the event list
- */
+   * It removes the class `event--hidden` from each event in the event list
+   */
   clearFilter () {
     this.eventList.forEach((event) => {
       event.classList.remove('event--hidden')
@@ -153,6 +153,11 @@ const addEventDataToForm = (eventData, form) => {
   eventIdInputEl.value = eventData.id
 }
 
+/**
+
+Removes the event registration form from the DOM and returns its parent element.
+@returns {HTMLElement} The parent element of the removed form.
+*/
 const destroyForm = () => {
   const form = document.querySelector('.events-form__container')
   const parent = form.parentElement
@@ -160,20 +165,35 @@ const destroyForm = () => {
   return parent
 }
 
-const showConfirmationView = (container) => {
-  const template = document.querySelector('#confirmation-view-template')
-  container.appendChild(template.content.cloneNode(true))
+/**
+
+Displays a confirmation view with event and registration data.
+@param {HTMLDivElement} container - The container where the confirmation view will be appended.
+@param {{id: string, type: string, date: string, hour: string, typeString: string, title: string, description: string, presenter: string}} eventData - The data of the selected event.
+@param {{firstName: string, email: string}} formData - The registration data entered by the user.
+@returns {void}
+*/
+const showConfirmationView = (container, eventData, formData) => {
+  const confirmationView = document.querySelector('#confirmation-view-template').content.cloneNode(true)
+
+  const firstNameEl = confirmationView.querySelector('.confirmation__firstname')
+  const eventTypeEl = confirmationView.querySelector('.event__type')
+  const eventTitleEl = confirmationView.querySelector('.confirmation__event-title')
+  const eventDateEl = confirmationView.querySelector('.event__date')
+  const eventHourEl = confirmationView.querySelector('.event__hour')
+  const confirmationEmailEl = confirmationView.querySelector('.confirmation__email')
+
+  firstNameEl.innerText = formData.firstName
+  eventTypeEl.innerText = eventData.typeString
+  eventTitleEl.innerText = eventData.title
+  eventDateEl.innerText = eventData.date
+  eventHourEl.innerText = eventData.hour
+  confirmationEmailEl.innerText = formData.email
+
+  container.appendChild(confirmationView)
 }
 
 // Form steps
-
-function createFormSubmitListener () {
-  registerToEventFormSubmit.addEventListener('click', (event) => {
-    event.preventDefault()
-    const container = destroyForm()
-    showConfirmationView(container)
-  })
-}
 
 /**
   * Returns an array of HTML elements representing the form steps.
@@ -226,15 +246,11 @@ function goToFirstStep () {
 Navigates to the last step of a two-step process by marking the first step as hidden
 and the second step as visible.
 */
-let registerToEventFormSubmit
 function goToLastStep () {
   const [step1, step2] = getSteps()
 
   markStepAsHidden(step1)
   markStepAsVisible(step2)
-
-  registerToEventFormSubmit = document.querySelector('.input__submit')
-  createFormSubmitListener()
 }
 
 /**
@@ -283,7 +299,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const eventList = new EventList(elements)
 
         /* Checking if the filter is set to all, if it is, it clears the filter, if it is
-        not, it filters the list. */
+                not, it filters the list. */
         if (filter === filterTypes.ALL) {
           eventList.clearFilter()
           toggler.removeAttribute('style')
@@ -293,7 +309,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         /* Removing the active class from all the buttons and then adding it to the button
-        that was clicked. */
+                that was clicked. */
         filterButtons.forEach((button) => { button.classList.remove(activeFilterClass) })
         button.classList.add(activeFilterClass)
       })
@@ -309,21 +325,53 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const container = document.querySelector('.events-form')
 
+  /**
+
+  Registers click events on each button in the registerButtons array.
+  Upon clicking a button, it retrieves event data from the parent event element, and then
+  uses that data to populate the registration form. Upon submission of the form, it
+  retrieves user data from the form, destroys the form, and shows the confirmation view
+  with both the event and user data.
+  @param {NodeList} registerButtons - An array of HTML button elements to register click events on.
+  @param {HTMLDivElement} eventListContainer - A container for the event list.
+  @param {HTMLDivElement} container - A container for the registration form and confirmation view.
+  @param {HTMLTemplateElement} registerFormTemplate - A template for the registration form.
+  @param {Function} getParent - A function to retrieve a parent element based on a provided class.
+  @param {Function} eventToJSON - A function to convert an event element to JSON format.
+  @param {Function} addEventDataToForm - A function to populate the registration form with event data.
+  @param {Function} destroyForm - A function to remove the registration form from the container.
+  @param {Function} showConfirmationView - A function to show the confirmation view with event and user data.
+  @returns {void}
+  */
   registerButtons.forEach(function (button) {
     button.addEventListener('click', function () {
       const eventElement = getParent(button, 'event')
       const eventData = eventToJSON(eventElement)
+
       if (eventListContainer) {
         eventListContainer.setAttribute('style', 'display: none;')
         const form = registerFormTemplate.content.cloneNode(true)
         addEventDataToForm(eventData, form)
         container.appendChild(form)
+
+        const registerToEventFormSubmit = document.querySelector('.input__submit')
+
+        registerToEventFormSubmit.addEventListener('click', (event) => {
+          event.preventDefault()
+
+          const form = getParent(event.target, 'form')
+          const data = new FormData(form)
+
+          const formData = {
+            firstName: data.get('first-name'),
+            email: data.get('email')
+          }
+
+          destroyForm()
+          showConfirmationView(container, eventData, formData)
+        })
       }
     })
   })
   // Register event
-
-  // Submit register event form
-
-  // Submit register event form
 })
