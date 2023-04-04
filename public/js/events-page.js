@@ -155,6 +155,23 @@ const addEventDataToForm = (eventData, form) => {
 
 /**
 
+Scrolls to the top of the view by creating an anchor element, adding it to the body, clicking it, and removing it from the body.
+*/
+const scrollToViewTop = () => {
+  const a = document.createElement('a')
+  const body = document.querySelector('body')
+
+  a.href = '#upcoming-events'
+  a.setAttribute('style', 'display: none;')
+
+  body.appendChild(a)
+  a.click()
+
+  body.removeChild(a)
+}
+
+/**
+
 Removes the event registration form from the DOM and returns its parent element.
 @returns {HTMLElement} The parent element of the removed form.
 */
@@ -191,9 +208,9 @@ const showConfirmationView = (container, eventData, formData) => {
   confirmationEmailEl.innerText = formData.email
 
   container.appendChild(confirmationView)
-}
 
-// Form steps
+  scrollToViewTop()
+}
 
 /**
   * Returns an array of HTML elements representing the form steps.
@@ -239,6 +256,8 @@ function goToFirstStep () {
 
   markStepAsVisible(step1)
   markStepAsHidden(step2)
+
+  scrollToViewTop()
 }
 
 /**
@@ -251,6 +270,8 @@ function goToLastStep () {
 
   markStepAsHidden(step1)
   markStepAsVisible(step2)
+
+  scrollToViewTop()
 }
 
 /**
@@ -265,6 +286,8 @@ function goToEventList () {
     eventFormContainer.parentElement.removeChild(eventFormContainer)
     eventListContainer.removeAttribute('style')
   }
+
+  // scrollToViewTop()
 }
 
 /**
@@ -378,6 +401,8 @@ document.addEventListener('DOMContentLoaded', function () {
         addEventDataToForm(eventData, form)
         container.appendChild(form)
 
+        scrollToViewTop()
+
         const registerToEventFormSubmit = document.querySelector('.input__submit')
 
         registerToEventFormSubmit.addEventListener('click', (event) => {
@@ -393,6 +418,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
           destroyForm()
           showConfirmationView(container, eventData, formData)
+          scrollToViewTop()
         })
       }
     })
