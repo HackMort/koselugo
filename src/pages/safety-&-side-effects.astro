@@ -10,14 +10,14 @@ import AccordionItem from '../components/AccordionItem.astro';
 
     <div class="wrapper side-effect-page">
 
-      <Section>
+      <Section className="possible-side-effects" id="possible-side-effects">
         <Fragment slot="section-title">
           <span>WHAT ARE THE POSSIBLE </span> <span
             class="color-yellow">SIDE EFFECTS OF KOSELUGO?</span
           >
         </Fragment>
-  
-          
+
+
         <div class="side-effects-page--section side-effects-page--section__overlapping">
 
           <div class="side-effects-page--callout">
@@ -29,7 +29,7 @@ import AccordionItem from '../components/AccordionItem.astro';
 
           <h3 class="side-effects-page--section__heading side-effects-page--section__heading--3">Koselugo may cause serious side effects, including:</h3>
 
-          
+
           <p class="side-effects-page--section__paragraph"><strong>Heart problems:</strong> Koselugo can lower the amount of blood pumped by your heart, which is common and can also be severe. Your child’s healthcare provider will do tests before and during treatment with Koselugo to check how well your child’s heart is working. Tell your child’s healthcare provider right away if your child gets any of the following signs or symptoms:</p>
 
           <ul class="side-effects-page--list">
@@ -82,9 +82,9 @@ import AccordionItem from '../components/AccordionItem.astro';
 
 
           <div class="side-effects-page--commun-list">
-            
+
             <div class="side-effects-page--commun-list__column">
-              
+
               <div class="side-effects-page--commun-list__item">
                 <img class="side-effects-page--commun-list__item__img" src="/assets/images/safety-and-side-effects/icons/vomiting-icon.png" alt=" " srcset="">
                 <span class="side-effects-page--commun-list__point desktop--only"></span>
@@ -113,7 +113,7 @@ import AccordionItem from '../components/AccordionItem.astro';
                 <img class="side-effects-page--commun-list__item__img" src="/assets/images/safety-and-side-effects/icons/tiredness-feeling-icon.png" alt=" " srcset="">
                 <span class="side-effects-page--commun-list__point desktop--only"></span>
                   Feeling of tiredness, weakness, or lacking energy
-                
+
               </div>
 
               <div class="side-effects-page--commun-list__item">
@@ -167,23 +167,23 @@ import AccordionItem from '../components/AccordionItem.astro';
           </p>
 
         </div>
-        
+
       </Section>
 
       <section class="side-effects-page--secondary-section">
         <p class="side-effects-page--disclaimer side-effects-page--disclaimer__overlapping text--center color--aqua">
           Remember, the information on this page does not replace medical guidance or directions from your doctor. Always talk to them about side effects and ways to manage them.
         </p>
-  
+
         <p class="side-effects-page--paragraph text--center color--aqua">
           See what people taking Koselugo experienced in a clinical study.
         </p>
-  
+
         <a href="#" class="text--center color--rose">View results now</a>
-        
+
       </section>
-      
-      <Section>
+
+      <Section className="before-starting-treatment" id="before-starting-treatment">
         <Fragment slot="section-title">
           <span>ARE THERE ANY TESTS NEEDED </span> <span
             class="color-yellow">BEFORE STARTING KOSELUGO?</span
@@ -191,7 +191,7 @@ import AccordionItem from '../components/AccordionItem.astro';
         </Fragment>
 
         <div class="side-effects-page--section">
-          
+
           <p class="side-effects-page--section__paragraph">
             Make a list of questions you’d like to ask your child’s doctor and information you’d like to share about your child:
           </p>
@@ -208,7 +208,7 @@ import AccordionItem from '../components/AccordionItem.astro';
                   <div class="side-effects-page--steps__step--figure">
                   </div>
                 </div>
-                
+
                 <p class="side-effects-page--steps__content">
                   Ask what <strong>tests are needed</strong>  before and during treatment
                 </p>
@@ -223,7 +223,7 @@ import AccordionItem from '../components/AccordionItem.astro';
                   <div class="side-effects-page--steps__step--figure">
                   </div>
                 </div>
-                
+
                 <p class="side-effects-page--steps__content">
                   Share details <strong>about pre-existing conditions</strong>
                 </p>
@@ -238,7 +238,7 @@ import AccordionItem from '../components/AccordionItem.astro';
                   <div class="side-effects-page--steps__step--figure">
                   </div>
                 </div>
-                
+
                 <p class="side-effects-page--steps__content">
                   Provide names of <strong>other medicines</strong> your child may be taking
                 </p>
@@ -259,21 +259,21 @@ import AccordionItem from '../components/AccordionItem.astro';
           </div>
 
           <h3 class="side-effects-page--section__heading side-effects-page--section__heading--3 text--center">Before starting Koselugo, tell your child’s doctor about all of your child’s medical conditions, including if they:</h3>
-          
+
           <div class="side-effects-page--problems-section">
-            
+
             <img class="side-effects-page--problems-section__img" src="/assets/images/safety-and-side-effects/icons/heart-icon.png" alt=" " />
             <div class="side-effects-page--problems-section__long">
               <h4 class="side-effects-page--problems-section__heading text--center">Have heart problems</h4>
             </div>
-            
+
             <img class="side-effects-page--problems-section__img" src="/assets/images/safety-and-side-effects/icons/eye-icon.png" alt=" " />
             <div class="side-effects-page--problems-section__long">
               <h4 class="side-effects-page--problems-section__heading text--center">Have eye problems</h4>
             </div>
-            
+
             <img class="side-effects-page--problems-section__img" src="/assets/images/safety-and-side-effects/icons/pregnant-icon.png" alt=" " srcset="" />
-            
+
             <div class="side-effects-page--problems-section__long">
               <h4 class="side-effects-page--problems-section__heading text--center">Are pregnant or plan to become pregnant. Koselugo can harm an unborn baby</h4>
 
@@ -289,7 +289,7 @@ import AccordionItem from '../components/AccordionItem.astro';
             <img class="side-effects-page--problems-section__img" src="/assets/images/safety-and-side-effects/icons/breastfeed-icon.png" alt="" srcset="">
 
             <div class="side-effects-page--problems-section__long">
-              
+
               <h4 class="side-effects-page--problems-section__heading text--center">Are breastfeeding or plan to breastfeed</h4>
 
               <ul class="side-effects-page--list side-effects-page--list__tests">
@@ -310,13 +310,13 @@ import AccordionItem from '../components/AccordionItem.astro';
         <p class="side-effects-page--disclaimer side-effects-page--disclaimer__two text--center color--aqua">
           Tell your child’s healthcare provider about all the medicines your child takes, including prescription and over-the-counter medicines, vitamins, or herbal supplements. Especially tell your child’s healthcare provider if your child is taking aspirin, blood thinners, or other medicines to treat blood clots. Koselugo contains vitamin E, which may increase the risk of bleeding.
         </p>
-  
+
         <p class="side-effects-page--paragraph text--center color--aqua">
           Review the treatment journey of patients who took Koselugo in a clinical study
         </p>
-  
+
         <a href="#" class="text--center color--rose">See their journeys here</a>
-        
+
       </section>
 
     </div>

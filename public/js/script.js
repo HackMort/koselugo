@@ -86,6 +86,15 @@ document.addEventListener('DOMContentLoaded', function (event) {
       }
     })
   })
+
+  changeScrollMarginTopVariable()
+
+  window.addEventListener('hashchange', function (event) {
+    if (mobileQuery.matches) {
+      event.preventDefault()
+      internalNavigationScroll()
+    }
+  })
 })
 
 // Accordion script
@@ -171,3 +180,35 @@ if (externalLinks && externalLinks.length > 0) {
 } */
 
 // -----------------------------anchor-pop-up-------------------------------------
+
+/* This function get the height of the Header
+  and the margin-top of a custom-section (there is at least 1 section with ID
+  for internal navigation in all the pages that requires internal navigation).
+  Then calculates the sum of margin-top plus height and assign that total as
+  margin-scroll-top variable */
+function changeScrollMarginTopVariable () {
+  const siteHeader = document.querySelector('.site__header')
+  const rootElement = document.querySelector(':root')
+  const customSection = document.querySelector('.custom-section')
+
+  const siteHeaderStyles = getComputedStyle(siteHeader)
+  const customSectionStyles = getComputedStyle(customSection)
+
+  const sectionMarginTop = parseInt(customSectionStyles.getPropertyValue('margin-top').slice(0, -2))
+  const siteHeaderHeight = parseInt(siteHeaderStyles.getPropertyValue('height').slice(0, -2))
+  const marginScrollTop = sectionMarginTop + siteHeaderHeight
+
+  rootElement.style.setProperty('--margin-top-scroll-var', marginScrollTop + 'px')
+}
+
+/* Function that will be executed when the hash change  */
+function internalNavigationScroll () {
+  const internalSection = document.querySelector(document.location.hash)
+
+  if (internalSection) {
+    const mainContainer = document.querySelector('main')
+    const siteHeader = document.querySelector('.site__header')
+    const scrollPosition = internalSection.offsetTop - mainContainer.scrollTop - siteHeader.scrollHeight
+    window.scroll({ top: scrollPosition, left: 0, behavior: 'smooth' })
+  }
+}

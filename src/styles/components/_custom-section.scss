@@ -7,6 +7,8 @@
     max-width: 72.8125rem;
     margin: 0 auto;
 
+    scroll-margin-top: var(--margin-top-scroll-var);
+
     @media screen and (min-width: 768px) {
         min-height: 10rem;
         margin-top: calc(3.0313rem + 2.25rem);
@@ -28,7 +30,7 @@
         display: flex;
         height: 9.5625rem;
         width: 100%;
-        
+
         @media screen and (min-width: 768px) {
             max-width: fit-content;
             height: 6.0625rem;
@@ -43,6 +45,11 @@
         @media screen and (min-width: 1300px) {
             left: -3rem;
         }
+
+        @include media('mobile') {
+            width: 100%;
+            max-width: 100%;
+        }
     }
 
     &__title-wrapper {
@@ -54,6 +61,9 @@
 
         @media screen and (min-width: 1024px) {
             margin-left: -1px;
+        }
+        @include media('mobile') {
+            width: 100%;
         }
     }
 

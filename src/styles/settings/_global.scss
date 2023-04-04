@@ -29,7 +29,7 @@ h3 {
 h6 {
     font-size: 1.125rem;
     line-height: 20.41px;
-    
+
     @include media('tablet') {
     font-size: 22px;
   }
@@ -98,4 +98,8 @@ main {
   ul li::marker {
     color: $color-aqua;
   }
+}
+
+:root {
+  --margin-top-scroll-var: 130px;
 }

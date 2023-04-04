@@ -8,7 +8,7 @@ import OneSource from "../components/OneSource.astro";
 
 <Layout title="Savings & Support">
   <div class="savings__page">
-    <div class="hero">
+    <div class="hero" id="pem-finder">
       <SimpleHero folder="savings-and-support" alt="PEM Team">
         <Fragment slot="content">
           <div class="hero__content">
@@ -39,7 +39,7 @@ import OneSource from "../components/OneSource.astro";
       </SimpleHero>
     </div>
 
-    <div class="wrapper">
+    <div id="pem-finder" class="wrapper">
       <PEM
         email="test@mail.com"
         name="Mike"
@@ -93,7 +93,7 @@ import OneSource from "../components/OneSource.astro";
       </PEM>
     </div>
 
-    <Section>
+    <Section className="onesource" id="onesource">
       <Fragment slot="section-title">
         HELPING YOUR CHILD <span class="color-yellow"
           >ACCESS THE CARE THEY NEED</span
@@ -185,13 +185,13 @@ import OneSource from "../components/OneSource.astro";
     </div>
 
     <div class="stay__informed">
-      <Section className="stay__informed-section">
+      <Section className="stay__informed-section register" id="register">
         <Fragment slot="section-title">
           <span class="color-yellow">STAY INFORMED</span> ABOUT NF1 PN
         </Fragment>
 
       </Section>
-      
+
       <p class="stay__informed-section-info">
         To receive the latest updates, tools, and tips about NF1 plexiform
         neurofibromas (PN) and Koselugo, please provide us with some
@@ -200,7 +200,7 @@ import OneSource from "../components/OneSource.astro";
 
       <div class="form">
         <div class="wrapper">
-          
+
           <form action=" ">
 
             <div class="form__control">
@@ -221,12 +221,12 @@ import OneSource from "../components/OneSource.astro";
                   </div>
 
                 </div>
-                
+
 
                 <p class="form__control-error"></p>
               </fieldset>
             </div>
-            
+
             <div class="form__control">
               <fieldset>
                 <legend class="form__control-legend">Do you care for someone who has been prescribed Koselugo?*</legend>
@@ -245,7 +245,7 @@ import OneSource from "../components/OneSource.astro";
                   </div>
 
                 </div>
-                
+
                 <p class="form__control-error"></p>
               </fieldset>
             </div>
@@ -257,7 +257,7 @@ import OneSource from "../components/OneSource.astro";
                 <input type="email" name="email" id="email" required>
                 <p class="form__control-error"></p>
               </div>
-            
+
               <!-- Confirm email -->
               <div class="form__control">
                 <label class="form__control-label" for="confirm-email">Confirm email adress*</label>
@@ -285,7 +285,7 @@ import OneSource from "../components/OneSource.astro";
             </div>
 
 
-            
+
 
             <!-- Disclaimer -->
             <div class="form__control-disclaimer">
@@ -299,14 +299,14 @@ import OneSource from "../components/OneSource.astro";
                 <p class="form__control-error"></p>
 
               </fieldset>
-              
+
             </div>
 
             <!-- Required information -->
             <p class="form__control-info">
               *Required information
             </p>
-            
+
             <!-- Submit -->
             <div class="form__control form__control-submit">
               <button type="submit" class="button button--primary" name="submit">Submit</button>
