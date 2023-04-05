@@ -37,5 +37,6 @@ const { title, hero } = Astro.props;
 
     <script is:inline src="/js/script.js" type="module"></script>
     <script is:inline src="/js/validate.js" type="module"></script>
+    <slot name="scripts" />
   </body>
 </html>

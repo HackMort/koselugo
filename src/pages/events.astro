@@ -5,6 +5,8 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Events">
     <EventJoiner></EventJoiner>
+    <Fragment slot="scripts">
+        <script is:inline src="/js/form-validation.js"></script>
+        <script is:inline src="/js/events-page.js"></script>
+    </Fragment>
 </Layout>
-<script is:inline src="/js/form-validation.js"></script>
-<script is:inline src="/js/events-page.js"></script>
