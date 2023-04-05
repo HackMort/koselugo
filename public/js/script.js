@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   })
   window.addEventListener('resize', () => {
     isiHeaderFixed()
+    changeScrollMarginTopVariable()
   })
 
   /**
@@ -87,6 +88,19 @@ document.addEventListener('DOMContentLoaded', function (event) {
     })
   })
 
+  document.querySelectorAll('.sub__nav_menu_item_link').forEach(linkElement => {
+    linkElement.addEventListener('click', (e) => {
+      if (!mobileQuery.matches) {
+        return
+      }
+
+      document.querySelector('.site__header_nav_menu_list .sub__nav_menu.is--active').classList.toggle('is--active')
+      root.classList.toggle('is--menu-open')
+      mainNav.classList.toggle('is--open')
+      mobileMenuToogleBtn.classList.toggle('is--active')
+    })
+  })
+
   changeScrollMarginTopVariable()
 
   window.addEventListener('hashchange', function (event) {
@@ -94,10 +108,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
       event.preventDefault()
       internalNavigationScroll()
     }
-  })
-
-  window.addEventListener('resize', function (event) {
-    changeScrollMarginTopVariable()
   })
 })
 
