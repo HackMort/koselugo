@@ -56,11 +56,20 @@
         modalClose.addEventListener("click", () => {
           Fancybox.close();
         });
+/* 
+        continueButton.addEventListener("click", () => {
+          console.log(link)
+          console.log(continueButton)
+          Fancybox.close();
+          setTimeout(() => {
+            window.open(link.attributes.href, "_blank");
+          }, 500);
+        }); */
 
         Fancybox.show(
           [
             {
-              src: modal,
+              src: 'modal',
               type: "inline",
               //dragToClose: false,
               autoFocus: true,
@@ -71,14 +80,22 @@
           {
             on: {
               done: () => {
-                if (link.classList.contains("button--continue")) {
-                  Fancybox.close();
+                /* console.log(link) */
+                
+                link = continueButton
+                /* console.log(link)
+                console.log(href) */
+
+                link.addEventListener('click', ()=>{
+                  //console.log('ola')
                   setTimeout(() => {
                     window.open(href, "_blank");
+                    Fancybox.close();
                   }, 500);
                   return;
-                }
-              },
+                })
+
+              }, 
               close: () => {
                 continueButton.setAttribute("href", "");
               },
