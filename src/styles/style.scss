@@ -643,15 +643,31 @@
       margin: 1rem;
     }
 
-    .form {
+    .form__wrapper {
       background-color: $color-soft-blue-2;
-      min-height: 300px;
+      // min-height: 300px;
       padding: 20px 0;
 
       font-size: 1rem;
       line-height: 1.5rem;
       color: $color-gray;
       margin-bottom: 5rem;
+
+      .form__control-label,
+      .form__control-label::after,
+      .form__control-legend::after {
+        color: $color-gray;
+      }
+
+      .form__control-label {
+        @media screen and (min-width: 1024px) {
+            font-size: 1.125rem;
+          }
+      }
+
+      .form__control-radio {
+        margin-bottom: 0;
+      }
 
       @include media('tablet') {
         font-size: 1.125rem;
@@ -689,6 +705,10 @@
       .form__control {
         legend {
           margin-bottom: 1rem;
+
+          @media screen and (min-width: 1024px) {
+            font-size: 1.125rem;
+          }
         }
 
         margin-bottom: 1rem;
@@ -743,7 +763,18 @@
       .form__control-checkbox {
         display: flex;
         flex-direction: row;
-        @include flex-gap(.8rem);
+        @include flex-gap(.3rem);
+
+        .form__control-label {
+            font-size: 1rem;
+            line-height: 22.86px;
+            color: $color-gray;
+
+            @media screen and (min-width: 1024px) {
+                font-size: 1.125rem;
+                line-height: 25.71px;
+            }
+        }
 
         margin-top: 1rem;
         input[type="checkbox"] {
@@ -772,13 +803,8 @@
 
       }
 
-      input[type="text"],
-      input[type="email"] {
-        border-radius: 5px;
+      .form__control-input {
         border: 1px solid #BCBEC0;
-        height: 35px;
-        padding-left: 5px;
-        padding-top: 4px;
         background-color: #fff;
       }
 
@@ -796,6 +822,8 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+
+        max-width: max-content;
       }
 
       .form__control-legend {

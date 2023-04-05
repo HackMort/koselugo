@@ -54,7 +54,6 @@ function validateFormControl (event) {
 
   const control = event.target
   const parent = getParent(control, parentClassName)
-  const controlIndex = +parent.dataset.fieldIndex
   const form = getParent(parent, formClassName)
   const submitButton = form.querySelector("[type='submit']")
   const controls = Array.from(form.querySelectorAll('.' + parentClassName))
