@@ -71,7 +71,27 @@ function validateFormControl (event) {
   const formHasBeenTouched = function () {
     return controls
       .filter((control) => control.dataset.required === 'true')
-      .every((control) => control.dataset.touched === 'true')
+      .some((control) => control.dataset.touched === 'true')
+  }
+
+  /**
+
+    Disables a submit button by adding the 'disabled' attribute and the 'disabled' class to its parent element.
+    @param {Element} submit - The submit button to be disabled.
+    */
+  const disableSubmitButton = (submit) => {
+    submit && submit.setAttribute('disabled', 'true')
+    submit.parentElement.classList.add('disabled')
+  }
+
+  /**
+
+    Enables a submit button by removing the 'disabled' attribute and the 'disabled' class from its parent element.
+    @param {Element} submit - The submit button to be enabled.
+    */
+  const enableSubmitButton = (submit) => {
+    submit && submit.removeAttribute('disabled')
+    submit.parentElement.classList.remove('disabled')
   }
 
   /**
@@ -80,10 +100,10 @@ function validateFormControl (event) {
      */
   const toggleSubmitButtonState = function () {
     if (form && checkFormValidity(form)) {
-      submitButton && submitButton.removeAttribute('disabled')
+      enableSubmitButton(submitButton)
       form.classList.remove('form--invalid')
     } else {
-      submitButton && submitButton.setAttribute('disabled', 'true')
+      disableSubmitButton(submitButton)
       if (formHasBeenTouched()) {
         form.classList.add('form--invalid')
       }

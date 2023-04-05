@@ -481,15 +481,13 @@ import OneSource from "../components/OneSource.astro";
                         <p class="form__control-info">*Required information</p>
 
                         <!-- Submit -->
-                        <div class="button button--primary form__control-submit">
-                            <input class="input__submit" type="submit" value="Submit" />
+                        <div class="button button--primary form__control-submit disabled">
+                            <input class="input__submit" type="submit" value="Submit" disabled/>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <Fragment slot="scripts">
-        <script is:inline src="/js/form-validation.js"></script>
-    </Fragment>
+    <script slot="scripts" is:inline src="/js/form-validation.js"></script>
 </Layout>
