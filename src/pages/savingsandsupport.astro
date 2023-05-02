@@ -180,7 +180,9 @@ import OneSource from "../components/OneSource.astro";
     <div class="video__text">
       <p>
         To see the inspiring story of how 8-year-old Cooper and his family
-        helped manage his treatment, view the <a href="#">video</a>.
+        helped manage his treatment, view the <a
+          href="/resources.html#resources-videos">video</a
+        >.
       </p>
     </div>
 
@@ -389,19 +391,6 @@ import OneSource from "../components/OneSource.astro";
             <!-- Disclaimer -->
             <div class="form__control-disclaimer">
               <fieldset>
-                <p class="form__control-legend">
-                  Alexion respects your personal health information. The
-                  information you provide may be used to send you health-related
-                  materials and to develop products, services, and programs.
-                  Alexion, or third parties working on our behalf, will not sell
-                  or rent personal health information. If in the future you no
-                  longer want to receive health-related materials, call
-                  1-844-259-6783. Please click <a
-                    href="https://alexion.com/Legal#privacynotice"
-                    target="_blank">here</a
-                  > to review our Privacy Notice.
-                </p>
-
                 <div
                   class="form__control"
                   data-touched="false"
@@ -419,10 +408,19 @@ import OneSource from "../components/OneSource.astro";
                       onchange="validateFormControl(event)"
                     />
                     <label class="form__control-label" for="disclaimer"
-                      >By completing this registration, I confirm that I am 18
-                      years of age or older and a US resident. I understand that
-                      I may also receive ongoing information and support related
-                      to NF1 PN, including treatment information.</label
+                      >I verify that I am 18 years of age or older and agree to
+                      the Privacy Notice. I (or my representative) give Alexion
+                      and companies working at Alexion's direction permission to
+                      use my contact information to provide promotional
+                      information to me about Alexion products, services,
+                      programs, or other topics that Alexion thinks may interest
+                      me. I understand that Alexion will use and share my
+                      information in accordance with the Privacy Notice on the
+                      Alexion website at <a
+                        href="https://alexion.com/Legal#privacynotice"
+                        target="_blank"
+                        >https://alexion.com/Legal#privacynotice</a
+                      > .</label
                     >
                   </div>
                   <p class="form__control-error">Important info/error</p>
