@@ -18,10 +18,16 @@
             overflow-y: hidden;
             max-height: 48.125rem;
 
-            transition: max-height 200ms ease;
+            // transition: max-height 200ms ease;
+
+            @media screen and (min-width: 768px) {
+                height: 48.125rem;
+                max-height: 100%;
+            }
 
             &--expanded {
-                max-height: calc(48.125rem + (48.125rem * 4));
+                // max-height: calc(48.125rem + (48.125rem * 4));
+                overflow-y: scroll;
             }
 
             .events-list__title {
