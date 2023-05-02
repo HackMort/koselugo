@@ -304,11 +304,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const toggler = document.querySelector('.event-list__toggler')
   const eventListWrapper = document.querySelector('.events-list__wrapper')
 
-  function scrollToBottom (element) {
+  function scrollToBottomOfWrapper (element) {
     element.scroll({ top: element.scrollHeight, behavior: 'smooth' })
   }
 
-  function scrollToViewTop (element) {
+  function scrollToTopOfTheWrapper (element) {
     element.scroll({ top: 0, behavior: 'smooth' })
   }
 
@@ -320,13 +320,13 @@ document.addEventListener('DOMContentLoaded', function () {
     toggler.addEventListener('click', function () {
       if (eventListWrapper) {
         if (toggler.classList.contains('event-list__toggler--expanded')) {
-          scrollToViewTop(eventListWrapper)
+          scrollToTopOfTheWrapper(eventListWrapper)
           toggler.classList.remove(togglerExpandedClass)
           return
         }
         toggler.classList.add(togglerExpandedClass)
         eventListWrapper.classList.add(expandedClass)
-        scrollToBottom(eventListWrapper)
+        scrollToBottomOfWrapper(eventListWrapper)
       }
     })
   }
