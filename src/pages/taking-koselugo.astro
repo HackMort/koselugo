@@ -1,157 +1,363 @@
 ---
-import SimpleHero from '../components/SimpleHero.astro';
+import SimpleHero from "../components/SimpleHero.astro";
 import Layout from "../layouts/Layout.astro";
-import Section from '../components/Section.astro';
-import Callout from '../components/Callout.astro';
+import Section from "../components/Section.astro";
+import Callout from "../components/Callout.astro";
 ---
 
 <Layout title="Taking Koselugo">
-    <SimpleHero folder="taking-koselugo" alt="" />
-    <div class="taking-koselugo">
-      <Section className="taking-koselugo__doses" id="taking-koselugo">
-        <Fragment slot="section-title">
-          <span class="color-yellow">HOW IS</span> KOSELUGO TAKEN?
-        </Fragment>
-        <div class="taking-koselugo__container taking-koselugo__container--flex">
-          <div class="taking-koselugo__container">
-            <img class="taking-koselugo__image hours-icon" src="/assets/images/taking-koselugo/12-hours-icon.png" alt=" ">
-          </div>
-          <div class="taking-koselugo__container taking-koselugo__container--flex flex-wrap">
-            <p class="taking-koselugo__paragraph first-indication"><strong class="not-emphasis-desktop">Doses should be taken—on an empty stomach—approximately the same time each day, about 12 hours apart</strong></p>
-            <ul class="taking-koselugo__list taking-koselugo__list--no-margin-bottom limit-width">
-              <li class="taking-koselugo__list-item">
-                <p><span class="color--aqua">Your child must take Koselugo on an empty stomach,</span> <span class="color--arsenic-black">which means your child should not eat 2 hours before each dose or 1 hour after each dose</span></p>
-              </li>
-            </ul>
-            <img class="taking-koselugo__image atleast-image" src="/assets/images/taking-koselugo/atleast.png" alt=" ">
-            <img class="taking-koselugo__image capsule-icon" src="/assets/images/taking-koselugo/capsule-icon.png" alt=" ">
-            <div class="taking-koselugo__container taking-koselugo__paragraphs-container">
-              <p class="taking-koselugo__paragraph"><strong>Remember:</strong></p>
-              <p  class="taking-koselugo__paragraph"><strong>Koselugo capsules must only be swallowed whole with water. They must not be chewed, dissolved, or opened.</strong>  Taking Koselugo in a different way than instructed may affect how it works. To learn more, visit the <a href="#tips-for-taking" class="text--decoration-underline color--rose">Tips For Taking Koselugo</a> page.</p>
-            </div>
-          </div>
+  <SimpleHero folder="taking-koselugo" alt="" />
+  <div class="taking-koselugo">
+    <Section className="taking-koselugo__doses" id="taking-koselugo">
+      <Fragment slot="section-title">
+        <span class="color-yellow">HOW IS</span> KOSELUGO TAKEN?
+      </Fragment>
+      <div class="taking-koselugo__container taking-koselugo__container--flex">
+        <div class="taking-koselugo__container">
+          <img
+            class="taking-koselugo__image hours-icon"
+            src="/assets/images/taking-koselugo/12-hours-icon.png"
+            alt=" "
+          />
         </div>
-        <ul class="taking-koselugo__list">
-          <li class="taking-koselugo__list-item">
-            <p><span class="color--aqua">If your child misses a dose,</span> <span class="color--arsenic-black">they should take it as soon as you remember. If it is less than 6 hours before the next scheduled dose, give the next dose at the regular time. Do not make up for the missed dose</span></p>
-          </li>
-          <li class="taking-koselugo__list-item">
-            <p><span class="color--aqua">If your child vomits at any time after taking Koselugo,</span> <span class="color--arsenic-black">they should not take an additional dose. The next dose should be taken at the regular time</span></p>
-          </li>
-        </ul>
-        <article class="taking-koselugo__important-tip">
-          <header>
-            <p class="taking-koselugo__paragraph">It's important to <strong>GIVE KOSELUGO EXACTLY AS YOUR CHILD’S DOCTOR PRESCRIBES AND KEEP TO A DOSING SCHEDULE THAT FITS BEST WITH YOUR CHILD’S DAILY ROUTINE.</strong></p>
-            <p class="taking-koselugo__paragraph">The goal is to make it easy to stay on track to get the most out of treatment.</p>
-          </header>
-          <ul class="taking-koselugo__list">
+        <div
+          class="taking-koselugo__container taking-koselugo__container--flex flex-wrap"
+        >
+          <p class="taking-koselugo__paragraph first-indication">
+            <strong class="not-emphasis-desktop"
+              >Doses should be taken—on an empty stomach—approximately the same
+              time each day, about 12 hours apart</strong>
+          </p>
+          <ul
+            class="taking-koselugo__list taking-koselugo__list--no-margin-bottom limit-width"
+          >
             <li class="taking-koselugo__list-item">
               <p>
-                <strong class="color--arsenic-black">Do not change the dose or stop taking Koselugo unless directed by your child’s doctor</strong>
-              </p>
-            </li>
-            <li class="taking-koselugo__list-item">
-              <p>
-                Your child’s doctor may change the dose, temporarily stop, or permanently stop treatment if your child has side effects
-              </p>
-            </li>
-            <li class="taking-koselugo__list-item">
-              <p>
-                Your child’s doctor will decide on the right dose of Koselugo based on your child’s weight or size (body surface area), and how many capsules of Koselugo to take
+                <span class="color--aqua"
+                  >Your child must take Koselugo on an empty stomach,</span
+                >
+                <span class="color--arsenic-black"
+                  >which means your child should not eat 2 hours before each
+                  dose or 1 hour after each dose</span>
               </p>
             </li>
           </ul>
-        </article>
-        <Callout />
-      </Section>
-      <Section noHeader className="taking-koselugo__container taking-koselugo__container--visit">
-        <p class="taking-koselugo__title color--aqua">Explore the treatment journey of children who took Koselugo in a clinical study</p>
-        <a href="/taking-koselugo.html#tracking-their-treatment" class="text--decoration-underline color--rose">See their journeys here</a>
-      </Section>
-      <Section className="taking-koselugo__tips" id="tips-for-taking">
-        <Fragment slot="section-title">
-          <span class="color-yellow">ARE THERE</span> ANY TIPS FOR TAKING KOSELUGO?
-        </Fragment>
-        <h6 class="taking-koselugo__title">Encouraging a child to take medicine can be a difficult task. Common reasons why children don’t want to take medicine may include:</h6>
-        <ul class="taking-koselugo__list taking-koselugo__list--reasons">
-          <li class="taking-koselugo__list-item">
-            <img class="taking-koselugo__image not-understanding-icon" src="/assets/images/taking-koselugo/not-understanding-icon.png" alt="">
-            <p>Not understanding why they need to take it</p>
-          </li>
-          <li class="taking-koselugo__list-item">
-            <img class="taking-koselugo__image taste-icon" src="/assets/images/taking-koselugo/taste-icon.png" alt="">
-            <p>Not liking the taste or texture</p>
-          </li>
-          <li class="taking-koselugo__list-item">
-            <img class="taking-koselugo__image swallowing-tablets-icon" src="/assets/images/taking-koselugo/swallowing-tablets-icon.png" alt="">
-            <p>Having difficulty swallowing medication</p>
-          </li>
-        </ul>
-        <p>It’s important that your child understands why it’s necessary to take 2 doses of Koselugo every day. Be sure to talk about it in a way that’s positive. And, as your child grows, you may need to change your approach to ensure that the dosing schedule is followed.</p>
-        <h6 class="taking-koselugo__title">Suggestions to help give medicine to young children:</h6>
+          <img
+            class="taking-koselugo__image atleast-image"
+            src="/assets/images/taking-koselugo/atleast.png"
+            alt=" "
+          />
+          <img
+            class="taking-koselugo__image capsule-icon"
+            src="/assets/images/taking-koselugo/capsule-icon.png"
+            alt=" "
+          />
+          <div
+            class="taking-koselugo__container taking-koselugo__paragraphs-container"
+          >
+            <p class="taking-koselugo__paragraph"><strong>Remember:</strong></p>
+            <p class="taking-koselugo__paragraph">
+              <strong
+                >Koselugo capsules must only be swallowed whole with water. They
+                must not be chewed, dissolved, or opened.</strong
+              > Taking Koselugo in a different way than instructed may affect how
+              it works. To learn more, visit the <a
+                href="#tips-for-taking"
+                class="text--decoration-underline color--rose"
+                >Tips For Taking Koselugo</a
+              > page.
+            </p>
+          </div>
+        </div>
+      </div>
+      <ul class="taking-koselugo__list">
+        <li class="taking-koselugo__list-item">
+          <p>
+            <span class="color--aqua">If your child misses a dose,</span>
+            <span class="color--arsenic-black"
+              >they should take it as soon as you remember. If it is less than 6
+              hours before the next scheduled dose, give the next dose at the
+              regular time. Do not make up for the missed dose</span>
+          </p>
+        </li>
+        <li class="taking-koselugo__list-item">
+          <p>
+            <span class="color--aqua"
+              >If your child vomits at any time after taking Koselugo,</span
+            >
+            <span class="color--arsenic-black"
+              >they should not take an additional dose. The next dose should be
+              taken at the regular time</span>
+          </p>
+        </li>
+      </ul>
+      <article class="taking-koselugo__important-tip">
+        <header>
+          <p class="taking-koselugo__paragraph">
+            It's important to <strong
+              >GIVE KOSELUGO EXACTLY AS YOUR CHILD’S DOCTOR PRESCRIBES AND KEEP
+              TO A DOSING SCHEDULE THAT FITS BEST WITH YOUR CHILD’S DAILY
+              ROUTINE.</strong>
+          </p>
+          <p class="taking-koselugo__paragraph">
+            The goal is to make it easy to stay on track to get the most out of
+            treatment.
+          </p>
+        </header>
         <ul class="taking-koselugo__list">
           <li class="taking-koselugo__list-item">
             <p>
-              Role playing can be helpful: Pretending to give a favorite doll or teddy bear some medicine can make taking medicine more fun
+              <strong class="color--arsenic-black"
+                >Do not change the dose or stop taking Koselugo unless directed
+                by your child’s doctor</strong
+              >
             </p>
           </li>
           <li class="taking-koselugo__list-item">
             <p>
-              Try to do a positive, fun activity after your child takes the medicine. This may help motivate your child to take the medicine again
+              Your child’s doctor may change the dose, temporarily stop, or
+              permanently stop treatment if your child has side effects
+            </p>
+          </li>
+          <li class="taking-koselugo__list-item">
+            <p>
+              Your child’s doctor will decide on the right dose of Koselugo
+              based on your child’s weight or size (body surface area), and how
+              many capsules of Koselugo to take
             </p>
           </li>
         </ul>
-        <p>
-          <strong>For some helpful tips to teach your child how to swallow pills,</strong> you may want to download the brochure
-          <a href="https://ccr.cancer.gov/sites/default/files/medbooklet.pdf#search=swallowing" target="_blank" class="document-link text--decoration-underline color--rose text--italic">Medicine & Your Child: A Guide for Parents on Adherence and Administration</a> or visit <a href="https://kidshealth.org/en/parents/swallowing-pills.html" target="_blank" class="text--decoration-underline color--rose">www.kidshealth.org</a> to see <strong class="text--italic">Teaching Your Child How to Swallow Pills</strong> for additional suggestions.
+      </article>
+      <Callout />
+    </Section>
+    <Section
+      noHeader
+      className="taking-koselugo__container taking-koselugo__container--visit"
+    >
+      <p class="taking-koselugo__title color--aqua">
+        Explore the treatment journey of children who took Koselugo in a
+        clinical study
+      </p>
+      <a
+        href="/taking-koselugo.html#tracking-their-treatment"
+        class="text--decoration-underline color--rose"
+        >See their journeys here</a
+      >
+    </Section>
+    <Section className="taking-koselugo__tips" id="tips-for-taking">
+      <Fragment slot="section-title">
+        <span class="color-yellow">ARE THERE</span> ANY TIPS FOR TAKING KOSELUGO?
+      </Fragment>
+      <h6 class="taking-koselugo__title">
+        Encouraging a child to take medicine can be a difficult task. Common
+        reasons why children don’t want to take medicine may include:
+      </h6>
+      <ul class="taking-koselugo__list taking-koselugo__list--reasons">
+        <li class="taking-koselugo__list-item">
+          <img
+            class="taking-koselugo__image not-understanding-icon"
+            src="/assets/images/taking-koselugo/not-understanding-icon.png"
+            alt=""
+          />
+          <p>Not understanding why they need to take it</p>
+        </li>
+        <li class="taking-koselugo__list-item">
+          <img
+            class="taking-koselugo__image taste-icon"
+            src="/assets/images/taking-koselugo/taste-icon.png"
+            alt=""
+          />
+          <p>Not liking the taste or texture</p>
+        </li>
+        <li class="taking-koselugo__list-item">
+          <img
+            class="taking-koselugo__image swallowing-tablets-icon"
+            src="/assets/images/taking-koselugo/swallowing-tablets-icon.png"
+            alt=""
+          />
+          <p>Having difficulty swallowing medication</p>
+        </li>
+      </ul>
+      <p>
+        It’s important that your child understands why it’s necessary to take 2
+        doses of Koselugo every day. Be sure to talk about it in a way that’s
+        positive. And, as your child grows, you may need to change your approach
+        to ensure that the dosing schedule is followed.
+      </p>
+      <h6 class="taking-koselugo__title">
+        Suggestions to help give medicine to young children:
+      </h6>
+      <ul class="taking-koselugo__list">
+        <li class="taking-koselugo__list-item">
+          <p>
+            Role playing can be helpful: Pretending to give a favorite doll or
+            teddy bear some medicine can make taking medicine more fun
+          </p>
+        </li>
+        <li class="taking-koselugo__list-item">
+          <p>
+            Try to do a positive, fun activity after your child takes the
+            medicine. This may help motivate your child to take the medicine
+            again
+          </p>
+        </li>
+      </ul>
+      <p>
+        <strong
+          >For some helpful tips to teach your child how to swallow pills,</strong
+        > you may want to download the brochure
+        <a
+          href="https://ccr.cancer.gov/sites/default/files/medbooklet.pdf#search=swallowing"
+          target="_blank"
+          class="document-link text--decoration-underline color--rose text--italic"
+          >Medicine & Your Child: A Guide for Parents on Adherence and
+          Administration</a
+        > or visit <a
+          href="https://kidshealth.org/en/parents/swallowing-pills.html"
+          target="_blank"
+          class="text--decoration-underline color--rose">www.kidshealth.org</a
+        > to see <span class="text--italic"
+          >Teaching Your Child How to Swallow Pills</span
+        > for additional suggestions.
+      </p>
+      <p class="taking-koselugo__footnote">
+        Please note: These links will take you to sites that are maintained by a
+        third party who is solely responsible for its contents. Alexion is not
+        responsible for the privacy policy of any third-party websites. We
+        encourage you to read the privacy policy of every website you visit.
+      </p>
+    </Section>
+    <Section className="taking-koselugo__schedule" id="taking-it-on-time">
+      <Fragment slot="section-title">
+        HOW CAN I ESTABLISH A DAILY SCHEDULE FOR <span class="color-yellow"
+          >TAKING KOSELUGO?</span
+        >
+      </Fragment>
+      <p class="taking-koselugo__paragraph">
+        Work with your child’s doctor to establish a dosing routine that can be
+        easily followed. Taking each dose of Koselugo as directed, every day, is
+        the best way to benefit from treatment.
+      </p>
+    </Section>
+    <picture class="taking-koselugo__image-container">
+      <source
+        media="(min-width: 725px )"
+        srcset="/assets/images/taking-koselugo/schedules-for-dose-desktop.png"
+      />
+      <img
+        class="taking-koselugo__image schedules-for-dose"
+        src="/assets/images/taking-koselugo/schedules-for-dose-mobile.png"
+        alt=" "
+      />
+    </picture>
+    <Section
+      noHeader
+      className="taking-koselugo__schedule taking-koselugo__schedule-continue"
+    >
+      <p class="taking-koselugo__paragraph">
+        These sample schedules are designed as suggestions only.
+      </p>
+      <div class="taking-koselugo__container taking-koselugo__container--flex">
+        <p class="taking-koselugo__paragraph limit-width text--center">
+          <strong
+            >You may want to use a dose-alert timer, or the alarm on your
+            smartphone, as a reminder to take the medicine on time as part of
+            your child’s daily dosing routine.</strong>
         </p>
-        <p class="taking-koselugo__footnote">Please note: These links will take you to sites that are maintained by a third party who is solely responsible for its contents. Alexion is not responsible for the privacy policy of any third-party websites. We encourage you to read the privacy policy of every website you visit.</p>
-      </Section>
-      <Section className="taking-koselugo__schedule" id="taking-it-on-time">
-        <Fragment slot="section-title">
-          HOW CAN I ESTABLISH A DAILY SCHEDULE FOR <span class="color-yellow">TAKING KOSELUGO?</span>
-        </Fragment>
-        <p class="taking-koselugo__paragraph">Work with your child’s doctor to establish a dosing routine that can be easily followed. Taking each dose of Koselugo as directed, every day, is the best way to benefit from treatment.</p>
-      </Section>
-      <picture class="taking-koselugo__image-container">
-        <source media="(min-width: 725px )" srcset="/assets/images/taking-koselugo/schedules-for-dose-desktop.png">
-        <img class="taking-koselugo__image schedules-for-dose" src="/assets/images/taking-koselugo/schedules-for-dose-mobile.png" alt=" ">
-      </picture>
-      <Section noHeader className="taking-koselugo__schedule taking-koselugo__schedule-continue">
-        <p class="taking-koselugo__paragraph">These sample schedules are designed as suggestions only.</p>
-        <div class="taking-koselugo__container taking-koselugo__container--flex">
-          <p class="taking-koselugo__paragraph limit-width text--center"><strong>You may want to use a dose-alert timer, or the alarm on your smartphone, as a reminder to take the medicine on time as part of your child’s daily dosing routine.</strong></p>
-          <img class="taking-koselugo__image koselugo-bottle" src="/assets/images/taking-koselugo/koselugo-bottle.png" alt=" ">
-        </div>
-      </Section>
-      <Section className="taking-koselugo__experience" id="tracking-their-treatment">
-        <Fragment slot="section-title">
-          WHAT WAS THE EXPERIENCE LIKE FOR THOSE PATIENTS <span class="color-yellow">TAKING KOSELUGO?</span>
-        </Fragment>
-        <p class="taking-koselugo__paragraph">
-          <strong class="fweight--750">Your child is beginning treatment. It may be helpful to see what other patients experienced.</strong> The chart below is an overview of the first year of patients who took Koselugo in a clinical study. It notes when patients responded to treatment and when they experienced side effects.
-        </p>
-        <p class="taking-koselugo__paragraph">It’s important to remember that everyone may respond to treatment differently, so your child may not experience the same efficacy results (tumor shrinkage) or the same side effects described below.</p>
-        <p class="taking-koselugo__paragraph">Please know that these are not all the possible efficacy results or side effects your child may experience during treatment with Koselugo.</p>
-        <p class="taking-koselugo__paragraph taking-koselugo__paragraph--highlight color--aqua">Use the chart below to track your child’s progress and any side effects that may occur. Be sure to share your child’s experience with their doctor.</p>
-      </Section>
-      <picture class="taking-koselugo__image-container">
-        <source media="(min-width: 1000px)" srcset="/assets/images/taking-koselugo/patient-journey-chart-desktop.png">
-        <img class="taking-koselugo__image patient-journey-chart" src="/assets/images/taking-koselugo/patient-journey-chart-mobile.png" alt="">
-      </picture>
-      <Section noHeader className="taking-koselugo__experience taking-koselugo__experience-continue">
-        <p class="taking-koselugo__footnote">*Of the 33 patients that responded to Koselugo treatment in the clinical trial, approximately one-half saw their tumor volume shrink by at least 20% within 7 months. The time of onset of response ranged from 3.3 months to 19.2 months.</p>
-        <p class="taking-koselugo__footnote">†Koselugo can lower the amount of blood pumped by the heart. Your child’s doctor should do tests before and during treatment to check how well your child’s heart is working.</p>
-        <p class="taking-koselugo__footnote">‡Koselugo can cause eye problems. Tell your child’s doctor as soon as possible if your child’s vision blurs or if any other changes to their sight occur during treatment.</p>
-        <article class="taking-koselugo__important-tip">
-          <header>
-            <p class="taking-koselugo__paragraph"><strong>Having the right support can make all the difference in your child’s treatment journey. Learn about the Patient Access Navigators who are ready to connect caregivers and patients to the personal assistance they need here.</strong></p>
-          </header>
-        </article>
-      </Section>
-      <Section noHeader className="taking-koselugo__container taking-koselugo__container--visit">
-        <p class="taking-koselugo__title color--aqua">Visit the Koselugo Frequently Asked Questions page</p>
-        <a href="/faqs.html" class="text--decoration-underline color--rose">Visit the FAQs here</a>
-      </Section>
-    </div>
+        <img
+          class="taking-koselugo__image koselugo-bottle"
+          src="/assets/images/taking-koselugo/koselugo-bottle.png"
+          alt=" "
+        />
+      </div>
+    </Section>
+    <Section
+      className="taking-koselugo__experience"
+      id="tracking-their-treatment"
+    >
+      <Fragment slot="section-title">
+        WHAT WAS THE EXPERIENCE LIKE FOR THOSE PATIENTS <span
+          class="color-yellow">TAKING KOSELUGO?</span
+        >
+      </Fragment>
+      <p class="taking-koselugo__paragraph">
+        <strong class="fweight--750"
+          >Your child is beginning treatment. It may be helpful to see what
+          other patients experienced.</strong
+        > The chart below is an overview of the first year of patients who took Koselugo
+        in a clinical study. It notes when patients responded to treatment and when
+        they experienced side effects.
+      </p>
+      <p class="taking-koselugo__paragraph">
+        It’s important to remember that everyone may respond to treatment
+        differently, so your child may not experience the same efficacy results
+        (tumor shrinkage) or the same side effects described below.
+      </p>
+      <p class="taking-koselugo__paragraph">
+        Please know that these are not all the possible efficacy results or side
+        effects your child may experience during treatment with Koselugo.
+      </p>
+      <p
+        class="taking-koselugo__paragraph taking-koselugo__paragraph--highlight color--aqua"
+      >
+        Use the chart below to track your child’s progress and any side effects
+        that may occur. Be sure to share your child’s experience with their
+        doctor.
+      </p>
+    </Section>
+    <picture class="taking-koselugo__image-container">
+      <source
+        media="(min-width: 1000px)"
+        srcset="/assets/images/taking-koselugo/patient-journey-chart-desktop.png"
+      />
+      <img
+        class="taking-koselugo__image patient-journey-chart"
+        src="/assets/images/taking-koselugo/patient-journey-chart-mobile.png"
+        alt=""
+      />
+    </picture>
+    <Section
+      noHeader
+      className="taking-koselugo__experience taking-koselugo__experience-continue"
+    >
+      <p class="taking-koselugo__footnote">
+        *Of the 33 patients that responded to Koselugo treatment in the clinical
+        trial, approximately one-half saw their tumor volume shrink by at least
+        20% within 7 months. The time of onset of response ranged from 3.3
+        months to 19.2 months.
+      </p>
+      <p class="taking-koselugo__footnote">
+        †Koselugo can lower the amount of blood pumped by the heart. Your
+        child’s doctor should do tests before and during treatment to check how
+        well your child’s heart is working.
+      </p>
+      <p class="taking-koselugo__footnote">
+        ‡Koselugo can cause eye problems. Tell your child’s doctor as soon as
+        possible if your child’s vision blurs or if any other changes to their
+        sight occur during treatment.
+      </p>
+      <article class="taking-koselugo__important-tip">
+        <header>
+          <p class="taking-koselugo__paragraph">
+            <strong
+              >Having the right support can make all the difference in your
+              child’s treatment journey. Learn about the Patient Access
+              Navigators who are ready to connect caregivers and patients to the
+              personal assistance they need here.</strong>
+          </p>
+        </header>
+      </article>
+    </Section>
+    <Section
+      noHeader
+      className="taking-koselugo__container taking-koselugo__container--visit"
+    >
+      <p class="taking-koselugo__title color--aqua">
+        Visit the Koselugo Frequently Asked Questions page
+      </p>
+      <a href="/faqs.html" class="text--decoration-underline color--rose"
+        >Visit the FAQs here</a
+      >
+    </Section>
+  </div>
 </Layout>
