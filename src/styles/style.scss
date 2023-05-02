@@ -1783,11 +1783,11 @@
             }
         }
 
-        @include media('desktop') {
-            .not-emphasis-desktop {
-                font-weight: 400;
-            }
-        }
+        // @include media('desktop') {
+        //     .not-emphasis-desktop {
+        //         font-weight: 400;
+        //     }
+        // }
     }
 
     &__experience {
