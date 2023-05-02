@@ -102,10 +102,20 @@ const eventToJSON = function (event) {
   const { eventId, eventType } = event.dataset
   const date = event.querySelector('.event__date').innerText.trim()
   const hour = event.querySelector('.event__hour').innerText.trim()
-  const type = event.querySelector('.event__type').innerText.trim()
   const title = event.querySelector('.event__title').innerText.trim()
   const presenter = event.querySelector('.event__presenter').innerText.trim()
   const description = event.querySelector('.event__description').innerText.trim()
+
+  let type = event.querySelector('.event__type')
+  if (type) {
+    type = type.innerText.trim()
+  }
+
+  let location = event.querySelector('.event__location')
+  if (location) {
+    location = location.innerHTML.trim()
+    console.log('🚀 ~ file: events-page.js:113 ~ eventToJSON ~ location:', location)
+  }
 
   return {
     id: eventId,
@@ -113,6 +123,7 @@ const eventToJSON = function (event) {
     date,
     hour,
     typeString: type,
+    location,
     title,
     description,
     presenter
@@ -121,19 +132,25 @@ const eventToJSON = function (event) {
 
 /**
  * Updates event form container with data from an event object
- * @param {{id: string, type: string, date: string, hour: string, typeString: string, title: string, description: string, presenter: string}} eventData
+ * @param {{id: string, type: string, date: string, hour: string, typeString: string, location: string, title: string, description: string, presenter: string}} eventData
  * @param {HTMLDivElement} form
 */
 const addEventDataToForm = (eventData, form) => {
   const eventTitleEl = form.querySelector('.events-form__title')
   const eventDateEl = form.querySelector('.events-form__date')
   const eventHourEl = form.querySelector('.events-form__hour')
+  const eventLocationEl = form.querySelector('.events-form__location')
   const eventIdInputEl = form.querySelector('.input-hidden')
 
   eventTitleEl.innerText = eventData.title
   eventDateEl.innerText = eventData.date
   eventHourEl.innerText = eventData.hour
   eventIdInputEl.value = eventData.id
+
+  if (eventData.location) {
+    eventLocationEl.innerHTML = eventData.location
+    eventLocationEl.removeAttribute('style')
+  }
 }
 
 /**
@@ -190,7 +207,7 @@ const destroyForm = () => {
 
 Displays a confirmation view with event and registration data.
 @param {HTMLDivElement} container - The container where the confirmation view will be appended.
-@param {{id: string, type: string, date: string, hour: string, typeString: string, title: string, description: string, presenter: string}} eventData - The data of the selected event.
+@param {{id: string, type: string, date: string, hour: string, typeString: string, location: string, title: string, description: string, presenter: string}} eventData - The data of the selected event.
 @param {{firstName: string, email: string}} formData - The registration data entered by the user.
 @returns {void}
 */
