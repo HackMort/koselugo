@@ -137,6 +137,27 @@ const addEventDataToForm = (eventData, form) => {
 }
 
 /**
+ * This function filters form controls based on the event type and removes those that are not
+ * applicable.
+ * @param {string} eventType - a string representing the type of event for which the form needs to be prepared.
+ * @param {HTMLFormElement} form - The `form` parameter is a reference to an HTML form element that will be modified
+ * based on the `eventType` parameter.
+ */
+const prepareFormAccordingEventType = (eventType, form) => {
+  const filterableControls = Array.from(form.querySelectorAll('.form__control[data-only-for-types]'))
+
+  filterableControls.forEach((control) => {
+    const onlyForTypes = [].concat(control.dataset.onlyForTypes.split(','))
+
+    const deleteControl = !onlyForTypes.includes(eventType)
+
+    if (deleteControl) {
+      control.parentElement.removeChild(control)
+    }
+  })
+}
+
+/**
 
 Scrolls to the top of the view by creating an anchor element, adding it to the body, clicking it, and removing it from the body.
 */
@@ -398,6 +419,8 @@ document.addEventListener('DOMContentLoaded', function () {
         eventListContainer.setAttribute('style', 'display: none;')
         const form = registerFormTemplate.content.cloneNode(true)
         addEventDataToForm(eventData, form)
+        prepareFormAccordingEventType(eventData.type, form)
+
         container.appendChild(form)
 
         scrollToViewTop()

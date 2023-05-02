@@ -335,6 +335,7 @@
                 data-field-index="8"
                 data-required="true"
                 data-is-valid="false"
+                data-only-for-types="in-person"
               >
                 <fieldset>
                   <div class="legend-container">
@@ -398,6 +399,7 @@
                 data-field-index="9"
                 data-required="false"
                 data-is-valid="false"
+                data-only-for-types="in-person"
               >
                 <fieldset>
                   <legend class="form__control-legend"
@@ -583,7 +585,7 @@
               <div
                 class="form__control"
                 data-touched="false"
-                data-required="false"
+                data-required="true"
                 data-is-valid="false"
               >
                 <div class="form__control-checkbox">
@@ -594,11 +596,18 @@
                     aria-required="false"
                   />
                   <label class="form__control-label" for="terms-and-conditions">
-                    By checking this box and submitting this form, I give
-                    Alexion permission to provide promotional information to me
-                    or otherwise contact me about Alexion products, services,
-                    programs, or other topics that Alexion thinks may interest
-                    me. I have read and understand the Alexion Privacy Notice.
+                    <strong>By checking this box and submitting this form, I can confirm and agree to the following:</strong>
+
+                    <ul>
+                        <li>If I have NF1 PN or care for someone who does, I confirm I am 18 years of age or older.</li>
+                        <li>If I care for someone living with NF1 PN, I confirm this person is also at least 18 years of age.</li>
+                        <li>
+                            I agree to my personal data being processed in this Registration Portal for the purposes of registering my interest in attending an upcoming patient program sponsored by Alexion.
+                        </li>
+                        <li>
+                            I am giving Alexion permission to contact me for marketing purposes or otherwise provide me with information about Alexion’s products, services, and programs or other topics of interest, and to conduct market research or surveys.
+                        </li>
+                    </ul>
                   </label>
                 </div>
               </div>
