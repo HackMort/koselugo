@@ -7,12 +7,18 @@
   padding-bottom: 2.5rem;
 
   scroll-margin-top: 150px;
+
   p {
     margin-bottom: .5rem;
   }
 
   strong {
     font-weight: 500;
+  }
+
+  a {
+    color: $color-rose;
+    text-decoration: underline;
   }
 
   &__section_heading {
@@ -61,7 +67,7 @@
       position: relative;
       max-width: calc(100% - 2rem);
 
-      @media screen and (min-width: 1440px) {
+      @media screen and (min-width: 1500px) {
         max-width: 90rem;
       }
     }

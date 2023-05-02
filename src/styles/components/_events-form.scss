@@ -18,10 +18,16 @@
             overflow-y: hidden;
             max-height: 48.125rem;
 
-            transition: max-height 200ms ease;
+            // transition: max-height 200ms ease;
+
+            @media screen and (min-width: 768px) {
+                height: 48.125rem;
+                max-height: 100%;
+            }
 
             &--expanded {
-                max-height: calc(48.125rem + (48.125rem * 4));
+                // max-height: calc(48.125rem + (48.125rem * 4));
+                overflow-y: scroll;
             }
 
             .events-list__title {
@@ -82,7 +88,7 @@
 
                         .event__schedule {
                             display: flex;
-                            margin-bottom: .0625rem;
+                            margin-bottom: .35rem;
 
                             span {
                                 color: $color-navy-300;
@@ -94,6 +100,14 @@
                                 &:not(:first-of-type) {
                                     padding: 0 .5rem;
                                     border-left: 1px solid $color-navy-300;
+                                }
+
+                                .venue__link {
+                                    display: inline;
+                                    font-family: 'Lato';
+                                    font-size: .875rem;
+                                    line-height: .875rem;
+                                    font-weight: 600;
                                 }
                             }
                         }
@@ -177,6 +191,8 @@
 
             .events-form__schedule {
                 display: flex;
+                font-size: 14px;
+                line-height: 14px;
                 margin-bottom: .25rem;
 
                 span {
@@ -190,6 +206,12 @@
                         padding: 0 .5rem;
                         border-left: 1px solid $color-navy-300;
                     }
+
+                    .venue__link {
+                        display: inline;
+                        font-size: 14px;
+                        line-height: 14px;
+                    }
                 }
             }
 
@@ -198,7 +220,7 @@
                 font-weight: 400;
                 line-height: 12px;
                 color: $color-boulder;
-                max-width: 5.625rem;
+                // max-width: 5.625rem;
                 font-family: $montserrat-font;
             }
         }
@@ -251,6 +273,15 @@
             font-family: $montserrat-font;
 
             margin-bottom: 1.5rem;
+
+            .venue__link {
+                color: $color-boulder;
+                font-weight: 600;
+                display: block;
+                font-size: .875rem;
+                margin-top: .3125rem;
+                margin-bottom: .3125rem;
+            }
         }
 
         .confirmation__callout {

@@ -304,14 +304,30 @@ document.addEventListener('DOMContentLoaded', function () {
   const toggler = document.querySelector('.event-list__toggler')
   const eventListWrapper = document.querySelector('.events-list__wrapper')
 
+  function scrollToBottomOfWrapper (element) {
+    element.scroll({ top: element.scrollHeight, behavior: 'smooth' })
+  }
+
+  function scrollToTopOfTheWrapper (element) {
+    element.scroll({ top: 0, behavior: 'smooth' })
+  }
+
   const expandedClass = 'events-list__wrapper--expanded'
   const togglerExpandedClass = 'event-list__toggler--expanded'
 
   /* Checking if the toggler is there, if it is, it adds an event listener to it. */
   if (toggler) {
     toggler.addEventListener('click', function () {
-      toggler.classList.toggle(togglerExpandedClass)
-      if (eventListWrapper) { eventListWrapper.classList.toggle(expandedClass) }
+      if (eventListWrapper) {
+        if (toggler.classList.contains('event-list__toggler--expanded')) {
+          scrollToTopOfTheWrapper(eventListWrapper)
+          toggler.classList.remove(togglerExpandedClass)
+          return
+        }
+        toggler.classList.add(togglerExpandedClass)
+        eventListWrapper.classList.add(expandedClass)
+        scrollToBottomOfWrapper(eventListWrapper)
+      }
     })
   }
   // Event list expander

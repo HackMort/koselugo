@@ -345,6 +345,7 @@
 }
 
 .side-effects__link {
+    color: $color-rose;
     text-decoration: none;
     font-weight: 500;
 }
@@ -678,7 +679,7 @@
             .form__control-submit {
                 &.disabled {
                     cursor: not-allowed;
-                    background-color: $color-gray;
+                    // background-color: $color-gray;
                     padding: .75rem 1.5rem;
 
                     &:hover::after {
@@ -1146,6 +1147,7 @@
         margin-top: 3.6513rem;
         margin-bottom: 2.3438rem;
         max-width: 32.0625rem;
+        line-height: 1.4175rem;
         text-align: center;
 
         a {
@@ -1153,8 +1155,8 @@
             padding: 0;
             font-size: 1.125rem;
             line-height: 1.5625rem;
-            font-weight: bold;
-            font-family: $franklin-font;
+            font-weight: 600;
+            font-family: 'ITC-Franklin-Gothic';
             letter-spacing: normal !important;
 
             @include media('tablet') {
@@ -1772,6 +1774,11 @@
                         .taking-koselugo__paragraphs-container {
                             align-self: flex-start;
                             max-width: 75%;
+
+                            p a {
+                                font-weight: 600;
+                            }
+
                         }
 
                         .taking-koselugo__list.limit-width {
@@ -1782,11 +1789,11 @@
             }
         }
 
-        @include media('desktop') {
-            .not-emphasis-desktop {
-                font-weight: 400;
-            }
-        }
+        // @include media('desktop') {
+        //     .not-emphasis-desktop {
+        //         font-weight: 400;
+        //     }
+        // }
     }
 
     &__experience {
@@ -1811,8 +1818,10 @@
                 margin-bottom: 0.5rem;
 
                 &--highlight {
-                    font-size: 18px;
-                    line-height: 20.41px;
+                    font-size: 1.125rem;
+                    font-weight: 600;
+                    line-height: 1.5588rem;
+                    margin-top: 1.5rem;
                     margin-bottom: 1.5rem;
 
                     @media (min-width:1000px) {
