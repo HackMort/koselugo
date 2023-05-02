@@ -679,7 +679,7 @@
             .form__control-submit {
                 &.disabled {
                     cursor: not-allowed;
-                    background-color: $color-gray;
+                    // background-color: $color-gray;
                     padding: .75rem 1.5rem;
 
                     &:hover::after {
