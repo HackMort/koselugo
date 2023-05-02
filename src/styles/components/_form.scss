@@ -118,7 +118,7 @@ input {
             content: '*';
             color: $color-red;
             display: inline-block;
-            margin-left: .25rem;
+            // margin-left: .25rem;
         }
     }
 
@@ -165,6 +165,7 @@ input {
 
         .form__control-label {
             cursor: pointer;
+
             &::after {
                 display: none;
             }
