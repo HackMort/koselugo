@@ -102,13 +102,25 @@
                 }
 
                 @media screen and (min-width: 1900px) {
-                    right: 36%;
+                    right: 32.5%;
                     transform: translateX(50%);
+                }
+
+                @media screen and (min-width: 2100px) {
+                    right: 34%;
+                }
+
+                @media screen and (min-width: 2300px) {
+                    right: 35%;
+                }
+
+                @media screen and (min-width: 2500px) {
+                    right: 36%;
                 }
 
                 .main-hero__picture {
                     width: auto;
-                    max-width: max-content  ;
+                    max-width: max-content;
                     height: fit-content;
 
                     height: 295px;
