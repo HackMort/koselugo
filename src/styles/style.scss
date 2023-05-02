@@ -521,6 +521,8 @@
                     }
                 }
 
+
+
             }
 
             .hero__content {
@@ -530,6 +532,38 @@
                 padding-right: 0;
                 padding-bottom: 1.5rem;
                 padding-left: 1.5rem;
+            }
+        }
+
+        @media screen and (min-width: 1440px) {
+
+            picture {
+                position: relative;
+                z-index: 1;
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    left: 100%;
+                    width: 2000px;
+                    height: 100%;
+                    background-color: #e2f8ff;
+                    z-index: -1;
+                }
+
+                &::before {
+                    left: -80%;
+                    right: 100%;
+                    background-color: $color-white;
+                }
+            }
+
+            .hero__content {
+                position: relative;
+                z-index: 2;
             }
         }
     }
