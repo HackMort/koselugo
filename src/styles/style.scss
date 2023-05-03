@@ -1216,13 +1216,13 @@
 #faqs-pdf {
 
     @media screen and (min-width:1020px) {
-        margin-top: -5rem;
-        margin-left: 15rem;
-        margin-bottom: 5rem;
+        margin-top: -1rem;
+        margin-bottom: 1rem;
     }
 
-    @media screen and (min-width:1060px) {
-        margin-left: 7rem;
+    @media screen and (min-width:1200px) {
+        margin-top: -4.75rem;
+        margin-bottom: 3rem;
     }
 }
 
@@ -1871,6 +1871,7 @@
 
             @media(min-width: 1000px) {
                 padding: 3rem;
+                padding-bottom: 6rem;
             }
 
             .custom-section__content {
@@ -1972,8 +1973,13 @@
             @include media('tablet') {
                 font-size: 22px;
                 line-height: 24.94px;
+                margin-bottom: 0.5rem;
                 max-width: 48ch;
             }
+        }
+
+        a.color--rose {
+            font-weight: 600;
         }
     }
 
@@ -2072,8 +2078,11 @@
             }
 
             @media(min-width: 1024px) {
+                position: relative;
                 box-sizing: border-box;
+                margin-top: -50px;
                 width: 900px;
+                z-index: 2;
             }
 
             .taking-koselugo__paragraph {
@@ -2083,6 +2092,16 @@
 
                 &:first-child {
                     margin-bottom: 10px;
+                }
+
+                a {
+                    color: $color-white;
+                }
+
+                @media screen and (min-width: 1024px) {
+                    font-size: 1.3125rem;
+                    line-height: 1.4881rem;
+                    max-width: 39.0625rem;
                 }
             }
         }
