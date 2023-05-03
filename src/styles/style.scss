@@ -940,6 +940,7 @@
 
 .plexiform-paragraph {
     margin-top: 1rem;
+    margin-bottom: 1rem;
 
     @include media('tablet') {
 
@@ -1357,7 +1358,8 @@
                         align-items: center;
                         @include flex-gap(1.5rem);
                         justify-content: center;
-                        margin-top: 1rem;
+                        margin-top: 2rem;
+                        margin-bottom: 1rem;
                     }
                 }
             }
@@ -1368,7 +1370,8 @@
 
                 @media (min-width: 700px) {
                     margin: 0;
-                    width: fit-content;
+                    // width: fit-content;
+                    width: 9rem;
                 }
             }
         }
@@ -1430,6 +1433,10 @@
 
     &__journeys {
         background-color: transparent;
+
+        @include media('tablet') {
+            padding-top: 1.25rem;
+        }
     }
 
     &__support-program {
@@ -1522,7 +1529,13 @@
 
             .button {
                 margin: 0 auto;
+                height: auto;
                 padding-top: 0;
+
+                @include media('tablet') {
+                    padding-bottom: 0;
+                    margin-bottom: 3.25rem;
+                }
             }
 
             .about-koselugo__title {
@@ -1562,6 +1575,7 @@
     .custom-section {
         @include media('tablet') {
             margin-top: 2rem;
+            padding-top: 0;
         }
 
         &:nth-child(even) {
