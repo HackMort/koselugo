@@ -125,7 +125,7 @@ html.is--menu-open {
         position: relative;
         color: $color-dark-purple;
         font-family: Lato;
-        font-weight: 500;
+        font-weight: 600;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -136,7 +136,6 @@ html.is--menu-open {
 
         &.current-page {
           color: $color-rose;
-          font-weight: 500;
 
           @include media('desktop') {
             &::after {
@@ -160,7 +159,7 @@ html.is--menu-open {
             border: 0.5px solid #A3A3A3;
             height: 23.41px;
             width: 0px;
-            left: -5px;
+            left: -6px;
           }
 
           @media screen and (min-width: 1365px) {
