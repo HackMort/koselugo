@@ -1,6 +1,6 @@
 .pem {
   color: $color-dark-purple;
-  display: grid;
+  display: none;
   grid-template-columns: 1fr;
   font-weight: 400;
   font-size: 1.125rem;
@@ -8,6 +8,11 @@
   margin-bottom: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  transition: all 0.3s ease-in-out;
+
+  &.is--showing {
+    display: grid;
+  }
 
   @include media('tablet') {
     grid-template-columns: repeat(2, 1fr);
@@ -106,6 +111,7 @@
 
 #pem-finder {
   scroll-margin-top: 130px;
+
   @media screen and (min-width: 768px) {
     scroll-margin-top: 220px;
   }
