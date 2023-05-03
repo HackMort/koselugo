@@ -2297,3 +2297,21 @@
         color: #434343;
     }
 }
+
+#thankYouModal {
+    .modal__wrapper {
+        height: 100%;
+
+        .modal__content {
+            display: flex;
+            align-items: center;
+            height: 100%;
+
+            .modal__title {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+
+}
