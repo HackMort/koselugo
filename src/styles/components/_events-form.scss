@@ -423,3 +423,8 @@
         }
     }
 }
+
+.form__control-checkboxes.dietary {
+    display: grid;
+    grid-template-columns: repeat(2, 170px);
+}
