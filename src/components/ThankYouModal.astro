@@ -1,0 +1,55 @@
+---
+---
+
+<div class="modal" id="thankYouModal" style="display: none;">
+  <div class="modal__wrapper" tabindex="-1">
+    <button
+      class="button modal__close"
+      data-dismiss="thankYouModal"
+      aria-label="Close modal"
+    >
+      x
+    </button>
+    <div class="modal__content">
+      <h1 class="modal__title">
+        Thank you for providing us with this information.
+      </h1>
+    </div>
+  </div>
+</div>
+
+<script>
+  import { Fancybox } from "@fancyapps/ui";
+
+  const form = document.querySelector(".stay__informed .form");
+  const modal = document.querySelector("#thankYouModal");
+  const modalClose: HTMLButtonElement = modal.querySelector(".modal__close");
+  modalClose.addEventListener("click", () => {
+    Fancybox.close();
+  });
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    Fancybox.show(
+      [
+        {
+          src: "#thankYouModal",
+          type: "inline",
+          dragToClose: false,
+          autoFocus: true,
+          placeFocusBack: true,
+          trapFocus: true,
+        },
+      ],
+      {
+        on: {
+          done: () => {},
+          close: () => {
+            // clear form
+            form.reset();
+            modalClose.click();
+          },
+        },
+      }
+    );
+  });
+</script>
