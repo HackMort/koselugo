@@ -114,7 +114,6 @@ const eventToJSON = function (event) {
   let location = event.querySelector('.event__location')
   if (location) {
     location = location.innerHTML.trim()
-    console.log('🚀 ~ file: events-page.js:113 ~ eventToJSON ~ location:', location)
   }
 
   return {
@@ -219,14 +218,19 @@ const showConfirmationView = (container, eventData, formData) => {
   const eventTitleEl = confirmationView.querySelector('.confirmation__event-title')
   const eventDateEl = confirmationView.querySelector('.event__date')
   const eventHourEl = confirmationView.querySelector('.event__hour')
+  const eventLocationEl = confirmationView.querySelector('.confirmation__location')
   const confirmationEmailEl = confirmationView.querySelector('.confirmation__email')
 
   firstNameEl.innerText = formData.firstName
-  eventTypeEl.innerText = eventData.typeString
+  eventTypeEl.innerText = eventData.type
   eventTitleEl.innerText = eventData.title
   eventDateEl.innerText = eventData.date
   eventHourEl.innerText = eventData.hour
   confirmationEmailEl.innerText = formData.email
+
+  if (eventData.location) {
+    // eventLocationEl.innerHTML = eventData.location
+  }
 
   container.appendChild(confirmationView)
 

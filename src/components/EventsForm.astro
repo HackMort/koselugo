@@ -94,11 +94,11 @@
                             <span class="event__date">July 09, 2023</span><span
                                 class="event__hour">9:00 PM</span
                             ><span class="event__location">
-                                    <a
-                                        href="https://www.google.com/maps/search/1234+Street+Rd+City,+MA+01234/@42.0313812,-73.0051344,8z/data=!3m1!4b1"
-                                        target="_blank"
-                                        class="venue__link">Venue</a
-                                    > City, State
+                                <a
+                                    href="https://www.google.com/maps/search/1234+Street+Rd+City,+MA+01234/@42.0313812,-73.0051344,8z/data=!3m1!4b1"
+                                    target="_blank"
+                                    class="venue__link">Venue</a
+                                > City, State
                             </span>
                         </div>
                         <p class="event__title">
@@ -176,7 +176,8 @@
                 <div class="events-form__schedule">
                     <span class="events-form__date">July 01, 2023</span>
                     <span class="events-form__hour">7:00 PM</span>
-                    <span class="events-form__location" style="display: none"></span>
+                    <span class="events-form__location" style="display: none"
+                    ></span>
                 </div>
             </div>
             <div class="form__steps">
@@ -447,85 +448,6 @@
                             <div
                                 class="form__control"
                                 data-touched="false"
-                                data-field-index="9"
-                                data-required="false"
-                                data-is-valid="false"
-                                data-only-for-types="in-person"
-                            >
-                                <fieldset>
-                                    <legend class="form__control-legend"
-                                        >Do you have any dietary restrictions?
-                                        Select all that apply.</legend
-                                    >
-                                    <div class="form__control-checkboxes">
-                                        <div
-                                            class="form__control-checkbox form__control-checkbox--rounded"
-                                        >
-                                            <input
-                                                id="vegerarian"
-                                                type="checkbox"
-                                                name="dietary-restriction"
-                                                value="Vegetarian"
-                                                aria-required="false"
-                                            />
-                                            <label
-                                                class="form__control-label"
-                                                for="vegerarian"
-                                                >Vegetarian</label
-                                            >
-                                        </div>
-                                        <div
-                                            class="form__control-checkbox form__control-checkbox--rounded"
-                                        >
-                                            <input
-                                                id="vegan"
-                                                type="checkbox"
-                                                name="dietary-restriction"
-                                                value="Vegan"
-                                                aria-required="false"
-                                            />
-                                            <label
-                                                class="form__control-label"
-                                                for="vegan">Vegan</label
-                                            >
-                                        </div>
-                                        <div
-                                            class="form__control-checkbox form__control-checkbox--rounded"
-                                        >
-                                            <input
-                                                id="gluten-free"
-                                                type="checkbox"
-                                                name="dietary-restriction"
-                                                value="Gluten-free"
-                                                aria-required="false"
-                                            />
-                                            <label
-                                                class="form__control-label"
-                                                for="gluten-free"
-                                                >Gluten-free</label
-                                            >
-                                        </div>
-                                        <div
-                                            class="form__control-checkbox form__control-checkbox--rounded"
-                                        >
-                                            <input
-                                                id="kosher"
-                                                type="checkbox"
-                                                name="dietary-restriction"
-                                                value="Kosher"
-                                                aria-required="false"
-                                            />
-                                            <label
-                                                class="form__control-label"
-                                                for="kosher">Kosher</label
-                                            >
-                                        </div>
-                                    </div>
-                                </fieldset>
-                            </div>
-                            <div
-                                class="form__control"
-                                data-touched="false"
                                 data-required="false"
                                 data-is-valid="false"
                             >
@@ -600,7 +522,6 @@
                             <div
                                 class="form__control form__control--basic-education"
                                 data-touched="false"
-                                data-field-index="9"
                                 data-required="false"
                                 data-is-valid="false"
                             >
@@ -665,6 +586,86 @@
                             <div
                                 class="form__control"
                                 data-touched="false"
+                                data-required="false"
+                                data-is-valid="false"
+                                data-only-for-types="in-person"
+                            >
+                                <fieldset>
+                                    <legend class="form__control-legend"
+                                        >Do you have any dietary restrictions?
+                                        Select all that apply.</legend
+                                    >
+                                    <div
+                                        class="form__control-checkboxes dietary"
+                                    >
+                                        <div
+                                            class="form__control-checkbox form__control-checkbox--rounded"
+                                        >
+                                            <input
+                                                id="vegerarian"
+                                                type="checkbox"
+                                                name="dietary-restriction"
+                                                value="Vegetarian"
+                                                aria-required="false"
+                                            />
+                                            <label
+                                                class="form__control-label"
+                                                for="vegerarian"
+                                                >Vegetarian</label
+                                            >
+                                        </div>
+                                        <div
+                                            class="form__control-checkbox form__control-checkbox--rounded"
+                                        >
+                                            <input
+                                                id="vegan"
+                                                type="checkbox"
+                                                name="dietary-restriction"
+                                                value="Vegan"
+                                                aria-required="false"
+                                            />
+                                            <label
+                                                class="form__control-label"
+                                                for="vegan">Vegan</label
+                                            >
+                                        </div>
+                                        <div
+                                            class="form__control-checkbox form__control-checkbox--rounded"
+                                        >
+                                            <input
+                                                id="gluten-free"
+                                                type="checkbox"
+                                                name="dietary-restriction"
+                                                value="Gluten-free"
+                                                aria-required="false"
+                                            />
+                                            <label
+                                                class="form__control-label"
+                                                for="gluten-free"
+                                                >Gluten-free</label
+                                            >
+                                        </div>
+                                        <div
+                                            class="form__control-checkbox form__control-checkbox--rounded"
+                                        >
+                                            <input
+                                                id="kosher"
+                                                type="checkbox"
+                                                name="dietary-restriction"
+                                                value="Kosher"
+                                                aria-required="false"
+                                            />
+                                            <label
+                                                class="form__control-label"
+                                                for="kosher">Kosher</label
+                                            >
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div
+                                class="form__control"
+                                data-touched="false"
                                 data-required="true"
                                 data-is-valid="false"
                             >
@@ -673,7 +674,10 @@
                                         id="terms-and-conditions"
                                         type="checkbox"
                                         name="terms-and-conditions"
-                                        aria-required="false"
+                                        aria-required="true"
+                                        required
+                                        onblur="validateFormControl(event); checkStepValidity(event)"
+                                        onchange="validateFormControl(event); checkStepValidity(event)"
                                     />
                                     <label
                                         class="form__control-label"
@@ -684,6 +688,8 @@
                                             this form, I can confirm and agree
                                             to the following:</strong
                                         >
+
+                                        <br /><br />
 
                                         <ul>
                                             <li>
@@ -719,6 +725,9 @@
                                         </ul>
                                     </label>
                                 </div>
+                                <p class="form__control-error">
+                                    Important info/error
+                                </p>
                             </div>
                         </div>
                         <div class="step__form-actions">
@@ -763,11 +772,14 @@
                 >
             </h4>
             <p class="confirmation__address">
-                <a
-                    href="https://www.google.com/maps/search/1234+Street+Rd+City,+MA+01234/@42.0313812,-73.0051344,8z/data=!3m1!4b1"
-                    target="_blank"
-                    class="venue__link">Venue name</a
-                > 1234 Street Rd City, MA 01234
+                <span class="confirmation__location">
+                    <a
+                        href="https://www.google.com/maps/search/1234+Street+Rd+City,+MA+01234/@42.0313812,-73.0051344,8z/data=!3m1!4b1"
+                        target="_blank"
+                        class="venue__link">Venue name</a
+                    >
+                </span>
+                1234 Street Rd City, MA 01234
             </p>
             <p class="confirmation__message">
                 A confirmation has been sent to <span
