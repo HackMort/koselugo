@@ -337,7 +337,9 @@ function checkStepValidity (event) {
   if (isInvalid) {
     nextButton.setAttribute('disabled', 'true')
   } else {
-    nextButton.removeAttribute('disabled')
+    if (nextButton) {
+      nextButton.removeAttribute('disabled')
+    }
   }
 }
 
