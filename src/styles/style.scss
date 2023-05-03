@@ -74,6 +74,20 @@
     @include media('mobile') {
         max-width: 100% !important;
     }
+
+    .possible-side-effects {
+        @media screen and (min-width: 1024px) {
+            padding-bottom: 6rem;
+        }
+    }
+
+
+    .side-effects-page--secondary-section:not(:last-of-type) {
+        @media screen and (min-width: 1024px) {
+            margin-top: -48px;
+        }
+    }
+
 }
 
 .side-effects-page--section__heading {
@@ -351,6 +365,7 @@
 }
 
 .side-effects-page--disclaimer {
+    position: relative;
     font-weight: 600;
     font-size: 20px;
     background-color: $color-white;
@@ -359,6 +374,22 @@
     margin: 20px auto;
     padding: 39px 49px;
 
+
+    @media screen and (min-width: 1024px) {
+        padding-top: 24px;
+        padding-right: 24px;
+        padding-bottom: 12px;
+        padding-left: 24px;
+
+        &.side-effects-page--disclaimer__two {
+            margin-top: 40px;
+
+            @include media('desktop') {
+                width: 75%;
+            }
+        }
+    }
+
     @include media('desktop') {
         width: 70%;
     }
@@ -366,6 +397,13 @@
 
 .side-effects-page--disclaimer__two {
     padding: 39px 20px !important;
+
+    @media screen and (min-width: 1024px) {
+        padding-top: 24px !important;
+        padding-right: 24px !important;
+        padding-bottom: 12px !important;
+        padding-left: 24px !important;
+    }
 }
 
 .side-effects-page--disclaimer__overlapping {
@@ -386,6 +424,10 @@
     font-weight: 600;
     font-size: 20px;
     margin: 39px 60px 0px 60px;
+
+    ~.button {
+        padding-top: 0;
+    }
 }
 
 .side-effects-page--secondary-section {
@@ -940,6 +982,7 @@
 
 .plexiform-paragraph {
     margin-top: 1rem;
+    margin-bottom: 1rem;
 
     @include media('tablet') {
 
@@ -1014,6 +1057,12 @@
 
     }
 
+    .button--basic {
+        font-family: 'Lato';
+        font-weight: 600;
+        padding-top: 0;
+    }
+
     h6 {
         text-align: center;
     }
@@ -1076,6 +1125,7 @@
         max-width: 644px;
 
         a {
+            font-weight: 600;
             padding-top: 0;
         }
     }
@@ -1326,6 +1376,10 @@
 ******************************************************/
 .about-koselugo {
     &__clinical-study {
+        @media (min-width: 768px) {
+            padding-top: 4rem;
+        }
+
         .about-koselugo {
             &__container {
                 &--results-description {
@@ -1357,7 +1411,8 @@
                         align-items: center;
                         @include flex-gap(1.5rem);
                         justify-content: center;
-                        margin-top: 1rem;
+                        margin-top: 2rem;
+                        margin-bottom: 1rem;
                     }
                 }
             }
@@ -1368,7 +1423,8 @@
 
                 @media (min-width: 700px) {
                     margin: 0;
-                    width: fit-content;
+                    // width: fit-content;
+                    width: 9rem;
                 }
             }
         }
@@ -1382,12 +1438,14 @@
         background-color: transparent;
 
         @include media('tablet') {
-            padding-bottom: 3rem;
+            margin-top: 2rem;
+            padding-bottom: 2rem;
         }
 
         &.about-koselugo__container--visit {
             .button {
                 display: none;
+                font-weight: 600;
 
                 &--only-mobile {
                     display: flex;
@@ -1395,6 +1453,7 @@
 
                 @include media('tablet') {
                     display: flex;
+                    padding-top: 0;
 
                     &--only-mobile {
                         display: none;
@@ -1430,6 +1489,10 @@
 
     &__journeys {
         background-color: transparent;
+
+        @include media('tablet') {
+            padding-top: 1.25rem;
+        }
     }
 
     &__support-program {
@@ -1522,7 +1585,15 @@
 
             .button {
                 margin: 0 auto;
+                height: auto;
                 padding-top: 0;
+                margin-top: 0.25rem;
+                font-weight: 600;
+
+                @include media('tablet') {
+                    padding-bottom: 0;
+                    margin-bottom: 3.25rem;
+                }
             }
 
             .about-koselugo__title {
@@ -1534,7 +1605,8 @@
                 }
 
                 @include media('desktop') {
-                    max-width: 50ch;
+                    margin-top: 0.5rem;
+                    max-width: 56ch;
                 }
             }
         }
@@ -1562,6 +1634,7 @@
     .custom-section {
         @include media('tablet') {
             margin-top: 2rem;
+            padding-top: 0;
         }
 
         &:nth-child(even) {
@@ -1773,6 +1846,10 @@
 
     &__doses {
 
+        @media screen and (min-width: 1024px) {
+            padding-bottom: 0;
+        }
+
         .first-indication {
             line-height: 18px;
 
@@ -1973,8 +2050,12 @@
             @include media('tablet') {
                 font-size: 22px;
                 line-height: 24.94px;
-                margin-bottom: 0.5rem;
-                max-width: 48ch;
+                margin-bottom: 0;
+                max-width: 62ch;
+
+                ~.button {
+                    padding-top: 0;
+                }
             }
         }
 
@@ -2078,12 +2159,13 @@
             }
 
             @media(min-width: 1024px) {
-                position: relative;
                 box-sizing: border-box;
-                margin-top: -50px;
                 width: 900px;
-                z-index: 2;
+
+
             }
+
+
 
             .taking-koselugo__paragraph {
                 color: $color-white;
@@ -2131,6 +2213,15 @@
                     max-width: 60ch;
                 }
             }
+        }
+    }
+
+    &__important-tip.mt-desktop {
+        @media screen and (min-width: 1024px) {
+            position: relative;
+            margin-top: -3.75rem;
+            z-index: 2;
+
         }
     }
 
@@ -2205,4 +2296,22 @@
     .color--arsenic-black {
         color: #434343;
     }
+}
+
+#thankYouModal {
+    .modal__wrapper {
+        height: 100%;
+
+        .modal__content {
+            display: flex;
+            align-items: center;
+            height: 100%;
+
+            .modal__title {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+
 }
