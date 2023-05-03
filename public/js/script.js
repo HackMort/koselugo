@@ -215,6 +215,14 @@ function changeScrollMarginTopVariable () {
 
   const marginScrollTop = sectionMarginTop + siteHeaderHeight
   rootElement.style.setProperty('--margin-top-scroll-var', marginScrollTop + 'px')
+
+  const pemForm = document.querySelector('.savings__page .hero__content_form')
+  if (pemForm) {
+    pemForm.addEventListener('submit', (e) => {
+      e.preventDefault()
+      showRandomPemSection()
+    })
+  }
 }
 
 /* Function that will be executed when the hash change  */
@@ -227,4 +235,16 @@ function internalNavigationScroll () {
     const scrollPosition = internalSection.offsetTop - mainContainer.scrollTop - siteHeader.scrollHeight
     window.scroll({ top: scrollPosition, left: 0, behavior: 'smooth' })
   }
+}
+
+// function to show a random .pem section in PEM finder
+function showRandomPemSection () {
+  const pemSections = document.querySelectorAll('.pem')
+  // hide all sections
+  pemSections.forEach((section) => {
+    section.classList.remove('is--showing')
+  })
+  const randomIndex = Math.floor(Math.random() * pemSections.length)
+  // fade in the random section
+  pemSections[randomIndex].classList.add('is--showing')
 }
