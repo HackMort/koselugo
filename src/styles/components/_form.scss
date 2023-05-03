@@ -1,6 +1,9 @@
 input {
     width: 100%;
-    cursor: pointer;
+
+    &[type="submit"] {
+        cursor: pointer;
+    }
 
     &[type="checkbox"],
     &[type="radio"] {
@@ -159,9 +162,7 @@ input {
         display: flex;
         align-items: center;
 
-        &:not(:last-of-type) {
-            margin-bottom: .5rem;
-        }
+        margin-bottom: .5rem;
 
         input {
             margin-right: .625rem;
@@ -185,6 +186,20 @@ input {
             font-weight: 300;
             line-height: 14px;
             letter-spacing: .6px;
+
+            ul {
+                transform: translateX(.75rem);
+                max-width: calc(100% - .75rem);
+
+                li {
+                    line-height: initial;
+                    list-style-type: circle;
+
+                    &::marker {
+                        color: $color-dark;
+                    }
+                }
+            }
         }
 
         &.form__control-checkbox--rounded {

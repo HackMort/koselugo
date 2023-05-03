@@ -102,10 +102,19 @@ const eventToJSON = function (event) {
   const { eventId, eventType } = event.dataset
   const date = event.querySelector('.event__date').innerText.trim()
   const hour = event.querySelector('.event__hour').innerText.trim()
-  const type = event.querySelector('.event__type').innerText.trim()
   const title = event.querySelector('.event__title').innerText.trim()
   const presenter = event.querySelector('.event__presenter').innerText.trim()
   const description = event.querySelector('.event__description').innerText.trim()
+
+  let type = event.querySelector('.event__type')
+  if (type) {
+    type = type.innerText.trim()
+  }
+
+  let location = event.querySelector('.event__location')
+  if (location) {
+    location = location.innerHTML.trim()
+  }
 
   return {
     id: eventId,
@@ -113,6 +122,7 @@ const eventToJSON = function (event) {
     date,
     hour,
     typeString: type,
+    location,
     title,
     description,
     presenter
@@ -121,19 +131,46 @@ const eventToJSON = function (event) {
 
 /**
  * Updates event form container with data from an event object
- * @param {{id: string, type: string, date: string, hour: string, typeString: string, title: string, description: string, presenter: string}} eventData
+ * @param {{id: string, type: string, date: string, hour: string, typeString: string, location: string, title: string, description: string, presenter: string}} eventData
  * @param {HTMLDivElement} form
 */
 const addEventDataToForm = (eventData, form) => {
   const eventTitleEl = form.querySelector('.events-form__title')
   const eventDateEl = form.querySelector('.events-form__date')
   const eventHourEl = form.querySelector('.events-form__hour')
+  const eventLocationEl = form.querySelector('.events-form__location')
   const eventIdInputEl = form.querySelector('.input-hidden')
 
   eventTitleEl.innerText = eventData.title
   eventDateEl.innerText = eventData.date
   eventHourEl.innerText = eventData.hour
   eventIdInputEl.value = eventData.id
+
+  if (eventData.location) {
+    eventLocationEl.innerHTML = eventData.location
+    eventLocationEl.removeAttribute('style')
+  }
+}
+
+/**
+ * This function filters form controls based on the event type and removes those that are not
+ * applicable.
+ * @param {string} eventType - a string representing the type of event for which the form needs to be prepared.
+ * @param {HTMLFormElement} form - The `form` parameter is a reference to an HTML form element that will be modified
+ * based on the `eventType` parameter.
+ */
+const prepareFormAccordingEventType = (eventType, form) => {
+  const filterableControls = Array.from(form.querySelectorAll('.form__control[data-only-for-types]'))
+
+  filterableControls.forEach((control) => {
+    const onlyForTypes = [].concat(control.dataset.onlyForTypes.split(','))
+
+    const deleteControl = !onlyForTypes.includes(eventType)
+
+    if (deleteControl) {
+      control.parentElement.removeChild(control)
+    }
+  })
 }
 
 /**
@@ -169,7 +206,7 @@ const destroyForm = () => {
 
 Displays a confirmation view with event and registration data.
 @param {HTMLDivElement} container - The container where the confirmation view will be appended.
-@param {{id: string, type: string, date: string, hour: string, typeString: string, title: string, description: string, presenter: string}} eventData - The data of the selected event.
+@param {{id: string, type: string, date: string, hour: string, typeString: string, location: string, title: string, description: string, presenter: string}} eventData - The data of the selected event.
 @param {{firstName: string, email: string}} formData - The registration data entered by the user.
 @returns {void}
 */
@@ -181,14 +218,19 @@ const showConfirmationView = (container, eventData, formData) => {
   const eventTitleEl = confirmationView.querySelector('.confirmation__event-title')
   const eventDateEl = confirmationView.querySelector('.event__date')
   const eventHourEl = confirmationView.querySelector('.event__hour')
+  const eventLocationEl = confirmationView.querySelector('.confirmation__location')
   const confirmationEmailEl = confirmationView.querySelector('.confirmation__email')
 
   firstNameEl.innerText = formData.firstName
-  eventTypeEl.innerText = eventData.typeString
+  eventTypeEl.innerText = eventData.type
   eventTitleEl.innerText = eventData.title
   eventDateEl.innerText = eventData.date
   eventHourEl.innerText = eventData.hour
   confirmationEmailEl.innerText = formData.email
+
+  if (eventData.location) {
+    // eventLocationEl.innerHTML = eventData.location
+  }
 
   container.appendChild(confirmationView)
 
@@ -295,7 +337,9 @@ function checkStepValidity (event) {
   if (isInvalid) {
     nextButton.setAttribute('disabled', 'true')
   } else {
-    nextButton.removeAttribute('disabled')
+    if (nextButton) {
+      nextButton.removeAttribute('disabled')
+    }
   }
 }
 
@@ -398,6 +442,8 @@ document.addEventListener('DOMContentLoaded', function () {
         eventListContainer.setAttribute('style', 'display: none;')
         const form = registerFormTemplate.content.cloneNode(true)
         addEventDataToForm(eventData, form)
+        prepareFormAccordingEventType(eventData.type, form)
+
         container.appendChild(form)
 
         scrollToViewTop()
