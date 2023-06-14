@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function (event) {
+  isiHeaderFixed()
   window.addEventListener('scroll', () => {
     isiHeaderFixed()
   })
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
    * It requires IntersectionObserver API
    * @see https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
    * @see https://caniuse.com/#feat=intersectionobserver
-  */
+   */
   function isiHeaderFixed () {
     const mobileMedia = window.matchMedia('(min-width: 1200px)')
     const isiHeader = document.querySelector('.isi__section_header')
@@ -43,8 +44,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
           isiHeader.classList.add('is--fixed')
         }
       })
-    }
-    , observerOptions)
+    }, observerOptions)
     if (isiSection) {
       isiObserver.observe(isiSection)
     }
@@ -68,13 +68,15 @@ document.addEventListener('DOMContentLoaded', function (event) {
     })
   }
 
-  const menuItems = document.querySelectorAll('.site__header_nav_menu_list_item_link')
+  const menuItems = document.querySelectorAll(
+    '.site__header_nav_menu_list_item_link'
+  )
   const mobileQuery = window.matchMedia('(max-width: 1200px)')
-  menuItems.forEach((item) => {
+  menuItems.forEach(item => {
     if (item.getAttribute('href') === window.location.pathname) {
       item.classList.add('current-page')
     }
-    item.addEventListener('click', (e) => {
+    item.addEventListener('click', e => {
       if (!mobileQuery.matches) {
         return
       }
@@ -89,12 +91,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
   })
 
   document.querySelectorAll('.sub__nav_menu_item_link').forEach(linkElement => {
-    linkElement.addEventListener('click', (e) => {
+    linkElement.addEventListener('click', e => {
       if (!mobileQuery.matches) {
         return
       }
 
-      document.querySelector('.site__header_nav_menu_list .sub__nav_menu.is--active').classList.toggle('is--active')
+      document
+        .querySelector('.site__header_nav_menu_list .sub__nav_menu.is--active')
+        .classList.toggle('is--active')
       root.classList.toggle('is--menu-open')
       mainNav.classList.toggle('is--open')
       mobileMenuToogleBtn.classList.toggle('is--active')
@@ -115,9 +119,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
 const accordion = document.querySelector('.accordion')
 if (accordion) {
   const accordionItems = document.querySelectorAll('.accordion__item')
-  accordionItems.forEach((accordionItem) => {
+  accordionItems.forEach(accordionItem => {
     accordionItem.addEventListener('click', () => {
-      const expanded = accordionItem.getAttribute('aria-expanded') === 'true' || false
+      const expanded =
+        accordionItem.getAttribute('aria-expanded') === 'true' || false
       accordionItem.setAttribute('aria-expanded', !expanded)
       // close all other accordion items... maybe?
       // accordionItems.forEach((accordionItem) => {
@@ -132,7 +137,7 @@ if (accordion) {
 // basic form code
 const form = document.querySelector('.form')
 if (form) {
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', e => {
     e.preventDefault()
     const formData = new FormData(form)
     const data = Object.fromEntries(formData)
@@ -205,20 +210,27 @@ function changeScrollMarginTopVariable () {
   const customSection = document.querySelector('.custom-section')
 
   const siteHeaderStyles = getComputedStyle(siteHeader)
-  const siteHeaderHeight = parseInt(siteHeaderStyles.getPropertyValue('height').slice(0, -2))
+  const siteHeaderHeight = parseInt(
+    siteHeaderStyles.getPropertyValue('height').slice(0, -2)
+  )
 
   let sectionMarginTop = 0
   if (customSection) {
     const customSectionStyles = getComputedStyle(customSection)
-    sectionMarginTop = parseInt(customSectionStyles.getPropertyValue('margin-top').slice(0, -2))
+    sectionMarginTop = parseInt(
+      customSectionStyles.getPropertyValue('margin-top').slice(0, -2)
+    )
   }
 
   const marginScrollTop = sectionMarginTop + siteHeaderHeight
-  rootElement.style.setProperty('--margin-top-scroll-var', marginScrollTop + 'px')
+  rootElement.style.setProperty(
+    '--margin-top-scroll-var',
+    marginScrollTop + 'px'
+  )
 
   const pemForm = document.querySelector('.savings__page .hero__content_form')
   if (pemForm) {
-    pemForm.addEventListener('submit', (e) => {
+    pemForm.addEventListener('submit', e => {
       e.preventDefault()
       showRandomPemSection()
     })
@@ -232,7 +244,10 @@ function internalNavigationScroll () {
   if (internalSection) {
     const mainContainer = document.querySelector('main')
     const siteHeader = document.querySelector('.site__header')
-    const scrollPosition = internalSection.offsetTop - mainContainer.scrollTop - siteHeader.scrollHeight
+    const scrollPosition =
+      internalSection.offsetTop -
+      mainContainer.scrollTop -
+      siteHeader.scrollHeight
     window.scroll({ top: scrollPosition, left: 0, behavior: 'smooth' })
   }
 }
@@ -241,7 +256,7 @@ function internalNavigationScroll () {
 function showRandomPemSection () {
   const pemSections = document.querySelectorAll('.pem')
   // hide all sections
-  pemSections.forEach((section) => {
+  pemSections.forEach(section => {
     section.classList.remove('is--showing')
   })
   const randomIndex = Math.floor(Math.random() * pemSections.length)
